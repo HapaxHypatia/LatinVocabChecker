@@ -1,0 +1,8 @@
+AuthorName
+FullName
+Title
+Date
+Genre
+Length
+Gender
+Religion

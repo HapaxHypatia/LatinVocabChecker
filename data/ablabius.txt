@@ -1,0 +1,10 @@
+name: Ablabius
+fullname: Ablabius Rhetor
+
+
+
+title: epigramma
+genre: epigram
+date:
+fulltext: "Saturni aurea saecla quis requirat? Sunt haec gemmea, sed Neroniana."
+
