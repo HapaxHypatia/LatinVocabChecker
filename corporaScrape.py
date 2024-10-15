@@ -12,16 +12,18 @@ mydb = SQL.connect(
 )
 mycursor = mydb.cursor()
 
+
 def DBaddAuthor(name, fullname):
 	# insert author
 	val = (name, fullname)
 	CHECKsql = "SELECT * FROM authors WHERE authorName = %s AND fullName = %s"
 	mycursor.execute(CHECKsql, val)
 	if not mycursor.fetchall():
+		print("Adding author: {},{}".format(name, fullname))
 		ADDsql = "INSERT INTO authors (authorName, fullName) VALUES (%s, %s)"
 		mycursor.execute(ADDsql, val)
-	mydb.commit()
-
+		mydb.commit()
+		print("Author added.")
 
 def DBgetAuthor(fullname):
 	# get author ID for text
@@ -30,18 +32,28 @@ def DBgetAuthor(fullname):
 	mycursor.execute(sql, val)
 	return mycursor.fetchall()
 
+
 def DBaddText(text):
 	# insert text
-	TEXTsql = "INSERT INTO texts (title, textLength, fulltext, authorID ) VALUES (%(title)s, %(length)s, %(text)s, %(author)s)"
 	authorID = DBgetAuthor(text["author"])
-	val = {
+	values = {
 		'title': text["title"],
 		'length': text["length"],
 		'text': text["fulltext"],
 		'author': authorID[0][0]
 	}
-	mycursor.execute(TEXTsql, val)
-	mydb.commit()
+	val = (text["title"], authorID[0][0])
+	CHECKsql = "SELECT * FROM texts WHERE title = %s AND authorID = %s"
+	mycursor.execute(CHECKsql, val)
+
+	if not mycursor.fetchall():
+		print("Adding text: {} by {}".format(text['title'], text['author']))
+		add_text = ("INSERT INTO texts "
+				   "(title, textLength, textString, authorID) "
+				   "VALUES (%(title)s, %(length)s, %(text)s, %(author)s)")
+		mycursor.execute(add_text, values)
+		mydb.commit()
+		print("Text added.")
 
 
 driver = webdriver.Chrome()
@@ -49,7 +61,8 @@ driver.set_page_load_timeout(60)
 
 driver.get("https://latin.packhum.org/browse")
 print("Connected to site")
-
+checkbox = driver.find_element(By.CSS_SELECTOR, value='#showall')
+checkbox.click()
 texts = []
 authorElements = driver.find_elements(By.CSS_SELECTOR, value='.authors li a')
 for item in authorElements:
@@ -79,5 +92,4 @@ for author in author_links:
 		textdata["fulltext"] = " ".join(cell.text for cell in tablecells)
 		textdata["length"] = len(textdata["fulltext"].split(" "))
 		texts.append(textdata)
-		print(textdata)
 		DBaddText(textdata)
