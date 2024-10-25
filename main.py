@@ -1,6 +1,7 @@
 from cltk import NLP
 from cltk.alphabet.lat import remove_macrons, JVReplacer
 from openpyxl import load_workbook
+import os.path
 
 # TODO grab random unseen passages from corpora and assess coverage
 # TODO allow ability to paste any list of words
@@ -9,9 +10,15 @@ from openpyxl import load_workbook
 # TODO find passages from corpora that meet a certain coverage threshold
 # TODO how many words do you typically need before a word repeats in latin?
 
-def read_text(textfile):
-    with open(text_file, "r") as file:
-        return file.read().split(" ")
+def read_text(text_input):
+    '''
+    :return: list of strings
+    '''
+    if os.path.exists(text_input):
+        with open(text_input, "r") as file:
+            return file.read().split(" ")
+    elif type(text_input) == str:
+        return text_input.split(" ")
 
 
 def normalize_text(text):
@@ -21,44 +28,55 @@ def normalize_text(text):
     return text.lower()
 
 
-def read_wordlist(file, col):
-    # Read Excel file into array
-    wb = load_workbook(file)
-    ws = wb.active
-    return [ws.cell(row=i, column=col).value for i in range(2, ws.max_row)]
-
-
-def analyze_text(text):
-    cltk_nlp = NLP(language="lat", suppress_banner=True)
-    return cltk_nlp.analyze(text=text)
+def read_wordlist(list_input):
+    '''
+    :return: list of strings
+    '''
+    if os.path.exists(list_input):
+        col = int(input("Which column are your Latin words in? Enter a numeral:  "))
+        wb = load_workbook(list_input)
+        ws = wb.active
+        raw_list = [ws.cell(row=i, column=col).value for i in range(2, ws.max_row)]
+    elif type(list_input) == str:
+        raw_list = list_input.split(',')
+    normalized_vocab_list = [normalize_text(i) for i in raw_list]
+    vocab_objects = cltk.analyze(" ".join(normalized_vocab_list))
+    return [word.lemma for word in vocab_objects]
 
 
 if __name__ == '__main__':
-    wordlist_file = input("Enter the filepath to your vocab list excel file:  ")
-    col = int(input("Which column are your Latin words in? Enter a numeral:  "))
-    raw_vocab_list = read_wordlist(wordlist_file, col)
-    vocab_list = [normalize_text(i) for i in raw_vocab_list]
+    cltk = NLP(language="lat", suppress_banner=True)
+    punctuation = " .,;:'\"?! ()[]_-"
 
-    punctuation = " .,;:'?! ()[]_-"
+    text_input = input("Enter text filepath or text:  ")
+    text_words = read_text(text_input)  # returns a list of words (strings)
 
-    text_file = input("Enter text filepath:  ")
-    text_words = read_text(text_file) #returns a list of words
-    text_length = len([x for x in text_words if x not in punctuation])    # total words
-    print("text length = {}".format(text_length))
+    list_input = input("Enter a word list separated by commas, or the filepath to your vocab list excel file:  ")
+    vocab_list = read_wordlist(list_input)
+
     text = " ".join(text_words)
-    doc = (analyze_text(normalize_text(text)))
+    doc = (cltk.analyze(normalize_text(text)))
+    word_objects = [word for word in doc.words if word.lemma not in punctuation]  # list of all word objects in text
 
-    word_objects = [word for word in doc.words if word.lemma not in punctuation]
-    unknown_words_total = sum(1 for word in word_objects if word.lemma not in vocab_list)
-    coverage = ((text_length - unknown_words_total) / text_length) * 100
-    lemmata = set([word.lemma for word in word_objects])
-    unknown_words = []
+    text_length = len(word_objects)
+    print("text length = {}".format(text_length))
+    total_unknown_tokens = sum(1 for word in word_objects if word.lemma not in vocab_list)  # int
+
+    lemmata = sorted(set([word.lemma for word in word_objects]))  # set of strings: all lemmata in text
+    total_lemmata = len(lemmata)  # int
+    unknown_lemmata = []
     for word in word_objects:
-        if word.lemma not in vocab_list and word not in unknown_words:
-            unknown_words.append(word)
+        if word.lemma in vocab_list or word.lemma in unknown_lemmata:
+            continue
+        unknown_lemmata.append(word.lemma)
+    unknown_lemmata.sort()
+    total_unknown_lemmata = len(unknown_lemmata)
 
-    print("Coverage = {}%".format(coverage))
-    print("Number of unknown words: {}".format(len(unknown_words)))
-    unknown_words.sort(key=lambda x: x.lemma)
-    for word in unknown_words:
-        print(word.lemma, word.pos)
+    lemma_coverage = ((total_lemmata - total_unknown_lemmata) / total_lemmata) * 100
+    token_coverage = ((text_length - total_unknown_tokens) / text_length) * 100
+
+    print("Token Coverage = {}%".format(token_coverage))
+    print("Lemma Coverage = {}%".format(lemma_coverage))
+    print("Number of unknown lemmata: {}".format(total_unknown_lemmata))
+    for item in unknown_lemmata:
+        print(item)

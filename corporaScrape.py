@@ -2,6 +2,7 @@ import time
 
 import mysql.connector as SQL
 from selenium import webdriver
+from selenium.common import NoSuchElementException
 from selenium.webdriver.common.by import By
 
 mydb = SQL.connect(
@@ -24,6 +25,7 @@ def DBaddAuthor(name, fullname):
 		mycursor.execute(ADDsql, val)
 		mydb.commit()
 		print("Author added.")
+
 
 def DBgetAuthor(fullname):
 	# get author ID for text
@@ -49,8 +51,8 @@ def DBaddText(text):
 	if not searchresult:
 		print("Adding text: {} by {}".format(text['title'], text['author']))
 		add_text = ("INSERT INTO texts "
-				   "(title, textLength, textString, authorID) "
-				   "VALUES (%(title)s, %(length)s, %(text)s, %(author)s)")
+					"(title, textLength, textString, authorID) "
+					"VALUES (%(title)s, %(length)s, %(text)s, %(author)s)")
 		mycursor.execute(add_text, values)
 		mydb.commit()
 		print("Text added.")
@@ -62,11 +64,12 @@ def DBaddText(text):
 		if current_length[0][0] != text['length']:
 			values = {
 				'length': text["length"],
-				'text': text["fulltext"],
+				'textstring': text["fulltext"],
 				'id': textID
 			}
-			update_text = ("UPDATE texts SET textLength=%s, textString=%s WHERE textID = %s ) "
-					   "VALUES (%(length)s, %(text)s, %(id)s)")
+			update_text = ("UPDATE texts "
+						   "SET textLength=%s, textString=%s WHERE textID = %s ) "
+						   "VALUES (%(length)s, %(textstring)s, %(id)s)")
 			mycursor.execute(update_text, values)
 			mydb.commit()
 			print("Text updated.")
@@ -84,7 +87,7 @@ authorElements = driver.find_elements(By.CSS_SELECTOR, value='.authors li a')
 for item in authorElements:
 	name = item.find_element(By.CSS_SELECTOR, value='span b').text
 	fullname = item.find_element(By.CSS_SELECTOR, value='span').text
-	# DBaddAuthor(name, fullname)
+# DBaddAuthor(name, fullname)
 author_links = [x.get_attribute("href") for x in authorElements]
 for author in author_links:
 	driver.get(author)
@@ -104,9 +107,28 @@ for author in author_links:
 		driver.get(text)
 		textdata["author"] = driver.find_element(By.ID, value='author').text
 		textdata["title"] = driver.find_element(By.ID, value='work').text
+		text = []
 		tablecells = driver.find_elements(by=By.TAG_NAME, value='td')
-		# TODO click next button until full text is gathered
-		textdata["fulltext"] = " ".join(cell.text for cell in tablecells)
+		for cell in tablecells:
+			text.append(cell.text)
+		next = True
+		next_button = driver.find_element(By.ID, value="next")
+		if next_button.get_attribute("href") == "":
+			next = False
+		while next:
+			# click next button until full text is gathered
+			current_page = str(driver.current_url)
+			# get next link
+			next_button = driver.find_element(By.ID, value="next")
+			next_page = next_button.get_attribute('href')
+			# check it against current page
+			if not next_page:
+				break
+			next_button.click()
+			tablecells = driver.find_elements(by=By.TAG_NAME, value='td')
+			for cell in tablecells:
+				text.append(cell.text)
+		textdata["fulltext"] = " ".join(text)
 		textdata["length"] = len(textdata["fulltext"].split(" "))
 		texts.append(textdata)
 		DBaddText(textdata)
