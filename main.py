@@ -4,7 +4,6 @@ from openpyxl import load_workbook
 import os.path
 
 # TODO grab random unseen passages from corpora and assess coverage
-# TODO allow ability to paste any list of words
 # TODO add stage selection for CLC
 # TODO analyse the top words coming up that are still unknown on DCC and what words in DCC are not coming up. (Per author?)
 # TODO find passages from corpora that meet a certain coverage threshold
@@ -16,9 +15,9 @@ def read_text(text_input):
     '''
     if os.path.exists(text_input):
         with open(text_input, "r") as file:
-            return file.read().split(" ")
+            return file.read()
     elif type(text_input) == str:
-        return text_input.split(" ")
+        return text_input
 
 
 def normalize_text(text):
@@ -42,19 +41,18 @@ def read_wordlist(list_input):
     normalized_vocab_list = [normalize_text(i) for i in raw_list]
     vocab_objects = cltk.analyze(" ".join(normalized_vocab_list))
     return [word.lemma for word in vocab_objects]
-
+    return [word.lemma for word in normalized_vocab_list]
 
 if __name__ == '__main__':
     cltk = NLP(language="lat", suppress_banner=True)
     punctuation = " .,;:'\"?! ()[]_-"
 
     text_input = input("Enter text filepath or text:  ")
-    text_words = read_text(text_input)  # returns a list of words (strings)
+    text = read_text(text_input)  # returns a list of words (strings)
 
     list_input = input("Enter a word list separated by commas, or the filepath to your vocab list excel file:  ")
     vocab_list = read_wordlist(list_input)
 
-    text = " ".join(text_words)
     doc = (cltk.analyze(normalize_text(text)))
     word_objects = [word for word in doc.words if word.lemma not in punctuation]  # list of all word objects in text
 
@@ -62,21 +60,28 @@ if __name__ == '__main__':
     print("text length = {}".format(text_length))
     total_unknown_tokens = sum(1 for word in word_objects if word.lemma not in vocab_list)  # int
 
-    lemmata = sorted(set([word.lemma for word in word_objects]))  # set of strings: all lemmata in text
+    lemmata = sorted(set([lemma for lemma in doc.lemmata]))  # set of strings: all lemmata in text
     total_lemmata = len(lemmata)  # int
     unknown_lemmata = []
     for word in word_objects:
-        if word.lemma in vocab_list or word.lemma in unknown_lemmata:
+        if word.lemma in vocab_list or word in unknown_lemmata:
             continue
-        unknown_lemmata.append(word.lemma)
-    unknown_lemmata.sort()
+        unknown_lemmata.append(word)
+    unknown_lemmata.sort(key=lambda x: x.lemma)
     total_unknown_lemmata = len(unknown_lemmata)
 
     lemma_coverage = ((total_lemmata - total_unknown_lemmata) / total_lemmata) * 100
     token_coverage = ((text_length - total_unknown_tokens) / text_length) * 100
 
+    # TODO: Grammatical analysis. List of grammar features in text (Tenses etc)
+
     print("Token Coverage = {}%".format(token_coverage))
     print("Lemma Coverage = {}%".format(lemma_coverage))
     print("Number of unknown lemmata: {}".format(total_unknown_lemmata))
     for item in unknown_lemmata:
-        print(item)
+        print(item.lemma, item.pos)
+    print("Vocab to be learned: ")
+    for item in unknown_lemmata:
+        if item in read_wordlist("data/Latin Core Vocab.xlsx"):
+            print(item)
+    #TODO including duplicate lemmata
