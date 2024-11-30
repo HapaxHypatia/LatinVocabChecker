@@ -1,0 +1,2840 @@
+PRINCIPAL_PARTS,SHORT_DEFINITION,SIMPLE_LEMMA,PART_OF_SPEECH,Count_in_Selection,Location
+qui quae quod,"who, which",qui,Pronoun,255,0.1
+modo,"only, just now",modo,Adverb,21,0.1
+Naso –onis m.,Naso,Naso,Noun,4,0.1
+sum esse fui futurus,to be,sum,Verb,547,0.1
+quinque; quintus –a –um,5; 5th,quinque,Number,3,0.1
+libellus libelli m.,"little book, document",libellus,Noun,5,0.1
+tres tria,3,tres,Number,2,0.2
+hic haec hoc,"this, these",hic,Pronoun,107,0.2
+ille illa illud,that,ille,Pronoun,166,0.2
+praefero praeferre praetuli praelatus,to prefer,praefero,Verb,2,0.2
+auctor auctoris m.,founder,auctor,Noun,4,0.2
+opus operis n.,work; need,opus,Noun,23,0.2
+ut or uti,"so that; as, when; that; how? In what manner?",ut,Conjunction,65,0.3
+iam,now; already,iam,Adverb,29,0.3
+nullus –a –um,"not any, no",nullus,Adjective,37,0.3
+tu tui tibi te te,you,tu,Pronoun,243,0.3
+nos nostrum/nostri,we; us,nos,Pronoun,32,0.3
+lego legere legi lectus,"to choose, collect; read",lego,Verb,18,0.3
+voluptas voluptatis f.,pleasure,voluptas,Noun,5,0.3
+at or ast,but,at,Conjunction,50,0.4
+levis –e,"light, trivial",levis,Adjective,14,0.4
+demo demere dempsi demptus,to remove,demo,Verb,5,0.4
+poena poenae f.,punishment,poena,Noun,9,0.4
+duo duae duo,2,duo,Number,12,0.4
+arma armorum n.,"arms, weapons",arma,Noun,31,1.1.1
+gravis grave,heavy,gravis,Adjective,11,1.1.1
+numerus numeri m.,"number, amount",numerus,Noun,11,1.1.1
+violentus –a –um,"violent, savage",violentus,Adjective,4,1.1.1
+–que,and,que,Conjunction,332,1.1.1
+bellum (duellum) belli n.,war,bellum,Noun,17,1.1.1
+paro parare paravi paratus,to prepare,paro,Verb,8,1.1.1
+edo edere edidi editus,"to emit, bring forth",edo,Verb,2,1.1.2
+materia materiae f.,material,materia,Noun,5,1.1.2
+convenio convenire conveni conventus,to assemble; agree,convenio,Verb,7,1.1.2
+modus modi m.,measure; manner,modus,Noun,10,1.1.2
+pa¯r paris,"equal, like (+dat.)",pa¯r,Adjective,2,1.1.3
+inferus –a –um,"low, vile; subst. inhabitant of the underworld",inferus,Adjective,3,1.1.3
+versus versus m.,line (of poetry),versus,Noun,6,1.1.3
+rideo ridere risi risus,to laugh,rideo,Verb,6,1.1.3
+Cupido –inis m.,Cupid (name),Cupido,Noun,12,1.1.3
+dico dicere dixi dictus,"to say, speak",dico,Verb,56,1.1.4
+atque or ac,"and, also",atque,Conjunction,19,1.1.4
+unus –a –um,1,unus,Number,20,1.1.4
+surripio surripere surripui surreptum,to steal,surripio,Verb,1,1.1.4
+pes pedis m.,foot,pes,Noun,27,1.1.4
+quis quid,"who, what",quis,Pronoun,140,1.1.5
+saevus –a –um,savage,saevus,Adjective,12,1.1.5
+puer pueri m.,"boy, slave",puer,Noun,20,1.1.5
+do dare dedi datus,to give,do,Verb,97,1.1.5
+in,"in, on",in,Preposition,236,1.1.5
+carmen carminis n.,"song, poem",carmen,Noun,37,1.1.5
+ius iuris n.,"right, justice, law",ius,Noun,11,1.1.5
+Pieris –idos f.,a Muse; daughter of Pierus,Pieris,Noun,1,1.1.6
+vates vatis m.,poet,vates,Noun,18,1.1.6
+non,not,non,Adverb,170,1.1.6
+tuus –a –um,your,tuus,Adjective,125,1.1.6
+turba turbae f.,"crowd, uproar",turba,Noun,6,1.1.6
+si,if,si,Conjunction,118,1.1.7
+praeripio praeripere praeripui praereptum,"to snatch, carry off",praeripio,Verb,1,1.1.7
+flavus –a –um,"golden, yellow",flavus,Adjective,8,1.1.7
+Venus –eris f.,Venus (goddess),Venus,Noun,24,1.1.7
+Minerva –ae f.,Minerva,Minerva,Noun,5,1.1.7
+ventilo ventilare ventilavi ventilatus,"to wave, fan; brandish",ventilo,Verb,2,1.1.8
+accendo accendere accendi accensus,"to kindle, set on fire",accendo,Verb,2,1.1.8
+fax facis f.,torch,fax,Noun,5,1.1.8
+probo probare probavi probatus,to approve,probo,Verb,6,1.1.9
+silva silvae f.,forest,silva,Noun,10,1.1.9
+Ceres Cereris f.,wheat; Ceres,Ceres,Noun,9,1.1.9
+regno regnare regnavi regnatus,to rule,regno,Verb,5,1.1.9
+iugosus –a –um,"hilly, mountainous",iugosus,Adjective,1,1.1.9
+lex legis f.,law,lex,Noun,6,1.1.10
+pharetratus –a –um,wearing a quiver,pharetratus,Adjective,2,1.1.10
+virgo virginis f.,maiden,virgo,Noun,11,1.1.10
+arvum arvi n.,field,arvum,Noun,8,1.1.10
+colo colere colui cultus,"to inhabit, cultivate",colo,Verb,9,1.1.10
+crinis crinis m.,hair,crinis,Noun,7,1.1.11
+insignis insigne,distinguished,insignis,Adjective,1,1.1.11
+acutus –a –um,"sharp, piercing",acutus,Adjective,2,1.1.11
+cuspis –idis f.,"sharp point, spear",cuspis,Noun,2,1.1.11
+Phoebus –i m.,Phoebus,Phoebus,Noun,9,1.1.11
+instruo instruere instruxi instructus,to build upon; furnish; arrange,instruo,Verb,1,1.1.12
+Aonius –a –um,of Aonia; Boeotian,Aonius,Adjective,2,1.1.12
+Mars Martis m.,Mars,Mars,Noun,13,1.1.12
+moveo movere movi motus,to move,moveo,Verb,35,1.1.12
+lyra –ae f.,lyre,lyra,Noun,8,1.1.12
+magnus –a –um,great,magnus,Adjective,42,1.1.13
+nimium (nimio),excessively,nimium,Adverb,17,1.1.13
+potens,powerful,potens,Adjective,6,1.1.13
+regnum regni n.,"royal power, kingdom",regnum,Noun,9,1.1.13
+cur,why,cur,Adverb,25,1.1.14
+adfecto adfectare adfectavi adfectatus,"to strive after, grasp at",adfecto,Verb,2,1.1.14
+ambitiosus –a –um,"twisting; ambitious, eager",ambitiosus,Adjective,2,1.1.14
+novus –a –um,new,novus,Adjective,17,1.1.14
+an,"or, whether, if",an,Adverb,14,1.1.15
+ubique,everywhere,ubique,Adverb,1,1.1.15
+Heliconius –a –um,of (Mt.) Helicon,Heliconius,Adjective,1,1.1.15
+Tempe indecl. n.,Tempe (valley),Tempe,Noun,1,1.1.15
+vix,scarcely,vix,Adverb,8,1.1.16
+etiam,also,etiam,Adverb,14,1.1.16
+tutus –a –um,safe,tutus,Adjective,9,1.1.16
+suus –a –um,his/her/its own,suus,Adjective,81,1.1.16
+cum,when; since; although,cum,Conjunction,69,1.1.17
+bene; melius (comp.); optime (superl.),well,bene,Adverb,37,1.1.17
+surgo surgere surrexi surrectus,to rise,surgo,Verb,11,1.1.17
+pagina –ae f.,page,pagina,Noun,1,1.1.17
+primus –a –um,first,primus,Number,23,1.1.17
+attenuo attenuare attenuavi attenuatus,to make thin; weaken,attenuo,Verb,1,1.1.18
+nervus –i m.,muscle; string,nervus,Noun,3,1.1.18
+prope propius proxime,near (prep. + acc.),prope,Preposition,6,1.1.18
+meus –a –um,"my, mine",meus,Adjective,155,1.1.18
+nec,nor; and not,nec,Conjunction,131,1.1.19
+ego mei mihi me me,"I, me",ego,Pronoun,287,1.1.19
+aptus –a –um,"fitted to, appropriate, fitting",aptus,Adjective,23,1.1.19
+aut; aut…aut,"or, either...or",aut,Conjunction,35,1.1.20
+longus –a –um,"long, far",longus,Adjective,34,1.1.20
+como comere compsi comptus,"to arrange, adorn",como,Verb,2,1.1.20
+puella puellae f.,girl,puella,Noun,71,1.1.20
+coma comae f.,hair,coma,Noun,26,1.1.20
+queror queri questus sum,to complain,queror,Verb,11,1.1.21
+pharetra –ae f.,quiver,pharetra,Noun,3,1.1.21
+protinus or protenus,at once,protinus,Adverb,8,1.1.21
+solvo solvere solvi solutus,"to release, pay",solvo,Verb,10,1.1.21
+exitium existi(i) n.,"destruction, ruin",exitium,Noun,2,1.1.22
+spiculum –i n.,"sharp point, sting, arrow",spiculum,Noun,1,1.1.22
+facio facere feci factus,"to do, make",facio,Verb,72,1.1.22
+luno lunare lunavi lunatus,to bend like a halfmoon,luno,Verb,1,1.1.23
+genu (genus) genus n.,knee,genu,Noun,2,1.1.23
+sinuosus –a –um,full of windings; sinuous,sinuosus,Adjective,1,1.1.23
+fortis forte,brave; strong,fortis,Adjective,15,1.1.23
+arcus arcus m.,"bow, arch",arcus,Noun,12,1.1.23
+cano canere cecini cantus,to sing,cano,Verb,7,1.1.24
+accipio accipere accepi acceptus,to receive,accipio,Verb,7,1.1.24
+miser misera miserum,"wretched, pitiable",miser,Adjective,26,1.1.25
+certus –a –um,"sure, fixed",certus,Adjective,10,1.1.25
+habeo habere habui habitus,"to have, hold",habeo,Verb,69,1.1.25
+sagitta sagittae f.,arrow,sagitta,Noun,4,1.1.25
+uro urere ussi ustum,to burn,uro,Verb,11,1.1.26
+et,and,et,Conjunction,311,1.1.26
+vacuus –a –um,empty,vacuus,Adjective,11,1.1.26
+pectus pectoris n.,"chest, breast; heart",pectus,Noun,26,1.1.26
+amor amoris m.,love,amor,Noun,86,1.1.26
+sex; sextus –a –um,6; 6th,sex,Number,1,1.1.27
+resido –ere –sidere –sedi,"to sit down, sink down, shrink",resido,Verb,1,1.1.27
+ferreus –a –um,made of iron,ferreus,Adjective,7,1.1.28
+cum,with (prep. +abl.),cum,Preposition,49,1.1.28
+vester vestra vestrum,your,vester,Adjective,13,1.1.28
+valeo valere valui valitus,"to be strong, be worth",valeo,Verb,17,1.1.28
+cingo cingere cinxi cinctus,to surround,cingo,Verb,5,1.1.29
+litoreus –a –um,"littoral, of the seashore",litoreus,Adjective,1,1.1.29
+flaveo –ere –––,to be yellow; p.,flaveo,Verb,2,1.1.29
+tempus temporis n.,"the side of the forehead, temple",tempus,Noun,5,1.1.29
+myrtus –i m./f.,myrtle,myrtus,Noun,3,1.1.29
+Musa –ae f.,a Muse,Musa,Noun,6,1.1.30
+per,through,per,Preposition,65,1.1.30
+undenus –a –um,ten,undenus,Number,1,1.1.30
+emodulor –ari,to measure out; put into meter,emodulor,Verb,1,1.1.30
+quod,because,quod,Conjunction,23,1.2.1
+tam,so,tam,Adverb,22,1.2.1
+durus –a –um,"hard, harsh",durus,Adjective,26,1.2.1
+video videre vidi visus,to see,video,Verb,62,1.2.1
+stratum –i n.,"bedding, coverlet; (often in pl.) bed",stratum,Noun,1,1.2.2
+neque or nec,and not; neither … nor …,neque,Conjunction,9,1.2.2
+lectus lecti m.,"bed, couch",lectus,Noun,7,1.2.2
+pallium palli(i) n.,"cloak, coverlet",pallium,Noun,4,1.2.2
+noster nostra nostrum,"our, ours",noster,Adjective,54,1.2.2
+sedeo sedere sedi sessus,to sit,sedeo,Verb,7,1.2.2
+somnus somni m.,sleep,somnus,Noun,15,1.2.3
+nox noctis f.,night,nox,Noun,38,1.2.3
+quam,"than; as, how",quam,Adverb,29,1.2.3
+perago peragere peregi peractum,to finish,perago,Verb,5,1.2.3
+lassus –a –um,"tired, weary",lassus,Adjective,9,1.2.4
+verso versare versavi versatus,to keep turning,verso,Verb,4,1.2.4
+corpus corporis n.,body,corpus,Noun,31,1.2.4
+os ossis n.,bone,os,Noun,7,1.2.4
+doleo dolere dolui dolitus,to feel pain/grief,doleo,Verb,8,1.2.4
+nam,for,nam,Conjunction,5,1.2.5
+puto putare putavi putatus,to think,puto,Verb,23,1.2.5
+sentio sentire sensi sensus,to perceive,sentio,Verb,17,1.2.5
+quis quid (after si nisi ne or num),"anyone/thing, someone/thing",quis,Pronoun,26,1.2.5
+tento tentare tentavi tentatus,to try,tento,Verb,5,1.2.5
+subeo subire subivi/subii subitus,to go under,subeo,Verb,5,1.2.6
+tectus –a –um,covered,tectus,Adjective,1,1.2.6
+callidus –a –um,clever,callidus,Adjective,3,1.2.6
+ars artis f.,"skill, talent",ars,Noun,19,1.2.6
+noceo nocere nocui nocitus,to harm,noceo,Verb,15,1.2.6
+sic,"so, in this way",sic,Adverb,33,1.2.7
+haereo haerere haesi haesus,"to stick to, hang on to",haereo,Verb,3,1.2.7
+tenuis tenue,thin,tenuis,Adjective,8,1.2.7
+cor cordis n.,heart,cor,Noun,2,1.2.7
+possido possidere possedi possessus,to take possession of,possido,Verb,1,1.2.8
+ferus –a –um,"wild, fierce",ferus,Adjective,10,1.2.8
+cedo cedere cessi cessum,to yield,cedo,Verb,10,1.2.9
+subitus –a –um,having come up suddenly; unexpected,subitus,Adjective,2,1.2.9
+luctor –ari,"to wrestle, struggle, strive",luctor,Verb,3,1.2.9
+ignis ignis m.,fire,ignis,Noun,9,1.2.9
+fio fieri factus sum,to become,fio,Verb,15,1.2.10
+fero ferre tuli latus,"to bear, carry, report",fero,Verb,75,1.2.10
+onus oneris n.,"load, burden",onus,Noun,8,1.2.10
+iacto iactare iactavi iactatus,to throw,iacto,Verb,5,1.2.11
+cresco crescere crevi cretus,"to grow, increase",cresco,Verb,5,1.2.11
+flamma flammae f.,flame,flamma,Noun,10,1.2.11
+concutio –cutere –cussi –cussus,"shake, beat, strike; terrify; disturb, distract",concutio,Verb,5,1.2.12
+morior mori mortuus sum,to die,morior,Verb,13,1.2.12
+verber –eris n.,whip; a beating or blow with a whip,verber,Noun,9,1.2.13
+multus –a –um,"much, many",multus,Adjective,36,1.2.13
+iuvo iuvare iuvi iutus,to help; please,iuvo,Verb,29,1.2.13
+usus usus m.,use,usus,Noun,9,1.2.13
+aratrum –i n,plough,aratrum,Noun,4,1.2.13
+detracto detractare detractavi detractatus,"to decline, refuse",detracto,Verb,1,1.2.14
+premo premere pressi pressus,to press,premo,Verb,22,1.2.14
+dum,"while, until, provided that",dum,Conjunction,33,1.2.14
+iugum iugi n.,"yoke; ridge, chain of hills",iugum,Noun,5,1.2.14
+bos bovis m.,ox,bos,Noun,5,1.2.14
+asper –a –um,rough,asper,Adjective,2,1.2.15
+equus equi m.,horse,equus,Noun,24,1.2.15
+contundo contundere contudi contusum,to beat crush bruise destroy,contundo,Verb,1,1.2.15
+os oris n.,"mouth, face",os,Noun,36,1.2.15
+lupata –orum n.,wolfsbit,lupata,Noun,1,1.2.15
+frenum –i n. (freni –orum m.),"bridle, reins",frenum,Noun,3,1.2.16
+parum; minus; minime,too little,parum,Adverb,10,1.2.16
+quisquis quidquid or quicquid,"whoever, whichever",quisquis,Pronoun,9,1.2.16
+ad,"to, up to, towards",ad,Preposition,42,1.2.16
+acer acris acre,"sharp, piercing",acer,Adjective,2,1.2.17
+invitus –a –um,unwilling,invitus,Adjective,5,1.2.17
+multo,"by much, greatly",multo,Adverb,4,1.2.17
+ferox ferocis,bold; wild,ferox,Adjective,1,1.2.17
+urgeo urgere ursi,to press,urgeo,Verb,3,1.2.17
+servitium servirti(i) n.,"servitude, slavery",servitium,Noun,1,1.2.18
+fateor fateri fassus sum,"to confess, admit",fateor,Verb,9,1.2.18
+en or em,look!,en,Interjection,4,1.2.19
+confiteor confiteri confessus sum,to confess,confiteor,Verb,2,1.2.19
+praeda praedae f.,"booty, prey",praeda,Noun,9,1.2.19
+porrigo porrigere porrexi porrectum,to stretch forth,porrigo,Verb,2,1.2.20
+vinco vincere vici victus,to conquer,vinco,Verb,33,1.2.20
+manus manus f.,hand; band of men,manus,Noun,65,1.2.20
+nihil or nil or nihilo n.,nothing,nihil,Pronoun,16,1.2.21
+opus n. (indeclinable),need,opus,Noun,3,1.2.21
+venia veniae f.,pardon,venia,Noun,2,1.2.21
+pax pacis f.,peace; favor,pax,Noun,8,1.2.21
+rogo rogare rogavi rogatus,to ask,rogo,Verb,20,1.2.21
+laus laudis f.,"praise, glory",laus,Noun,4,1.2.22
+inermis inermis inerme,unarmed,inermis,Adjective,4,1.2.22
+necto nectere nexi nexum,"to tie, bind, connect, weave",necto,Verb,7,1.2.23
+maternus –a –um,maternal,maternus,Adjective,2,1.2.23
+iungo iungere iunxi iunctus,to join,iungo,Verb,12,1.2.23
+columba –ae f.,"pigeon, dove",columba,Noun,2,1.2.23
+decet decere decuit,"adorn, become, grace; (impers.) it is fitting (to)",decet,Verb,10,1.2.24
+currus currus m.,chariot,currus,Noun,4,1.2.24
+vitricus –i m.,a step–father,vitricus,Noun,2,1.2.24
+ipse ipsa ipsum,"himself, herself, itself (intensive)",ipse,Pronoun,84,1.2.24
+populus populi m.,people,populus,Noun,12,1.2.25
+clamo clamare clamavi clamatus,"to call, shout",clamo,Verb,6,1.2.25
+triumphus triumphi m.,triumph,triumphus,Noun,9,1.2.25
+sto stare steti statum,to stand,sto,Verb,13,1.2.26
+adiungo adiungere adiunxi adiunctus,"to join to, connect",adiungo,Verb,1,1.2.26
+avis avis f.,bird,avis,Noun,14,1.2.26
+duco ducere duxi ductus,to lead; consider,duco,Verb,5,1.2.27
+capio capere cepi captus,to seize,capio,Verb,25,1.2.27
+iuvenis iuvenis m.,youth,iuvenis,Noun,16,1.2.27
+magnificus –a –um,"grand, splendid, magnificent",magnificus,Adjective,2,1.2.28
+pompa –ae f.,"procession, parade; the set piece at a banquet",pompa,Noun,8,1.2.28
+recens recentis,fresh,recens,Adjective,5,1.2.29
+vulnus vulneris n.,wound,vulnus,Noun,6,1.2.29
+captivus –a –um,captured,captivus,Adjective,3,1.2.30
+vinculum vinculi n.,bond,vinculum,Noun,6,1.2.30
+mens mentis f.,mind,mens,Noun,16,1.2.30
+bonus –a –um,good,bonus,Adjective,24,1.2.31
+post,after (adv. and prep. +acc.),post,Preposition,4,1.2.31
+tergum tergi n. or tergus –oris n.,the back of men or animals,tergum,Noun,8,1.2.31
+retorqueo –torquere –torsi –tortum,"to twist back, bend back",retorqueo,Verb,1,1.2.31
+pudor pudoris m.,decency,pudor,Noun,19,1.2.32
+castra castrorum n. (rarely –ae f.),camp,castra,Noun,6,1.2.32
+obsum obesse obfui,to be in the way,obsum,Verb,2,1.2.32
+omnis omne,every; all,omnis,Adjective,35,1.2.33
+metuo metuere metui,"to fear, dread",metuo,Verb,8,1.2.33
+brachium brachi(i) n.,arm,brachium,Noun,5,1.2.33
+tendo tendere tetendi tentum,to stretch,tendo,Verb,5,1.2.33
+vulgus vulgi n.,common people,vulgus,Noun,4,1.2.34
+io,hurrah! oh!,io,Interjection,2,1.2.34
+vox vocis f.,voice,vox,Noun,14,1.2.34
+blanditia –ae f. or blandities –ei,"flattery, endearment, often pl. with sg. meaning",blanditia,Noun,9,1.2.35
+comes comitis m. or f.,companion,comes,Noun,11,1.2.35
+error erroris m.,"wandering, error",error,Noun,2,1.2.35
+furor furoris m.,madness,furor,Noun,4,1.2.35
+adsidue,"perpetually, constantly",adsidue,Adverb,1,1.2.36
+pars partis f.,"part, portion",pars,Noun,18,1.2.36
+sequor sequi secutus sum,"to follow, come next",sequor,Verb,13,1.2.36
+miles militis m.,soldier,miles,Noun,15,1.2.37
+supero superare superavi superatus,to overcome,supero,Verb,4,1.2.37
+homo hominis m.,"human being, man",homo,Noun,4,1.2.37
+deus dei m.,god,deus,Noun,33,1.2.37
+commodum commodi n.,benefit,commodum,Noun,3,1.2.38
+nudus –a –um,"nude, bare",nudus,Adjective,11,1.2.38
+laetus –a –um,happy,laetus,Adjective,4,1.2.39
+triumpho triumphare triumphavi triumphatus,to triumph,triumpho,Verb,4,1.2.39
+de,"down from, about, concerning",de,Preposition,28,1.2.39
+superus –a –um,above,superus,Adjective,7,1.2.39
+mater matris f.,mother,mater,Noun,19,1.2.39
+Olympus –i m.,Olympus,Olympus,Noun,2,1.2.39
+plaudo plaudere plausi plausum,"to strike; clap; approve, applaud",plaudo,Verb,5,1.2.40
+appono –ponere –posui –positus,to place near; appoint,appono,Verb,7,1.2.40
+spargo spargere sparsi sparsum,to scatter,spargo,Verb,4,1.2.40
+rosa rosae f.,rose,rosa,Noun,3,1.2.40
+pinna –ae f.,"feather, wing",pinna,Noun,8,1.2.41
+gemma –ae f.,"jewel, gem",gemma,Noun,6,1.2.41
+vario variare variavi variatus,"to vary, diversify; adorn with various colors",vario,Verb,1,1.2.41
+capillus capilli m.,hair,capillus,Noun,28,1.2.41
+eo ire ii/ivi itum,to go,eo,Verb,46,1.2.42
+auro aurare,to gild,auro,Verb,2,1.2.42
+aureus (auratus) –a –um,golden,aureus,Adjective,9,1.2.42
+rota rotae f.,wheel,rota,Noun,4,1.2.42
+tum or tunc,"then, at that time",tum,Adverb,20,1.2.43
+quoque,also,quoque,Adverb,44,1.2.43
+paucus –a –um,(pl.) a few; (sing.) small,paucus,Adjective,7,1.2.43
+nosco noscere novi notus,"to learn, know",nosco,Verb,7,1.2.43
+praetereo praeterire praeterivi/praeterii praeteritus,to go by,praetereo,Verb,5,1.2.44
+possum posse potui,to be able,possum,Verb,81,1.2.45
+licet,even though,licet,Conjunction,6,1.2.45
+volo velle volui,to wish,volo,Verb,46,1.2.45
+cesso cessare cessavi cessatus,to cease,cesso,Verb,8,1.2.45
+fervidus –a –um,"intensely hot, blazing",fervidus,Adjective,1,1.2.46
+vicinus –a –um,neighboring,vicinus,Adjective,1,1.2.46
+vapor –oris m.,"vapor, steam; heat",vapor,Noun,1,1.2.46
+talis tale,such,talis,Pronoun,10,1.2.47
+domo domare domui domitus,"to subdue, dominate",domo,Verb,3,1.2.47
+Bacchus –i m.,Bacchus,Bacchus,Noun,4,1.2.47
+Gangeticus –a –um and Gangetis –idis,of or belonging to the Ganges,Gangeticus,Adjective,1,1.2.47
+terra terrae f.,land,terra,Noun,23,1.2.47
+ales –itis m./f.,bird,ales,Noun,7,1.2.48
+tigris tigris m.,tiger,tigris,Noun,2,1.2.48
+ergo,therefore,ergo,Conjunction,14,1.2.49
+sacer sacra sacrum,holy,sacer,Adjective,7,1.2.49
+parco parcere peperci parsus,to spare (+ dat.),parco,Verb,10,1.2.50
+perdo perdere perdidi perditus,to destroy,perdo,Verb,11,1.2.50
+victor victoris m.,"conqueror, victor",victor,Noun,3,1.2.50
+ops opis f.,resources,ops,Noun,16,1.2.50
+aspicio aspicere aspexi aspectus,to look at,aspicio,Verb,13,1.2.51
+cognatus –a –um,near by birth,cognatus,Adjective,1,1.2.51
+felix felicis,fortunate,felix,Adjective,11,1.2.51
+Caesar Caesaris m.,Caesar (name),Caesar,Noun,4,1.2.51
+protego –tegere –texi –tectum,"to cover, conceal; protect",protego,Verb,2,1.2.52
+iustus –a –um,"just, fair",iustus,Adjective,5,1.3.1
+precor precari precatus sum,"to beg, pray",precor,Verb,10,1.3.1
+nuper,not long ago,nuper,Adverb,6,1.3.1
+praedor –ari praedatus sum,to plunder,praedor,Verb,1,1.3.1
+amo amare amavi amatus,to love,amo,Verb,45,1.3.2
+semper,always,semper,Adverb,21,1.3.2
+a,"ah! (expletive of distress, pity, or entreaty)",a,Interjection,5,1.3.3
+tantum,only,tantum,Adverb,18,1.3.3
+patior pati passus sum,"to permit, endure",patior,Verb,11,1.3.3
+audio audire audivi auditus,to hear,audio,Verb,9,1.3.4
+tot,so many,tot,Pronoun,9,1.3.4
+Cytherea –ae f.,"Venus, the Cytherean goddess",Cytherea,Noun,1,1.3.4
+prex precis f.,prayer,prex,Noun,8,1.3.4
+deservio –ire –servire,"to serve, be devoted to",deservio,Verb,1,1.3.5
+annus anni m.,year,annus,Noun,18,1.3.5
+purus –a –um,pure,purus,Adjective,5,1.3.6
+fides fidei f.,"trust, faith",fides,Noun,17,1.3.6
+vetus veteris,old,vetus,Adjective,9,1.3.7
+commendo commendare commendavi commendatus,"to entrust, recommend, approve",commendo,Verb,1,1.3.7
+parens parentis m. or f.,parent,parens,Noun,10,1.3.7
+nomen nominis n.,name,nomen,Noun,21,1.3.8
+sanguis sanguinis m. or sanguen –inis n.,blood,sanguis,Noun,13,1.3.8
+eques equitis m.,horseman,eques,Noun,6,1.3.8
+innumerus –a –um,countless,innumerus,Adjective,1,1.3.9
+renovo renovare renovavi renovatus,"to restore, refresh, renew",renovo,Verb,1,1.3.9
+campus campi m.,plain,campus,Noun,5,1.3.9
+tempero temperare temperavi temperatus,to moderate,tempero,Verb,2,1.3.10
+sumptus –us m. ,"outlay, expense, cost, charge",sumptus,Noun,1,1.3.10
+parcus –a –um,sparing,parcus,Adjective,3,1.3.10
+uterque utraque utrumque,each of two,uterque,Pronoun,14,1.3.10
+novem; nonus –a –um,"9, 9th",novem,Number,3,1.3.11
+vitis –is f.,"vine, grapevine",vitis,Noun,7,1.3.11
+repertor –oris m.,"discoverer, inventor",repertor,Noun,1,1.3.11
+hac,by this way or route,hac,Adverb,3,1.3.12
+dono donare donavi donatus,to give; concede,dono,Verb,4,1.3.12
+sine,without (+abl.),sine,Preposition,26,1.3.13
+crimen criminis n.,"verdict, accusation",crimen,Noun,25,1.3.13
+mos moris m.,custom,mos,Noun,11,1.3.13
+simplicitas –atis f.,"simplicity; lack of sophistication, ignorance",simplicitas,Noun,3,1.3.14
+purpureus –a –um,purple,purpureus,Adjective,9,1.3.14
+mille; millesimus –a –um,"1000, 1000th",mille,Number,6,1.3.15
+placeo placere placui placitum,to please,placeo,Verb,28,1.3.15
+desultor –oris m.,acrobat,desultor,Noun,1,1.3.15
+cura curae f.,"care, concern",cura,Noun,15,1.3.16
+perennis perennis perenne,lasting throughout the year,perennis,Adjective,6,1.3.16
+filum –i n.,"thread, string",filum,Noun,3,1.3.17
+soror sororis f.,sister,soror,Noun,5,1.3.17
+vivo vivere vixi victus,to live,vivo,Verb,17,1.3.18
+contingo contingere contigi contactus,to touch,contingo,Verb,12,1.3.18
+materies materiei f.,material,materies,Noun,1,1.3.19
+praebeo praebere praebui praebitus,to supply,praebeo,Verb,11,1.3.19
+provenio –venire –veni –venturum,to come forth; come about,provenio,Verb,3,1.3.20
+causa causae f.,"cause, reason, lawsuit",causa,Noun,23,1.3.20
+dignus –a –um,worthy,dignus,Adjective,10,1.3.20
+exterreo –ere –ui –itus,to frighten; alarm,exterreo,Verb,1,1.3.21
+cornu cornus f.,horn,cornu,Noun,7,1.3.21
+Io –us f.,Io,Io,Noun,3,1.3.21
+flumineus –a –um,of a river,flumineus,Adjective,1,1.3.22
+ludo ludere lusi lusus,to play; play with,ludo,Verb,6,1.3.22
+adulter –eri m.,adulterer,adulter,Noun,4,1.3.22
+super,over (adv. and prep. +acc.),super,Preposition,3,1.3.23
+pontus ponti m.,the open sea,pontus,Noun,2,1.3.23
+simulo simulare simulavi simulatus,to imitate,simulo,Verb,5,1.3.23
+veho vehere vexi vectus,to carry,veho,Verb,5,1.3.23
+iuvencus –i m.,"young bull, bullock",iuvencus,Noun,1,1.3.23
+virgineus –a –um,"maidenly, of a virgin",virgineus,Adjective,3,1.3.24
+teneo tenere tenui tentus,to hold,teneo,Verb,19,1.3.24
+varus –a –um,"crooked, bent; diverse, different",varus,Adjective,1,1.3.24
+totus –a –um,whole,totus,Adjective,22,1.3.25
+pariter,alike,pariter,Adverb,4,1.3.25
+canto cantare cantavi cantatus,"to sing, play",canto,Verb,12,1.3.25
+orbis orbis m.,"circle, orb",orbis,Noun,15,1.3.25
+vir viri m.,man,vir,Noun,43,1.4.1
+epulae epularum (f. pl.),"banquet, feast",epulae,Noun,1,1.4.1
+adeo adire adivi/adii aditus,to go to,adeo,Verb,4,1.4.1
+idem eadem idem,same,idem,Pronoun,7,1.4.1
+ulterior –ius; ultimus –a –um,farther; farthest,ulterior,Adjective,6,1.4.2
+cena cenae f.,dinner,cena,Noun,1,1.4.2
+diligo diligere dilexi dilectus,to choose; love,diligo,Verb,1,1.4.3
+conviva –ae m.,guest at meal,conviva,Noun,2,1.4.3
+tango tangere tetigi tactus,to touch,tango,Verb,23,1.4.4
+alter altera alterum,other of two,alter,Adjective,28,1.4.4
+sinus sinus m.,"fold, pocket, chest",sinus,Noun,13,1.4.5
+subicio subicere subieci subiectus,"to throw under, put up for auction",subicio,Verb,3,1.4.5
+foveo fovere fovi fotus,to warm; favor,foveo,Verb,3,1.4.5
+inicio –ere –ieci –iectum,"to throw, lay hands on",inicio,Verb,5,1.4.6
+collum colli n.,neck,collum,Noun,12,1.4.6
+desino desinere desii desitus,"to leave off, cease",desino,Verb,8,1.4.7
+miror mirari miratus sum,"to wonder, be astonished",miror,Verb,7,1.4.7
+pono ponere posui positus,to place,pono,Verb,22,1.4.7
+candidus –a –um,"shining white, clear, bright",candidus,Adjective,14,1.4.7
+vinum vini n. or vinus vini m.,wine,vinum,Noun,6,1.4.7
+Atracis –idis f.,Thessalian,Atracis,Noun,1,1.4.8
+ambiguus –a –um,"uncertain, doubtful",ambiguus,Adjective,3,1.4.8
+traho trahere traxi tractus,to drag,traho,Verb,6,1.4.8
+domus domi f.,"house, home",domus,Noun,8,1.4.9
+membrum membri n.,limb,membrum,Noun,11,1.4.9
+cohaereo –haerere –haesi –haesum,"to cling to, adhere to",cohaereo,Verb,2,1.4.9
+a ab abs,"from, by",a,Preposition,43,1.4.10
+tamen,"nevertheless, however",tamen,Adverb,58,1.4.11
+cognosco cognoscere cognovi cognitus,"to learn, understand, inquire",cognosco,Verb,7,1.4.11
+Eurus –i m.,Southwest wind,Eurus,Noun,4,1.4.11
+tepidus –a –um,"warm, tepid",tepidus,Adjective,5,1.4.12
+verbum verbi n.,word,verbum,Noun,33,1.4.12
+Notus –i m.,the south wind,Notus,Noun,8,1.4.12
+venio venire veni ventum,to come,venio,Verb,48,1.4.13
+antequam,before,antequam,Conjunction,1,1.4.13
+ante,"before, in front of (adv. and prep. +acc.)",ante,Preposition,27,1.4.13
+ago agere egi actus,"to drive, do, act, concern oneself with",ago,Verb,15,1.4.14
+sed,but,sed,Conjunction,56,1.4.14
+torum –i n. (also torus –i m.),"bed, couch, cushion; swelling",torum,Noun,21,1.4.15
+vultus vultus m.,expression,vultus,Noun,22,1.4.15
+modestus –a –um,"modest, restrained",modestus,Adjective,4,1.4.15
+accumbo –cumbere –cubui –cubitum,to lie down,accumbo,Verb,1,1.4.16
+clam,secretly,clam,Adverb,3,1.4.16
+specto spectare spectavi spectatus,to look at,specto,Verb,14,1.4.17
+nutus –us m.,"nod, will",nutus,Noun,3,1.4.17
+loquax –acis,"talkative, chirping",loquax,Adjective,2,1.4.17
+excipio excipere excepi exceptus,"to receive, take",excipio,Verb,3,1.4.18
+furtivus –a –um,"secret, furtive",furtivus,Adjective,5,1.4.18
+refero referre rettuli relatus,to bring back,refero,Verb,12,1.4.18
+nota notae f.,"mark, note",nota,Noun,10,1.4.18
+supercilium –i n.,"eyebrow, ridge",supercilium,Noun,3,1.4.19
+loquor loqui locutus sum,to speak,loquor,Verb,12,1.4.19
+digitus digiti m.,finger,digitus,Noun,15,1.4.20
+noto notare notavi notatus,"to mark, sign, censure",noto,Verb,8,1.4.20
+merum –i n.,wine; wine unmixed with water,merum,Noun,5,1.4.20
+succurro –currere –curri –cursurum,to come to mind,succurro,Verb,1,1.4.21
+venus veneris f.,charm,venus,Noun,8,1.4.21
+lascivia –ae f.,"playfulness; wantonness, licentiousness",lascivia,Noun,2,1.4.21
+tener tenera tenerum,tender,tener,Adjective,29,1.4.22
+pollex –icis m.,"thumb, big toe",pollex,Noun,3,1.4.22
+gena –ae f.,cheek,gena,Noun,11,1.4.22
+tacitus –a –um,silent,tacitus,Adjective,8,1.4.23
+pendeo pendere pependi,to hang,pendeo,Verb,6,1.4.24
+exter extera exterum,"outward, foreign",exter,Adjective,3,1.4.24
+mollis molle,"yielding, gentle",mollis,Adjective,10,1.4.24
+auris auris f.,ear,auris,Noun,5,1.4.24
+lux lucis f.,daylight,lux,Noun,8,1.4.25
+ve,or (postpositive enclitic),ve,Conjunction,10,1.4.25
+anulus –i m.,ring,anulus,Noun,4,1.4.26
+usque,continuously,usque,Adverb,10,1.4.26
+mensa mensae f.,table,mensa,Noun,5,1.4.27
+opto optare optavi optatus,to desire; choose,opto,Verb,11,1.4.28
+merito,deservedly,merito,Adverb,4,1.4.28
+malum mali n.,"evil, calamity",malum,Noun,3,1.4.28
+misceo miscere miscui mixtus,"to mix, mingle",misceo,Verb,6,1.4.29
+sapio sapere sapivi,to discern; taste of; be intelligent,sapio,Verb,5,1.4.29
+bibo bibere bibi,to drink,bibo,Verb,9,1.4.29
+iubeo iubere iussi iussus,to order,iubeo,Verb,21,1.4.29
+leviter,"lightly, slightly",leviter,Adverb,2,1.4.30
+posco poscere poposci,to demand,posco,Verb,11,1.4.30
+reddo reddere reddidi redditus,to return,reddo,Verb,10,1.4.31
+poculum poculi n.,drinking–cup,poculum,Noun,2,1.4.31
+sumo sumere sumpsi sumptus,"to take up, consume",sumo,Verb,9,1.4.31
+forte,by chance,forte,Adverb,4,1.4.33
+praegusto praegustare praegustavi praegustatus,to taste before,praegusto,Verb,1,1.4.33
+reicio reicere reieci reiectum,to throw back,reicio,Verb,1,1.4.34
+libo libare libavi libatus,"to pour, taste",libo,Verb,1,1.4.34
+cibus cibi m.,food,cibus,Noun,4,1.4.34
+indignus –a –um,unworthy (of),indignus,Adjective,7,1.4.35
+sino sinere sivi situs,to allow,sino,Verb,9,1.4.35
+lacertus –i m.,"the arm, esp. the upper arm",lacertus,Noun,9,1.4.35
+mitis mite,mild; ripe,mitis,Adjective,3,1.4.36
+rigidus –a –um,"hard, rigid, strict",rigidus,Adjective,8,1.4.36
+caput capitis n.,head,caput,Noun,16,1.4.36
+admitto admittere admisi admissus,"to send to, admit",admitto,Verb,9,1.4.37
+habilis –e,suited,habilis,Adjective,5,1.4.37
+papilla –ae f.,"nipple, breast",papilla,Noun,3,1.4.37
+osculum –i n.,kiss,osculum,Noun,17,1.4.38
+praecipue,"especially, particularly",praecipue,Adverb,2,1.4.38
+manifestus –a –um,"clear, manifest",manifestus,Adjective,2,1.4.39
+amator –oris m.,lover,amator,Noun,8,1.4.39
+celo celare celavi celatus,to hide,celo,Verb,5,1.4.41
+caecus –a –um,blind,caecus,Adjective,5,1.4.42
+timor timoris m.,fear,timor,Noun,5,1.4.42
+femur –oris n. (rarely femen –inis n.),thigh,femur,Noun,8,1.4.43
+committo committere commisi commissus,"to join, entrust",committo,Verb,3,1.4.43
+crus –uris n.,"shin, leg",crus,Noun,7,1.4.43
+timeo timere timui,to fear,timeo,Verb,22,1.4.45
+quia,because,quia,Conjunction,8,1.4.45
+protervus –a –um,"bold, impudent",protervus,Adjective,2,1.4.45
+exemplum exempli n.,"sample, example",exemplum,Noun,3,1.4.46
+metus metus m.,"fear, dread, anxiety",metus,Noun,9,1.4.46
+torqueo torquere torsi tortum,to twist,torqueo,Verb,6,1.4.46
+saepe,often,saepe,Adverb,38,1.4.47
+domina dominae f.,mistress,domina,Noun,43,1.4.47
+propero properare properavi properatus,to hasten,propero,Verb,8,1.4.47
+vestis vestis f.,clothing,vestis,Noun,13,1.4.48
+sub,under,sub,Preposition,18,1.4.48
+dulcis dulce,sweet,dulcis,Adjective,9,1.4.48
+ne,not; in order that…not; that…not; that,ne,Conjunction,24,1.4.49
+conscius –a –um,conscious,conscius,Adjective,8,1.4.50
+desum deesse defui,to be lacking,desum,Verb,5,1.4.51
+furtim,stealthily,furtim,Adverb,3,1.4.52
+addo addere addidi additus,to give to,addo,Verb,8,1.4.52
+compono componere composui compositus,"to build, arrange, bury, calm down",compono,Verb,6,1.4.53
+iaceo iacere iacui,to lie,iaceo,Verb,25,1.4.53
+consilium consilii n.,plan; council,consilium,Noun,1,1.4.54
+res rei f.,"matter, business, affair, thing",res,Noun,7,1.4.54
+locus loci m. or loca locorum n. pl.,"place, region",locus,Noun,18,1.4.54
+abeo abire abii abitum,to go away,abeo,Verb,10,1.4.55
+medius –a –um,"middle, in the middle, in half",medius,Adjective,22,1.4.56
+memor memoris,remembering,memor,Adjective,4,1.4.56
+agmen agminis n.,line of march,agmen,Noun,6,1.4.56
+invenio invenire inveni inventus,"to find, discover",invenio,Verb,5,1.4.57
+ibi,there; then,ibi,Adverb,1,1.4.58
+moneo monere monui monitus,"to warn, advise",moneo,Verb,3,1.4.59
+prosum prodesse profui profuturus,to be useful,prosum,Verb,12,1.4.59
+hora horae f.,hour,hora,Noun,3,1.4.59
+separo separare separavi separatum,to separate,separo,Verb,2,1.4.60
+includo includere inclusi inclusus,to enclose,includo,Verb,2,1.4.61
+lacrima lacrimae f.,tear,lacrima,Noun,15,1.4.61
+maestus –a –um,"sad, depressing",maestus,Adjective,6,1.4.61
+oborior –oriri –ortus sum,"to arise, appear",oborior,Verb,1,1.4.61
+qua,where; how; anyhow; anywhere,qua,Adverb,10,1.4.62
+licet licere licuit/licitum est,it is permitted; (+ subj.) although,licet,Verb,25,1.4.62
+prosequor prosequi prosecutus sum,to follow,prosequor,Verb,1,1.4.62
+foris foris f.,door,foris,Noun,18,1.4.62
+cogo cogere coegi coactus,to drive together; compel,cogo,Verb,13,1.4.64
+verum,but indeed,verum,Conjunction,2,1.4.65
+similis simile,similar,similis,Adjective,3,1.4.65
+taceo tacere tacui tacitus,to be silent,taceo,Verb,6,1.4.66
+malignus –a –um,"malignant, wicked, malicious, grudging",malignus,Adjective,1,1.4.66
+votum voti n.,vow,votum,Noun,20,1.4.67
+certo or certe (certius),"without doubt, certainly",certo,Adverb,9,1.4.68
+inde,"from there, from then",inde,Adverb,7,1.4.68
+quicumque quaecumque quodcumque,whoever,quicumque,Pronoun,11,1.4.69
+fortuna fortunae f.,"fortune, chance",fortuna,Noun,4,1.4.69
+cras,tomorrow,cras,Adverb,1,1.4.70
+constans constantis,"constant, steady",constans,Adjective,1,1.4.70
+nego negare negavi negatus,"to deny, refuse",nego,Verb,18,1.4.70
+aestus aestus m.,"heat; wave, tide",aestus,Noun,6,1.5.1
+dies diei m. or f.,day,dies,Noun,15,1.5.1
+exigo exigere exegi exactus,"to drive out; collect; achieve, complete",exigo,Verb,5,1.5.1
+levo levare levavi levatus,to raise; make light,levo,Verb,1,1.5.2
+adaperio –aperire –aperui –apertum,to open fully,adaperio,Verb,2,1.5.3
+claudo (cludo or clodo) claudere clausi clausus ,to close,claudo,Verb,9,1.5.3
+fenestra –ae f.,window,fenestra,Noun,1,1.5.3
+qualis quale,what sort,qualis,Pronoun,17,1.5.4
+fere,almost,fere,Adverb,2,1.5.4
+lumen luminis n.,light,lumen,Noun,4,1.5.4
+soleo solere solitus sum,to be accustomed,soleo,Verb,3,1.5.4
+subluceo –lucere,"to shine faintly, glimmer, gleam",subluceo,Verb,1,1.5.5
+fugio fugere fugi fugitus,"to flee, escape",fugio,Verb,14,1.5.5
+crepusculum –i n.,"evening, twilight",crepusculum,Noun,1,1.5.5
+ubi,"where, when",ubi,Adverb,8,1.5.6
+orior oriri ortus sum,"to rise, be born",orior,Verb,3,1.5.6
+verecundus –a –um,"bashful, modest, shy",verecundus,Adjective,1,1.5.7
+timidus –a– um,"hesitant, cowardly, timid",timidus,Adjective,4,1.5.8
+latebra –ae f.,"hiding place, concealment",latebra,Noun,2,1.5.8
+spero sperare speravi speratus,to hope,spero,Verb,4,1.5.8
+ecce,behold!,ecce,Interjection,12,1.5.9
+Corinna –ae f.,Corinna,Corinna,Noun,14,1.5.9
+tunica tunicae f.,tunic,tunica,Noun,10,1.5.9
+velo velare velavi velatus,to cover,velo,Verb,5,1.5.9
+recingo recingere recinctus,to loosen,recingo,Verb,1,1.5.9
+dividuus –a –um,divided,dividuus,Adjective,2,1.5.10
+tego tegere texi tectus,to cover,tego,Verb,10,1.5.10
+qualiter,just as,qualiter,Adverb,2,1.5.11
+thalamus –i m.,marriage bed; bedchamber,thalamus,Noun,3,1.5.11
+formosus (formonsus) –a –um,beautiful,formosus,Adjective,22,1.5.11
+Semiramis (Sameramis) –is (– idis) f.,Semiramis (name),Semiramis,Noun,1,1.5.11
+Lais –idis or –idos f.,Lais,Lais,Noun,1,1.5.12
+deripio –ripere –ripui –reptum,"to snatch away, tear down",deripio,Verb,3,1.5.13
+multum,"much, a lot",multum,Adverb,5,1.5.13
+rarus –a –um,"loose, thin",rarus,Adjective,7,1.5.13
+pugno pugnare pugnavi pugnatum,to fight,pugno,Verb,5,1.5.14
+ita,"in this way, so",ita,Adverb,4,1.5.15
+tamquam,just as,tamquam,Adverb,3,1.5.15
+nolo nolle nolui,to be unwilling (+ inf.),nolo,Verb,4,1.5.15
+aeger aegra aegrum,sick,aeger,Adjective,5,1.5.16
+proditio –onis f.,"betrayal, abandonment (of a cause)",proditio,Noun,1,1.5.16
+oculus oculi m.,eye,oculus,Noun,25,1.5.17
+velamen –inis n.,"covering, garment",velamen,Noun,1,1.5.17
+nusquam,nowhere,nusquam,Adverb,3,1.5.18
+menda –ae f.,"fault, defect, blemish",menda,Noun,1,1.5.18
+umerus umeri m.,"the upper arm, shoulder",umerus,Noun,4,1.5.19
+forma formae f.,shape; beauty,forma,Noun,15,1.5.20
+castigatus –a –um,"checked, restrained",castigatus,Adjective,1,1.5.21
+planus –a –um,"level, flat",planus,Adjective,1,1.5.21
+venter ventris m.,"stomach, belly",venter,Noun,4,1.5.21
+quantus –a –um,how great,quantus,Adjective,4,1.5.22
+latus lateris n.,"side, flank, strength",latus,Noun,13,1.5.22
+iuvenalis (iuvenilis) –e,youthful,iuvenalis,Adjective,2,1.5.22
+singuli –ae –a,separate,singuli,Number,2,1.5.23
+laudabilis –e,"praiseworthy, laudable",laudabilis,Adjective,1,1.5.23
+ceterus –a –um,the other,ceterus,Adjective,4,1.5.25
+nescio nescire nescivi/nescii nescitus,to not know,nescio,Verb,3,1.5.25
+requiesco requiescere requievi requietum,to rest,requiesco,Verb,4,1.5.25
+ambo ambae ambo,both,ambo,Number,5,1.5.25
+ianitor –oris m.,door–keeper,ianitor,Noun,2,1.6.1
+religo religare religavi religatus,"to tie up, bind fast",religo,Verb,1,1.6.1
+catena –ae f.,"chain, fetter",catena,Noun,6,1.6.1
+difficilis difficile,difficult,difficilis,Adjective,3,1.6.2
+cardo –inis m.,hinge,cardo,Noun,2,1.6.2
+pando pandere pandi passus,"to spread out, explain",pando,Verb,3,1.6.2
+exiguus –a –um,"small, little",exiguus,Adjective,7,1.6.3
+aditus aditus m.,an approach; entryway,aditus,Noun,1,1.6.3
+ianua ianuae f.,door,ianua,Noun,10,1.6.3
+parvus –a –um / minor –us / minimus –a –um,small,parvus,Adjective,17,1.6.3
+obliquus –a –um,"slanting, indirect, covert",obliquus,Adjective,2,1.6.4
+semiadapertus –a –um,half–open,semiadapertus,Adjective,1,1.6.4
+tenuo tenuare tenuavi tenuatus,"to make thin, make fine",tenuo,Verb,1,1.6.5
+subduco –ducere –duxi –ductum,"to draw up, raise; remove, take away",subduco,Verb,3,1.6.6
+excubiae –arum f. pl.,"the keeping of a watch, a watch",excubiae,Noun,1,1.6.7
+custos custodis m.,guardian,custos,Noun,12,1.6.7
+leniter lenius (comp.) lenissime (superl.),"gently, mildly",leniter,Adverb,1,1.6.7
+monstro monstrare monstravi monstratus,"to show, point out",monstro,Verb,1,1.6.8
+inoffensus –a –um,unhindered,inoffensus,Adjective,1,1.6.8
+dirigo (derigo) –ere –rexi –rectus,to lay straight,dirigo,Verb,1,1.6.8
+quondam,"formerly, at times, sometimes",quondam,Adverb,5,1.6.9
+simulacrum simulacri n.,likeness; statue,simulacrum,Noun,1,1.6.9
+vanus –a –um,empty,vanus,Adjective,3,1.6.9
+tenebrae tenebrarum f. pl.,darkness,tenebrae,Noun,2,1.6.10
+aio,"to say, affirm, say yes",aio,Verb,4,1.6.12
+mora morae f.,delay,mora,Noun,9,1.6.13
+umbra umbrae f.,shadow,umbra,Noun,12,1.6.13
+volo volare volavi volatus,to fly,volo,Verb,1,1.6.13
+stringo stringere strinxi strictum,"to draw tight, bind fast; draw (from a scabbard, etc.)",stringo,Verb,5,1.6.14
+fatum –i n. or fatus –i m.,"destiny, fate",fatum,Noun,8,1.6.14
+lentus –a –um,"flexible, sticky, slow",lentus,Adjective,8,1.6.15
+blandior blandiri blanditus sum,"to flatter, charm",blandior,Verb,3,1.6.15
+fulmen fulminis n.,"lightening, thunderbolt",fulmen,Noun,6,1.6.16
+immitis –e,"hard, harsh, cruel",immitis,Adjective,1,1.6.17
+claustrum –i n.,"bolt, bar",claustrum,Noun,1,1.6.17
+relaxo relaxare relaxavi relaxatus,"to loosen, open",relaxo,Verb,1,1.6.17
+udus –a –um,"wet, damp",udus,Adjective,3,1.6.18
+pro,"on behalf of, for, instead of, in accordance with (+ abl.)",pro,Preposition,28,1.6.20
+tremo tremere tremui,to tremble,tremo,Verb,4,1.6.20
+gratia gratiae f.,"favor, influence, gratitude",gratia,Noun,6,1.6.21
+heu,alas! oh!,heu,Interjection,5,1.6.22
+facinus facinoris n.,"deed, crime",facinus,Noun,1,1.6.22
+nunc,now,nunc,Adverb,39,1.6.22
+vicis vicis f.,"turn, change, succession",vicis,Noun,1,1.6.23
+meritum meriti n.,"punishment, reward",meritum,Noun,5,1.6.23
+gratus –a –um,pleasant; grateful,gratus,Adjective,9,1.6.23
+tempus temporis n.,time,tempus,Noun,26,1.6.24
+excutio excutere excussi excussum,to shake off,excutio,Verb,8,1.6.24
+postis –is m.,doorjamb; door,postis,Noun,11,1.6.24
+sera –ae f.,"bar, bolt",sera,Noun,7,1.6.24
+umquam,ever,umquam,Adverb,4,1.6.25
+relevo relevare relevavi relevatus,"to lighten, relieve",relevo,Verb,1,1.6.25
+perpetuo,"constantly, uninterruptedly",perpetuo,Adverb,1,1.6.26
+servus –a –um,"of slavery, servile",servus,Adjective,1,1.6.26
+aqua aquae f.,water,aqua,Noun,43,1.6.26
+oro orare oravi oratus,"to pray, plead",oro,Verb,2,1.6.27
+nequiquam,in vain,nequiquam,Adverb,1,1.6.27
+robur roboris n.,"oak, strength",robur,Noun,2,1.6.28
+fulcio fulcire fulsi fultum,"to strengthen, fortify, reinforce",fulcio,Verb,1,1.6.28
+rigeo –ere,"to be stiff, stiffen",rigeo,Verb,1,1.6.28
+urbs urbis f.,city,urbs,Noun,11,1.6.29
+obsideo obsidere obsedi obsessus,to blockade,obsideo,Verb,3,1.6.29
+munimen –inis n.,"protection, defense, fortification",munimen,Noun,1,1.6.29
+porta portae f.,gate,porta,Noun,2,1.6.29
+hostis hostis m.,(public) enemy,hostis,Noun,11,1.6.31
+excludo excludere exclusi exclusus,"to shut out, exclude; leave uncovered",excludo,Verb,2,1.6.31
+amans –antis,"loving, fond; (subst.) a lover",amans,Adjective,20,1.6.31
+como –are –avi –atum,to be covered with hair or foliage,como,Verb,2,1.6.33
+solus –a –um,"alone, only",solus,Adjective,19,1.6.34
+adsum adesse adfui adfuturus,to be present,adsum,Verb,13,1.6.34
+cupio cupere cupii/cupivi cupitus,to desire,cupio,Verb,13,1.6.35
+dimitto dimittere dimisi dimissus,to send away,dimitto,Verb,1,1.6.35
+vel,or,vel,Conjunction,9,1.6.36
+divido dividere divisi divisus,"to divide, separate",divido,Verb,1,1.6.36
+modicus modica modicum,"moderate, modest, temperate",modicus,Adjective,1,1.6.37
+circa,around (adv. and prep. +acc.),circa,Preposition,2,1.6.37
+madidus –a –um,"moist, wet; drunk",madidus,Adjective,5,1.6.38
+labor labi lapsus sum,"to glide, slip (down)",labor,Verb,8,1.6.38
+corona coronae f.,garland; crown,corona,Noun,3,1.6.38
+obvius obvia obvium,in the way,obvius,Adjective,2,1.6.39
+male,badly,male,Adverb,14,1.6.41
+ventus venti m.,wind,ventus,Noun,13,1.6.42
+repello repellere reppuli repulsum,to drive back,repello,Verb,7,1.6.42
+memini meminisse,"to remember, recollect",memini,Verb,9,1.6.43
+primum,first,primum,Number,4,1.6.43
+pervigil –ilis,"keeping watch all night, awake",pervigil,Adjective,1,1.6.44
+sidus sideris n.,star,sidus,Noun,11,1.6.44
+forsan or fortisan,perhaps,forsan,Adverb,6,1.6.45
+et(iam),"even, also",et,Adverb,16,1.6.45
+amica amicae f.,female friend,amica,Noun,8,1.6.45
+sors sortis f.,fate,sors,Noun,5,1.6.46
+dummodo,provided that,dummodo,Conjunction,2,1.6.47
+transeo transire transivi/transii transitus,to go across,transeo,Verb,4,1.6.47
+fallo fallere fefelli falsus,to deceive,fallo,Verb,15,1.6.49
+verto vertere verti versus,to turn,verto,Verb,8,1.6.49
+sono sonare sonui sonitum,to sound,sono,Verb,3,1.6.49
+raucus –a –um,"harsh–sounding, noisy",raucus,Adjective,3,1.6.50
+signum signi n.,"mark, impression, sign",signum,Noun,13,1.6.50
+impello impellere impuli impulsum,to strike against,impello,Verb,3,1.6.51
+animosus –a –um,"courageous, bold",animosus,Adjective,4,1.6.51
+ei,woe! alas!,ei,Interjection,6,1.6.52
+spes spei f.,hope,spes,Noun,4,1.6.52
+aura aurae f.,breeze,aura,Noun,8,1.6.52
+satis or sat (comp. satius),enough,satis,Adverb,15,1.6.53
+rapio rapere rapui raptus,"to seize, carry off",rapio,Verb,18,1.6.53
+Boreas –ae m.,the god of the North Wind,Boreas,Noun,2,1.6.53
+Orithyia –ae f.,Orithyia,Orithyia,Noun,1,1.6.53
+huc,"to here, hither",huc,Adverb,12,1.6.54
+surdus –a –um,deaf,surdus,Adjective,5,1.6.54
+flamen –inis n.,"gust, blast (of wind)",flamen,Noun,1,1.6.54
+tundo tundere tutudi tunsus,to beat,tundo,Verb,2,1.6.54
+sileo silere silui,to be silent,sileo,Verb,3,1.6.55
+vitreus –a –um,"glassy, made of glass",vitreus,Adjective,1,1.6.55
+madeo –ere,"to be wet, be damp",madeo,Verb,1,1.6.55
+ros roris m.,dew,ros,Noun,1,1.6.55
+ferrum ferri n.,iron,ferrum,Noun,7,1.6.57
+sustineo sustinere sustinui sustentus,"to sustain, be able to, endure",sustineo,Verb,13,1.6.58
+tectum –i n.,roof,tectum,Noun,3,1.6.58
+superbus –a –um,arrogant,superbus,Adjective,3,1.6.58
+peto petere petii/petivi petitus,"to seek, go towards",peto,Verb,19,1.6.58
+moderabilis –e,controllable,moderabilis,Adjective,1,1.6.59
+suadeo suadere suasi suasus,to recommend,suadeo,Verb,1,1.6.59
+vaco vacare vacavi vacatus,to be empty,vaco,Verb,5,1.6.60
+Liber Liberi m.,Bacchus; Dionysus,Liber,Noun,2,1.6.60
+consumo consumere consumpsi consumptus,"to use up, consume",consumo,Verb,2,1.6.61
+minae –arum f. pl.,threats; battlements,minae,Noun,2,1.6.61
+o,O,o,Interjection,15,1.6.62
+servo servare servavi servatus,to save,servo,Verb,19,1.6.63
+limen liminis n.,threshold,limen,Noun,9,1.6.64
+sollicitus –a –um,worried,sollicitus,Adjective,5,1.6.64
+carcer carceris m.,jail,carcer,Noun,6,1.6.64
+pruinosus –a –um,"full of frost, frosty",pruinosus,Adjective,3,1.6.65
+molior moliri molitus,"to work at, devise",molior,Verb,4,1.6.65
+Lucifer –feri m.,Lucifer; the morning–star,Lucifer,Noun,2,1.6.65
+axis axis m.,axle; sky,axis,Noun,4,1.6.65
+excito excitare excitavi excitatus,"to stir up, arouse, put into motion",excito,Verb,1,1.6.66
+detraho –ere –traxi –tractum,to take away from,detraho,Verb,1,1.6.67
+proicio –icere ieci –iectum,"to cast forth, throw out, fling to the ground",proicio,Verb,3,1.6.69
+mane,in the morning,mane,Adverb,7,1.6.69
+absumo absumere absumpsi absumptum,"to reduce, consume",absumo,Verb,2,1.6.70
+testis testis m.,witness,testis,Noun,9,1.6.70
+qualiscumque qualecumque,"whatever kind, whatever sort",qualiscumque,Pronoun,1,1.6.71
+honor or honos honoris m. ,honor; office,honor,Noun,5,1.6.71
+turpis turpe,ugly,turpis,Adjective,18,1.6.72
+vos vestrum/vestri,you (plural),vos,Pronoun,18,1.6.73
+crudelis crudele,"unfeeling, cruel",crudelis,Adjective,2,1.6.73
+conserva –ae f. or conservus –i m.,fellow–slave,conserva,Noun,1,1.6.74
+lignum ligni n.,firewood,lignum,Noun,3,1.6.74
+mereo merere merui meritum,"to earn, deserve; serve as a soldier",mereo,Verb,8,1.7.1
+amicus –a –um,friendly (+dat.),amicus,Adjective,6,1.7.2
+temerarius –a –um,"accidental; thoughtless, impetuous",temerarius,Adjective,3,1.7.3
+fleo flere flevi fletus,to cry,fleo,Verb,6,1.7.4
+vesanus –a –um,insane,vesanus,Adjective,2,1.7.4
+laedo laedere laesi laesus,"to injure by striking, hurt",laedo,Verb,15,1.7.4
+carus –a –um,precious,carus,Adjective,4,1.7.5
+violo violare violavi violatus,to violate,violo,Verb,1,1.7.5
+sanctus –a –um,consecrated,sanctus,Adjective,3,1.7.6
+clipeus –i m. or clipeum –i n.,round shield,clipeus,Noun,1,1.7.7
+dominus domini m.,master,dominus,Noun,8,1.7.7
+septemplex –icis,sevenfold,septemplex,Number,1,1.7.7
+Aiax –acis m.,Ajax,Aiax,Noun,1,1.7.7
+sterno sternere stravi stratus,to spread,sterno,Verb,3,1.7.8
+deprehendo deprehendere deprehendi deprehensus,"to catch, seize, understand",deprehendo,Verb,5,1.7.8
+latus –a –um,"broad, wide",latus,Adjective,9,1.7.8
+grex gregis m.,"herd, flock",grex,Noun,4,1.7.8
+vindex –icis m.,"champion, defender; avenger",vindex,Noun,2,1.7.9
+pater patris m.,father; (in pl.) Patricians; Senators,pater,Noun,10,1.7.9
+malus –a –um,"bad, evil",malus,Adjective,9,1.7.9
+ultor –oris m.,"avenger, punisher",ultor,Noun,2,1.7.9
+Orestes –is or –ae m.,Orestes,Orestes,Noun,2,1.7.9
+audeo audere ausus sum,to dare,audeo,Verb,7,1.7.10
+arcanus –a –um,"secret, mysterious, hidden",arcanus,Adjective,2,1.7.10
+telum teli n.,spear; missile weapon,telum,Noun,10,1.7.10
+dea deae f.,goddess,dea,Noun,17,1.7.10
+digero –gere –gessi –gestum,"to separate, arrange",digero,Verb,2,1.7.11
+lanio laniare laniavi laniatus,to lacerate,lanio,Verb,3,1.7.11
+dedecet dedecere dedecuit,to it disgraces,dedecet,Verb,2,1.7.12
+Schoeneis –idis f.,Atalanta,Schoeneis,Noun,1,1.7.13
+Maenalius –a –um,of Maenalus,Maenalius,Adjective,1,1.7.14
+sollicito sollicitare sollicitavi sollicitatus,to stir up,sollicito,Verb,6,1.7.14
+fera ferae f.,wild animal,fera,Noun,4,1.7.14
+periurus –a –um,violating one's oath,periurus,Adjective,4,1.7.15
+promissum –i n.,promise,promissum,Noun,2,1.7.15
+velum veli n.,"sail, awning",velum,Noun,4,1.7.15
+Theseus –i m.,Theseus,Theseus,Noun,1,1.7.15
+praeceps praecipitis,headlong,praeceps,Adjective,4,1.7.16
+Cressa –ae f.,Cretan woman,Cressa,Noun,1,1.7.16
+nisi or ni,if...not; unless,nisi,Conjunction,17,1.7.17
+vittatus –a –um,bound up by a fillet,vittatus,Adjective,1,1.7.17
+Cassandra –ae f.,Cassandra,Cassandra,Noun,1,1.7.17
+procumbo –cumbere –cubui –cubitum,"to fall forwards, sink down, fall prostrate",procumbo,Verb,3,1.7.18
+templum templi n.,temple,templum,Noun,4,1.7.18
+castus –a –um,pure,castus,Adjective,8,1.7.18
+demens dementis,"mad, raving",demens,Adjective,3,1.7.19
+barbarus –a –um,"foreign, barbarous, savage",barbarus,Adjective,2,1.7.19
+pavidus –a –um,"scared, frightened",pavidus,Adjective,1,1.7.20
+lingua linguae f.,tongue; language,lingua,Noun,16,1.7.20
+retineo retinere retinui retentus,to hold back,retineo,Verb,4,1.7.20
+convicium –i n.,"clamor, abuse, mockery",convicium,Noun,2,1.7.21
+reus rei m.,defendant,reus,Noun,4,1.7.22
+cado cadere cecidi casum,to fall,cado,Verb,13,1.7.23
+utilis utilis utile,useful,utilis,Adjective,4,1.7.24
+careo carere carui caritus,to be without,careo,Verb,13,1.7.24
+dispendium –i n.,"expenditure, loss",dispendium,Noun,2,1.7.25
+vis vis f.,force,vis,Noun,11,1.7.25
+caedes caedis f.,killing,caedes,Noun,3,1.7.27
+scelus sceleris n.,crime,scelus,Noun,8,1.7.27
+ministra –ae f.,"servant, attendant",ministra,Noun,4,1.7.27
+debeo debere debui debitus,to owe; ought,debeo,Verb,9,1.7.28
+sacrilegus –a –um,"guilty of impiety, sacrilegious",sacrilegus,Adjective,1,1.7.28
+pulso pulsare pulsavi pulsatus,to hit,pulso,Verb,4,1.7.29
+plebs plebis f.,common people,plebs,Noun,1,1.7.29
+Quiris Quiritis m.,Quiris,Quiris,Noun,2,1.7.29
+plecto –ere,to beat; punish,plecto,Verb,2,1.7.30
+T?dides –ae m.,the son of Tydeus; Diomedes,Tydides,Noun,2,1.7.31
+monumentum monumenti n.,"memorial, monument",monumentum,Noun,1,1.7.31
+relinquo relinquere reliqui relictus,to abandon,relinquo,Verb,12,1.7.31
+percello percellere perculi perculsum,to strike,percello,Verb,2,1.7.32
+nocens nocentis,guilty,nocens,Adjective,4,1.7.33
+profiteor profiteri professus sum,"to confess, announce",profiteor,Verb,3,1.7.33
+laurus –i f.,laurel,laurus,Noun,4,1.7.36
+Iuppiter Iovis m.,Jupiter,Iuppiter,Noun,14,1.7.36
+comitor comitari comitatus sum,to accompany,comitor,Verb,1,1.7.37
+effusus –a –um,poured forth; overflowing; thronging,effusus,Adjective,3,1.7.39
+tristis triste,sad,tristis,Adjective,12,1.7.39
+imprimo –primere –pressi –pressum,"to apply with pressure, imprint",imprimo,Verb,1,1.7.41
+liveo –ere,"to be livid, be black and blue with bruises",liveo,Verb,2,1.7.41
+labellum labelli n.,"lip, small basin",labellum,Noun,3,1.7.41
+blandus –a –um,"flattering, pleasant",blandus,Adjective,7,1.7.42
+dens dentis m.,tooth,dens,Noun,5,1.7.42
+denique,finally,denique,Adverb,3,1.7.43
+tumidus –a –um,swollen,tumidus,Adjective,5,1.7.43
+ritus –us m.,farm of religious ceremonial; form,ritus,Noun,2,1.7.43
+torrens –ntis m.,"a rushing stream, torrent",torrens,Noun,3,1.7.43
+ira irae f.,anger,ira,Noun,7,1.7.44
+nonne,"introduces a direct question expecting the answer ""yes""",nonne,Adverb,1,1.7.45
+inclamo inclamare inclamavi inclamatus,to shout abuse at (+ dat.),inclamo,Verb,1,1.7.45
+intono intonare intonui,to thunder forth,intono,Verb,1,1.7.46
+deduco deducere deduxi deductus,"to launch, lead away",deduco,Verb,7,1.7.47
+turpiter,in an unbecoming or disgraceful manner,turpiter,Adverb,6,1.7.47
+ora –ae f.,"shore, coast",ora,Noun,2,1.7.47
+zona –ae f.,"girdle, belt",zona,Noun,1,1.7.48
+frons frontis f.,forehead,frons,Noun,7,1.7.49
+ingenuus –a –um,indigenous; free-born,ingenuus,Adjective,5,1.7.50
+unguis –is m.,"fingernail; claw, talon",unguis,Noun,6,1.7.50
+asto astare astiti,to stand near,asto,Verb,1,1.7.51
+amens amentis,"mad, insane",amens,Adjective,2,1.7.51
+albus –a –um,white,albus,Adjective,9,1.7.51
+caedo caedere cecidi caesus,"to kill, strike, cut",caedo,Verb,6,1.7.52
+Parius –a –um,of Paros (island),Parius,Adjective,1,1.7.52
+saxum saxi n.,"rock, boulder, stone",saxum,Noun,7,1.7.52
+exanimus –a –um or exanimis –e,"breathless, lifeless",exanimus,Adjective,1,1.7.53
+artus artus m.,"limb, leg",artus,Noun,4,1.7.53
+populeus –a –um,of the poplar tree,populeus,Adjective,1,1.7.54
+lenis –e,"gentle, kind, mild",lenis,Adjective,4,1.7.55
+Zephyrus –i m.,Zephyr (name); or west wind,Zephyrus,Noun,3,1.7.55
+gracilis gracile,thin,gracilis,Adjective,4,1.7.55
+vibro vibrare vibravi vibratus,to shake,vibro,Verb,2,1.7.55
+harundo –inis f.,"reed, stick",harundo,Noun,2,1.7.55
+unda undae f.,wave,unda,Noun,14,1.7.56
+suspendo suspendere suspendi suspensum,to hang,suspendo,Verb,1,1.7.57
+diu,for a long time,diu,Adverb,7,1.7.57
+fluo fluere fluxi fluxus,to flow,fluo,Verb,7,1.7.57
+abicio abicere abieci abiectum,to throw down/away,abicio,Verb,1,1.7.58
+nix nivis f.,snow,nix,Noun,7,1.7.58
+mano manare manavi manatus,"to drip, flow",mano,Verb,1,1.7.58
+coepi coepisse coeptum,to begin,coepi,Verb,4,1.7.59
+ter,3 times,ter,Number,8,1.7.61
+supplex supplicis,suppliant,supplex,Adjective,2,1.7.61
+formido formidare formidavi formidatus,to be in dread; to dread,formido,Verb,1,1.7.62
+–ne,(added to the first word of a question),ne,Adverb,2,1.7.63
+dubito dubitare dubitavi dubitatus,"to hesitate, doubt",dubito,Verb,3,1.7.63
+minuo minuere minui minutus,to lessen,minuo,Verb,2,1.7.63
+vindicta –ae f.,"vengeance, punishment",vindicta,Noun,1,1.7.63
+dolor doloris m.,"pain, grief",dolor,Noun,11,1.7.63
+quamlibet,"however, in whatever degree",quamlibet,Adverb,2,1.7.66
+infirmus –a –um,"weak, feeble",infirmus,Adjective,1,1.7.66
+adiuvo adiuvare adiuvi adiutum,"to help, assist, support",adiuvo,Verb,1,1.7.66
+neu or neve,"or not, and not, nor, neither",neu,Conjunction,4,1.7.67
+supersum superesse superfui superfuturus,to be left over,supersum,Verb,2,1.7.67
+recompono –ponere –posui –positum,"to put back together; readjust, rearrange",recompono,Verb,1,1.7.68
+statio stationis f.,standing,statio,Noun,1,1.7.68
+quidam quaedam quiddam,a certain person/thing,quidam,Pronoun,4,1.8.1
+lena –ae f.,"brothel–keeper, procuress",lena,Noun,4,1.8.1
+Dipsas –adis f.,Dipsas (name),Dipsas,Noun,1,1.8.2
+anus anus f.,old woman,anus,Noun,4,1.8.2
+e ex,"out of, from",e,Preposition,23,1.8.3
+niger nigra nigrum,"black, unlucky, wicked",niger,Adjective,6,1.8.3
+Memnon –onis m.,Memnon,Memnon,Noun,3,1.8.4
+roseus –a –um,rosy,roseus,Adjective,2,1.8.4
+sobrius –a –um,"sober, moderate",sobrius,Adjective,3,1.8.4
+magus –a –um,"magic, magical",magus,Adjective,1,1.8.5
+Aeaeus –a –um,of Aeaea (island); Aeaean or Colchian,Aeaeus,Adjective,3,1.8.5
+liquidus –a –um,"clear, liquid, melodious",liquidus,Adjective,4,1.8.6
+recurvo –are,"to bend backward, turn back",recurvo,Verb,1,1.8.6
+scio scire scivi/scii scitus,to know,scio,Verb,9,1.8.7
+gramen –inis n.,"grass, plant, herb",gramen,Noun,3,1.8.7
+concieo –ere –ivi –itus,to call together; incite,concieo,Verb,2,1.8.7
+rhombus –i m.,a wooden noisemaker,rhombus,Noun,1,1.8.7
+licium –i n.,end of a thread; a thread,licium,Noun,1,1.8.8
+virus –i n.,a medicinal liquid; poison,virus,Noun,1,1.8.8
+equa equae f.,mare,equa,Noun,2,1.8.8
+glomero glomerare glomeravi glomeratus,to form into a ball,glomero,Verb,1,1.8.9
+nubilum –i n.,darkness; cloud,nubilum,Noun,1,1.8.9
+caelum caeli n.,"sky, heaven",caelum,Noun,12,1.8.9
+fulgeo fulgere fulsi,to shine,fulgeo,Verb,2,1.8.10
+stillo stillare stillavi stillatus,to drip with,stillo,Verb,1,1.8.11
+luna lunae f.,moon,luna,Noun,5,1.8.12
+nocturnus –a –um,nocturnal,nocturnus,Adjective,5,1.8.13
+volito volitare volitavi volitatus,to fly around,volito,Verb,1,1.8.13
+suspicor suspicari suspicatus sum,to suspect,suspicor,Verb,3,1.8.14
+pluma –ae f.,"feather, down",pluma,Noun,3,1.8.14
+anilis –e,old woman,anilis,Adjective,1,1.8.14
+fama famae f.,"rumor, fame",fama,Noun,10,1.8.15
+pupula –ae f.,the pupil (of the eye),pupula,Noun,1,1.8.15
+duplex –icis,double,duplex,Number,3,1.8.15
+fulmino fulminare fulminavi fulminatus,to flash/strike like lightning,fulmino,Verb,2,1.8.16
+geminus –a –um,twin,geminus,Adjective,2,1.8.16
+evoco evocare ––– evocatus,"to call out, summon",evoco,Verb,1,1.8.17
+antiquus –a –um,"ancient, old",antiquus,Adjective,5,1.8.17
+proavus –i m.,great–grandfather; ancestor,proavus,Noun,2,1.8.17
+atavus –i m,grandfather,atavus,Noun,1,1.8.17
+sepulcrum sepulcri n.,"tomb, grave",sepulcrum,Noun,3,1.8.17
+solidus –a –um,"dense, firm, solid",solidus,Adjective,2,1.8.18
+findo findere fidi fissum,to split apart,findo,Verb,2,1.8.18
+humus humi f.,ground,humus,Noun,15,1.8.18
+sui sibi se se,"himself, herself, itself (reflexive)",sui,Pronoun,25,1.8.19
+propono proponere proposui propositus,"to propose, announce",propono,Verb,1,1.8.19
+temero temerare temeravi temeratus,"to violate, desecrate, defile",temero,Verb,3,1.8.19
+pudicus –a –um,"modest, chaste",pudicus,Adjective,3,1.8.19
+eloquium –i n.,eloquence,eloquium,Noun,1,1.8.20
+fors fortis f.,"chance, luck",fors,Noun,1,1.8.21
+sermo sermonis m.,conversation,sermo,Noun,3,1.8.21
+occulo occulere occului occultus,to cover,occulo,Verb,2,1.8.22
+heri,yesterday or here,heri,Adverb,1,1.8.23
+beatus –a –um,"happy, blessed",beatus,Adjective,1,1.8.23
+consisto consistere constiti constitus,"to take position; , halt, stand",consisto,Verb,3,1.8.24
+secundus –a –um,"following, second",secundus,Adjective,6,1.8.25
+cultus cultus m.,"cultivation, civilization, dress, mode of life",cultus,Noun,4,1.8.26
+absum abesse afui afuturus,"to be away, be absent",absum,Verb,7,1.8.26
+dives divitis,rich; as substantive rich man,dives,Adjective,6,1.8.28
+pauper pauperis,poor; humble,pauper,Adjective,5,1.8.28
+stella stellae f.,star,stella,Noun,2,1.8.29
+oppono opponere opposui oppositum,to place opposite,oppono,Verb,2,1.8.29
+contrarius –a –um,opposite,contrarius,Adjective,3,1.8.29
+advenio advenire adveni adventus,to arrive,advenio,Verb,1,1.8.31
+facies faciei f.,"appearance, face",facies,Noun,17,1.8.33
+comparo comparare comparavi comparatus,"to provide, compare",comparo,Verb,1,1.8.33
+emo emere emi emptus,to buy,emo,Verb,7,1.8.34
+erubesco erubescere erubui,"to grow red, blush",erubesco,Verb,3,1.8.35
+quidem,moreover,quidem,Adverb,5,1.8.35
+iste ista istud,that,iste,Pronoun,23,1.8.35
+verus –a –um,"real, true",verus,Adjective,3,1.8.36
+deicio deicere deieci deictum,"to throw down, eject",deicio,Verb,3,1.8.37
+gremium gremi(i) n.,"lap, bosom",gremium,Noun,5,1.8.37
+ocellus ocelli m.,little eye,ocellus,Noun,11,1.8.37
+quantum,how much,quantum,Adverb,3,1.8.38
+quisque quidque/quicque,"each, every",quisque,Pronoun,7,1.8.38
+respicio respicere respexi respectum,to look back,respicio,Verb,3,1.8.38
+immundus –a –um,"unclean, foul",immundus,Adjective,2,1.8.39
+Tatius –ii m.,Tatius,Tatius,Noun,1,1.8.39
+Sabinus –a –um,Sabine,Sabinus,Adjective,5,1.8.39
+externus –a –um,"outside, foreign, strange",externus,Adjective,2,1.8.41
+animus animi m.,"spirit, mind",animus,Noun,17,1.8.41
+exerceo exercere exercui exercitus,"to train, exercise, carry on",exerceo,Verb,2,1.8.41
+Aeneas –ae m.,Aeneas,Aeneas,Noun,4,1.8.42
+nemo neminis m. or f.,no one,nemo,Pronoun,2,1.8.43
+rusticitas –atis f.,lack of sophistication,rusticitas,Noun,1,1.8.44
+veto (voto) vetare vetui vetitus,to forbid,veto,Verb,6,1.8.44
+ruga –ae f.,wrinkle,ruga,Noun,4,1.8.45
+vertex verticis m.,"whirlpool; peak, summit",vertex,Noun,4,1.8.45
+porto portare portavi portatus,to carry a load,porto,Verb,3,1.8.45
+Penelope –es f.,Penelope,Penelope,Noun,4,1.8.47
+arguo arguere argui argutus,to declare; accuse,arguo,Verb,3,1.8.48
+corneus –a –um,of cornel–wood,corneus,Adjective,1,1.8.48
+occultus –a –um,"hidden, secret",occultus,Adjective,1,1.8.49
+volatilis –e,"able to fly, fleeting",volatilis,Adjective,2,1.8.49
+aetas aetatis f.,age,aetas,Noun,5,1.8.49
+celer celeris celere,swift,celer,Adjective,2,1.8.50
+aes aeris n.,"copper, bronze; money",aes,Noun,5,1.8.51
+niteo nitere nitui,to shine,niteo,Verb,1,1.8.51
+quaero quaerere quaesii/quaesivi quaesitus,to seek,quaero,Verb,19,1.8.51
+canesco –ere,to become white or old,canesco,Verb,1,1.8.52
+situs situs m.,situation,situs,Noun,3,1.8.52
+senesco senescere senui,"to grow old, deteriorate",senesco,Verb,1,1.8.53
+effectus –us m.,"fulfilment, accomplishment; effect, result, consequence",effectus,Noun,2,1.8.54
+invidiosus –a –um,envious,invidiosus,Adjective,1,1.8.55
+rapina –ae f.,"robbery, plundering, pillage",rapina,Noun,1,1.8.55
+plenus –a –um,full,plenus,Adjective,7,1.8.56
+canus –a –um,"white, of the hair and beard",canus,Adjective,1,1.8.56
+lupus lupi m.,wolf,lupus,Noun,1,1.8.56
+praeter,"so as to pass by, past; beyond; except",praeter,Preposition,1,1.8.57
+palla –ae f.,cloak,palla,Noun,4,1.8.59
+spectabilis –e,"visible, notable, remarkable",spectabilis,Adjective,1,1.8.59
+tracto tractare tractavi tractatus,to haul,tracto,Verb,3,1.8.60
+inauro –are –avi –atum,to cover with gold,inauro,Verb,1,1.8.60
+consonus –a –um,harmonious,consonus,Adjective,1,1.8.60
+Homerus –i m.,Homer,Homerus,Noun,2,1.8.61
+credo credere credidi creditus,"to trust, believe",credo,Verb,18,1.8.62
+ingeniosus –a –um,"talented, naturally clever",ingeniosus,Adjective,5,1.8.62
+merces mercedis f.,"pay, wages; article for sale, commodity",merces,Noun,4,1.8.63
+redimo –imere –emi –emptum,to buy back; purchase; buy out of slavery,redimo,Verb,2,1.8.63
+despicio –ere –spexi –spectum,"to look down upon, despise",despicio,Verb,1,1.8.64
+gypso gypsare gypsavi gypsatus,to whiten with gypsum,gypso,Verb,1,1.8.64
+inanis inanis inane,"empty, void",inanis,Adjective,4,1.8.64
+decipio decipere decepi deceptus,"to deceive, cheat",decipio,Verb,9,1.8.65
+circum or circa,around,circum,Preposition,3,1.8.65
+atrium –i n.,"atrium, court",atrium,Noun,2,1.8.65
+cera –ae f.,wax,cera,Noun,8,1.8.65
+tollo tollere sustuli sublatus,to raise; destroy,tollo,Verb,5,1.8.66
+avus avi m.,grandfather,avus,Noun,1,1.8.66
+quin,"introduces Relative Clause of Characteristic, Doubting clause, Prevention clause",quin,Adverb,6,1.8.67
+pulcher pulchra pulchrum,beautiful,pulcher,Adjective,6,1.8.67
+munus muneris n.,gift; duty; public show (esp. with gladiators),munus,Noun,27,1.8.67
+flagito flagitare flagitavi flagitatum,to demand,flagito,Verb,1,1.8.68
+pretium pretii n.,"price, value, payment",pretium,Noun,14,1.8.69
+rete retis n.,"net, trap",rete,Noun,1,1.8.69
+caveo cavere cavi cautus,to beware,caveo,Verb,2,1.8.72
+gratis,"for free, without pay",gratis,Adverb,1,1.8.72
+consto constare constiti constatus,"to agree, remain unchanged, stand firm",consto,Verb,1,1.8.72
+fingo fingere finxi fictus,"to shape, invent",fingo,Verb,6,1.8.73
+Isis Isidis f.,the Egyptian goddess Isis; whose worship was popular in Rome and required an annual period of sexual abstinence from her followers,Isis,Noun,3,1.8.74
+mox,soon; then,mox,Adverb,1,1.8.75
+recipio recipere recepi receptus,to take back,recipio,Verb,8,1.8.75
+colligo colligere collegi collectus,to collect,colligo,Verb,9,1.8.75
+relentesco –ere,to slacken; become less ardent,relentesco,Verb,1,1.8.76
+laxus –a –um,"wide, loose, spacious; not drawn tight; (of bows) unstrung",laxus,Adjective,4,1.8.77
+quasi,as if,quasi,Adverb,1,1.8.79
+prior prioris,"former, previous, prior, first; (+ abl. of comparison) superior to",prior,Number,5,1.8.79
+nonnumquam,sometimes,nonnumquam,Adverb,1,1.8.79
+irascor irasci iratus,to grow angry,irascor,Verb,1,1.8.79
+vanesco –ere –ere,"to disappear, vanish",vanesco,Verb,3,1.8.80
+culpa culpae f.,"fault, blame",culpa,Noun,10,1.8.80
+rependo –pendere –pendi –pensum,to make up for; balance,rependo,Verb,2,1.8.80
+numquam,never,numquam,Adverb,10,1.8.81
+spatiosus –a –um,"wide, spacious, large",spatiosus,Adjective,4,1.8.81
+simultas –atis f.,"a state of animosity, a feud",simultas,Noun,1,1.8.82
+moror morari moratus sum,to delay,moror,Verb,5,1.8.82
+disco discere didici,to learn,disco,Verb,4,1.8.83
+lacrimo lacrimare lacrimavi lacrimatus or lacrimor –ari –atus sum,"to cry, weep",lacrimo,Verb,2,1.8.83
+periuro (periero) peiurare peiuravi periuratus,to swear a false oath,periuro,Verb,2,1.8.85
+commodo commodare commodavi commodatus,to accommodate; lend,commodo,Verb,2,1.8.86
+lusus –us m.,"play, game",lusus,Noun,2,1.8.86
+numen numinis n.,divine will,numen,Noun,11,1.8.86
+servus servi m.,enslaved person,servus,Noun,5,1.8.87
+sollers sollertis,"skilled, expert",sollers,Adjective,4,1.8.87
+ancilla –ae f.,female enslaved person,ancilla,Noun,7,1.8.87
+doceo docere docui doctus,to teach,doceo,Verb,7,1.8.88
+postmodo,"later, presently",postmodo,Adverb,4,1.8.90
+stipula –ae f.,stalk,stipula,Noun,1,1.8.90
+grandis grandis grande,full–grown; large,grandis,Adjective,8,1.8.90
+acervus –i m.,"heap, pile",acervus,Noun,1,1.8.90
+nutrix nutricis f.,nurse,nutrix,Noun,1,1.8.91
+carpo carpere carpsi carptum,"to pluck, seize; criticize",carpo,Verb,6,1.8.91
+cito citius (comp.) citissime (superl.),quickly,cito,Adverb,3,1.8.92
+deficio deficere defeci defectus,to fail; revolt from,deficio,Verb,3,1.8.93
+natalis –is m.,birthday (dies natalis),natalis,Noun,2,1.8.94
+libum –i n.,cake,libum,Noun,1,1.8.94
+testificor –ari,to give proof of,testificor,Verb,1,1.8.94
+securus –a –um,free from care,securus,Adjective,3,1.8.95
+rivalis –is m.,rival,rivalis,Noun,4,1.8.95
+proelium proelii n.,battle,proelium,Noun,3,1.8.96
+duro durare duravi duratus,"to harden, endure",duro,Verb,4,1.8.96
+vestigium vestigi(i) n.,"trace, track",vestigium,Noun,2,1.8.97
+lascivus –a –um,"playful, wanton",lascivus,Adjective,5,1.8.98
+lividus –a –um,bluish; envious,lividus,Adjective,1,1.8.98
+mitto mittere misi missus,"to send; release, let go",mitto,Verb,20,1.8.99
+via viae f.,street,via,Noun,14,1.8.100
+aufero auferre abstuli ablatus,to take away; make cuts,aufero,Verb,4,1.8.101
+impius –a –um,disloyal,impius,Adjective,1,1.8.104
+mel mellis n.,honey,mel,Noun,3,1.8.104
+venenum veneni n.,poison,venenum,Noun,4,1.8.104
+lateo latere latui,"to lie hidden, be hidden",lateo,Verb,6,1.8.104
+praesto praestare praestiti praestitus,to be outstanding,praesto,Verb,1,1.8.105
+vivus –a –um,alive,vivus,Adjective,5,1.8.107
+defungor defungi defunctus sum,"to finish, complete",defungor,Verb,2,1.8.108
+molliter,"comp., mollius (mollis), softly, gently, sweetly",molliter,Adverb,3,1.8.108
+cubo cubare cubui cubitum,"to lie down, recline",cubo,Verb,1,1.8.108
+cursus cursus m.,"course, advance",cursus,Noun,4,1.8.109
+prodo prodere prodidi proditus,"to put forth, betray",prodo,Verb,1,1.8.109
+contineo continere continui contentus,"to contain, restrain",contineo,Verb,3,1.8.110
+lacrimosus –a –um,tearful,lacrimosus,Adjective,1,1.8.111
+rugosus –a –um,wrinkled,rugosus,Adjective,1,1.8.112
+distraho –ere –trahere –traxi –tractum,"to pull apart, tear to pieces",distraho,Verb,1,1.8.112
+Lar Laris m.,Lar; household god,Lar,Noun,1,1.8.113
+inops inopis,"lacking, poor",inops,Adjective,1,1.8.113
+senecta –ae f.,old age,senecta,Noun,1,1.8.113
+hiems hiemis f.,winter,hiems,Noun,3,1.8.114
+perpetuus –a –um,continuous,perpetuus,Adjective,3,1.8.114
+sitis –is f.,thirst,sitis,Noun,2,1.8.114
+milito militare militavi militatus,to serve as a soldier,milito,Verb,2,1.9.1
+Atticus –i m.,Atticus (name),Atticus,Noun,1,1.9.2
+senex senis,"old, aged",senex,Adjective,2,1.9.4
+senilis –e,"of an old man, senile",senilis,Adjective,1,1.9.4
+dux ducis m. or f.,"leader, general",dux,Noun,8,1.9.5
+socius –a –um,allied,socius,Adjective,6,1.9.6
+bellus –a –um,"pretty, handsome, suitable, nice",bellus,Adjective,1,1.9.6
+pervigilo pervigilare pervigilavi pervigilatus,to keep vigil,pervigilo,Verb,1,1.9.7
+officium offici(i) n.,"service, duty",officium,Noun,7,1.9.9
+strenuus –a –um,"brisk, prompt, vigorous",strenuus,Adjective,2,1.9.10
+eximo eximere exemi exemptus,"to take away, remove",eximo,Verb,1,1.9.10
+finis finis m.,"end, boundary",finis,Noun,7,1.9.10
+adversus –a –um,opposed; opposite; towards,adversus,Adjective,3,1.9.11
+mons montis m.,mountain,mons,Noun,3,1.9.11
+duplico duplicare duplicavi duplicatus,to fold over; double,duplico,Verb,1,1.9.11
+nimbus –i m.,"rain–cloud, cloud–burst, downpour",nimbus,Noun,2,1.9.11
+flumen fluminis n.,river,flumen,Noun,7,1.9.12
+congero –gerere –gessi –gestum,to gather together,congero,Verb,1,1.9.12
+extero –terere –trivi –tritum,"to rub out, wear away",extero,Verb,1,1.9.12
+fretum freti n.,"straight, channel",fretum,Noun,5,1.9.13
+causor –ari,"to plead, pretend, blame",causor,Verb,1,1.9.13
+verro verrere verri versum,to sweep,verro,Verb,2,1.9.14
+frigus frigoris n.,cold,frigus,Noun,3,1.9.15
+densus –a –um,"thick, dense",densus,Adjective,5,1.9.16
+perfero perferre pertuli perlatus,to endure,perfero,Verb,4,1.9.16
+imber imbris m.,rain,imber,Noun,3,1.9.16
+infestus –a –um,"hostile, aggressive",infestus,Adjective,2,1.9.17
+speculator –oris m.,"courier, spy",speculator,Noun,1,1.9.17
+frango frangere fregi fractus,"to break, shatter",frango,Verb,9,1.9.20
+soporatus –a –um,"lulled to sleep, asleep",soporatus,Adjective,1,1.9.21
+invado invadere invasi invasum,to go in,invado,Verb,1,1.9.21
+armatus –a –um,armed,armatus,Adjective,1,1.9.22
+Threicius –a –um,Thracian; northern,Threicius,Adjective,2,1.9.23
+Rhesus –i m.,Rhesus,Rhesus,Noun,1,1.9.23
+desero deserere deserui desertus,"to leave, abandon",desero,Verb,2,1.9.24
+nempe,indeed,nempe,Adverb,4,1.9.25
+maritus mariti m.,husband,maritus,Noun,8,1.9.25
+utor uti usus sum,to use,utor,Verb,5,1.9.25
+sopio sopire sopivi sopitum,"to put to sleep, lull to sleep",sopio,Verb,1,1.9.26
+vigil vigilis,"on watch, sleepless",vigil,Adjective,1,1.9.27
+caterva –ae f.,band (esp. of soldiers); a crowd,caterva,Noun,1,1.9.27
+dubius –a –um,doubtful,dubius,Adjective,6,1.9.29
+resurgo –surgere –surrexi –surrectum,"to rise again, reappear",resurgo,Verb,2,1.9.29
+desidia –ae f.,"idleness, inactivity",desidia,Noun,1,1.9.31
+voco vocare vocavi vocatus,to call,voco,Verb,12,1.9.31
+ingenium –(i)i n.,"disposition, ability",ingenium,Noun,13,1.9.32
+experior experiri expertus sum (experiscor),"to test, try, experience",experior,Verb,1,1.9.32
+ardeo ardere arsi arsum,"to burn, glow",ardeo,Verb,5,1.9.33
+abduco abducere abduxi abductus,to lead/take away,abduco,Verb,1,1.9.33
+Briseis –idis (–idos) f.,Briseis (name),Briseis,Noun,2,1.9.33
+Achilles –is m. or Achilleos –ei m.,Achilles (name),Achilles,Noun,5,1.9.33
+Argeus –a –um,Argive; of Argos,Argeus,Adjective,2,1.9.34
+Troes –um m. pl.,Trojans,Troes,Noun,1,1.9.34
+Hector –oris m.,Hector,Hector,Noun,3,1.9.35
+Andromache –es f. or Andromacha –ae f.,Andromache; wife of Hector,Andromache,Noun,1,1.9.35
+complexus –us m.,embrace,complexus,Noun,1,1.9.35
+galea geleae f.,helmet,galea,Noun,2,1.9.36
+uxor uxoris f.,wife,uxor,Noun,3,1.9.36
+summa summae f.,"peak, sum",summa,Noun,1,1.9.37
+Atrides –ae m.,son of Atreus,Atrides,Noun,3,1.9.37
+Priameis –idos f.,daughter of Priam,Priameis,Noun,1,1.9.37
+Maenas –adis f.,a priestess of Bacchus,Maenas,Noun,1,1.9.38
+obstipesco (obstupesco) –ere –stipui (stupui),to become stupefied; to be astonished,obstipesco,Verb,2,1.9.38
+fabrilis –e,skillfully made,fabrilis,Adjective,1,1.9.39
+notus –a –um,well–known,notus,Adjective,13,1.9.40
+fabula fabulae f.,story,fabula,Noun,2,1.9.40
+segnis segne,slow,segnis,Adjective,2,1.9.41
+discingo –ere –cinxi –cinctus,to ungird; p.,discingo,Verb,1,1.9.41
+otium –ii n.,leisure,otium,Noun,1,1.9.41
+natus –a –um,born,natus,Adjective,4,1.9.41
+mollio mollire mollivi mollitus,"to soften, soothe",mollio,Verb,2,1.9.42
+ignavus –a –um,lazy,ignavus,Adjective,5,1.9.43
+agilis –e,"light, agile",agilis,Adjective,1,1.9.45
+gero gerere gessi gestus,"to bear, manage",gero,Verb,9,1.9.45
+desidiosus –a –um,"idle, lazy",desidiosus,Adjective,2,1.9.46
+Eurotas –ae m.,Eurotas River,Eurotas,Noun,2,1.10.1
+Phrygius –a –um,Phrygian; a territory in Asia minor; Trojan,Phrygius,Adjective,1,1.10.1
+aveho –ere –vehere –vehexi –vectum,"to carry off, bear away",aveho,Verb,1,1.10.1
+carina –ae f.,keel; ship,carina,Noun,3,1.10.1
+coniunx coniugis f.,spouse,coniunx,Noun,6,1.10.2
+Leda –ae or Lede –es f.,Leda,Leda,Noun,3,1.10.3
+abdo abdere abdidi abditum,to withdraw; conceal,abdo,Verb,2,1.10.3
+falsus –a –um,"deceptive, false",falsus,Adjective,4,1.10.4
+Am?mone –es f.,Amymone,Amymone,Noun,1,1.10.5
+siccus –a –um,dry,siccus,Adjective,4,1.10.5
+erro errare erravi erratus,"to wander, err",erro,Verb,6,1.10.5
+Argus (Argivus or Argeus or Argius) –a –um,Argive; Greek,Argus,Adjective,2,1.10.5
+urna urnae f.,urn,urna,Noun,3,1.10.6
+aquila aquilae f.,eagle,aquila,Noun,1,1.10.7
+taurus tauri m.,bull,taurus,Noun,12,1.10.7
+resanesco –sanescere –sanui,to be healed,resanesco,Verb,1,1.10.9
+muto mutare mutavi mutatus,to change,muto,Verb,4,1.10.11
+donec,until,donec,Conjunction,2,1.10.13
+simplex –icis,"artless, naïve, lacking guile",simplex,Adjective,2,1.10.13
+vitium viti(i) n.,"fault, crime",vitium,Noun,10,1.10.14
+figura figurae f.,"form, shape",figura,Noun,1,1.10.14
+sordes –is f.,filth; greed,sordes,Noun,1,1.10.15
+aperio aperire aperui apertus,to open,aperio,Verb,3,1.10.16
+prosto prostare prostiti prostitum,to stand before; offer oneself for sale,prosto,Verb,2,1.10.17
+quo,"where; to what purpose, in order that",quo,Adverb,15,1.10.18
+condo condere condidi conditus,"to build, store up, place",condo,Verb,6,1.10.18
+filius filii m.,son,filius,Noun,3,1.10.19
+imbellis –e,"unwarlike, peaceful",imbellis,Adjective,2,1.10.20
+meretrix meretricis f.,prostitute,meretrix,Noun,3,1.10.21
+quivis quaevis quodvis or (subst.) quidvis,who or what you please,quivis,Pronoun,2,1.10.21
+mercabilis –e,purchasable,mercabilis,Adjective,1,1.10.21
+devoveo devovere devovi devotus,to dedicate,devoveo,Verb,3,1.10.23
+imperium imperii n.,"command, power",imperium,Noun,1,1.10.23
+leno lenonis m.,pimp,leno,Noun,3,1.10.23
+avarus –a –um,greedy,avarus,Adjective,6,1.10.23
+sponte,voluntarily,sponte,Adverb,3,1.10.24
+pecus pecudis f.,one animal of a flock or herd; an animal,pecus,Noun,1,1.10.25
+ratio rationis f.,method,ratio,Noun,1,1.10.25
+vacca vaccae f.,cow,vacca,Noun,6,1.10.27
+aries –etis m.,ram,aries,Noun,1,1.10.28
+placitus –a –um,agreeable,placitus,Adjective,1,1.10.28
+capto captare captavi captatus,"to seize, hunt for legacies",capto,Verb,2,1.10.28
+ovis –is n.,sheep,ovis,Noun,3,1.10.28
+mulier mulieris f.,woman,mulier,Noun,1,1.10.29
+spolium –ii or spolia –orum n.,plunder,spolium,Noun,1,1.10.29
+exsulto (exulto) –are –avi –atus,"to be ecstatic, exult",exsulto,Verb,1,1.10.29
+adimo adimere ademi ademptus,to take away,adimo,Verb,2,1.10.29
+loco locare locavi locatus,"to place, put",loco,Verb,2,1.10.30
+vendo vendere vendidi venditus,to sell,vendo,Verb,3,1.10.31
+gaudeo gaudere gavisus sum,to be glad,gaudeo,Verb,2,1.10.32
+aequum –i n.,that which is even; right,aequum,Noun,1,1.10.33
+damnum damni n.,"damage, injury",damnum,Noun,11,1.10.35
+lucrosus –a –um,"lucrative, profitable",lucrosus,Adjective,1,1.10.35
+motus motus m.,"motion, movement",motus,Noun,4,1.10.36
+femina feminae f.,"woman, wife",femina,Noun,10,1.10.36
+conduco conducere conduxi conductus,"to bring together, hire, rent",conduco,Verb,2,1.10.37
+periurium (peiurium) –i n.,"false oath, lie",periurium,Noun,3,1.10.37
+seligo –ere –ligere –legi –lectum,"to choose, select",seligo,Verb,2,1.10.38
+iudex iudicis m.,judge; juror,iudex,Noun,6,1.10.38
+arca arcae f.,"chest, box",arca,Noun,1,1.10.38
+pateo patere patui,to be open,pateo,Verb,4,1.10.38
+defendo defendere defendi defensus,"to defend, ward off",defendo,Verb,4,1.10.39
+tribunal tribunalis n.,platform,tribunal,Noun,1,1.10.40
+reditus reditus m.,"return, revenue",reditus,Noun,2,1.10.41
+census –us m.,"census, wealth",census,Noun,4,1.10.41
+augeo augere auxi auctus,to increase,augeo,Verb,2,1.10.41
+paternus –a –um,paternal,paternus,Adjective,2,1.10.41
+lucrum lucri n.,"gain, profit",lucrum,Noun,2,1.10.42
+prostituo –stituere –stitui –stitutum,to prostitute,prostituo,Verb,3,1.10.42
+inemptus –a –um,unbought,inemptus,Adjective,1,1.10.43
+conductor –oris m.,contractor,conductor,Noun,1,1.10.45
+maneo manere mansi mansus,to remain,maneo,Verb,7,1.10.46
+debitor –oris m.,debtor,debitor,Noun,1,1.10.46
+paciscor pacisci pactus,to agree,paciscor,Verb,1,1.10.47
+eventus eventus m.,result,eventus,Noun,1,1.10.48
+sordidus –a –um,"dirty, sordid",sordidus,Adjective,4,1.10.48
+armilla –ae f.,bracelet,armilla,Noun,1,1.10.49
+pango pangere pepigi pactum,"to fasten, fix; settle for, agree upon, contract for",pango,Verb,1,1.10.49
+exeo exire exivi/exii exitus,to go forth,exeo,Verb,5,1.10.51
+traicio –icere –ieci –iectum,"to transport, pierce, cross over",traicio,Verb,3,1.10.51
+viscus visceris n.,innards,viscus,Noun,2,1.10.51
+monile –is n.,necklace,monile,Noun,1,1.10.52
+praemium –(i)i n.,reward,praemium,Noun,3,1.10.53
+uva –ae f.,grape,uva,Noun,5,1.10.55
+Alcinous –i m.,Alcinous,Alcinous,Noun,1,1.10.56
+pomum –i n.,fruit,pomum,Noun,6,1.10.56
+benignus –a –um,kind,benignus,Adjective,2,1.10.56
+ager agri m.,field,ager,Noun,8,1.10.56
+numero numerare numeravi numeratus,to count,numero,Verb,1,1.10.57
+studium studii n.,eagerness,studium,Noun,1,1.10.57
+confero conferre contuli collatus,"to collect, transfer, move",confero,Verb,4,1.10.58
+celebro celebrare celebravi celebratus,to frequent; celebrate,celebro,Verb,2,1.10.59
+dos dotis f.,"gift, endowment; dowry",dos,Noun,3,1.10.60
+scindo scindere scidi scissum,"to cut, rend, tear asunder",scindo,Verb,3,1.10.61
+aurum auri n.,gold,aurum,Noun,8,1.10.61
+tribuo tribuere tribui tributus,to assign,tribuo,Verb,1,1.10.62
+dedignor –ari,to refuse scornfully,dedignor,Verb,2,1.10.63
+odi odisse,to hate,odi,Verb,8,1.10.63
+incertus –a –um,uncertain,incertus,Adjective,2,1.11.1
+ordo ordinis m.,row,ordo,Noun,5,1.11.1
+doctus –a –um,"taught, learned, skilled",doctus,Adjective,6,1.11.2
+inter,"between, among; during",inter,Preposition,11,1.11.2
+Nape –es f.,Nape,Nape,Noun,2,1.11.2
+ministerium –i n.,"service, ministry",ministerium,Noun,1,1.11.3
+hortor hortari hortatus sum,to urge,hortor,Verb,1,1.11.5
+laboro laborare laboravi laboratum,to work,laboro,Verb,4,1.11.6
+fidus –a –um,"faithful, trustworthy",fidus,Adjective,3,1.11.6
+reperio reperire repperi repertus,to find out,reperio,Verb,5,1.11.6
+peraro perarare peraravi peraratus,to incise,peraro,Verb,1,1.11.7
+tabella tabellae f.,tablet,tabella,Noun,12,1.11.7
+obsto obstare obstiti obstatum,"to stand before, stand in the way",obsto,Verb,1,1.11.8
+sedulus –a –um,"careful, cautious, purposeful",sedulus,Adjective,1,1.11.8
+pello pellere pepuli pulsus,"to drive (off), strike",pello,Verb,4,1.11.8
+silex silicis n.,flint,silex,Noun,4,1.11.9
+vena venae f.,vein,vena,Noun,1,1.11.9
+credibilis –e,"believable, credible",credibilis,Adjective,4,1.11.11
+militia –ae f.,military service,militia,Noun,6,1.11.12
+tueor tueri tutus sum,to look at,tueor,Verb,5,1.11.12
+continuo,"immediately, continuously",continuo,Adverb,1,1.11.16
+mando mandare mandavi mandatus,to entrust,mando,Verb,1,1.11.17
+futurum –i or futura –orum n.,the future,futurum,Noun,1,1.11.18
+perlego –legere –legi –lectum,to read through,perlego,Verb,1,1.11.19
+rescribo rescribere rescripsi rescriptum,"to rewrite, reply (to)",rescribo,Verb,3,1.11.19
+splendidus –a –um,"shining, clear, brilliant, splendid",splendidus,Adjective,1,1.11.20
+comprimo comprimere compressi compressum,to compress,comprimo,Verb,1,1.11.21
+margo –inis m.,"rim; border, edge; margin",margo,Noun,1,1.11.22
+littera litterae f.,letter (of the alphabet),littera,Noun,4,1.11.22
+rado radere rasi rasum,"to shave, scratch; inscribe",rado,Verb,2,1.11.22
+graphium –i n.,stylus,graphium,Noun,1,1.11.23
+lasso lassare lassavi lassatus,"to tire out, wear out",lasso,Verb,2,1.11.23
+scribo scribere scripsi scriptus,to write,scribo,Verb,2,1.11.24
+victrix –icis f.,female conqueror; in triumph,victrix,Noun,1,1.11.25
+redimio –imire –imii –imitum,to encircle (with a garland),redimio,Verb,3,1.11.25
+aedes aedis f.,"building, shrine",aedes,Noun,1,1.11.26
+subscribo –scribere –scripsi –scriptum,"to write under, sign",subscribo,Verb,1,1.11.27
+dedico dedicare dedicavi dedicatus,"to declare, dedicate",dedico,Verb,1,1.11.28
+vilis vilis vile,cheap,vilis,Adjective,3,1.11.28
+acer aceris n.,maple tree,acer,Noun,1,1.11.28
+casus casus m.,"fall, chance",casus,Noun,4,1.12.1
+redeo redire redii reditum,to go back,redeo,Verb,4,1.12.1
+infelix infelicis,"unfortunate, unhappy",infelix,Adjective,6,1.12.2
+hodie,today,hodie,Adverb,2,1.12.2
+omen ominis n.,omen,omen,Noun,4,1.12.3
+aliquis aliquid and aliqui aliqua aliquod,"someone, something; some, any",aliquis,Pronoun,16,1.12.3
+discedo discedere discessi discessum,"to go away, depart",discedo,Verb,2,1.12.3
+resto restare restiti,to resist,resto,Verb,2,1.12.4
+ico (icio) –ere –ici –ictus,to smite,ico,Verb,1,1.12.4
+foras,out of doors,foras,Adverb,1,1.12.5
+iterum,again,iterum,Adverb,5,1.12.5
+cautus –a –um,"cautious, careful, prudent",cautus,Adjective,1,1.12.6
+alte,"aloft, on high",alte,Adverb,1,1.12.6
+hinc,"from here, hence",hinc,Adverb,7,1.12.7
+funebris –e,funereal,funebris,Adjective,1,1.12.7
+refercio –ire –fersi –fertus,to stuff or cram full,refercio,Verb,1,1.12.8
+flos floris m.,flower,flos,Noun,2,1.12.9
+cicuta –ae f.,hemlock,cicuta,Noun,2,1.12.9
+infamis infamis infame,infamous,infamis,Adjective,2,1.12.10
+Corsicus (Corsus) –a –um,Corsican,Corsicus,Noun,1,1.12.10
+apis apis f.,bee,apis,Noun,1,1.12.10
+minium –i n.,cinnabar,minium,Noun,1,1.12.11
+penitus or penite,internally,penitus,Adverb,1,1.12.11
+medico (medicor) medicare medicavi medicatus,"to treat, medicate (with); dye (with)",medico,Verb,2,1.12.11
+rubeo rubere rubui,to be red,rubeo,Verb,4,1.12.11
+color coloris m.,color,color,Noun,9,1.12.12
+vere,truly,vere,Adverb,1,1.12.12
+sanguinulentus –a –um,blood–red,sanguinulentus,Adjective,1,1.12.12
+trivium –i n.,"a crossroads, gutter (often pl.)",trivium,Noun,1,1.12.13
+inutilis –e,"useless, unserviceable",inutilis,Adjective,2,1.12.13
+arbor (or arbos) arboris f.,tree,arbor,Noun,5,1.12.15
+convinco convincere convici convictus,"to prove wrong, find guilty",convinco,Verb,2,1.12.16
+suspendium –i n.,"act of hanging oneself, a hanging; gallows",suspendium,Noun,1,1.12.17
+carnifex –icis m.,executioner,carnifex,Noun,2,1.12.18
+crux crucis f.,cross,crux,Noun,1,1.12.18
+bubo –onis m.,owl,bubo,Noun,1,1.12.19
+vultur (volt–) vulturis m.,vulture,vultur,Noun,2,1.12.20
+ramus rami m.,branch,ramus,Noun,2,1.12.20
+strix –gis f.,screech owl,strix,Noun,1,1.12.20
+ovum –i n.,egg,ovum,Noun,1,1.12.20
+insanus –a –um,insane,insanus,Adjective,2,1.12.21
+vadimonium –i n.,guarantee,vadimonium,Noun,1,1.12.23
+garrulus –a –um,"talkative, chatty, babbling",garrulus,Adjective,5,1.12.23
+cognitor,attorney,cognitor,Noun,1,1.12.24
+ephemeris –idis f.,"day–book, account–book",ephemeris,Noun,1,1.12.25
+tabula tabulae f.,"plank, (game) board; painting; writing tablet",tabula,Noun,1,1.12.25
+auspicium auspici(i) n.,divination; authority,auspicium,Noun,1,1.12.28
+iratus –a –um,angry,iratus,Adjective,5,1.12.29
+cariosus –a –um,"decayed, rotten",cariosus,Adjective,1,1.12.29
+senectus senectutis f.,old age,senectus,Noun,2,1.12.29
+rodo rodere rosi rosum,"to gnaw, erode, slander",rodo,Verb,1,1.12.30
+oceanus –i m.,the ocean,oceanus,Noun,1,1.13.1
+aurora aurorae f.,"dawn, aurora",aurora,Noun,2,1.13.3
+annuus –a –um,"of the year, yearly",annuus,Adjective,3,1.13.4
+sollemnis –e,customary,sollemnis,Adjective,2,1.13.4
+parento parentare parentavi parentatus,to make memorial offerings for one’s parents; make offerings at a grave; honor the dead,parento,Verb,1,1.13.4
+quando,"when, since; some day (= si quando)",quando,Adverb,2,1.13.6
+pinguis pingue,fat; dull,pinguis,Adjective,2,1.13.7
+frigidus –a –um,"cool, cold",frigidus,Adjective,7,1.13.7
+aer aeris m. (acc. sing. aera or aerem),air,aer,Noun,4,1.13.7
+guttur –uris n.,"windpipe, throat",guttur,Noun,1,1.13.8
+ingratus –a –um,unpleasant,ingratus,Adjective,5,1.13.9
+roscidus –a –um,"dew–covered, dewy",roscidus,Adjective,1,1.13.10
+supprimo –primere –pressi –pressum,"to hold back, check",supprimo,Verb,1,1.13.10
+lorum lori n. or lorus –i m.,"thong, strap",lorum,Noun,5,1.13.10
+ortus ortus m.,"birth, rising",ortus,Noun,1,1.13.11
+nauta nautae m.,sailor,nauta,Noun,2,1.13.12
+nescius –a –um,ignorant,nescius,Adjective,3,1.13.12
+quamvis,"even though, although",quamvis,Adverb,18,1.13.13
+viator –oris m.,"traveler, wayfarer",viator,Noun,2,1.13.13
+apto aptare aptavi aptatus,"to adapt to, prepare; fit together, join",apto,Verb,3,1.13.14
+bidens –ntis m.,"mattock, hoe",bidens,Noun,1,1.13.15
+onero onerare oneravi oneratus,"to load, burden",onero,Verb,1,1.13.15
+tardus –a –um,slow,tardus,Adjective,6,1.13.16
+pandus –a –um,"bent, curved, crooked",pandus,Adjective,2,1.13.16
+fraudo fraudare fraudavi fraudatus,"to defraud, cheat, act illegally",fraudo,Verb,2,1.13.17
+trado tradere tradidi traditus,to hand over; report,trado,Verb,4,1.13.17
+magister magistri m.,"master, chief, teacher",magister,Noun,2,1.13.17
+spondeo –ere spopondi sponsum,to make a solemn promise,spondeo,Verb,2,1.13.19
+consultus or iuris consultus or iurisconsultus –i m.,"legal expert, jurist",consultus,Adjective,1,1.13.21
+iucundus –a –um,"pleasant, delightful, agreeable",iucundus,Adjective,2,1.13.21
+disertus –a –um,"eloquent, expressive",disertus,Adjective,1,1.13.21
+lis litis f.,lawsuit; quarrel,lis,Noun,1,1.13.22
+femineus –a –um,feminine,femineus,Adjective,2,1.13.23
+labor laboris m.,work,labor,Noun,5,1.13.23
+lanificus –a –um,"wool–working, spinning",lanificus,Adjective,1,1.13.24
+revoco revocare revocavi revocatus,to call back,revoco,Verb,6,1.13.24
+pensum –i n.,"wool, allotment",pensum,Noun,1,1.13.24
+perpetior –peti –pessus sum,"to bear to the end, endure",perpetior,Verb,1,1.13.25
+ullus –a –um,any,ullus,Adjective,10,1.13.26
+quotiens or quoties,how many times; whenever,quotiens,Adverb,8,1.13.27
+spissus –a –um,"close, dense, thick",spissus,Adjective,1,1.13.30
+nubes nubis f.,cloud,nubes,Noun,1,1.13.30
+Cephalus –i m.,Cephalus,Cephalus,Noun,2,1.13.31
+flagro flagrare flagravi flagraturus,to burn,flagro,Verb,1,1.13.31
+ignotus –a –um,unknown,ignotus,Adjective,5,1.13.32
+nequitia nequitiae or nequities –ei f.,depravity,nequitia,Noun,6,1.13.32
+invidus –a –um,"envious, jealous",invidus,Adjective,4,1.13.33
+ater atra atrum,black,ater,Adjective,2,1.13.33
+Tithonus –i m.,Tithonus (name),Tithonus,Noun,3,1.13.35
+narro –are –avi –atum,"to tell, report, recount",narro,Verb,7,1.13.35
+refugio –ere –fugere –fugi,"to flee back, run away",refugio,Verb,3,1.13.37
+aevum aevi n.,"eternity; lifetime, age",aevum,Noun,2,1.13.37
+invisus –a –um,"hated, hostile",invisus,Adjective,3,1.13.38
+senex senis m.,old man,senex,Noun,4,1.13.38
+complector complecti complexus sum,to embrace,complector,Verb,3,1.13.39
+lente,"slowly, leisurely",lente,Adverb,2,1.13.40
+curro currere cucurri cursus,to run,curro,Verb,8,1.13.40
+marceo –ere,"to wither, droop, be feeble",marceo,Verb,1,1.13.41
+num,whether,num,Adverb,5,1.13.42
+nubo nubere nupsi nuptum,to marry,nubo,Verb,1,1.13.42
+concilio conciliare conciliavi conciliatus,"to advise, reconcile",concilio,Verb,1,1.13.42
+quot,"how many , as many as (indeclinable)",quot,Pronoun,4,1.13.43
+genitor genitoris m.,father,genitor,Noun,1,1.13.45
+iurgium –i n.,"altercation, quarrel",iurgium,Noun,3,1.13.47
+finio finire finivi finitus,"to finish, limit",finio,Verb,1,1.13.47
+adsuetus –a –um,"usual, customary",adsuetus,Adjective,1,1.13.48
+desisto desistere destiti destitus,"to cease, desist",desisto,Verb,1,1.14.1
+tingo (tinguo) tingere tinxi tinctum,"to wet, moisten; dye, color",tingo,Verb,4,1.14.2
+orno ornare ornavi ornatus,"to equip, decorate",orno,Verb,5,1.14.5
+coloratus –a –um,colored,coloratus,Adjective,3,1.14.6
+Seres –um m.,Chinese,Seres,Adjective,1,1.14.6
+aranea araneae f.,spider,aranea,Noun,1,1.14.7
+desertus –a –um,desolate; abandoned,desertus,Adjective,1,1.14.8
+trabs trabis f.,beam of wood,trabs,Noun,1,1.14.8
+neuter neutra neutrum,neither,neuter,Adjective,1,1.14.10
+clivosus –a –um,"steep, hilly",clivosus,Adjective,1,1.14.11
+valles vallis f.,valley,valles,Noun,3,1.14.11
+Ida –ae or Ide –es f.,Mount Ida,Ida,Noun,4,1.14.11
+arduus –a –um,"steep, difficult",arduus,Adjective,2,1.14.12
+cortex –icis m.,"bark, shell, cork",cortex,Noun,1,1.14.12
+cedrus –i f.,cedar,cedrus,Noun,1,1.14.12
+docilis –e,"teachable, responsive",docilis,Adjective,1,1.14.13
+centum; centesimus –a –um,100; 100th,centum,Number,6,1.14.13
+flexus –us m.,"curl, wave; the act of bending or curling",flexus,Noun,1,1.14.13
+acus –us m.,"hairpin, needle",acus,Noun,4,1.14.15
+abrumpo abrumpere abrupi abruptum,"to break off, sever",abrumpo,Verb,3,1.14.15
+vallum valli n.,fortification,vallum,Noun,1,1.14.15
+pecten –inis m.,"comb; shell-fish, scallop",pecten,Noun,1,1.14.15
+ornatrix –icis f.,"hairdresser, lady’s maid",ornatrix,Noun,1,1.14.16
+saucius –a –um,wounded; afflicted; drunk,saucius,Adjective,2,1.14.18
+nondum,not yet,nondum,Adverb,6,1.14.19
+semisupinus –a –um,"half–supine, half–reclining on one’s back",semisupinus,Adjective,1,1.14.20
+neglego neglegere neglexi neglectus,"to disregard, neglect",neglego,Verb,2,1.14.21
+decens decentis,"attractive, seemly",decens,Adjective,4,1.14.21
+Thracius –a –um,Thracian,Thracius,Adjective,1,1.14.21
+Baccha –ae or Bacche –es f.,"a votary of Bacchus, a Bacchante",Baccha,Noun,1,1.14.21
+temere,rashly,temere,Adverb,2,1.14.22
+viridis –e,green,viridis,Adjective,4,1.14.22
+lanugo –inis f.,"soft hair, down",lanugo,Noun,1,1.14.23
+instar n.,"the equivalent, just like, + gen.",instar,Noun,4,1.14.23
+vexo vexare vexavi vexatus,"to annoy, attack",vexo,Verb,2,1.14.24
+patienter,"adv., patiently",patienter,Adverb,2,1.14.25
+nexilis –e,"plaited, intertwined",nexilis,Adjective,1,1.14.26
+procul,at a distance,procul,Adverb,8,1.14.29
+removeo removere removi remotus,to move back,removeo,Verb,2,1.14.29
+erudio erudire erudii eruditum,"to instruct, train; free from roughness",erudio,Verb,1,1.14.30
+admoveo admovere admovi admotus,"to move to, bring to",admoveo,Verb,5,1.14.30
+pereo perire perii peritus,to perish,pereo,Verb,13,1.14.31
+Apollo –inis m.,Apollo,Apollo,Noun,3,1.14.31
+insum inesse infui,to be in,insum,Verb,3,1.14.32
+Dione –es f.,Dione; Venus,Dione,Noun,1,1.14.33
+pingo pingere pinxi pictus,to paint,pingo,Verb,7,1.14.34
+umeo –ere,"to be wet, moist",umeo,Verb,1,1.14.34
+dispono disponere disposui dispositus,"to place, arrange, distribute",dispono,Verb,2,1.14.35
+speculum –i n.,mirror,speculum,Noun,2,1.14.36
+ineptus –a –um,silly,ineptus,Adjective,1,1.14.36
+consuesco consuescere consuevi consuetus,to accustom; to be accustomed to,consuesco,Verb,1,1.14.37
+immemor –oris,"unmindful, forgetful",immemor,Adjective,2,1.14.38
+paelex –icis f.,a mistress who was a rival to a wife or lover,paelex,Noun,1,1.14.39
+herba herbae f.,"grass, herb",herba,Noun,10,1.14.39
+Haemonius –a –um,"Haemonian,  of or belonging to Thessaly (Haemonia)",Haemonius,Adjective,3,1.14.40
+perfidus –a –um,"faithless, treacherous, false",perfidus,Adjective,2,1.14.40
+lavo lavare (lavere) lavi lotus (lautus),to wash,lavo,Verb,1,1.14.40
+morbus morbi m.,"sickness, disease",morbus,Noun,1,1.14.41
+Germania –ae f.,Germany,Germania,Noun,1,1.14.45
+gens gentis f.,"family, clan",gens,Noun,5,1.14.46
+merx mercis f.,commodity,merx,Noun,1,1.14.48
+nescioquis –qua –quid (also written as two words),"someone or other ; I know not who/what; to some degree, a little bit",nescioquis,Pronoun,6,1.14.49
+laudo laudare laudavi laudatus,to praise,laudo,Verb,7,1.14.49
+Sygamber (Sigamber) –bra –brum,of the Sygambri; a powerful Germanic tribe of Germans,Sygamber,Adjective,1,1.14.49
+dextera dextera f.,right hand,dextera,Noun,8,1.14.51
+rubor ruboris m.,redness,rubor,Noun,3,1.14.52
+reparabilis –e,"reparable, recoverable",reparabilis,Adjective,1,1.14.55
+nativus –a –um,"native, natural",nativus,Adjective,1,1.14.56
+conspicio conspicere conspexi conspectus,"to catch sight of, behold",conspicio,Verb,4,1.14.56
+livor –oris m.,bruising; envy,livor,Noun,4,1.15.1
+edax –acis,"voracious, greedy",edax,Adjective,2,1.15.1
+obiicio obiicere obieci obiectus,to throw in the way,obiicio,Verb,3,1.15.1
+iners –ertis,"unskilled, lazy",iners,Adjective,4,1.15.2
+pulverulentus –a– um,"covered with dust, dusty",pulverulentus,Adjective,2,1.15.4
+verbosus –a –um,"wordy, verbose",verbosus,Adjective,1,1.15.5
+edisco –discere –didici,"to learn thoroughly, study",edisco,Verb,1,1.15.5
+forum fori n.,forum,forum,Noun,3,1.15.6
+mortalis –e,mortal,mortalis,Adjective,3,1.15.7
+Maeonides –ae m.,native of Maeonia,Maeonides,Noun,2,1.15.9
+Tenedos –i f.,Tenedos (island),Tenedos,Noun,1,1.15.9
+rapidus –a –um,swift,rapidus,Adjective,6,1.15.10
+Simois –oentis m.,Simois,Simois,Noun,1,1.15.10
+mare maris n.,sea,mare,Noun,8,1.15.10
+volvo volvere volui volutum,"to roll, to ponder",volvo,Verb,2,1.15.10
+Ascraeus –a –um,belonging to Ascra,Ascraeus,Adjective,1,1.15.11
+mustum –i n.,must (fermenting grape juice),mustum,Noun,1,1.15.11
+tumeo tumere tumui,"to swell, puff up",tumeo,Verb,1,1.15.11
+incurvus –a –um,"bent, curved",incurvus,Adjective,1,1.15.12
+falx falcis f.,"scythe, sickle",falx,Noun,2,1.15.12
+reseco resecare resecui resectum,"to cut, cut back",reseco,Verb,1,1.15.12
+Battiades –ae m.,son of Battus,Battiades,Noun,1,1.15.13
+Sophocleus –a –um,Sophoclean,Sophocleus,Adjective,1,1.15.15
+iactura –ae f.,loss (of stature/prestige); sacrifice,iactura,Noun,3,1.15.15
+cothurnus (coturnus) –i m.,buskin,cothurnus,Noun,6,1.15.15
+sol solis m.,sun,sol,Noun,4,1.15.16
+Aratus –i m.,Aratus,Aratus,Noun,1,1.15.16
+fallax –acis,"deceitful, treacherous, false",fallax,Adjective,3,1.15.17
+improbus –a –um,bad,improbus,Adjective,3,1.15.17
+Menander (Menandros) –i m.,Menander (name),Menander,Noun,1,1.15.18
+Ennius –ii m.,Q. Ennius,Ennius,Noun,1,1.15.19
+Accius –ii m.,Accius,Accius,Noun,1,1.15.19
+Varro –onis m.,Varro (name),Varro,Noun,1,1.15.21
+ratis ratis f.,raft,ratis,Noun,3,1.15.21
+Aesonius –a –um,of or descended from Aeson,Aesonius,Adjective,1,1.15.22
+sublimis sublime,elevated lofty heroic noble,sublimis,Adjective,2,1.15.23
+Lucretius –ii m.,Lucretius,Lucretius,Noun,1,1.15.23
+Tityrus –i m.,Tityrus,Tityrus,Noun,1,1.15.25
+frux frugis f.,fruit,frux,Noun,5,1.15.25
+Aeneius –a –um,of Aeneas,Aeneius,Adjective,1,1.15.25
+Roma Romae f.,Rome,Roma,Noun,3,1.15.26
+cultus –a –um,"cultivated; well-groomed; refined, sophisticated",cultus,Adjective,8,1.15.28
+Tibullus –i m.,Tibullus,Tibullus,Noun,6,1.15.28
+Gallus –i m.,Gallus (name),Gallus,Noun,4,1.15.29
+Hesperius –a –um,of the west; western,Hesperius,Adjective,1,1.15.29
+Eous –a –um,belonging to the dawn; eastern,Eous,Adjective,2,1.15.29
+Lycoris –idis f.,Lycoris (name),Lycoris,Noun,1,1.15.30
+patiens –ntis,"long–suffering, patient; hardy",patiens,Adjective,1,1.15.31
+depereo –perire –perii,to destroy completely,depereo,Verb,2,1.15.32
+mors mortis f.,death,mors,Noun,5,1.15.32
+rex regis m.,king,rex,Noun,4,1.15.33
+aurifer –fera –ferum,"gold-bearing, containing gold",aurifer,Adjective,1,1.15.34
+ripa ripae f.,bank,ripa,Noun,6,1.15.34
+Tagus –i m.,Tagus,Tagus,Noun,1,1.15.34
+Castalius –a –um,Castalian,Castalius,Adjective,1,1.15.36
+ministro ministrare ministravi ministratus,"to attend, serve",ministro,Verb,2,1.15.36
+pascor –i,"to feed, nourish",pascor,Verb,5,1.15.39
+quiesco quiescere quievi quietus,"to sleep, keep quiet",quiesco,Verb,3,1.15.39
+adedo –ere –edi –esum,to consume,adedo,Verb,1,1.15.41
+superstes –itis,"surviving, remaining alive after death",superstes,Adjective,2,1.15.42
+Pelignus (Paelignus) –a –um,"of or belonging to the Peligni (a people of Central Italy), Pelignian",Pelignus,Adjective,6,2.1.1
+nascor nasci natus sum,"to be born, come into being",nascor,Verb,5,2.1.1
+aquosus –a –um,"abounding in water, rainy",aquosus,Adjective,2,2.1.1
+poeta poetae m.,poet,poeta,Noun,5,2.1.2
+severus –a –um,serious,severus,Adjective,6,2.1.3
+theatrum theatri n.,theater,theatrum,Noun,3,2.1.4
+sponsus –i m.,a lover who has promised marriage; fiancé,sponsus,Noun,1,2.1.5
+rudis –e,uncultivated,rudis,Adjective,3,2.1.6
+agnosco agnoscere agnovi agnitus,to recognize,agnosco,Verb,2,2.1.8
+index indicis m.,informer; witness; book title,index,Noun,5,2.1.9
+caelestis caeleste,from heaven,caelestis,Adjective,1,2.1.11
+centimanus –a –um,with a hundred hands,centimanus,Adjective,1,2.1.12
+G?ges –ae or –is m.,Gyges,Gyges,Noun,1,2.1.12
+tellus telluris f.,earth,tellus,Noun,6,2.1.13
+ulciscor ulcisci ultus sum,to avenge,ulciscor,Verb,2,2.1.13
+ingero –ere –gessi –gestus,to carry; heap on; obtrude; say over and over,ingero,Verb,1,2.1.13
+devexus –a –um,declining,devexus,Adjective,1,2.1.14
+Pelion –i n. or Pelius (Pelios) –i m.,"Pelion, a mountain in Thessaly",Pelion,Noun,1,2.1.14
+Ossa –ae f.,"Ossa, a mountain in Thessaly",Ossa,Noun,1,2.1.14
+excido excidere excidi,"to fall out, drop; perish; be forgotten",excido,Verb,1,2.1.18
+ignosco ignoscere ignovi ignotus,"to pardon, forgive",ignosco,Verb,2,2.1.19
+elegi –orum m.,elegiac verses,elegi,Noun,3,2.1.21
+resumo –sumere –sumpsi –sumptum,"to take up again, resume",resumo,Verb,2,2.1.21
+sanguineus –a –um,"bloody, bloodshot",sanguineus,Adjective,1,2.1.23
+niveus –a –um,snowy,niveus,Adjective,8,2.1.24
+dissilio –ire –ui,to spring apart; burst asunder; be rent asunder,dissilio,Verb,1,2.1.25
+faux faucis f.,mouth,faux,Noun,1,2.1.25
+anguis anguis m. or f.,snake,anguis,Noun,3,2.1.25
+fons fontis m.,"spring, fountain",fons,Noun,6,2.1.26
+recurro –ere –curri –cursus,to run back; return,recurro,Verb,1,2.1.26
+insero inserere inserui insertus,to fasten or put in; insert,insero,Verb,4,2.1.27
+velox –ocis,fast,velox,Adjective,1,2.1.29
+flebilis –e,"worthy of tears, lamentable",flebilis,Adjective,3,2.1.32
+heros –ois m.,demigod; hero,heros,Noun,3,2.1.35
+clarus –a –um,"clear, distinguished",clarus,Adjective,1,2.1.35
+adhibeo adhibere adhibui adhibitus,to apply,adhibeo,Verb,2,2.1.37
+dicto –are,"to say often, declare",dicto,Verb,2,2.1.38
+penes,within one's power (+ acc.),penes,Preposition,1,2.2.1
+periuro (periero) peiurare peiuravi periu2atus,Bagoas (name),Bagoas,Noun,1,2.2.1
+hesternus –a –um,"of yesterday, yesterday's",hesternus,Adjective,2,2.2.3
+spatior spatiari spatiatus sum,to walk about,spatior,Verb,2,2.2.3
+Danaus –i m.,Danaus,Danaus,Noun,1,2.2.4
+porticus porticus f.,"covered walk, colonnade, portico",porticus,Noun,1,2.2.4
+scripta –orum n. pl.,"writings, works (in poetry or prose)",scripta,Noun,5,2.2.5
+trepidus –a –um,agitated,trepidus,Adjective,2,2.2.6
+molestus –a –um,"troublesome, annoying",molestus,Adjective,2,2.2.8
+odium odii n.,hatred,odium,Noun,3,2.2.9
+mereor mereri meritus sum,"to earn, deserve",mereor,Verb,2,2.2.9
+sapiens –ntis,wise,sapiens,Adjective,2,2.2.11
+enim,"in fact, for",enim,Conjunction,3,2.2.11
+unde,"from where, whence",unde,Adverb,4,2.2.12
+furiosus –a –um,mad,furiosus,Adjective,2,2.2.13
+multi –orum m.,subst.,multi,Noun,4,2.2.14
+libertas libertatis f.,freedom,libertas,Noun,2,2.2.15
+obnoxius –a –um,"liable, guilty",obnoxius,Adjective,1,2.2.17
+dissimulo dissimulare dissimulavi dissimulatus,"to conceal, dissemble",dissimulo,Verb,6,2.2.18
+affectus –a –um,"furnished, supplied",affectus,Adjective,1,2.2.21
+langueo languere langui —,"to be faint, be weary",langueo,Verb,2,2.2.21
+viso visere visi visus,to look at,viso,Verb,1,2.2.22
+indicium indici(i) n.,"information, evidence",indicium,Noun,5,2.2.22
+fatigo fatigare fatigavi fatigatus,"to tire, wear out",fatigo,Verb,2,2.2.23
+impono imponere imposui impositus,"to put on, impose",impono,Verb,6,2.2.24
+sterto stertere,to snore,sterto,Verb,1,2.2.24
+liniger gera gerum,linen–wearing,liniger,Adjective,1,2.2.25
+curvus –a –um,curved,curvus,Adjective,5,2.2.26
+assiduus –a –um,"established, steady",assiduus,Adjective,2,2.2.27
+commissum –i n.,an offense,commissum,Noun,2,2.2.27
+autem,however; moreover,autem,Conjunction,1,2.2.28
+alius alia aliud (archaic: alis alid),"other, another",alius,Adjective,9,2.2.30
+interdum,sometimes,interdum,Adverb,1,2.2.35
+contra,"against, opposite (adv. and prep. +acc.)",contra,Preposition,3,2.2.37
+tuto,safely,tuto,Adverb,3,2.2.37
+diluo diluere dilui dilutus,to dissolve; wash,diluo,Verb,1,2.2.37
+altus –a –um,"tall, high; deep",altus,Adjective,14,2.2.39
+peculium –i n.,property; money,peculium,Noun,1,2.2.39
+liber libera liberum,free,liber,Adjective,3,2.2.40
+squalidus –a –um,rough; filthy,squalidus,Adjective,1,2.2.42
+orbus –a –um,bereft,orbus,Adjective,2,2.2.42
+fugax –acis,swift in flight,fugax,Adjective,2,2.2.43
+Tantalus –i m.,Tantalus (name),Tantalus,Noun,2,2.2.44
+Iunonius –a –um,pertaining to Juno,Iunonius,Adjective,3,2.2.45
+occido occidere occidi occasus,to go down; set; fall,occido,Verb,3,2.2.46
+compes (conpes) compedis f.,"a fetter, shackle",compes,Noun,1,2.2.47
+incestum –i n.,profanation of religion; incest,incestum,Noun,1,2.2.48
+quisquam quicquam,"someone, anyone",quisquam,Pronoun,9,2.2.52
+sive or seu,whether; or if,sive,Conjunction,12,2.2.53
+tepeo –ere,to be moderately warm; to reek,tepeo,Verb,1,2.2.53
+facilis facile,easy,facilis,Adjective,9,2.2.55
+favor favoris m.,goodwill,favor,Noun,3,2.2.56
+damno damnare damnavi damnatus,to condemn,damno,Verb,1,2.2.58
+ploro,"to lament, mourn",ploro,Verb,2,2.2.59
+dispar disparis,dissimilar,dispar,Adjective,1,2.2.61
+certamen certaminis n.,"contest, struggle",certamen,Noun,2,2.2.61
+ineo inire inii/inivi initus,to enter,ineo,Verb,3,2.2.61
+adgredior (aggredior) aggredi aggressus sum,to approach,adgredior,Verb,1,2.2.63
+coeo coire coivo/coii coitus,to come together,coeo,Verb,2,2.2.63
+toxicum –i n.,poison,toxicum,Noun,1,2.2.64
+ensis ensis m.,sword,ensis,Noun,5,2.2.64
+mutuus –a –um,"interchangeable,",mutuus,Adjective,3,2.3.2
+gaudium gaudi(i) n.,joy,gaudium,Noun,7,2.3.2
+genitalis –e ,fruitful,genitalis,Adjective,1,2.3.3
+recido –ere –cidi –cisus,to cut away; reduce,recido,Verb,1,2.3.3
+obsequium –i n.,"deference, solicitude",obsequium,Noun,2,2.3.5
+praetepesco –ere –ui —,to grow warm before,praetepesco,Verb,1,2.3.6
+bellicus –a –um,of or pertaining to war,bellicus,Adjective,1,2.3.8
+hasta hastae f.,spear,hasta,Noun,3,2.3.8
+mas maris,"male, masculine",mas,Noun,2,2.3.9
+depono deponere deposui depositus,to put down,depono,Verb,3,2.3.9
+virilis virile,manly,virilis,Adjective,1,2.3.9
+impleo implere implevi impletus,to fill in/up,impleo,Verb,5,2.3.11
+piger pigra pigrum,lazy,piger,Adjective,5,2.3.14
+mendosus –a –um,"false, pretend; faulty",mendosus,Adjective,1,2.4.1
+delictum –i n.,wrong,delictum,Noun,2,2.4.3
+studeo studere studui,to be eager,studeo,Verb,2,2.4.6
+rego regere rexi rectus,to rule,rego,Verb,2,2.4.7
+puppis puppis f.,stern of a ship,puppis,Noun,4,2.4.8
+invito invitare invitavi invitatus,to invite,invito,Verb,2,2.4.9
+insidiae insidiarum f. pl.,ambush,insidiae,Noun,2,2.4.12
+procax –acis,"bold, insolent",procax,Adjective,1,2.4.13
+rusticus –a –um,rural,rusticus,Adjective,8,2.4.13
+mobilis –e,"movable, loose",mobilis,Adjective,2,2.4.14
+imitor imitari imitatus sum,to imitate,imitor,Verb,2,2.4.15
+altum alti n.,deep sea; height,altum,Noun,2,2.4.16
+doto dotare dotavi dotatus,to endow,doto,Verb,1,2.4.17
+Callimachus –i m. ,Callimachus (name),Callimachus,Noun,1,2.4.19
+prae,"before (+ abl.), in the face of, in view of",prae,Adverb,3,2.4.19
+culpo culpare culpavi culpatus,"to blame, censure",culpo,Verb,4,2.4.21
+incedo incedere incessi incessus,"to go, happen; proceed; walk (in a stately manner)",incedo,Verb,1,2.4.23
+flecto flectere flexi flexus,to bend,flecto,Verb,1,2.4.25
+querulus –a –um ,querulous,querulus,Adjective,1,2.4.27
+percurro –ere –cucurri (–curri) –cursus,to run through or over,percurro,Verb,1,2.4.27
+chorda (corda) –ae f.,"a string, rope",chorda,Noun,1,2.4.27
+gestus –us m.,"posture, gesture, action",gestus,Noun,1,2.4.29
+numerosus –a –um,numerous,numerosus,Adjective,1,2.4.29
+illic or illi,there,illic,Adverb,9,2.4.32
+Hippolytus –i m.,Hippolytus,Hippolytus,Noun,4,2.4.32
+Priapus –i m.,Priapus (god),Priapus,Noun,1,2.4.32
+herois –idis f. (dat. heroisin),heroine,herois,Noun,1,2.4.33
+aequo aequare aequavi aequatus,"to make level, equalize",aequo,Verb,1,2.4.33
+brevitas –atis f.,shortness,brevitas,Noun,1,2.4.35
+corrumpo corrumpere corrupi corruptus,"to destroy, ruin",corrumpo,Verb,4,2.4.35
+brevis breve,"short, brief",brevis,Adjective,4,2.4.36
+accedo accedere accessi accessum,"to approach, be added, be included",accedo,Verb,3,2.4.37
+exhibeo exhibere exhibui exhibitum ,to produce,exhibeo,Verb,2,2.4.38
+fuscus –a –um,"dark, dusky",fuscus,Adjective,2,2.4.40
+pullus –a –um,dark-colored,pullus,Adjective,1,2.4.41
+cervix cervicis f.,neck,cervix,Noun,2,2.4.41
+croceus –a –um,"of saffron, saffron–colored",croceus,Adjective,1,2.4.43
+historia –ae f.,"a narrative of past events, history",historia,Noun,1,2.4.44
+serus –a –um,(too) late,serus,Adjective,4,2.4.45
+species speciei f.,"appearance, image; specter",species,Noun,3,2.4.46
+totiens,so often,totiens,Adverb,6,2.5.2
+pecco peccare peccavi peccatus,to commit a wrong; injure,pecco,Verb,10,2.5.3
+recordor recordari recordatus sum,to remember,recordor,Verb,2,2.5.3
+nudo nudare nudavi nudatus,"to bare, strip",nudo,Verb,1,2.5.5
+factum facti n.,deed,factum,Noun,7,2.5.5
+utinam,introduces an Optative subjunctive,utinam,Adverb,6,2.5.7
+quare,why; therefore,quare,Adverb,1,2.5.8
+faveo favere favi fautus,to favor,faveo,Verb,8,2.5.11
+palma palmae f.,"hand, palm",palma,Noun,4,2.5.12
+cruentus –a –um,"bloody, blood–stained",cruentus,Adjective,2,2.5.12
+rea –ae f.,a defendant; the accused,rea,Noun,1,2.5.12
+dormio dormire dormivi dormitum,to sleep,dormio,Verb,2,2.5.13
+conscribo conscribere conscripsi conscriptus,"to enroll, write",conscribo,Verb,1,2.5.17
+frequens frequentis,often,frequens,Adjective,1,2.5.21
+compositus –a –um ,well-ordered,compositus,Adjective,1,2.5.22
+vero,certainly,vero,Adverb,1,2.5.23
+liqueo liquere licui/liqui,to be fluid,liqueo,Verb,2,2.5.24
+frater fratris m.,brother,frater,Noun,4,2.5.25
+germanus –a –um,"having the same parents, true, real",germanus,Adjective,1,2.5.25
+cupidus –a –um,desirous,cupidus,Adjective,2,2.5.26
+Diana –ae f.,Diana (goddess),Diana,Noun,2,2.5.27
+exclamo exclamare exclamavi exclamatus,to exclaim,exclamo,Verb,1,2.5.29
+defero deferre detuli delatus,"to carry away; report, confer",defero,Verb,1,2.5.29
+communis communis commune,"common, general",communis,Adjective,1,2.5.31
+bonum –i n.,good thing; good; blessing,bonum,Noun,3,2.5.32
+tertius –a –um,3rd,tertius,Number,3,2.5.32
+subrubeo –ere,to be a little red,subrubeo,Verb,1,2.5.36
+lilium –ii n.,lily,lilium,Noun,1,2.5.37
+flavesco flavescere — — ,to become golden/yellow,flavesco,Verb,1,2.5.39
+Maeonis –idis f.,a Maeonian woman,Maeonis,Noun,1,2.5.40
+Assyrius –a –um,Assyrian,Assyrius,Adjective,1,2.5.40
+ebur –oris n.,ivory,ebur,Noun,1,2.5.40
+decenter,"decently, properly",decenter,Adverb,1,2.5.44
+sicut or sicuti,"just as, in as much as",sicut,Adverb,1,2.5.45
+impetus impetus m.,attack,impetus,Noun,1,2.5.46
+ultro,"furthermore, beyond; voluntarily",ultro,Adverb,2,2.5.49
+deterior deterior deterius; deterior –ius; deterrimus –a –um,worse,deterior,Adjective,2,2.5.50
+trisulcus –a –um,three–furrowed; three–forked,trisulcus,Adjective,1,2.5.52
+addisco addiscere addidici — ,to learn in addition,addisco,Verb,1,2.5.56
+psittacus –i m.,parrot,psittacus,Noun,4,2.6.1
+imitatrix –icis f.,"an imitator, follower",imitatrix,Noun,1,2.6.1
+Indus –a –um,belonging to India; Indian; native american (neo-Latin),Indus,Adjective,1,2.6.1
+exsequiae –arum f.,funeral rites,exsequiae,Noun,1,2.6.2
+frequenter,"in large numbers, in crowds; often, frequently; generally, widely",frequenter,Adverb,2,2.6.2
+pius –a –um,dutiful,pius,Adjective,13,2.6.3
+volucris volucris m. or f.,bird,volucris,Noun,3,2.6.3
+plango –ere –planxi –planctus,to beat,plango,Verb,2,2.6.3
+horridus –a –um,"rough, uncouth",horridus,Adjective,3,2.6.5
+resono resonare resonavi resonatus,to resound,resono,Verb,1,2.6.6
+tuba –ae f.,trumpet,tuba,Noun,1,2.6.6
+Ismaricus (Ismarius) –a –um,of Ismarus; of Thrace,Ismaricus,Adjective,2,2.6.7
+Philomela (Philemela) –ae f.,Philomela (name),Philomela,Noun,1,2.6.7
+tyrannus tyranni m.,tyrant,tyrannus,Noun,1,2.6.7
+expleo explere explevi expletus,"to fill up, fulfil",expleo,Verb,1,2.6.8
+querela querelae f.,complaint,querela,Noun,1,2.6.8
+deverto devertere deverti deversum ,to turn aside,deverto,Verb,1,2.6.9
+funus funeris n.,funeral; death; dead body,funus,Noun,4,2.6.9
+Itys –yos (acc. –ym) m.,Itys,Itys,Noun,3,2.6.10
+libro librare libravi libratus,to balance,libro,Verb,1,2.6.11
+turtur –uris m.,a turtle-dove,turtur,Noun,2,2.6.12
+concordia concordiae f.,"agreement, harmony",concordia,Noun,1,2.6.13
+vita vitae f.,life,vita,Noun,9,2.6.13
+tenax –acis,tenacious,tenax,Adjective,3,2.6.14
+Argolicus –a –um,of Argolis; Argolic; Greek,Argolicus,Adjective,1,2.6.15
+Phoceus (Phocaeus) –a –um,of Phocus,Phoceus,Adjective,1,2.6.15
+sonus soni m.,sound,sonus,Noun,4,2.6.18
+gloria gloriae f.,"renown, glory",gloria,Noun,4,2.6.20
+fragilis –e,"easily broken, brittle",fragilis,Adjective,1,2.6.21
+hebeto hebetare hebetavi hebetatus,to make blunt; to make dull; to impair,hebeto,Verb,1,2.6.21
+smaragdus –i m. or f.,"a green precious stone, emerald, beryl, jasper",smaragdus,Noun,1,2.6.21
+ruber rubra rubrum,red,ruber,Adjective,1,2.6.22
+Punicus –a –um,Punic; Carthaginian,Punicus,Adjective,1,2.6.22
+rostrum rostri n.,"beak, prow, speaker's platform",rostrum,Noun,3,2.6.22
+crocum –i n. or crocus –i m.,saffron; saffron color,crocum,Noun,1,2.6.22
+blaesus –a –um,"lisping, stammering",blaesus,Adjective,1,2.6.24
+invidia invidiae f.,"envy, jealousy",invidia,Noun,4,2.6.25
+placidus –a –um,pleasant,placidus,Adjective,1,2.6.26
+coturnix (coturnix) –icis f. ,a quail,coturnix,Noun,1,2.6.27
+minimum,"in the least degree, to least extent",minimum,Adverb,1,2.6.29
+nux nucis f.,nut,nux,Noun,1,2.6.31
+esca –ae f.,food,esca,Noun,2,2.6.31
+papaver –eris n.,the poppy,papaver,Noun,1,2.6.31
+umor –oris m.,moisture,umor,Noun,1,2.6.32
+g?rus –i m.,circle,gyrus,Noun,1,2.6.33
+milvus –i m.,"a bird of prey, kite",milvus,Noun,1,2.6.34
+pluvius –a –um,"rainy, bringing rain",pluvius,Adjective,1,2.6.34
+graculus –i m.,a jackdaw,graculus,Noun,1,2.6.34
+armifer (armiger) –era –erum,"armed, warlike",armifer,Adjective,1,2.6.35
+cornix –icis f.,crow,cornix,Noun,3,2.6.35
+saeculum saeculi n.,"age; generation, people born at a time; mortal race; century",saeculum,Noun,1,2.6.36
+humanus –a –um,human,humanus,Adjective,2,2.6.37
+imago imaginis f.,"image, echo",imago,Noun,5,2.6.37
+Ph?lacides (Phyll–) –ae m. ,"Phylacides, i.e. Protesilaus",Phylacides,Noun,1,2.6.41
+Thersites –ae ,Thersites (name),Thersites,Noun,1,2.6.41
+cinis cineris m. or f.,ashes,cinis,Noun,3,2.6.42
+procellosus –a –um,"full of storms, stormy",procellosus,Adjective,1,2.6.44
+septem; septimus –a –um,7; 7th,septem,Number,2,2.6.45
+Parca –ae f.,Parca; one of the Fates,Parca,Noun,1,2.6.46
+colus –i and –us f.,distaff,colus,Noun,1,2.6.46
+stupeo –ere –ui,to be amazed or dazed; to be bewildered,stupeo,Verb,1,2.6.47
+palatum –i n.,"roof of the mouth, palate; by metonymy, the mouth (as the organ of speech)",palatum,Noun,1,2.6.47
+collis collis m.,hill,collis,Noun,2,2.6.49
+Elysius –a –um,"Elysian, of the Elysian fields",Elysius,Adjective,2,2.6.49
+nemus nemoris n.,"grove, forest",nemus,Noun,3,2.6.49
+ilex –icis f.,the holm–oak,ilex,Noun,3,2.6.49
+frondeo –ere,to be leafy; to bear or put forth leaves; frondens,frondeo,Verb,1,2.6.49
+vireo virere virui,to be green,vireo,Verb,2,2.6.50
+obscenus (obscaenus) –a –um,filthy; ill-boding,obscenus,Adjective,2,2.6.52
+prohibeo prohibere prohibui prohibitus,to prevent,prohibeo,Verb,4,2.6.52
+innocuus –a –um,harmless,innocuus,Adjective,1,2.6.53
+olor –oris m.,"smell, odor",olor,Noun,1,2.6.53
+vivax –acis,long–lived; lively,vivax,Adjective,1,2.6.54
+phoenix –icis m.,Phoenix,phoenix,Noun,1,2.6.54
+unicus –a –um,unique,unicus,Adjective,1,2.6.54
+explico explicare explicavi/explicui explicatus/explicitus,to untangle; explain,explico,Verb,1,2.6.55
+nemoralis –e,"of a grove, in a wood, sylvan",nemoralis,Adjective,2,2.6.57
+sedes sedis f.,seat,sedes,Noun,1,2.6.57
+converto –ere –verti,"to turn round, cause to turn, turn back",converto,Verb,1,2.6.58
+tumulus tumuli m.,mound,tumulus,Noun,2,2.6.59
+lapis lapidis m.,stone,lapis,Noun,2,2.6.60
+sufficio sufficere suffeci suffectum,to suffuse,sufficio,Verb,2,2.7.1
+dimico dimicare dimicavi dimicatus,"to struggle, fight",dimico,Verb,2,2.7.2
+piget pigere piguit pigitum est,to it disgusts,piget,Verb,1,2.7.2
+marmoreus –a –um,of marble,marmoreus,Adjective,2,2.7.3
+summum –i n.,the top,summum,Noun,1,2.7.3
+eligo eligere elegi electus,"to pick out, select",eligo,Verb,1,2.7.4
+peccatum –i n.,fault,peccatum,Noun,2,2.7.11
+aequus –a –um,equal,aequus,Adjective,4,2.7.12
+insimulo insimulare,to accuse (falsely),insimulo,Verb,1,2.7.13
+frustra,in vain,frustra,Adverb,5,2.7.13
+pondus ponderis n.,weight,pondus,Noun,8,2.7.14
+auritus –a –um,"with ears, having large ears, long-eared",auritus,Adjective,1,2.7.15
+miserandus –a –um,to be pitied,miserandus,Adjective,1,2.7.15
+asellus – i m.,"ass, donkey",asellus,Noun,1,2.7.15
+Cypassis –idis f.,Cypassis (name),Cypassis,Noun,4,2.7.17
+contemero –are –avi –atus,"to stain, pollute",contemero,Verb,1,2.7.18
+libido libidinis f.,"passion, lust",libido,Noun,2,2.7.19
+contemno contemnere contempsi contemptus,"to despise, scorn",contemno,Verb,2,2.7.20
+famulus –a –um,"serving, serviceable, servile",famulus,Adjective,1,2.7.21
+conubium –ii n. ,marriage,conubium,Noun,1,2.7.21
+seco secare secui sectum,to cut,seco,Verb,5,2.7.22
+operor –ari –atus sum,to work; be occupied with,operor,Verb,2,2.7.23
+scilicet,certainly,scilicet,Adverb,9,2.7.25
+iuro iurare iuravi iuratus,"to swear, take an oath",iuro,Verb,9,2.7.27
+perfectus –a –um,complete,perfectus,Adjective,1,2.8.1
+furtum furti n.,theft,furtum,Noun,1,2.8.3
+magis or mage,more,magis,Adverb,7,2.8.4
+socio sociare sociavi sociatus,to make one a socius; to share,socio,Verb,1,2.8.5
+concubitus –us m.,"a lying together, concubinage",concubitus,Noun,2,2.8.6
+delinquo –linquere –liqui –lictum,"to fail, transgress, offend",delinquo,Verb,1,2.8.9
+contendo contendere contendi contentus,"to strain, exert",contendo,Verb,1,2.8.10
+Thessalus –a –um or Thessalis –idis,Thessalian,Thessalus,Adjective,1,2.8.11
+serva servae f.,female slave,serva,Noun,1,2.8.12
+Mycenaeus –a –um,of Mycenae; Mycenaean,Mycenaeus,Adjective,1,2.8.12
+Phoebas –adis f.,a priestess of Apollo,Phoebas,Noun,1,2.8.12
+Tantalides –ae m.,descendent of Tantalus,Tantalides,Noun,1,2.8.13
+defigo defigere defixi defixus,to fix,defigo,Verb,2,2.8.15
+praesens –ntis,present,praesens,Adjective,1,2.8.17
+Carpathius –a –um,of Carpathus (island),Carpathius,Adjective,2,2.8.20
+renuo renuere renui —,to deny (by motion of the head),renuo,Verb,1,2.8.23
+emereo emerere emerui emeritum or e–mereor emereri emeritus sum,"to obtain by service, earn, merit, deserve",emereo,Verb,3,2.8.24
+stultus –a –um,foolish,stultus,Adjective,7,2.8.25
+proditor –oris m.,"a betrayer, traitor",proditor,Noun,2,2.8.26
+indignor –atus sum,to deem unworthy; to fret,indignor,Verb,2,2.9.1
+vulnero vulnerare vulneravi vulneratus,to wound,vulnero,Verb,1,2.9.4
+figo figere fixi fixus,"to fix, fasten",figo,Verb,5,2.9.5
+confodio –ere –fodi –fossus,to stab,confodio,Verb,1,2.9.8
+medicus –a –um,"healing, medical",medicus,Adjective,1,2.9.8
+venator –oris m.,huntsman,venator,Noun,1,2.9.9
+deditus –a –um,"given up, surrendered",deditus,Adjective,1,2.9.11
+reluctor reluctari reluctatus,"to struggle, resist",reluctor,Verb,2,2.9.12
+hamatus –a –um,barbed,hamatus,Adjective,1,2.9.13
+retundo retundere ret(t)udi retu(n)sum,to dull,retundo,Verb,1,2.9.13
+immensus –a –um,immense,immensus,Adjective,2,2.9.17
+promoveo –ere –movi –motus,to move forward; push forward,promoveo,Verb,1,2.9.17
+stramineus –a –um,"made of straw, straw-",stramineus,Adjective,1,2.9.18
+casa casae f.,"cottage, house",casa,Noun,1,2.9.18
+fessus –a –um,tired,fessus,Adjective,1,2.9.19
+saltus saltus m.,pasture,saltus,Noun,1,2.9.20
+navalis –e,"naval, pertaining to ships",navalis,Adjective,1,2.9.21
+pinus –us or –i f.,pine tree,pinus,Noun,2,2.9.21
+rudis –is f.,a wooden sword used for practice,rudis,Noun,1,2.9.22
+placide,"gently, calmly",placide,Adverb,1,2.9.24
+deprecor deprecari deprecatus sum,to ward off (from one's self or others) by earnest prayer,deprecor,Verb,1,2.9.26
+adeo,"so, to such a point, to such an extent",adeo,Adverb,1,2.9.26
+pertaedet –taesum est,to it wearies,pertaedet,Verb,1,2.9.27
+relanguesco –languescere –langui —,"to grow languid, enfeebled",relanguesco,Verb,1,2.9.27
+ardor ardoris m.,"burning, heat, eagerness",ardor,Noun,3,2.9.27
+misere,"wretchedly, desperately",misere,Adverb,1,2.9.28
+turbo (turben) turbinis m.,whirlwind,turbo,Noun,2,2.9.28
+spumo spumare spumavi spumatus,to foam,spumo,Verb,1,2.9.29
+retento –are –avi –atum,to hold back; restrain,retento,Verb,1,2.9.30
+pre(he)ndo –ere prendi prensum,"to lay hold of, grasp, snatch",prehendo,Verb,1,2.9.31
+portus portus m.,port,portus,Noun,2,2.9.32
+hic,here,hic,Adverb,8,2.9.36
+gelidus –a –um,"cold, icy",gelidus,Adjective,5,2.9.41
+fruor frui fructus sum,to enjoy,fruor,Verb,3,2.9.46
+privignus –i m.,a step-son,privignus,Noun,1,2.9.47
+ventosus –a –um,"windy, stormy",ventosus,Adjective,3,2.9.49
+ala alae f.,"wing, armpit",ala,Noun,2,2.9.49
+exaudio exaudire exaudivi exauditus,to hear,exaudio,Verb,1,2.9.51
+indesertus –a –um,"not deserted, unforsaken",indesertus,Adjective,1,2.9.52
+vagus –a –um,wandering,vagus,Adjective,1,2.9.53
+veneror venerari veneratus sum or venero –are,to venerate,veneror,Verb,1,2.9.54
+Graecinus –i m.,Graecinus,Graecinus,Noun,1,2.10.1
+operosus –a –um,"full of labor, industrious",operosus,Adjective,2,2.10.5
+discors discordis,disagreeing,discors,Adjective,2,2.10.9
+phaselus –i m.,a light ship,phaselus,Noun,1,2.10.9
+gemino geminare geminavi geminatum,to double,gemino,Verb,1,2.10.11
+Erycinus –a –um,pertaining to Eryx,Erycinus,Adjective,1,2.10.11
+folium foli(i) n.,leaf,folium,Noun,3,2.10.13
+evenio evenire eveni eventus,to come out,evenio,Verb,4,2.10.16
+viduus –a –um,"deprived of a husband or wife, bereft, celibate; (of vines) unsupported by a tree",viduus,Adjective,3,2.10.17
+cubile cubilis n.,"couch, bed",cubile,Noun,1,2.10.17
+dis–perdo –perdere –perdidi –perditum,to ruin,disperdo,Verb,1,2.10.21
+alimentum –i n.,nourishment,alimentum,Noun,2,2.10.25
+opera operae f.,work,opera,Noun,1,2.10.26
+letum leti n.,death,letum,Noun,2,2.10.30
+induo induere indui indutus,"to put on, clothe",induo,Verb,4,2.10.31
+aeternus –a –um,"everlasting, eternal",aeternus,Adjective,4,2.10.32
+aro arare aravi aratus,to plough,aro,Verb,1,2.10.33
+aequor aequoris n.,level surface; sea; plain,aequor,Noun,3,2.10.34
+naufragus –a –um,shipwrecked,naufragus,Adjective,1,2.10.34
+languesco –ere langui,to become faint,languesco,Verb,1,2.10.35
+conveniens –entis,"agreeing, corresponding",conveniens,Adjective,1,2.10.38
+Peliacus –a –um,of Peleus; of Mt. Pelion,Peliacus,Adjective,1,2.11.2
+concurro concurrere concucurri concursus,to assemble,concurro,Verb,1,2.11.3
+cautes –is f.,craggy or pointed rock,cautes,Noun,1,2.11.3
+conspicuus –a –um,"in view, visible",conspicuus,Adjective,1,2.11.4
+fulvus –a –um,reddish or tawny yellow,fulvus,Adjective,1,2.11.4
+vellus –eris n.,fleece,vellus,Noun,1,2.11.4
+remus remi m.,oar,remus,Noun,2,2.11.5
+Argo –us f.,"Argo, the name of a ship",Argo,Noun,1,2.11.6
+funestus –a –um,deadly,funestus,Adjective,1,2.11.6
+Penates –ium m.,"Penates, household gods",Penates,Noun,1,2.11.7
+egelidus –a –um,"lukewarm, tepid",egelidus,Adjective,1,2.11.10
+iniustus –a –um,unjust,iniustus,Adjective,1,2.11.12
+caerulus (caeruleus) –a –um,dark blue,caerulus,Adjective,1,2.11.12
+concha –ae f.,shellfish; cockle shell,concha,Noun,1,2.11.13
+lapillus –i m.,pebble (dim. of lapis) ,lapillus,Noun,1,2.11.13
+bibulus –a –um,"drinking readily, absorbent",bibulus,Adjective,1,2.11.14
+litus litoris n.,sea–shore,litus,Noun,6,2.11.14
+signo signare signavi signatus,to mark,signo,Verb,4,2.11.15
+hactenus,"thus far, so far, of space and time",hactenus,Adverb,3,2.11.16
+ceterus –a –um; often pl. ceteri –ae –a,the other; the rest,ceterus,Adjective,1,2.11.16
+Scylla –ae f.,Scylla,Scylla,Noun,2,2.11.18
+infesto –are,"to annoy, disturb",infesto,Verb,1,2.11.18
+Charybdis –is f.,Charybdis,Charybdis,Noun,2,2.11.18
+emineo –ere –ui,to stand out,emineo,Verb,1,2.11.19
+Ceraunia –orum n. pl.,Ceraunia,Ceraunia,Noun,1,2.11.19
+syrtis –is f.,sand–bank or shoal in the sea; esp.,syrtis,Noun,1,2.11.20
+procella –ae f.,gale,procella,Noun,2,2.11.22
+sero,late,sero,Adverb,1,2.11.23
+funis funis m.,"rope, line",funis,Noun,1,2.11.23
+salum –i n.,the tossing or heaving swell of the sea; the open sea,salum,Noun,1,2.11.24
+horreo horrere horrui,to dread,horreo,Verb,1,2.11.25
+iniquus –a –um,uneven,iniquus,Adjective,4,2.11.25
+cerno cernere crevi certus,"to discern, separate",cerno,Verb,2,2.11.26
+Triton –onis m.,Triton,Triton,Noun,1,2.11.27
+exaspero –are –avi –atus,to make rough,exaspero,Verb,1,2.11.27
+generosus –a –um," of noble birth, noble; eminent",generosus,Adjective,1,2.11.29
+fecundus –a –um,bringing forth,fecundus,Adjective,3,2.11.29
+increpo increpare increpavi/increpui increpatus/increpitus,to rattle; complain loudly about,increpo,Verb,2,2.11.32
+volucer volucris volucre,flying,volucer,Adjective,1,2.11.33
+dictum dicti n.,word; saying,dictum,Noun,3,2.11.33
+Galatea –ae f.,Galatea,Galatea,Noun,1,2.11.34
+Nereis –idis (–idos) f.,Nereis,Nereis,Noun,3,2.11.36
+vado vadere vasi vasum,to go,vado,Verb,1,2.11.37
+proclino –are,"to bend, incline",proclino,Verb,1,2.11.39
+Nereus –ei or –eos m.,Nereus,Nereus,Noun,1,2.11.39
+linteum –i n.,"linen cloth, napkin; sailcloth; a sail",linteum,Noun,2,2.11.41
+turgidus –a –um,swollen; grandiose high-flown,turgidus,Adjective,1,2.11.42
+adveho –ere –vexi –vectus,to carry or convey to,adveho,Verb,1,2.11.44
+victima –ae f.,an animal offered in sacrifice; a victim,victima,Noun,3,2.11.46
+voveo vovere vovi votus,to vow,voveo,Verb,3,2.11.46
+arena (harena) –ae f.,"sand, arena",arena,Noun,3,2.11.47
+cumulus –i m.,heap; flood,cumulus,Noun,1,2.11.48
+"quilibet quaelibet quodlibet (or quilubet, etc.)","whoever or whatever you please; anyone, anything",quilibet,Pronoun,3,2.11.48
+Lyaeus –i m.,Lyaeus,Lyaeus,Noun,2,2.11.49
+paene,almost,paene,Adverb,2,2.11.50
+medium –ii n.,middle,medium,Noun,2,2.11.50
+obruo obruere obrui obrutum,to cover,obruo,Verb,2,2.11.50
+navis navis f.,ship,navis,Noun,1,2.11.50
+extimesco –ere –timui,to be afraid,extimesco,Verb,1,2.11.52
+verum –i n.,that which is true; truth,verum,Noun,4,2.11.53
+fictus –a –um,feigned,fictus,Adjective,1,2.11.53
+quam primum,as soon as possible,quam,Adverb,2,2.11.55
+nitidus –a –um,"shining, bring",nitidus,Adjective,1,2.11.55
+triumphalis –e,"triumphal, honored with a triumph",triumphalis,Adjective,1,2.12.1
+firmus –a –um,"firm, strong",firmus,Adjective,1,2.12.3
+praecipuus –a –um,"peculiar, special",praecipuus,Adjective,1,2.12.5
+victoria victoriae f.,victory,victoria,Noun,1,2.12.5
+humilis humile,humble,humilis,Adjective,2,2.12.7
+murus muri m.,wall,murus,Noun,1,2.12.7
+oppidum oppidi n.,town,oppidum,Noun,1,2.12.7
+fossa –ae f.,ditch,fossa,Noun,1,2.12.7
+ductus –us m.,"a leading, commanding; conveyance",ductus,Noun,1,2.12.8
+Pergama –orum n. or Pergamum –i n. and Pergamus (–os) –i f.,Pergamum (city),Pergama,Noun,1,2.12.9
+bilustris –e,"that lasts two lustra, i.e. ten years, of ten years' duration ",bilustris,Adjective,1,2.12.9
+quotus –a –um,of what number,quotus,Adjective,1,2.12.10
+sepono –ponere –posui –positum,"to separate, select",sepono,Verb,1,2.12.11
+dissors –rtis,"of a different fate, separate, not shared",dissors,Adjective,1,2.12.11
+titulus – i m. (–um n.),"title, label, claim to fame",titulus,Noun,3,2.12.12
+pedes peditis m.,foot soldier,pedes,Noun,1,2.12.14
+signifer –feri m.,a standard–bearer,signifer,Noun,1,2.12.14
+immisceo –miscui –mixtus (–mistus),to mingle with; usually w. dat.,immisceo,Verb,3,2.12.15
+actum –i n.,"deed, law; official record ",actum,Noun,2,2.12.15
+pario parere peperi partum,to bring forth,pario,Verb,2,2.12.16
+Tyndaris –idis (–idos) f.,daughter of Tyndarus; Helen,Tyndaris,Noun,1,2.12.18
+Europa –ae f.,Europa (name),Europa,Noun,1,2.12.18
+Asia –ae,Asia,Asia,Noun,1,2.12.18
+silvestris –e,"pertaining to the woods, pastoral",silvestris,Adjective,1,2.12.19
+Lapitha –ae m./f.,Lapitha,Lapitha,Noun,1,2.12.19
+biformis –is,two–formed,biformis,Adjective,1,2.12.19
+Troianus –a –um,Trojan,Troianus,Adjective,3,2.12.21
+Latinus –i m.,Latinus,Latinus,Noun,1,2.12.22
+Romanus –a –um,Roman,Romanus,Adjective,2,2.12.23
+etiamnum or etiamnunc,"yet, till now, even at this time",etiamnum,Adverb,2,2.12.23
+immitto immittere immisi immissus,to send in,immitto,Verb,1,2.12.24
+socer soceri m.,father–in–law,socer,Noun,1,2.12.24
+spectatrix –icis f.,an observer (female),spectatrix,Noun,1,2.12.26
+iuvencus –a –um,young,iuvencus,Noun,2,2.12.26
+labefacto labefactare labefactavi labefactatus,to make unsteady,labefacto,Verb,1,2.13.1
+gravidus –a –um,heavy,gravidus,Noun,2,2.13.1
+periculum periculi n.,danger,periculum,Noun,1,2.13.3
+concipio concipere concepi conceptum,"to produce, conceive",concipio,Verb,2,2.13.5
+Paraetonium –i n.,Paraetonium (place),Paraetonium,Noun,1,2.13.7
+genialis –e,sacred to the guardian spirit; genial,genialis,Adjective,2,2.13.7
+Canopus –i m.,Canopus (town),Canopus,Noun,1,2.13.7
+Memphis –idis f.,"Memphis, city in Egypt",Memphis,Noun,1,2.13.8
+palmifer –fera –ferum,"palm-bearing, abounding in palms, palmiferous",palmifer,Adjective,1,2.13.8
+Pharos (Pharus) –i f.,"Pharos (island), lighthouse",Pharos,Noun,1,2.13.8
+Nilus –i m.,Nilus,Nilus,Noun,3,2.13.9
+delabor –lapsus sum,to glide,delabor,Verb,3,2.13.9
+alveus –i m.,cavity,alveus,Noun,2,2.13.9
+sistrum –i n.,metallic rattle,sistrum,Noun,2,2.13.11
+Anubis –is (–idis) m.,Anubis,Anubis,Noun,1,2.13.11
+vereor vereri veritus sum,to fear,vereor,Verb,4,2.13.11
+sacrum sacri n.,"a holy thing, (religious) rite",sacrum,Noun,9,2.13.12
+Osiris –is (–idis) m.,Osiris,Osiris,Noun,1,2.13.12
+donarium –i n.,"a place of offerings, altar",donarium,Noun,1,2.13.13
+serpens –entis (gen. pl. serpentum) m./f.,creeping thing; snake,serpens,Noun,1,2.13.13
+corniger –era –erum,horned,corniger,Adjective,3,2.13.14
+Apis is m. (abl. Apide),Apis (name),Apis,Noun,1,2.13.14
+Gallicus –a –um,Gallic,Gallicus,Adjective,1,2.13.18
+turma turmae f.,troop,turma,Noun,1,2.13.18
+uterus –i m.,the womb,uterus,Noun,2,2.13.19
+miseror –ari –atus sum,to feel or show pity,miseror,Verb,1,2.13.19
+latens –entis,lying hid,latens,Adjective,1,2.13.20
+Ilithyia –ae f.,Ilithyia (goddess),Ilithyia,Noun,1,2.13.21
+tus turis n.,incense,tus,Noun,3,2.13.23
+fumosus –a –um,"full of smoke, smoky",fumosus,Adjective,1,2.13.23
+ara arae f.,altar,ara,Noun,3,2.13.23
+adicio adicere adieci adiectus,to throw to,adicio,Verb,2,2.13.25
+tantus –a –um,"so much, so great",tantus,Adjective,6,2.13.27
+fas n.,right (indeclinable),fas,Noun,1,2.13.27
+pugna pugnae f.,"battle, fight",pugna,Noun,3,2.13.28
+immunis –e,free from service,immunis,Adjective,1,2.14.1
+peltatus –a –um,armed with the pelta,peltatus,Adjective,1,2.14.2
+armo armare armavi armatus,"to equip, arm",armo,Verb,1,2.14.4
+instituo instituere institui institutus,"to undertake; equip, educate",instituo,Verb,1,2.14.5
+convello –ere –velli –vulsus,to pull violently; pluck,convello,Verb,1,2.14.5
+fetus fetus m.,bearing or breeding; the young; the new swarm,fetus,Noun,2,2.14.5
+iacio iacere ieci iactus,to throw,iacio,Verb,1,2.14.11
+genus generis n.,origin,genus,Noun,3,2.14.11
+primordium –(i)i n.,"a beginning, origin",primordium,Noun,1,2.14.11
+Priamus –i m.,Priamus,Priamus,Noun,1,2.14.13
+recuso recusare recusavi recusatus,to refuse,recuso,Verb,4,2.14.14
+Thetis –idis (–idos) f.,Thetis,Thetis,Noun,1,2.14.14
+Ilia –ae f.,Ilia,Ilia,Noun,5,2.14.15
+neco necari necavi necatus,to kill,neco,Verb,3,2.14.15
+conditor –oris m.,founder,conditor,Noun,1,2.14.16
+alvus –i f.,the abdomen,alvus,Noun,1,2.14.17
+vello vellere vulsi/velli vulsum,to pluck,vello,Verb,2,2.14.24
+acerbus –a –um,bitter,acerbus,Adjective,1,2.14.24
+spons spontis f.,free will,spons,Noun,1,2.14.25
+maturus –a –um,mature,maturus,Adjective,1,2.14.25
+effodio –ere –fodi –fossus,to dig out,effodio,Verb,1,2.14.27
+dirus –a –um,"awful, ill-omened",dirus,Adjective,1,2.14.28
+Colchis –idis f.,Colchis (place),Colchis,Noun,1,2.14.29
+respergo –ere –spersi –spersus,to sprinkle over; besprinkle,respergo,Verb,1,2.14.29
+Tereus –ei or –eos m.,Tereus (name),Tereus,Noun,1,2.14.33
+inrito (irrito) inritare inritavi inritatus,to exasperate,inrito,Verb,2,2.14.33
+Iason (Iaso) –onis m.,Jason,Iason,Noun,3,2.14.33
+Armenius –a –um,"Armenian, of or relating to Armenia",Armenius,Adjective,1,2.14.35
+leaena –ae f.,lioness,leaena,Noun,1,2.14.36
+impune,with impunity,impune,Adverb,2,2.14.37
+rogus rogi m.,funeral pyre,rogus,Noun,4,2.14.39
+resolvo –ere –solvi –solutus,to untie,resolvo,Verb,1,2.14.39
+aetherius (aetherius) –a –um,heavenly,aetherius,Adjective,1,2.14.41
+semel,once,semel,Number,1,2.14.43
+concedo concedere concessi concessus,"to withdraw, allow, concede",concedo,Verb,7,2.14.43
+vincio vincire vinxi vinctum,to tie up,vincio,Verb,1,2.15.1
+censeo censere censui census,to assess,censeo,Verb,1,2.15.2
+articulus articuli m.,"joint, knuckle; finger",articulus,Noun,1,2.15.4
+commodus –a –um,complete; proper; beneficial,commodus,Adjective,1,2.15.6
+tero terere trivi tritum,"to rub, wear away; use up",tero,Verb,2,2.15.6
+invideo invidere invidi invisus,to envy (+ dat.),invideo,Verb,2,2.15.8
+donum doni n.,gift,donum,Noun,3,2.15.8
+subito,suddenly,subito,Adverb,1,2.15.9
+laevus –a –um,"left, on the left side",laevus,Adjective,3,2.15.12
+elabor elabi elapsus,to slip away,elabor,Verb,1,2.15.13
+angustus –a –um,narrow,angustus,Adjective,2,2.15.13
+mirus –a –um,"marvelous, wonderful",mirus,Adverb,1,2.15.14
+umidus –a –um,"moist, damp",umidus,Adjective,2,2.15.17
+prius,"earlier, preceding, before; in preference, to, rather",prius,Number,2,2.15.17
+loculus –i m.,"small space, compartment",loculus,Noun,1,2.15.19
+astringo (adstringo) –stringere –strinxi –strictum,to tighten,astringo,Verb,2,2.15.20
+dedecus dedecoris n.,"shame, disgrace",dedecus,Noun,2,2.15.21
+calidus (caldus) –a –um,"warm, hot",calidus,Adjective,1,2.15.23
+perfundo –ere –fudi –fusus,to pour over or along; wash,perfundo,Verb,1,2.15.23
+irritus (inritus) –a –um,"invalid, void",irritus,Adjective,3,2.15.27
+proficiscor proficisci profectus sum,to set forth,proficiscor,Verb,1,2.15.27
+Sulmo –onis m.,Sulmo,Sulmo,Noun,2,2.16.1
+rus ruris n.,country,rus,Noun,3,2.16.1
+irriguus –a –um ,watered,irriguus,Adjective,1,2.16.2
+salubris –e or saluber –bris –bre,healthy,salubris,Adjective,2,2.16.2
+mico micare micui,"to move quickly to and fro, vibrate",mico,Verb,1,2.16.4
+Icarius –i m.,Icarius (name),Icarius,Noun,1,2.16.4
+canis canis m. or f.,dog,canis,Noun,4,2.16.4
+pererro pererrare pererravi pererratus,to wander through or over,pererro,Verb,2,2.16.5
+fertilis –e,"productive, fertile",fertilis,Adjective,3,2.16.6
+solum –i n.,"bottom, native territory",solum,Noun,2,2.16.6
+ferax –acis,fertile,ferax,Adjective,3,2.16.7
+bacifer –fera –ferum,bearing berries,bacifer,Adjective,1,2.16.8
+Pallas –adis f.,Pallas,Pallas,Noun,2,2.16.8
+rivus –i m.,"brook, stream",rivus,Noun,3,2.16.9
+gramineus –a –um,grassy,gramineus,Adjective,2,2.16.10
+caespes (cespes) –itis f.,turf,caespes,Noun,2,2.16.10
+obumbro obumbrare obumbravi obumbratus,to overshadow; darken,obumbro,Verb,1,2.16.10
+Pollux –ucis m.,Pollux,Pollux,Noun,2,2.16.13
+Castor –oris m.,Castor (name),Castor,Noun,2,2.16.13
+Alpes –ium f.,the Alps,Alpes,Noun,1,2.16.19
+iter itineris n.,journey,iter,Noun,3,2.16.20
+Libycus –a –um,Libyan,Libycus,Adjective,1,2.16.21
+perrumpo –ere –rupi –ruptus,to break,perrumpo,Verb,1,2.16.21
+Syrtis –is f.,shoals on the N. African coast between Carthage and Cyrene,Syrtis,Noun,1,2.16.21
+portentum –i,an omen,portentum,Noun,1,2.16.23
+inguen –inguinis n.,the groin,inguen,Noun,4,2.16.23
+latro latrare latravi latratus,to bark,latro,Verb,2,2.16.23
+Malea –ae f.,Malea,Malea,Noun,1,2.16.24
+summergo –ere –mersi –mersus,to plunge beneath; submerge,summergo,Verb,2,2.16.25
+saturo saturare saturavi saturatus,to fill; glut,saturo,Verb,1,2.16.25
+fundo fundere fudi fusus,"to pour, scatter",fundo,Verb,2,2.16.26
+effundo effundere effudi effusus,to pour out,effundo,Verb,2,2.16.26
+recepto receptare receptavi receptatus,to take back or out; recover,recepto,Verb,1,2.16.26
+Neptunus –i m.,Neptunus,Neptunus,Noun,2,2.16.27
+potentia potentiae f.,power,potentia,Noun,1,2.16.27
+subvenio subvenire subveni subventum,to aid,subvenio,Verb,1,2.16.28
+Hero –us f.,Hero (name),Hero,Noun,1,2.16.31
+trano tranare tranavi tranatus,to swim or sail across,trano,Verb,2,2.16.31
+amnis amnis m.,"river, torrent",amnis,Noun,7,2.16.34
+nato natare natavi natatus,to swim,nato,Verb,1,2.16.34
+arboreus –a –um,"pertaining to trees, branching",arboreus,Adjective,3,2.16.36
+mulceo –ere mulsi mulsus (mulctus),to stroke; lick,mulceo,Verb,1,2.16.36
+natalis –e,"related to birth, natal",natalis,Adjective,1,2.16.38
+Scythia –ae f,Scythia,Scythia,Noun,1,2.16.39
+Cilix –icis,Cilician,Cilix,Adjective,1,2.16.39
+Britannus –a –um,"Briton, of Britain",Britannus,Adjective,1,2.16.39
+Prometheus –a –um,"of or belonging to Prometheus, Promethean",Prometheus,Adjective,1,2.16.40
+cruor cruoris m.,"blood, bloodshed",cruor,Noun,1,2.16.40
+ulmus –i f.,an elm tree,ulmus,Noun,2,2.16.41
+caducus –a –um,"liable to fall, doomed",caducus,Adjective,2,2.16.45
+incipio incipere incepi inceptus,to begin,incipio,Verb,8,2.16.48
+pollicitum –i n. ,"a promise, pledge",pollicitum,Noun,2,2.16.48
+essedum –i n.,a two–wheeled war–chariot,essedum,Noun,1,2.16.49
+mannus –i m.,a pony,mannus,Noun,1,2.16.49
+iuba –ae f.,the mane of a horse; of a serpent,iuba,Noun,3,2.16.50
+subsido –ere –sedi –sessus,to sit or settle down,subsido,Verb,1,2.16.51
+servio servire servivi servitus,to serve,servio,Verb,3,2.17.1
+moderatus –a –um ,"limited, bounded, moderated",moderatus,Adjective,2,2.17.3
+Paphos (–us) –i f.,Paphos (–us),Paphos,Noun,1,2.17.4
+fluctus fluctus m.,flood,fluctus,Noun,1,2.17.4
+Cythera –orum n. or Cythere –es f.,Cythera (island),Cythera,Noun,1,2.17.4
+quoniam,since,quoniam,Conjunction,1,2.17.6
+fastus –us m.,haughtiness,fastus,Noun,1,2.17.9
+idcirco or iccirco,on that account,idcirco,Adverb,1,2.17.13
+nympha –ae (nymphe –es) f.,bride; nymph,nympha,Noun,2,2.17.15
+Calypso –us f.,Calypso (name),Calypso,Noun,1,2.17.15
+detineo –ere –ui –tentus,to hold from or back; hold,detineo,Verb,1,2.17.16
+aequoreus –a –um,"of the sea, maritime",aequoreus,Adjective,1,2.17.17
+Phthius –a –um,of or belonging to Phthia,Phthius,Adjective,1,2.17.17
+Egeria –ae f.,Egeria,Egeria,Noun,1,2.17.18
+concumbo –cumbere –cubui –cubitum,to lie together,concumbo,Verb,1,2.17.18
+Numa –ae m.,Numa,Numa,Noun,1,2.17.18
+Vulcanus –i m.,Vulcan,Vulcanus,Noun,1,2.17.19
+incus –udis f.,an anvil,incus,Noun,1,2.17.19
+claudico –are –avi –atus,"to limp, halt, be lame",claudico,Verb,1,2.17.20
+impar –aris,"unequal, in unequal combat",impar,Adjective,2,2.17.21
+herous –a –um,"of a hero, heroic",herous,Adjective,1,2.17.22
+laetor laetari laetatus sum,"to rejoice, be glad",laetor,Verb,2,2.17.25
+infitior infitiari infitiatus,to deny,infitior,Verb,2,2.17.26
+circumfero –ferre –tuli –latus,to bear round; pass around,circumfero,Verb,1,2.17.29
+diversus –a –um (or divorsus),"different, diverse",diversus,Adjective,3,2.17.31
+populifer fera ferum,poplar–bearing,populifer,Adjective,1,2.17.32
+Padus –i m.,the river Po,Padus,Noun,1,2.17.32
+perduco perducere perduxi perductum,to bring to/over,perduco,Verb,2,2.18.1
+Macer –cri m.,Macer (a Roman name),Macer,Noun,2,2.18.3
+tandem,finally,tandem,Adverb,1,2.18.5
+pudeo –ere –dui –ditus,to make ashamed,pudeo,Verb,7,2.18.7
+implico implicare implicavi (implicui) implicitus,to fold in; involve,implico,Verb,1,2.18.9
+sceptrum –i n.,royal staff; scepter,sceptrum,Noun,4,2.18.13
+tragoedia –ae f.,tragedy,tragoedia,Noun,5,2.18.13
+privatus –a –um,private; personal,privatus,Adjective,1,2.18.16
+cothurnatus –a –um,"with the cothurnus, buskined, tragic",cothurnatus,Adjective,1,2.18.18
+praeceptum praecepti n.,"precept, rule, instruction",praeceptum,Noun,1,2.18.20
+Ulixes (Ulysses) –is (–ei or –i) m.,Ulysses,Ulixes,Noun,2,2.18.21
+Phyllis –idis f.,Phyllis (name),Phyllis,Noun,2,2.18.22
+Paris –idis m.,Paris,Paris,Noun,2,2.18.23
+Macareus –ei (–eos) m.,Macareus (name),Macareus,Noun,1,2.18.23
+Dido –us or –onis f.,Dido,Dido,Noun,1,2.18.25
+miserabilis –e,"deplorable, deserving to be pitied",miserabilis,Adjective,3,2.18.25
+Lesbis –idis,"Lesbian, of Lesbos",Lesbis,Adjective,2,2.18.26
+noverca novercae f.,stepmother,noverca,Noun,1,2.18.30
+Elissa ae f.,Elissa ae,Elissa,Noun,1,2.18.31
+Hypsipyle –es f. ,Hypsipyle (name),Hypsipyle,Noun,1,2.18.33
+adultera –ae f.,an unchaste woman; a mistress,adultera,Noun,1,2.18.37
+nobilis nobile,"illustrious, famous",nobilis,Adjective,3,2.18.37
+exstinguo exstinguere exstinxi exstinctus,to extinguish,exstinguo,Verb,1,2.18.38
+Laodamia –ae f.,Laodamia,Laodamia,Noun,1,2.18.38
+libenter,willingly,libenter,Adverb,1,2.18.39
+quo,that,quo,Conjunction,1,2.19.2
+curo curare curavi curatus,to care for,curo,Verb,2,2.19.7
+versutus –a –um,"adroit, dexterous",versutus,Adjective,1,2.19.9
+sanus –a –um,sound,sanus,Adjective,2,2.19.11
+mentior mentiri mentitus,to lie,mentior,Verb,2,2.19.11
+cunctor –ari –atus sum,to delay,cunctor,Verb,3,2.19.12
+insons –sontis,innocent,insons,Adjective,1,2.19.14
+refoveo –fovere –fovi –fotum ,"to warm again, cherish anew, revive",refoveo,Verb,1,2.19.15
+rursus or rursum ,back,rursus,Adverb,1,2.19.16
+comis –e,"courteous, friendly",comis,Adjective,1,2.19.16
+adolesco adolescere adolevi adultus,grow up,adolesco,Verb,1,2.19.23
+patens –entis,open; broad,patens,Adjective,2,2.19.25
+taedium –i n.,"weariness, tedium",taedium,Noun,1,2.19.25
+stomachus –i m.,the gullet; chest,stomachus,Noun,1,2.19.26
+Danae –es f.,Danae,Danae,Noun,3,2.19.27
+aenus –a –um,"of bronze, brazen",aenus,Adjective,1,2.19.27
+turris turris f.,tower,turris,Noun,2,2.19.27
+Iuno Iunonis f.,Juno,Iuno,Noun,3,2.19.29
+frons frondis f.,leaf,frons,Noun,3,2.19.31
+poto potare potavi potus,to drink,poto,Verb,1,2.19.32
+deludo –ere –lusi –lusus,to deceive,deludo,Verb,1,2.19.33
+monitum –i n.,an admonition; counsel; advice,monitum,Noun,1,2.19.34
+indulgentia –ae f.,"indulgence, fondness",indulgentia,Noun,1,2.19.35
+refert referre retulit,to it concerns,refert,Verb,3,2.19.41
+secubo –are –avi –atum,to sleep apart (from one's spouse),secubo,Verb,3,2.19.42
+mordeo mordere momordi morsus,to bite,mordeo,Verb,1,2.19.43
+aliquando,"at some time, at length",aliquando,Adverb,1,2.19.43
+medulla medullae f.,marrow; middle,medulla,Noun,2,2.19.43
+dolus doli m.,"artifice, device, trick",dolus,Noun,2,2.19.44
+furor –ari furatus sum,to steal,furor,Verb,2,2.19.45
+prae–moneo –monere –monui –monitum,"to forewarn, advise",praemoneo,Verb,1,2.19.47
+suspirium –i n.,"a deep breath, sigh",suspirium,Noun,1,2.19.55
+iure,"rightly, justly",iure,Adverb,1,2.19.56
+patientia patientiae f.,endurance,patientia,Noun,2,2.19.59
+in–caeduus (inciduus) –a –um,"uncut, unhewn",incaeduus,Adjective,1,3.1.1
+spelunca speluncae f.,cave,spelunca,Noun,1,3.1.3
+pumex pumicis m. (f. in Catullus),pumice–stone,pumex,Noun,1,3.1.3
+odoratus –a –um,sweet–smelling,odoratus,Adjective,1,3.1.7
+elegia (elegea or elegeia) –ae f.,an elegy; a kind of reed,elegia,Noun,2,3.1.7
+decor –oris m.,"elegance, charm",decor,Noun,1,3.1.10
+ingens ingentis,huge,ingens,Adjective,2,3.1.11
+passus passus m.,"pace, footstep",passus,Noun,1,3.1.11
+torvus –a –um,stern; wild,torvus,Adjective,1,3.1.12
+regalis –e,"regal, kingly",regalis,Adjective,1,3.1.13
+L?dius –a –um.,of Lydia; Lydian; Etruscan,Lydius,Adjective,1,3.1.14
+ecquis ecquid,whether any,ecquis,Pronoun,1,3.1.15
+argumentum –i n.,"proof, evidence, argument",argumentum,Noun,1,3.1.16
+vinosus –a –um,"full of wine, drunk with wine",vinosus,Adjective,1,3.1.17
+convivium convivii n.,"banquet, feast",convivium,Noun,3,3.1.17
+compitum –i n.,crossroads,compitum,Noun,1,3.1.18
+designo designare designavi designatus,"to mark out, arrange",designo,Verb,2,3.1.19
+thyrsus –i m.,the stalk of a plant; a staff wreathed with ivy and vine–leaves,thyrsus,Noun,2,3.1.23
+area arae f.,"open space, threshing floor, forecourt",area,Noun,4,3.1.26
+iuventa iuventae f.,youth,iuventa,Noun,2,3.1.28
+spiritus spiritus m.,breath; spirit,spiritus,Noun,1,3.1.30
+innitor –niti –nixus sum,"to lean on, put one's weight on, press",innitor,Verb,1,3.1.31
+caesaries –ei f.,the hair of the head,caesaries,Noun,1,3.1.32
+quater,4 times,quater,Number,1,3.1.32
+limus –a –um,"sidelong, askew, sideways",limus,Adjective,1,3.1.33
+subrideo subridere subrisi subrisum,to smile (down) upon,subrideo,Verb,1,3.1.33
+myrteus –a –um,of myrtle,myrteus,Adjective,1,3.1.34
+virga virgae f.,stick,virga,Noun,1,3.1.34
+dignor –ari –atus sum,to deem worthy of (+acc. and abl.),dignor,Verb,1,3.1.37
+regia regia f.,palace,regia,Noun,2,3.1.40
+resero reserare reseravi reseratus,to unbolt; open,resero,Verb,2,3.1.45
+impercussus (inp–) –a –um,"not struck, unstruck",impercussus,Adjective,1,3.1.52
+incido –ere –cidi –cisus,to cut into; cut upon; cut,incido,Verb,1,3.1.53
+delitesco –ere delitui,to hide; lurk,delitesco,Verb,1,3.1.56
+rumpo rumpere rupi ruptus,to break,rumpo,Verb,4,3.1.58
+mergo –ere mersi mersus,to dip,mergo,Verb,1,3.1.58
+semen seminis n.,seed,semen,Noun,6,3.1.59
+decoro decorare decoravi decoratus,to adorn,decoro,Verb,1,3.1.63
+studiosus –a –um,eager,studiosus,Adjective,1,3.2.1
+pasco pascere pavi pastum,to feed,pasco,Verb,2,3.2.6
+agitator –oris m.,one who drives; a charioteer,agitator,Noun,1,3.2.7
+insisto –ere –stiti,to place one’s self in or upon a thing; (w. dat.),insisto,Verb,1,3.2.10
+meta metae f.,"limit, goal, boundary, turning point",meta,Noun,3,3.2.12
+interior –ius,"nearer, deeper",interior,Adjective,2,3.2.12
+remitto remittere remisi remissum,to send back,remitto,Verb,1,3.2.14
+Pelops –opis m.,Pelops (name),Pelops,Noun,1,3.2.15
+Pisaeus (Pisanus) –a –um,Pisaean,Pisaeus,Adjective,1,3.2.15
+concido concidere concidi,to fall down,concido,Verb,1,3.2.15
+Hippodamia –ae f.,Hippodamia (name),Hippodamia,Noun,1,3.2.16
+linea (linia) –ae f.,a string,linea,Noun,1,3.2.19
+circus –i m.,circle,circus,Noun,2,3.2.20
+contactus –us m.,touching together or upon; touch,contactus,Noun,1,3.2.22
+contraho contrahere contraxi contractus,to collect; shrink because of pain,contraho,Verb,1,3.2.23
+demitto demittere demisi demissum,"to send down, drop",demitto,Verb,3,3.2.25
+quo,(expresses degree of difference),quo,Adverb,1,3.2.28
+Milanion –onis m.,Milanion (name),Milanion,Noun,1,3.2.29
+Atalanta –ae or Atalante –es f.,Atalanta (name),Atalanta,Noun,1,3.2.29
+succingo –ere –cinxi –cinctus,to gird beneath; gird up; wrap,succingo,Verb,1,3.2.31
+interea,meanwhile,interea,Adverb,1,3.2.37
+arcesso (accerso) arcessere arcessivi arcessitus,"to fetch, summon",arcesso,Verb,1,3.2.37
+torreo –ere –ui tostus,"to burn, boil",torreo,Verb,2,3.2.40
+pulvis pulveris m.,dust,pulvis,Noun,3,3.2.41
+plausus –us m.,"beating, clapping",plausus,Noun,1,3.2.44
+Victoria —ae f.,Victoria (name),Victoria,Noun,1,3.2.45
+pelagus pelagi m.,sea,pelagus,Noun,2,3.2.48
+augur auguris m. or f.,seer,augur,Noun,3,3.2.51
+Phoebe –es f.,Phoebe,Phoebe,Noun,1,3.2.51
+venor venari venatus sum,"to hunt, go hunting",venor,Verb,1,3.2.51
+artifex –icis m.,an artist,artifex,Noun,1,3.2.52
+ruricola –ae m.,"a tiller of the land, husbandman, countryman",ruricola,Noun,1,3.2.53
+adsurgo –ere –surrexi –surrectus,to rise up; rise,adsurgo,Verb,1,3.2.53
+pugil –ilis m.,"a boxer, fist-fighter",pugil,Noun,1,3.2.54
+placo placare placavi placatus,to soothe,placo,Verb,1,3.2.54
+inceptum –i n.,beginning; deliberation,inceptum,Noun,1,3.2.56
+adnuo –ere –nui (utus –rare),to nod to; with dat.,adnuo,Verb,2,3.2.56
+diva –ae f.,goddess,diva,Noun,3,3.2.56
+promitto promittere promisi promissus,"to send forth, let loose; promise",promitto,Verb,4,3.2.59
+cancellus –i m.,"a bar, railing; a boundary",cancellus,Noun,1,3.2.64
+praetor praetoris m.,praetor,praetor,Noun,1,3.2.65
+spectaculum spectaculi n.,spectacle; (pl.) the seats for the audience,spectaculum,Noun,1,3.2.65
+quadriiugus –a –um,pertaining to a four–horse team,quadriiugus,Adjective,1,3.2.66
+circumeo (circueo ) –ire –ii/–ivi circuitus,to go around,circumeo,Verb,1,3.2.69
+validus –a –um,strong,validus,Adjective,2,3.2.72
+sinister –a –um,left,sinister,Adjective,2,3.2.72
+Quirites –ium m.,ancient Sabines,Quirites,Noun,1,3.2.73
+undique,from all sides,undique,Adverb,1,3.2.74
+toga togae f.,toga,toga,Noun,2,3.2.74
+turbo turbare turbavi turbatus,to disturb,turbo,Verb,2,3.2.75
+evolo evolare evolavi evolatus,to fly away,evolo,Verb,1,3.2.78
+discolor –oris,of different color,discolor,Adjective,1,3.2.78
+saltem or saltim,"at least, at any rate",saltem,Adverb,2,3.2.79
+spatium spati(i) n.,space,spatium,Noun,2,3.2.79
+insurgo –ere –surrexi –rectus,to rise to; w. dat.,insurgo,Verb,1,3.2.79
+reor reri ratus sum,to think,reor,Verb,2,3.2.80
+argutus –a –um,clear; clever,argutus,Adjective,2,3.2.83
+postquam,after,postquam,Conjunction,3,3.3.4
+candor –oris m.,shining,candor,Noun,1,3.3.5
+suffundo –ere –fudi –fusus,to pour from below; pour through; overspread,suffundo,Verb,1,3.3.5
+luceo lucere luxi,to shine,luceo,Verb,1,3.3.6
+artus –a –um,"straitened, narrow",artus,Adjective,1,3.3.7
+radio –are –avi –atum,"to radiate light, beam, shine",radio,Verb,1,3.3.9
+aeterno,"forever, everlastingly",aeterno,Adverb,1,3.3.11
+falsum –i n.,"a fraud, deceit",falsum,Noun,1,3.3.11
+Cepheus (Cepheïus) –a –um,of Cepheus,Cepheus,Adjective,1,3.3.17
+inultus –a –um,unavenged,inultus,Adjective,1,3.3.20
+credulitas –atis f.,"credulity, rash confidence",credulitas,Noun,3,3.3.24
+fatifer –era –erum,fatal,fatifer,Adjective,1,3.3.27
+accingo –ere –cinxi –cinctus,to gird on,accingo,Verb,1,3.3.27
+invictus –a –um,unconquered,invictus,Adjective,1,3.3.28
+flexibilis –e ,"pliant, flexible",flexibilis,Adjective,1,3.3.29
+curvo curvare curvavi curvatus,to bend,curvo,Verb,1,3.3.29
+superi –orum m.,"those above, i.e. the gods",superi,Noun,1,3.3.31
+offendo offendere offendi offensus,"to strike, knock against",offendo,Verb,1,3.3.31
+focus –i m.,fireplace,focus,Noun,2,3.3.33
+lucus luci m.,"grove, wood",lucus,Noun,3,3.3.35
+iaculor –atus sum,to hurl the javelin; to dart; throw,iaculor,Verb,2,3.3.35
+arx arcis f.,"summit, citadel",arx,Noun,3,3.3.35
+ferio ferire,to hit,ferio,Verb,1,3.3.36
+Semele –es or –ae f.,Semele (name),Semele,Noun,1,3.3.37
+fraus fraudis f.,fraud,fraus,Noun,1,3.3.43
+mendax –acis,"false, deceitful",mendax,Adjective,1,3.3.44
+tetricus –a –um,"gloomy, harsh",tetricus,Adjective,2,3.3.46
+is ea id,"he, she it; that",is,Pronoun,2,3.4.3
+adulter adultera adulterum,unchaste,adulter,Adjective,4,3.4.5
+custodio custodire custodivi custoditus,to guard,custodio,Verb,1,3.4.6
+occludo (obcl–) occludere occlusi occlusum,to shut or close up,occludo,Verb,1,3.4.8
+intus,"within, inside",intus,Preposition,1,3.4.8
+potestas potestatis f.,power,potestas,Noun,1,3.4.9
+languidus –a –um,languid,languidus,Adjective,3,3.4.10
+habena –ae f.,rein,habena,Noun,1,3.4.15
+nitor niti nixus sum,to press/lean upon,nitor,Verb,1,3.4.17
+vetitum –i n.,that which is forbidden; a prohibition,vetitum,Noun,1,3.4.17
+interdico interdicere interdixi interdictum,to forbid,interdico,Verb,1,3.4.18
+immineo imminere,to threaten; overhang,immineo,Verb,1,3.4.18
+Argus (Argos) –i m.,Argus (Argos),Argus,Noun,1,3.4.20
+iuvenis iuvene,"youthful, young",iuvenis,Adjective,1,3.4.24
+intemeratus –a –um,undefiled; chaste,intemeratus,Adjective,1,3.4.24
+procus –i m.,one who asks,procus,Noun,1,3.4.24
+fur furis m.,thief,fur,Noun,1,3.4.25
+probus –a –um,good,probus,Adjective,2,3.4.29
+inconcessus –a –um,not allowed,inconcessus,Adjective,1,3.4.31
+Martigena –ae m./f.,"Mars-born, begotten by Mars",Martigena,Adjective,1,3.4.39
+Romulus –i m.,Romulus,Romulus,Noun,1,3.4.40
+Ilias –adis f.,daughter of Ilium or Troy; pl.,Ilias,Noun,2,3.4.40
+Remus –i m.,Remus,Remus,Noun,1,3.4.40
+indulgeo indulgere indulsi indultus,"to gratify, indulge in",indulgeo,Verb,1,3.4.43
+exuo exuere exui exutus,"to take off, strip",exuo,Verb,1,3.4.44
+sumitto (submitto) –mittere –misi –missum,to place under,sumitto,Verb,1,3.5.1
+terreo terrere terrui territus,to terrify,terreo,Verb,1,3.5.2
+apricus –a –um,open to the sun,apricus,Adjective,1,3.5.3
+creber crebra crebrum,"thick, crowded, close",creber,Adjective,1,3.5.3
+subsum subesse —,"to be under, be behind",subsum,Verb,1,3.5.5
+pratum prati n.,meadow,pratum,Noun,1,3.5.5
+gutta guttae f.,drop,gutta,Noun,2,3.5.6
+vito vitare vitavi vitatus,"to avoid, shun",vito,Verb,3,3.5.7
+varius –a –um,varied,varius,Adjective,1,3.5.9
+adhuc,"thus far, to this point, still",adhuc,Adverb,1,3.5.13
+spuma –ae f.,froth,spuma,Noun,1,3.5.13
+strideo stridere or strido stridere stridi,to produce a grating or shrill sound; to creak,strideo,Verb,1,3.5.13
+albeo –ere,to be white,albeo,Verb,2,3.5.13
+sicco siccare siccavi siccatus,to make dry,sicco,Verb,1,3.5.14
+lac lactis n.,milk,lac,Noun,2,3.5.14
+feliciter felicius felicissime,luckily more luckily most luckily,feliciter,Adverb,2,3.5.15
+rumino ruminare ,to ruminate,rumino,Verb,1,3.5.17
+petulans –antis ,impudent,petulans,Adjective,1,3.5.23
+fodio fodere fodi fossum,to dig,fodio,Verb,2,3.5.24
+pabulum –i n.,feeding material; food,pabulum,Noun,2,3.5.27
+illuc,there,illuc,Adverb,2,3.5.29
+age agite,come on! Let's go!,age,Interjection,1,3.5.31
+visum visi n.,vision,visum,Noun,1,3.5.32
+expendo –ere –pendi –pensus,to weigh out; (fig.),expendo,Verb,1,3.5.34
+compar comparis,similar,compar,Adjective,1,3.5.38
+destituo destituere destitui destitutum ,to set down; leave alone,destituo,Verb,5,3.5.42
+macula –ae f.,spot,macula,Noun,1,3.5.43
+adulterium adulteri(i) n.,adultery,adulterium,Noun,1,3.5.44
+labes –is f.,falling,labes,Noun,1,3.5.44
+interpres –etis m./f.,an agent between parties; a mediator,interpres,Noun,1,3.5.45
+limosus –a –um,full of mud; miry,limosus,Adjective,1,3.6.1
+obsero –ere –sevi –situs,to plant upon or over,obsero,Verb,1,3.6.1
+sisto sistere stiti status,to set up,sisto,Verb,1,3.6.2
+parumper,a little while,parumper,Adverb,1,3.6.2
+pons pontis m.,bridge,pons,Noun,1,3.6.3
+remex –igis m.,an oarsman,remex,Noun,1,3.6.3
+ictus ictus m.,"blow, stroke",ictus,Noun,1,3.6.3
+concavus –a –um,completely hollow,concavus,Adjective,1,3.6.4
+cumba or cymba –ae f.,"small boat, rowboat",cumba,Noun,1,3.6.4
+rudens –entis m.,rope; cord; pl.,rudens,Noun,1,3.6.4
+talus –i m.,anklebone; ankle,talus,Noun,1,3.6.6
+ruo ruere rui rutum,to rush,ruo,Verb,1,3.6.7
+crassus –a –um,"thick, fat; crass, coarse",crassus,Adjective,1,3.6.8
+gurges –itis m.,whirlpool,gurges,Noun,2,3.6.8
+quies quietis f.,"sleep, rest",quies,Noun,1,3.6.9
+consero –ere –serui –sertus,to tie together; join,consero,Verb,1,3.6.10
+Danaeius –a –um,pertaining to Danae,Danaeius,Adjective,1,3.6.13
+terribilis terribile,terrifying,terribilis,Adjective,1,3.6.14
+Cerealis –e,pertaining to Ceres,Cerealis,Adjective,2,3.6.15
+prodigiosus –a –um,"strange, wonderful, unnatural",prodigiosus,Adjective,1,3.6.17
+mendacium –i n.,lie,mendacium,Noun,2,3.6.17
+potius,"rather, more",potius,Adverb,2,3.6.19
+capax –acis,spacious,capax,Adjective,1,3.6.19
+Inachus –i m.,Inachus,Inachus,Noun,2,3.6.25
+Melie –es or Melia –ae f.,"a priestess of Aphrodite, in Sestos, beloved by Leander of Abydos, who repeatedly swam to her across the Hellespont, but at length was drowned, Ov. H. 18 and 19; id. Am. 2, 16, 31.—
+B Deriv.: Herous, a, um, adj., of or belonging to Hero: turres, Luc. 9, 9",Melie,Noun,1,3.6.25
+Bith?nis –idis f.,a Bithynian woman (or town),Bithynis,Noun,1,3.6.25
+pallidus –a –um,"pale, ghastly",pallidus,Adjective,1,3.6.25
+incalesco –calescere –calui —,to grow warm,incalesco,Verb,1,3.6.26
+vadum –i n.,ford; shallow,vadum,Noun,2,3.6.26
+Troia Troiae f.,Troy,Troia,Noun,2,3.6.27
+lustrum –i n.,purifying atonement; the national lustrum or atoning sacrifice,lustrum,Noun,1,3.6.27
+Xanthus –i m.,The Xanthus or Scamander (river),Xanthus,Noun,1,3.6.28
+Neaera –ae f.,Neaera (name),Neaera,Noun,1,3.6.28
+Alpheus –i m.,Alpheus River,Alpheus,Noun,1,3.6.29
+Arcadia –ae f.,Arcadia,Arcadia,Noun,1,3.6.30
+adigo adigere adegi adactus,"to drive to, force to",adigo,Verb,1,3.6.30
+Xuthus –i m.,Xuthus (name),Xuthus,Noun,1,3.6.31
+Penios –ii m.,Peneus River,Penios,Noun,1,3.6.31
+Creusa –ae f.,Creusa (name),Creusa,Noun,1,3.6.31
+Phthiota –ae and Phthiotes –ae m.,"a Phthiote, a person from Phthia",Phthiota,Noun,1,3.6.32
+Asopus (–os) i m.,Asopus (river),Asopus,Noun,1,3.6.33
+Mavortius –a –um or Martius –a –um,pertaining to Mavors or Mars,Mavortius,Adjective,1,3.6.33
+Thebe –es f.,Thebe (name),Thebe,Noun,2,3.6.33
+nata (gnata) –ae f.,daughter,nata,Noun,2,3.6.34
+Achelous –i m.,"Achelous, a river",Achelous,Noun,2,3.6.35
+requiro requirere requisivi requisitus,to seek,requiro,Verb,1,3.6.35
+Hercules –is m.,Hercules,Hercules,Noun,1,3.6.36
+Calydon –onis f.,Calydon,Calydon,Noun,1,3.6.37
+Aetolia –ae f.,Aetolia (region),Aetolia,Noun,1,3.6.37
+Deianira –ae f.,Deianira,Deianira,Noun,1,3.6.38
+septeni –ae –a,7 each,septeni,Number,1,3.6.39
+ostium osti(i) n.,door,ostium,Noun,1,3.6.39
+patria patriae f.,country,patria,Noun,1,3.6.40
+Evanthe –es f.,Evanthe (name),Evanthe,Noun,1,3.6.41
+Asopis –idis f.,a daughter of Asopus,Asopis,Noun,1,3.6.41
+amplector amplecti amplexus sum,to embrace,amplector,Verb,2,3.6.43
+Salmonis –idis f.,a daughter of Salmoneus,Salmonis,Noun,1,3.6.43
+Enipeus –ei or –eos m.,"Enipeus, a river",Enipeus,Noun,1,3.6.43
+recedo recedere recessi recessum,to withdraw,recedo,Verb,1,3.6.44
+cavus –a –um,hollow,cavus,Adjective,3,3.6.45
+voluto volutare volutavi volutatus,to roll about; to roll back,voluto,Verb,1,3.6.45
+Tibur –uris n.,Tibur (town),Tibur,Noun,1,3.6.46
+pomifer –fera –ferum,fruit-bearing,pomifer,Adjective,2,3.6.46
+rigo rigare rigavi rigatus,to moisten,rigo,Verb,2,3.6.46
+gemo gemere gemui,"to groan, sigh",gemo,Verb,1,3.6.49
+patruus patrui m.,uncle,patruus,Noun,1,3.6.49
+nefas n.,divinely forbidden (indeclinable),nefas,Noun,2,3.6.49
+Anio (Anien) –enis (–onis) m.,Anio (Anien),Anio,Noun,1,3.6.51
+anxius –a –um,"troubled, disquieted",anxius,Adjective,2,3.6.53
+Idaeus –a –um,of Mount Ida,Idaeus,Adjective,1,3.6.54
+Laomedon –ontis m.,Laomedon,Laomedon,Noun,1,3.6.54
+vagor –ari –atus sum,to wander about,vagor,Verb,1,3.6.55
+vitta vittae f.,ribbon,vitta,Noun,1,3.6.56
+evincio –ire –vinxi –vinctus,to bind round; crown,evincio,Verb,1,3.6.56
+impedio impedire impedivi/impedii impeditus,to hinder,impedio,Verb,1,3.6.56
+dominor dominari dominatus ,to be lord or master; rule,dominor,Verb,1,3.6.63
+sperno spernere sprevi spretum,to reject,sperno,Verb,1,3.6.65
+propago –inis f.,that which is fastened forward or along; the layer of a vine; offspring,propago,Noun,1,3.6.65
+uber uberis,"fertile, fruitful",uber,Adjective,1,3.6.66
+fuga fugae f.,"flight, escape",fuga,Noun,2,3.6.69
+resisto resistere restiti,"to stand still, oppose",resisto,Verb,1,3.6.69
+eripio eripere eripui ereptus,"to tear away, snatch away",eripio,Verb,1,3.6.70
+inimicus –a –um,"unfriendly, hostile",inimicus,Adjective,1,3.6.71
+patrius –a –um,paternal,patrius,Adjective,2,3.6.73
+Vestalis –is f.,a Vestal,Vestalis,Noun,1,3.6.75
+taeda taedae f.,torch,taeda,Noun,1,3.6.75
+Iliacus –a –um,belonging to Ilium; Ilian; Trojan,Iliacus,Adjective,1,3.6.76
+famosus –a –um ,"renowned, notorious",famosus,Adjective,2,3.6.78
+praetendo –ere –tendi –tentus,to hold out before; stretch forth,praetendo,Verb,1,3.6.79
+perditus –a –um,ruined,perditus,Adjective,1,3.6.80
+suppo –ereno –ere –posui –positus,"to put; put something in the place of another, substitute",suppo,Verb,5,3.6.81
+lubricus –a –um,"smooth, slippery",lubricus,Adjective,1,3.6.81
+caleo –ere –ui,to be warm; to glow,caleo,Verb,1,3.6.83
+incresco –ere –crevi –cretus,to grow in; grow up,incresco,Verb,1,3.6.85
+differo differre distuli dilatus,to scatter; divulge; differ,differo,Verb,1,3.6.87
+legitimus (legitumus) –a –um,"lawful, legitimate; genuine, real",legitimus,Adjective,1,3.6.89
+pluvia –ae (sc. aqua) f.,rain,pluvia,Noun,1,3.6.93
+divitia divitiae f.,"riches, wealth",divitia,Noun,1,3.6.94
+lutulentus –a –um,muddy,lutulentus,Adjective,1,3.6.95
+brumalis –e,wintry,brumalis,Adjective,1,3.6.95
+areo –ere –ui,to be dry; wither,areo,Verb,3,3.6.96
+sitio sitire sitivi,to be thirsty,sitio,Verb,2,3.6.97
+haurio haurire hausi hastus,"to drain, drink, swallow",haurio,Verb,1,3.6.97
+damnosus –a –um,"injurious, destructive",damnosus,Adjective,2,3.6.99
+pecus pecoris n.,"farm animals, herd",pecus,Noun,1,3.6.99
+vae,"alas, woe to",vae,Interjection,1,3.6.101
+effetus –a –um,exhausted,effetus,Adjective,1,3.7.6
+eburneus (eburnus) –a –um,of ivory,eburneus,Noun,1,3.7.7
+Sithonius –a –um or Sithon –onis,"Sithonian, Thracian",Sithonius,Adjective,1,3.7.8
+cupide,eagerly,cupide,Adverb,1,3.7.9
+praeterea,besides,praeterea,Adverb,1,3.7.12
+publicus –a –um,public,publicus,Adjective,1,3.7.12
+velut or veluti,just as,velut,Adverb,2,3.7.13
+propositum –i n.,"a plan, intention",propositum,Noun,1,3.7.14
+truncus –i m.,the stem,truncus,Noun,1,3.7.15
+siquidem,"if only, if indeed, since that",siquidem,Conjunction,1,3.7.17
+sacerdos sacerdotis m. or f.,"priest, priestess",sacerdos,Noun,4,3.7.21
+bis,twice,bis,Number,1,3.7.23
+Chlide –es f. ,Childe (name),Chlide,Noun,1,3.7.23
+Pitho –onis f.,"Pitho, the goddess of persuasion",Pitho,Noun,1,3.7.23
+Libas –adis f.,Libas (name),Libas,Noun,1,3.7.24
+continuo continuare continuavi contiunatus,"to connect, unite",continuo,Verb,1,3.7.24
+Thessalicus –a –um ,"of Thessaly, Thessalian (region in Greece)",Thessalicus,Adjective,1,3.7.27
+saga –ae f.,"witch, diviner, sorceress",saga,Noun,1,3.7.29
+Puniceus –a –um,"reddish, crimson",Puniceus,Adjective,1,3.7.29
+iecur –oris or iecinoris n.,the liver,iecur,Noun,1,3.7.30
+sterilis –e,"unproductive, unfruitful",sterilis,Adjective,1,3.7.31
+glans glandis f.,an acorn; a leaden ball or bullet,glans,Noun,2,3.7.33
+decido –ere –cidi,to fall down; fall,decido,Verb,2,3.7.34
+magicus –a –um,"pertaining to magi, or magicians",magicus,Adjective,1,3.7.35
+torpeo torpere,to be numb,torpeo,Verb,1,3.7.35
+impatiens –entis,"impatient (+gen.), unable to tolerate",impatiens,Adjective,1,3.7.36
+tactus –us m.,touching; touch,tactus,Noun,1,3.7.41
+Pylius –a –um,of Pylos,Pylius,Adjective,1,3.7.41
+iuvenesco iuvenescere — —,to grow up; to grow young again,iuvenesco,Verb,1,3.7.41
+offero offerre obtuli oblatus,"to offer, present",offero,Verb,1,3.7.46
+paenitet paenitere paenituit,"to make sorry, cause to repent",paenitet,Verb,1,3.7.46
+possideo –ere –sedi –sessus,"to hold, possess",possideo,Verb,4,3.7.50
+vulgator (volg–) –oris m.,a publisher; divulger,vulgator,Noun,1,3.7.51
+quercus –us f.,an oak tree,quercus,Noun,3,3.7.57
+adamas –antis m.,that which cannot be overcome,adamas,Noun,1,3.7.57
+Phemius –ii m.,Phemius (name),Phemius,Noun,1,3.7.61
+Thamyras –ae m.,Thamyras (name),Thamyras,Noun,1,3.7.62
+formo formare formavi formatus,"to form, shape",formo,Verb,1,3.7.63
+praemorior –mori –morituus,to die early or prematurely,praemorior,Verb,1,3.7.65
+vigeo –ere –ui,to flourish,vigeo,Verb,1,3.7.67
+intempestivus –a –um,unseasonable; untimely,intempestivus,Adjective,1,3.7.67
+exposco –ere –poposci,to ask importunately; to beg,exposco,Verb,1,3.7.68
+istic,there,istic,Adverb,1,3.7.69
+pudibundus –a –um,"ashamed, shamefaced; dishonoring",pudibundus,Adjective,1,3.7.69
+consurgo –ere –surrexi –surrectus,to rise together,consurgo,Verb,1,3.7.75
+venefica –ae f.,"a poisoner, sorceress",venefica,Noun,1,3.7.79
+lana –ae f.,wool,lana,Noun,1,3.7.79
+desilio –ire –ui –sultus,to leap or spring down; alight from,desilio,Verb,1,3.7.81
+proripio –ere –ripui –reptus,"to snatch forth, rush forth",proripio,Verb,1,3.7.82
+intactus –a –um,"untouched, unbroken",intactus,Adjective,1,3.7.83
+suspicio suspicere suspexi suspectus,to take up; recognize; accept,suspicio,Verb,1,3.8.1
+pretiosus –a –um ,"expensive, costly, precious ",pretiosus,Adjective,1,3.8.3
+barbaria –ae f. ,"a strange land, foreign country; barbarousness, brutality; barbarous language",barbaria,Noun,1,3.8.4
+pulchre pulchrius pulcherrime,beautifully more beautifully most beautifully,pulchre,Adverb,1,3.8.5
+liber libri m.,book,liber,Noun,1,3.8.6
+amplexus –us m.,an embrace,amplexus,Noun,1,3.8.12
+scutum scuti n.,shield,scutum,Noun,1,3.8.16
+mollitia –ae f. or mollities –ei f.,flexibility,mollitia,Noun,1,3.8.18
+cicatrix –icis f.,a scar,cicatrix,Noun,1,3.8.19
+iugulo iugulare iugulavi iugulatus,to cut the throat; slay,iugulo,Verb,1,3.8.21
+indico indicare indicavi indicatus,"to point out, accuse",indico,Verb,1,3.8.22
+acies aciei f.,edge; line of battle,acies,Noun,1,3.8.26
+pilum –i n.,javelin,pilum,Noun,1,3.8.27
+admoneo admonere admonui admonitus,"to admonish, remind",admoneo,Verb,1,3.8.29
+aeratus –a –um,furnished with copper or bronze,aeratus,Adjective,1,3.8.32
+Saturnus –i m.,Saturnus,Saturnus,Noun,1,3.8.35
+argentum argenti n.,silver,argentum,Noun,1,3.8.37
+Manes –ium m.,Manes,Manes,Noun,1,3.8.38
+massa –ae f.,lump,massa,Noun,1,3.8.38
+vomer –eris m.,plowshare,vomer,Noun,2,3.8.39
+limes –itis m.,border; path crossing the border,limes,Noun,1,3.8.42
+mensor –oris m.,"a measurer, surveyor",mensor,Noun,1,3.8.42
+eruo eruere erui erutus,"to cast out or up; unearth, dig up",eruo,Verb,2,3.8.43
+natura naturae f.,nature,natura,Noun,1,3.8.45
+turritus –a –um,turreted,turritus,Adjective,1,3.8.47
+incingo –ere –cinxi –cinctus,to gird on,incingo,Verb,1,3.8.47
+moenia moenium n. pl.,walls,moenia,Noun,4,3.8.47
+contentus –a –um,"content, satisfied",contentus,Adjective,1,3.8.49
+Quirinus –i m.,Quirinus,Quirinus,Noun,1,3.8.51
+Alcides –ae m.,a descendant of Alceus,Alcides,Noun,1,3.8.52
+curia curiae f.,"place of assembly, Roman senate; court",curia,Noun,1,3.8.55
+crudus –a –um,"bloody, raw, dyspeptic",crudus,Adjective,1,3.8.58
+avidus –a –um,"greedy, keen",avidus,Adjective,2,3.8.59
+liceor liceri licitus sum,to bid for,liceor,Verb,1,3.8.59
+exaequo –are,to make equal,exaequo,Verb,1,3.8.61
+impero imperare imperavi imperatus,"to command, control",impero,Verb,1,3.8.62
+nimis,very much,nimis,Adverb,1,3.9.4
+exstruo –ere –struxi –structus,to build up; erect; raise,exstruo,Verb,1,3.9.6
+everto evertere everti eversus,"to overturn, overthrow",everto,Verb,1,3.9.7
+singultus –us m.,a gasp,singultus,Noun,1,3.9.12
+egredior egredi egressus sum,to depart,egredior,Verb,1,3.9.14
+Iulus –i m.,Julus,Iulus,Noun,1,3.9.14
+confundo confundere confudi confusus,to pour together,confundo,Verb,1,3.9.15
+aper apri m.,wild boar,aper,Noun,2,3.9.16
+divus (dius) divi m.,god,divus,Noun,1,3.9.17
+importunus –a –um,troublesome,importunus,Adjective,1,3.9.19
+profano –are ,to offer (in front of a shrine); desecrate,profano,Verb,1,3.9.19
+obscurus –a –um,"covered, dark",obscurus,Adjective,1,3.9.20
+Orpheus –ei m.,Orpheus,Orpheus,Noun,1,3.9.21
+Linus (–os) –i m.,Linus,Linus,Noun,1,3.9.23
+aelinos –i m.,"a song of lament, a dirge",aelinos,Noun,1,3.9.23
+concino –cinere –cinui,to sing together; celebrate in song,concino,Verb,3,3.9.24
+ceu,"as, just as",ceu,Conjunction,1,3.9.25
+Pierius –a –um,"Pierian, of the Muses",Pierius,Adjective,1,3.9.26
+Avernus –i m.,Avernus (lake),Avernus,Adjective,1,3.9.27
+defugio –fugere –fugi —,to make an escape,defugio,Verb,1,3.9.28
+tela telae f.,web,tela,Noun,1,3.9.30
+retexo –ere –texui –textus,to weave again; (fig.),retexo,Verb,1,3.9.30
+Nemesis –eos f.,Nemesis (a goddess),Nemesis,Noun,3,3.9.31
+Delia –ae f.,Delia (name),Delia,Noun,2,3.9.31
+Aegyptius (Aegyptus or Aegyptiacus) –a –um,Egyptian,Aegyptius,Adjective,1,3.9.33
+boni –orum m. pl.,men of substance and social standing,boni,Noun,1,3.9.35
+bustum –i n.,the mound where the dead have been burned; funeral pile,bustum,Noun,1,3.9.38
+confido confidere confisus sum,"to be assured, trust",confido,Verb,1,3.9.39
+rogalis –e,of or belonging to a funeral pyre,rogalis,Adjective,1,3.9.41
+averto avertere averti aversus,to turn away,averto,Verb,3,3.9.45
+Eryx –ycis m.,Eryx,Eryx,Noun,1,3.9.45
+Phaeacius (Phaeacus) –a –um,"of Phaeacia, Phaecian",Phaeacius,Adjective,1,3.9.47
+inornatus –a –um,"plain, unadorned",inornatus,Adjective,1,3.9.52
+dilanio –are,tear to pieces,dilanio,Verb,1,3.9.52
+tui –orum m.,your friends,tui,Pronoun,1,3.9.53
+descendo descendere descendi descensus,to descend,descendo,Verb,1,3.9.55
+inquam inquis inquit inquiunt,to say,inquam,Verb,1,3.9.55
+hedera –ae f.,ivy,hedera,Noun,1,3.9.61
+Calvus –i m.,Calvus (name),Calvus,Noun,1,3.9.62
+Catullus –i m.,Catullus (name),Catullus,Noun,2,3.9.62
+anima animae f.,"breath, spirit",anima,Noun,1,3.9.64
+prodigus –a –um,"wasteful, lavish",prodigus,Adjective,1,3.9.64
+quietus –a –um,"at rest, free from exertion, inactive, in repose",quietus,Adjective,1,3.9.67
+onerosus –a –um,burdensome,onerosus,Adjective,1,3.9.68
+spica –ae f. or spicum –i n.,ear of grain,spica,Noun,1,3.10.3
+inhibeo –ere –ui –itus,to hold back,inhibeo,Verb,1,3.10.4
+munificus –a –um,dutiful; generous,munificus,Adjective,1,3.10.5
+hirsutus –a –um,"rough, hairy",hirsutus,Adjective,1,3.10.7
+far farris n.,spelt,far,Noun,2,3.10.7
+colonus coloni m.,"farmer, colonist",colonus,Noun,1,3.10.7
+oraculum –i n.,"oracle, prophecy",oraculum,Noun,1,3.10.9
+turgesco turgescere,to begin to swell (with passion),turgesco,Verb,1,3.10.11
+subseco –ere –cui –ctum,to cut under or below,subseco,Verb,1,3.10.12
+revello –ere –velli –vulsus,to pull back; pluck out,revello,Verb,1,3.10.14
+tormentum tormenti n.,torture,tormentum,Noun,1,3.10.16
+secubitus –us m.,a sleeping apart; the action of sleeping apart from one's spouse or love,secubitus,Noun,2,3.10.16
+Cres –etis,Cretan,Cres,Adjective,2,3.10.19
+Creta –ae (or Crete –es) f.,Crete,Creta,Noun,2,3.10.20
+nutrio –ire –ivi (–ii) –itus,to nourish,nutrio,Verb,1,3.10.20
+sidereus –a –um,starry,sidereus,Adjective,1,3.10.21
+mundus mundi m.,"world, universe, heavens",mundus,Noun,1,3.10.21
+alumnus –i m.,foster–son,alumnus,Noun,2,3.10.23
+Iasius –ii m.,Iasius,Iasius,Noun,1,3.10.25
+Cretaeus (Cretanus) –a –um,"of Crete, Cretan",Cretaeus,Adjective,1,3.10.25
+ferinus –a –um,of wild beasts,ferinus,Adjective,1,3.10.26
+sulcus –i m.,furrow,sulcus,Noun,1,3.10.29
+sata satorum n.,things sown or planted; grain,sata,Noun,1,3.10.30
+ligo –onis m.,mattock,ligo,Noun,1,3.10.31
+aduncus –a –um ,"hooked, bent",aduncus,Adjective,1,3.10.32
+aequalis –e,"equal, of the same age",aequalis,Adjective,1,3.10.33
+spiceus –a –um,made of ears of corn,spiceus,Adjective,1,3.10.36
+serta –orum n.,things entwined; garlands,serta,Noun,1,3.10.36
+messis –is f.,harvest,messis,Noun,1,3.10.38
+caneo canere canui,to be white,caneo,Verb,1,3.10.39
+meto metere messui messus,to harvest,meto,Verb,1,3.10.40
+Minos –ois m.,Minos,Minos,Noun,1,3.10.41
+legifer –era –erum,law–bringing,legifer,Adjective,1,3.10.41
+festus –a –um,"sacred, festive",festus,Adjective,1,3.10.47
+cantus –us m.,singing or playing; melody; song,cantus,Noun,2,3.10.47
+assero asserere asserui assertum,"to join, defend",assero,Verb,1,3.11.3
+calco calcare calcavi calcatus,to put under the heel; trample upon; mix by trampling,calco,Verb,1,3.11.5
+obduro obdurare obduravi obduratus,"to be hard, hold out",obduro,Verb,1,3.11.7
+olim,formerly,olim,Adverb,1,3.11.7
+sucus –i m.,juice,sucus,Noun,1,3.11.8
+amarus –a –um,bitter; harsh,amarus,Adjective,1,3.11.8
+excubo excubare excubui excubitus,to lie out; be on guard,excubo,Verb,1,3.11.12
+prodeo prodire prodii proditum,to go,prodeo,Verb,1,3.11.13
+invalidus –a –um,not strong,invalidus,Adjective,1,3.11.14
+adhaereo adhaerere adhaesi –––,"to adhere, stick to",adhaereo,Verb,1,3.11.17
+votivus –a –um,votive,votivus,Adjective,2,3.11.29
+tumesco tumescere tumui —,to begin to swell,tumesco,Verb,1,3.11.30
+reduco reducere reduxi reductus,to bring back,reduco,Verb,1,3.11.37
+aversor aversari,to turn from,aversor,Verb,1,3.11.38
+exoro exorare exoravi exoratus,"to pray effectually; entreat, prevail upon",exoro,Verb,1,3.11.43
+socialis –e,allied,socialis,Adjective,1,3.11.45
+anne (an + ne),(introducing questions with note of surprise or indignation: can it be that…?),anne,Adverb,1,3.11.50
+occurro occurrere occurri occursus,to run to meet; come to mind,occurro,Verb,1,3.12.3
+in–notesco notescere notui —,to be made conspicuous,innotesco,Verb,1,3.12.7
+praeconium –i n.,the office of a public crier,praeconium,Noun,1,3.12.9
+vendibilis –e,salable,vendibilis,Adjective,1,3.12.10
+Thebae –arum f.,Thebes,Thebae,Noun,1,3.12.15
+malo malle malui,to prefer,malo,Verb,1,3.12.20
+pubes –is f.,the groin,pubes,Noun,1,3.12.22
+Abantiades Abantiadae m.,Perseus (a descendant of Abas),Abantiades,Noun,1,3.12.24
+ales alitis m.,winged,ales,Adjective,1,3.12.24
+Tityos –i m.,Tityos,Tityos,Noun,1,3.12.25
+vipereus –a –um,viperous,vipereus,Adjective,1,3.12.26
+Enceladus –i m.,Enceladus,Enceladus,Noun,1,3.12.27
+Aeolius –a –um,pertaining to Aeolus,Aeolius,Adjective,1,3.12.29
+Ithacus –a –um,of Ithaca; Ithacan,Ithacus,Adjective,1,3.12.29
+uter utris m. ,(wine) skin,uter,Noun,1,3.12.29
+Niobe,Niobe (name),Niobe,Noun,1,3.12.31
+ursa –ae f.,she–bear; bear,ursa,Noun,1,3.12.31
+Odrysius –a –um,Odrysian,Odrysius,Adjective,1,3.12.32
+Cecropis –idis f.,a female descendent of Cecrops,Cecropis,Noun,1,3.12.32
+transformo transformare transformavi transformatus,to change the form,transformo,Verb,1,3.12.33
+Proteus –ei or –eos m.,Proteus (name),Proteus,Noun,1,3.12.35
+Thebanus –a –um,Theban; of or from Thebes,Thebanus,Adjective,1,3.12.35
+vomo –ere –ui –itus,to vomit; belch,vomo,Verb,1,3.12.36
+electrum –i n.,amber; a mixed metal of the color of amber,electrum,Noun,1,3.12.37
+auriga –ae m.,charioteer,auriga,Noun,1,3.12.37
+furialis –e,raging,furialis,Adjective,1,3.12.39
+Atreus –ei m.,Atreus,Atreus,Noun,1,3.12.39
+percutio percutere percussi percussum,"to strike, kill",percutio,Verb,1,3.12.40
+immensum –i n.,"a boundless extent, vastness",immensum,Noun,1,3.12.41
+licentia licentiae f.,license,licentia,Noun,1,3.12.41
+obligo obligare,to bind up,obligo,Verb,1,3.12.42
+historicus –a –um,"of history, historical",historicus,Adjective,1,3.12.42
+falso,"wrongly, falsely",falso,Adverb,1,3.12.43
+Falisci –orum m.,Falisci,Falisci,Adjective,3,3.13.1
+Camillus –i m.,Camillus,Camillus,Noun,1,3.13.2
+festum festi n.,festival,festum,Noun,1,3.13.3
+celeber celebris celebre,famous,celeber,Adjective,1,3.13.4
+ludus ludi m.,game,ludus,Noun,1,3.13.4
+indigena –ae,born in the land,indigena,Noun,1,3.13.4
+clivus –i m.,a slope,clivus,Noun,1,3.13.6
+praenubilus –a –um,very cloudy or gloomy ,praenubilus,Adjective,1,3.13.7
+praesono –sonare –sonui,to sound before; to sound louder than,praesono,Verb,1,3.13.11
+tibia tibiae f.,the larger of the shinbones; a pipe or flute,tibia,Noun,1,3.13.11
+alo alere alui altus,to nourish,alo,Verb,1,3.13.14
+vitulus –i m.,young bullock,vitulus,Noun,1,3.13.15
+minax –acis,"projecting, overhanging",minax,Adjective,1,3.13.15
+porcus porci m.,pig,porcus,Noun,1,3.13.16
+hara –ae f. ,"a pen, coop, sty",hara,Noun,1,3.13.16
+recurvus –a –um,curving back or round,recurvus,Adjective,1,3.13.17
+capella capellae f.,she–goat,capella,Noun,1,3.13.18
+iaculum –i n.,thing hurled; spear,iaculum,Noun,1,3.13.21
+incesso –ere –cessivi,to attack,incesso,Verb,1,3.13.21
+praetexo –ere –texui –textus,to weave in front; to fringe,praetexo,Verb,1,3.13.24
+Graius –a –um,"Greek, of Greece",Graius,Adjective,1,3.13.27
+subsequor sequi secutus sum,to follow (closely),subsequor,Verb,1,3.13.30
+Agamemnon –onis m.,Agamemnon (name),Agamemnon,Noun,1,3.13.31
+Halaesus –i m.,Halaesus,Halaesus,Noun,1,3.13.32
+profugus –a –um,"fugitive, exiled",profugus,Adjective,1,3.13.33
+necesse,necessary (indeclinable),necesse,Adjective,2,3.14.2
+censura –ae f.,"the office of censor, censorship, criticism",censura,Noun,1,3.14.3
+palam,openly,palam,Adverb,1,3.14.8
+summoveo –ere –movi –motus,to move from beneath; remove,summoveo,Verb,1,3.14.10
+coram,"(adv. or prep. + abl.) personally; openly, publicly",coram,Adverb,1,3.14.16
+delicia deliciae f. (often plural) or delici(ol)um –i m.,"charm, delight",delicia,Noun,2,3.14.18
+simul,at the same time,simul,Adverb,1,3.14.19
+figuro figurare,"to form, fashion, shape",figuro,Verb,1,3.14.24
+sponda –ae f.,the frame of a bedstead or couch; a couch,sponda,Noun,1,3.14.26
+mobilitas –atis f.,moveableness; swiftness,mobilitas,Noun,1,3.14.26
+diffiteor –eri,"to disavow, to deny",diffiteor,Verb,1,3.14.28
+hebeo –ere,to be blunt; (fig.),hebeo,Verb,1,3.14.37
+mortuus –a –um,dead,mortuus,Adjective,1,3.14.40
+equidem,indeed,equidem,Adverb,1,3.14.41
+inquiro inquirere inquisivi inquisitum ,to seek after,inquiro,Verb,1,3.14.41
+insequor insequi insecutus sum,"to follow after, pursue",insequor,Verb,1,3.14.42
+probrum –i n.,"insult, disgrace, scandal",probrum,Noun,1,3.14.44
+pronus –a –um,sloping; easy,pronus,Adjective,1,3.14.47
+etsi,although,etsi,Conjunction,1,3.14.50
+heres heredis m. or f.,heir,heres,Noun,1,3.15.5
+Mantua –ae f.,Mantua (town),Mantua,Noun,1,3.15.7
+Vergilius (Virgilius) –ii m.,Vergil,Vergilius,Noun,1,3.15.7
+Verona –ae f.,Verona (town),Verona,Noun,1,3.15.7
+honestus –a –um,"honorable, decent",honestus,Adjective,1,3.15.9
+hospes hospitis m.,guest; stranger; host,hospes,Noun,1,3.15.11
+iugerum –i n.,Roman acre,iugerum,Noun,1,3.15.12
+quantuluscumque –acumque –umcumque,however small,quantuluscumque,Pronoun,1,3.15.14
+Amathusius –a –um,"of Amathus (place), Amathusian",Amathusius,Adjective,1,3.15.15

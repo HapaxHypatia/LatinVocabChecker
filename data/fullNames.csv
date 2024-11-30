@@ -1,0 +1,363 @@
+fullName,born,flourished start,flourished end,died,uncertain,,,,
+Lucius Accius,-170,,,-86,,84,0,VALID,VALID
+Lucius Livius Andronicus,-284,,,-204,,80,0,VALID,VALID
+Marcus Gaevius Apicius,,14,37,,,0,23,VALID,VALID
+Apuleius Madaurensis,124,,,170,,46,0,VALID,VALID
+Gaius Iulius Caesar,-100,,,-44,,56,0,VALID,VALID
+Titus Calpurnius Siculus,54,,,68,,14,0,VALID,VALID
+Marcus Porcius Cato,-234,,,-149,,85,0,VALID,VALID
+Gaius Valerius Catullus,-84,,,-54,,30,0,VALID,VALID
+Aulus Cornelius Celsus,,0,100,,,0,100,VALID,VALID
+Marcus Tullius Cicero,-106,,,-43,,63,0,VALID,VALID
+L. Iunius Moderatus Columella,,0,100,,,0,100,VALID,VALID
+Quintus Curtius Rufus,,41,41,,,0,0,VALID,VALID
+Quintus Ennius,-239,,,-169,,70,0,VALID,VALID
+Annius Florus,74,,,130,Y,56,0,VALID,VALID
+Sextus Iulius Frontinus,40,,,103,,63,0,VALID,VALID
+Marcus Cornelius Fronto,100,,,170,,70,0,VALID,VALID
+Aulus Gellius,125,,,180,,55,0,VALID,VALID
+Grattius,,-63,14,,,0,77,VALID,VALID
+Hadrianus,76,,,138,,62,0,VALID,VALID
+Quintus Horatius Flaccus,-65,,,-8,,57,0,VALID,VALID
+Hyginus Astronomus,-64,,,17,Y,81,0,VALID,VALID
+"Hyginus, myth.",-64,,,17,Y,81,0,VALID,VALID
+Iustinianus,482,,,565,,83,0,VALID,VALID
+Decimus Iunius Iuvenalis,55,,,128,,73,0,VALID,VALID
+Laus Pisonis,,0,100,,Y,0,100,VALID,VALID
+Titus Livius,-59,,,17,,76,0,VALID,VALID
+Marcus Annaeus Lucanus,39,,,65,,26,0,VALID,VALID
+Gaius Lucilius,-180,,,-103,,77,0,VALID,VALID
+Titus Lucretius Carus,-99,,,-55,,44,0,VALID,VALID
+Marcus Manilius,,0,100,,,0,100,VALID,VALID
+Marcus Valerius Martialis,40,,,103,Y,63,0,VALID,VALID
+Gnaeus Naevius,-270,,,-201,,69,0,VALID,VALID
+Cornelius Nepos,-110,,,-25,,85,0,VALID,VALID
+Publius Ovidius Naso,-43,,,17,,60,0,VALID,VALID
+Marcus Pacuvius,-220,,,-130,,90,0,VALID,VALID
+Aulus Persius Flaccus,30,,,62,Y,32,0,VALID,VALID
+Petronius,27,,,66,,39,0,VALID,VALID
+Phaedrus,-15,,,50,,65,0,VALID,VALID
+Titus Maccius Plautus,-254,,,-184,,70,0,VALID,VALID
+Gaius Plinius Secundus,23,,,79,,56,0,VALID,VALID
+C. Plinius Caecilius Secundus,61,,,113,,52,0,VALID,VALID
+Sextus Propertius,-50,,,-15,,35,0,VALID,VALID
+Publilius Syrus,,-85,-43,,,0,42,VALID,VALID
+Marcus Fabius Quintilianus,35,,,100,,65,0,VALID,VALID
+Gaius Sallustius Crispus,86,,,35,,-51,0,ERROR,VALID
+Scriptores Historiae Augustae,,300,400,,Y,0,100,VALID,VALID
+Lucius Annaeus Seneca senior,-54,,,39,,93,0,VALID,VALID
+Lucius Annaeus Seneca iunior,-4,,,65,,69,0,VALID,VALID
+Maurus Servius Honoratus,,300,400,,,0,100,VALID,VALID
+Silius Italicus,26,,,101,,75,0,VALID,VALID
+Publius Papinius Statius,45,,,96,,51,0,VALID,VALID
+Gaius Suetonius Tranquillus,69,,,122,,53,0,VALID,VALID
+Cornelius Tacitus,56,,,120,,64,0,VALID,VALID
+Publius Terentius Afer,-195,-166,-160,,,195,6,VALID,VALID
+Albius Tibullus,-55,,,-19,,36,0,VALID,VALID
+Gaius Valerius Flaccus,,,,90,,90,0,VALID,VALID
+Valerius Maximus,,14,37,,,0,23,VALID,VALID
+Marcus Terentius Varro,-116,,,-27,,89,0,VALID,VALID
+Velleius Paterculus,-19,,,31,,50,0,VALID,VALID
+Appendix Vergiliana,,0,100,,,0,100,VALID,VALID
+Publius Vergilius Maro,-70,,,-19,,51,0,VALID,VALID
+Vitruvius,-80,,,-15,,65,0,VALID,VALID
+Ablabius,,300,500,,Y,0,200,VALID,VALID
+Valerius Aedituus,,0,100,,,0,100,VALID,VALID
+Aemilius Sura,,,,,,0,0,VALID,VALID
+Lucius Afranius,,0,100,,,0,100,VALID,VALID
+Iulius Africanus,,54,68,,,0,14,VALID,VALID
+Gnaeus Domitius Ahenobarbus,-98,,,-48,,50,0,VALID,VALID
+"Albinus, poet.",,335,,,,0,-335,VALID,ERROR
+Publius Alfenus Varus,,-99,0,,,0,99,VALID,VALID
+Altercatio Hadr. et Epicteti,,200,400,,,0,200,VALID,VALID
+Lucius Ampelius,,117,230,,Y,0,113,VALID,VALID
+Annianus,,98,138,,,0,40,VALID,VALID
+Titus Annius Luscus,,117,139,,,0,22,VALID,VALID
+Anonymi Epici et Lyrici,,,,,,0,0,VALID,VALID
+Anonymi Comici et Tragici,,,,,,0,0,VALID,VALID
+Anonymi Grammatici,,,,,,0,0,VALID,VALID
+Bellum Africum [Anonymous],,-40,,,,0,40,VALID,VALID
+Bellum Alexandrinum [Anonymous],,-40,,,,0,40,VALID,VALID
+Bellum Hispaniense [Anonymous],,-40,,,,0,40,VALID,VALID
+Gallus Antipater,,,,,,0,0,VALID,VALID
+Marcus Antonius,,,,,,0,0,VALID,VALID
+Marcus Antonius triumvir,,,,,,0,0,VALID,VALID
+Antonius Panurgus,,,,,,0,0,VALID,VALID
+Appius Claudius Caecus,,-312,-279,,,312,#REF!,VALID,#REF!
+Aprissius (?),,,,,,0,0,VALID,VALID
+"Aquilius, comoed.",,,,,,0,0,VALID,VALID
+Gaius Aquilius Gallus,,,,,,0,0,VALID,VALID
+Arbonius Silo,,,,,,0,0,VALID,VALID
+Argum. Aen. et Tetrast.,,,,,,0,0,VALID,VALID
+Lucius Arruntius,,-39,-22,,,0,17,VALID,VALID
+Quintus Asconius Pedianus,,,,,,0,0,VALID,VALID
+Sempronius Asellio,,-158,-91,,,0,67,VALID,VALID
+Aemilius Asper,,100,300,,Y,0,200,VALID,VALID
+Lucius Ateius Praetextatus,,-86,,-29,,-29,86,ERROR,VALID
+Iulius Atherianus,,,,,,0,0,VALID,VALID
+Atilius,,-400,-200,,,0,200,VALID,VALID
+Titus Quinctius Atta,,-100,,-77,,-77,100,ERROR,VALID
+Aufidius Bassus,,-27,14,,,0,41,VALID,VALID
+Aufustius,-63,,,-19,,44,0,VALID,VALID
+Sentius Augurinus,,0,100,,,0,100,VALID,VALID
+Aurelius Augustinus,354,,,430,,76,0,VALID,VALID
+C. Iul. Caes. Augustus Octavianus,-63,,,19,,82,0,VALID,VALID
+Caelius Aurelianus,,400,500,,,0,100,VALID,VALID
+Aurelius Opillus,,-100,0,,,0,100,VALID,VALID
+Marcus Aurelius,121,,,180,,59,0,VALID,VALID
+Alfius Avitus,,-27,37,,,0,64,VALID,VALID
+Lucius Herennius Balbus,,-56,-45,,,0,11,VALID,VALID
+"Balbus, grom.",,100,300,,,0,200,VALID,VALID
+Gaius Caesius Bassus,,0,100,,,0,100,VALID,VALID
+Marcus Furius Bibaculus,,-103,0,,,0,103,VALID,VALID
+Bruttedius Niger,,-6,31,,,0,37,VALID,VALID
+Marcus Iunius Brutus [iur.],,-146,-136,,,0,10,VALID,VALID
+Marcus Iunius Brutus [tyr.],,-85,-42,,,0,43,VALID,VALID
+Bucolica Einsidlensia,,,,,,0,0,VALID,VALID
+Caecilius Statius,-220,,,-168,,52,0,VALID,VALID
+Aulus Caecina,,,,,,0,0,VALID,VALID
+Marcus Caelius Rufus,-81,,,-47,,34,0,VALID,VALID
+Cn. Arulenus Caelius Sabinus,,0,100,,,0,100,VALID,VALID
+Gaius vel Lucius Caepasius,,-74,-70,,,0,4,VALID,VALID
+Quintus Servilius Caepio,,-100,-90,,,0,10,VALID,VALID
+Lucius Iulius Caesar,,-90,-43,,,0,47,VALID,VALID
+Caesellius Vindex,,200,300,,,0,100,VALID,VALID
+Marcus Calidius,,-64,-49,,,0,15,VALID,VALID
+Lucius Calpurnius Piso Frugi,-182,,100,,,182,100,VALID,VALID
+Gaius Calpurnius Piso,,-100,,-65,,-65,100,ERROR,VALID
+Calpurnius Flaccus,,-100,0,,,0,100,VALID,VALID
+Gaius Licinius Macer Calvus,,-100,0,,,0,100,VALID,VALID
+Publius Cannutius,-106,,0,,,106,0,VALID,VALID
+Flavius Caper,,,,,,0,0,VALID,VALID
+Gaius Ateius Capito,,,,,,0,0,VALID,VALID
+Gaius Papirius Carbo,,,,,,0,0,VALID,VALID
+Gaius Papirius Carbo Arvina,,,,,,0,0,VALID,VALID
+Carmen Arvale,,,,,,0,0,VALID,VALID
+Carmen Devotionis,,,,,,0,0,VALID,VALID
+Carmen Evocationis,,,,,,0,0,VALID,VALID
+Carmen de Bello Aegyptiaco,,,,,,0,0,VALID,VALID
+Aulus Cascellius,,,,,,0,0,VALID,VALID
+Lucius Cassius Longinus,,,,,,0,0,VALID,VALID
+Marcus Porcius Cato M.f.M.n.,,,,,,0,0,VALID,VALID
+Marcus Porcius Cato Uticensis,,,,,,0,0,VALID,VALID
+Q. Lutatius Catulus iunior,,,,,,0,0,VALID,VALID
+Chalcidius,,,,,,0,0,VALID,VALID
+Quintus Tullius Cicero,,,,,,0,0,VALID,VALID
+Lucius Cincius Alimentus,,,,,,0,0,VALID,VALID
+Lucius Cincius,,,,,,0,0,VALID,VALID
+Gaius Helvius Cinna,,,,,,0,0,VALID,VALID
+Cloatius Verus,,,,,,0,0,VALID,VALID
+Clodius Tuscus,,,,,,0,0,VALID,VALID
+Publius Clodius Pulcher,,,,,,0,0,VALID,VALID
+Servius Clodius,,,,,,0,0,VALID,VALID
+Gaius Clodius Licinus,,,,,,0,0,VALID,VALID
+Lucius Coelius Antipater,,,,,,0,0,VALID,VALID
+Publius Cominius,,,,,,0,0,VALID,VALID
+Commentarii Augurum,,,,,,0,0,VALID,VALID
+Commentarii Consulares,,,,,,0,0,VALID,VALID
+Commentarius Anquisit. Sergii,,,,,,0,0,VALID,VALID
+"Cornelia, mater Gracchorum",,,,,,0,0,VALID,VALID
+Cornelius Severus,,,,,,0,0,VALID,VALID
+Quintus Cornificius,,,,,,0,0,VALID,VALID
+Cornificius Longus,,,,,,0,0,VALID,VALID
+Cornificius Gallus,,,,,,0,0,VALID,VALID
+Lucius Annaeus Cornutus,,,,,,0,0,VALID,VALID
+Gaius Aurelius Cotta,,,,,,0,0,VALID,VALID
+Lucius Licinius Crassus,,,,,,0,0,VALID,VALID
+Aulus Cremutius Cordus,,,,,,0,0,VALID,VALID
+Gaius Scribonius Curio avus,,,,,,0,0,VALID,VALID
+Gaius Scribonius Curio pater,,,,,,0,0,VALID,VALID
+Didascaliae et Argum. in Plautum,,,,,,0,0,VALID,VALID
+Didascaliae et Per. in Terentium,,,,,,0,0,VALID,VALID
+Publius Cornelius Dolabella,,,,,,0,0,VALID,VALID
+Domitius Marsus,,,,,,0,0,VALID,VALID
+Dorcatius,,,,,,0,0,VALID,VALID
+Fabius Dossennus,,,,,,0,0,VALID,VALID
+Marcus Duronius,,,,,,0,0,VALID,VALID
+Egnatius,,,,,,0,0,VALID,VALID
+Sextus (vel Spurius) Ennius,,,,,,0,0,VALID,VALID
+Cornelius Epicadus,,,,,,0,0,VALID,VALID
+Gaius Erucius,,,,,,0,0,VALID,VALID
+Q. Fabius Maximus Servilianus,,,,,,0,0,VALID,VALID
+Fabius Pictor,,,,,,0,0,VALID,VALID
+Gaius Fannius,,,,,,0,0,VALID,VALID
+Favorinus,,,,,,0,0,VALID,VALID
+Fenestella,,,,,,0,0,VALID,VALID
+Sextus Pompeius Festus,,,,,,0,0,VALID,VALID
+Fragmenta Bobiensia,,,,,,0,0,VALID,VALID
+Anonymi Fragmenta de Iure Fisci,,,,,,0,0,VALID,VALID
+Anonymi de Differentiis [Fronto],,,,,,0,0,VALID,VALID
+Aulus Furius Antias,,,,,,0,0,VALID,VALID
+Cn. Cornel. Lentulus Gaetulicus,,,,,,0,0,VALID,VALID
+"Gaius, iur.",,,,,,0,0,VALID,VALID
+Gaius Aelius Gallus,,,,,,0,0,VALID,VALID
+Gaius Cornelius Gallus,,,,,,0,0,VALID,VALID
+Gaius Asinius Gallus,,,,,,0,0,VALID,VALID
+Gannius,,,,,,0,0,VALID,VALID
+Gavius Bassus,,,,,,0,0,VALID,VALID
+Gnaeus Gellius,,,,,,0,0,VALID,VALID
+Claudius Caesar Germanicus,,,,,,0,0,VALID,VALID
+Gaius Servilius Glaucia,,,,,,0,0,VALID,VALID
+Marcus Iunius Gracchanus,,,,,,0,0,VALID,VALID
+Gaius Sempronius Gracchus,,,,,,0,0,VALID,VALID
+"Gracchus, trag.",,,,,,0,0,VALID,VALID
+Granius Flaccus,,,,,,0,0,VALID,VALID
+Granius Licinianus,,,,,,0,0,VALID,VALID
+Gaius Cassius Hemina,,,,,,0,0,VALID,VALID
+Hilarius Arelatensis,,,,,,0,0,VALID,VALID
+Aulus Hirtius,,,,,,0,0,VALID,VALID
+Homerus Latinus,,,,,,0,0,VALID,VALID
+Quintus Hortensius Hortalus,,,,,,0,0,VALID,VALID
+Hostius,,,,,,0,0,VALID,VALID
+Gaius Iulius Hyginus,,,,,,0,0,VALID,VALID
+Hyginus Gromaticus,,,,,,0,0,VALID,VALID
+Licinius Imbrex,,,,,,0,0,VALID,VALID
+"Iuventius, comoed.",,,,,,0,0,VALID,VALID
+Marcus Iuventius Laterensis,,,,,,0,0,VALID,VALID
+Marcus Antistius Labeo,,,,,,0,0,VALID,VALID
+Attius Labeo,,,,,,0,0,VALID,VALID
+Decimus Laberius,,,,,,0,0,VALID,VALID
+Titus Labienus,,,,,,0,0,VALID,VALID
+Gaius Laelius Sapiens,,,,,,0,0,VALID,VALID
+Laelius Felix,,,,,,0,0,VALID,VALID
+Laevius,,,,,,0,0,VALID,VALID
+Luscius Lanuvinus,,,,,,0,0,VALID,VALID
+Scribonius Largus,,,,,,0,0,VALID,VALID
+Tullius Laurea,,,,,,0,0,VALID,VALID
+Cn. Cornel. Lentulus Marcell.,,,,,,0,0,VALID,VALID
+"Lentulus, mimus",,,,,,0,0,VALID,VALID
+M. Aemilius Lepidus Porcina,,,,,,0,0,VALID,VALID
+Lucilius iunior,,,,,,0,0,VALID,VALID
+Quintus Lutatius Catulus,,,,,,0,0,VALID,VALID
+Gaius Licinius Macer,,,,,,0,0,VALID,VALID
+Aemilius Macer,,,,,,0,0,VALID,VALID
+Gaius Cilnius Maecenas,,,,,,0,0,VALID,VALID
+Lucius Volusius Maecianus,,,,,,0,0,VALID,VALID
+Helvius Mancia,,,,,,0,0,VALID,VALID
+"Manilius, poet.",,,,,,0,0,VALID,VALID
+Manius Manilius,,,,,,0,0,VALID,VALID
+Gnaeus Marcius vates,,,,,,0,0,VALID,VALID
+Marianus,,,,,,0,0,VALID,VALID
+Marullus,,,,,,0,0,VALID,VALID
+Gnaeus Matius,,,,,,0,0,VALID,VALID
+Terentianus Maurus,,,,,,0,0,VALID,VALID
+Pomponius Mela,,,,,,0,0,VALID,VALID
+Gaius Memmius,,,,,,0,0,VALID,VALID
+Gaius Memmius L. f.,,,,,,0,0,VALID,VALID
+M. Valerius Messalla Rufus,,,,,,0,0,VALID,VALID
+M. Valerius Messalla Corvinus,,,,,,0,0,VALID,VALID
+Caecilius Metellus,,,,,,0,0,VALID,VALID
+Q. Caecilius Metellus Maced.,,,,,,0,0,VALID,VALID
+Q. Caecilius Metellus Numid.,,,,,,0,0,VALID,VALID
+Mimi Poetarum Incertorum,,,,,,0,0,VALID,VALID
+Iulius Modestus,,,,,,0,0,VALID,VALID
+Iulius Montanus,,,,,,0,0,VALID,VALID
+Gaius Licinius Mucianus,,,,,,0,0,VALID,VALID
+Mummius,,,,,,0,0,VALID,VALID
+"Naevius, iunior",,,,,,0,0,VALID,VALID
+Publius Aufidius Namusa,,,,,,0,0,VALID,VALID
+Lucius Neratius Priscus,,,,,,0,0,VALID,VALID
+Imperator Nero,,,,,,0,0,VALID,VALID
+Publius Nigidius Figulus,,,,,,0,0,VALID,VALID
+Ninnius Crassus,,,,,,0,0,VALID,VALID
+"Novius, comoed.",,,,,,0,0,VALID,VALID
+Lucius Novius,,,,,,0,0,VALID,VALID
+Numitorius,,,,,,0,0,VALID,VALID
+Gaius Oppius,,,,,,0,0,VALID,VALID
+Lucius Orbilius Pupillus,,,,,,0,0,VALID,VALID
+Sextus Paconianus,,,,,,0,0,VALID,VALID
+Quintus Remmius Palaemon,,,,,,0,0,VALID,VALID
+"Papinius, epigram.",,,,,,0,0,VALID,VALID
+Parthenius Presbyter,,,,,,0,0,VALID,VALID
+Passienus Crispus,,,,,,0,0,VALID,VALID
+L. Aemilius L.f.M.n. Paulus,,,,,,0,0,VALID,VALID
+Paulus Quaestor,,,,,,0,0,VALID,VALID
+Albinovanus Pedo,,,,,,0,0,VALID,VALID
+Lucius Marcius Philippus,,,,,,0,0,VALID,VALID
+Philumenus medicus,,,,,,0,0,VALID,VALID
+Gaius Asinius Pollio,,,,,,0,0,VALID,VALID
+Q. Pompeius Q.f.A.n. Rufus,,,,,,0,0,VALID,VALID
+Q. Pompeius Q.f.Q.n. Rufus,,,,,,0,0,VALID,VALID
+Pompilius,,,,,,0,0,VALID,VALID
+Lucius Pomponius Bononiensis,,,,,,0,0,VALID,VALID
+Publius Pomponius Secundus,,,,,,0,0,VALID,VALID
+Sextus Pomponius,,,,,,0,0,VALID,VALID
+Porcius Licinus,,,,,,0,0,VALID,VALID
+Pomponius Porphyrio,,,,,,0,0,VALID,VALID
+Aulus Postumius Albinus,,,,,,0,0,VALID,VALID
+Precatio Omnium Herbarum,,,,,,0,0,VALID,VALID
+Precatio Terrae,,,,,,0,0,VALID,VALID
+Priapea,,,,,,0,0,VALID,VALID
+Marcus Valerius Probus,,,,,,0,0,VALID,VALID
+Publilius Optatianus Porfyrius,,,,,,0,0,VALID,VALID
+Pupius (?),,,,,,0,0,VALID,VALID
+Quintus Claudius Quadrigarius,,,,,,0,0,VALID,VALID
+Lucius Quinctius,,,,,,0,0,VALID,VALID
+Rabirius,,,,,,0,0,VALID,VALID
+Publius Rutilius Rufus,,,,,,0,0,VALID,VALID
+Publius Rutilius Lupus,,,,,,0,0,VALID,VALID
+Sabidius,,,,,,0,0,VALID,VALID
+Sacra Argeorum,,,,,,0,0,VALID,VALID
+Santra,,,,,,0,0,VALID,VALID
+Saserna,,,,,,0,0,VALID,VALID
+Publius Saturius,,,,,,0,0,VALID,VALID
+Publius Mucius Scaevola,,,,,,0,0,VALID,VALID
+Quintus Mucius Scaevola,,,,,,0,0,VALID,VALID
+Q. Mucius Scaevola [pontifex],,,,,,0,0,VALID,VALID
+Scaevus Memor,,,,,,0,0,VALID,VALID
+Marcus Aemilius Scaurus,,,,,,0,0,VALID,VALID
+Quintus Terentius Scaurus,,,,,,0,0,VALID,VALID
+P. Cornel. Scipio Afr. ma.,,,,,,0,0,VALID,VALID
+P. Cornel. Scipio Aem. Afr.,,,,,,0,0,VALID,VALID
+P. Cornel. Scipio Nasica Ser.,,,,,,0,0,VALID,VALID
+Septimius Serenus,,,,,,0,0,VALID,VALID
+Quintus Serenus (Sammonicus),,,,,,0,0,VALID,VALID
+Sevius Nicanor,,,,,,0,0,VALID,VALID
+Sextilius Ena,,,,,,0,0,VALID,VALID
+Siculus Flaccus,,,,,,0,0,VALID,VALID
+Decimus Iunius Silanus,,,,,,0,0,VALID,VALID
+Sinnius Capito,,,,,,0,0,VALID,VALID
+Lucius Cornelius Sisenna,,,,,,0,0,VALID,VALID
+Staberius Eros,,,,,,0,0,VALID,VALID
+L. Aelius Praeconinus Stilo,,,,,,0,0,VALID,VALID
+Gaius Iulius Caesar Strabo,,,,,,0,0,VALID,VALID
+Sueius,,,,,,0,0,VALID,VALID
+Lucius Cornelius Sulla,,,,,,0,0,VALID,VALID
+"Sulpicia, Caleni uxor",,,,,,0,0,VALID,VALID
+Servius Sulpicius Rufus,,,,,,0,0,VALID,VALID
+Q. Aurelius Symmachus,,,,,,0,0,VALID,VALID
+L. Aurel. Avianius Symmachus,,,,,,0,0,VALID,VALID
+Tabulae Censoriae,,,,,,0,0,VALID,VALID
+Tarquitius Priscus,,,,,,0,0,VALID,VALID
+Ticidas,,,,,,0,0,VALID,VALID
+Marcus Tullius Tiro,,,,,,0,0,VALID,VALID
+Titinius,,,,,,0,0,VALID,VALID
+Gaius Titius,,,,,,0,0,VALID,VALID
+"Titius, gram.",,,,,,0,0,VALID,VALID
+Trabea,,,,,,0,0,VALID,VALID
+Imp. Marcus Ulpius Traianus,,,,,,0,0,VALID,VALID
+Gaius Trebatius Testa,,,,,,0,0,VALID,VALID
+Gnaeus Tremelius Scrofa,,,,,,0,0,VALID,VALID
+Pompeius Trogus,,,,,,0,0,VALID,VALID
+Quintus Aelius Tubero,,,,,,0,0,VALID,VALID
+Turnus,,,,,,0,0,VALID,VALID
+Sextus Turpilius,,,,,,0,0,VALID,VALID
+Turranius Niger,,,,,,0,0,VALID,VALID
+Vagellius,,,,,,0,0,VALID,VALID
+"Valerius, comoed.",,,,,,0,0,VALID,VALID
+Valerius Antias,,,,,,0,0,VALID,VALID
+Quintus Valerius Soranus,,,,,,0,0,VALID,VALID
+Iulius Valerius,,,,,,0,0,VALID,VALID
+Gaius Valgius Rufus,,,,,,0,0,VALID,VALID
+Lucius Varius Rufus,,,,,,0,0,VALID,VALID
+P. Terentius Varro Atacinus,,,,,,0,0,VALID,VALID
+Pseudo-Varro,,,,,,0,0,VALID,VALID
+Velius Longus,,,,,,0,0,VALID,VALID
+Veranius,,,,,,0,0,VALID,VALID
+Lucius Verginius Rufus,,,,,,0,0,VALID,VALID
+Marcus Verrius Flaccus,,,,,,0,0,VALID,VALID
+Vibius Crispus,,,,,,0,0,VALID,VALID
+Vita Iuvenalis,,,,,,0,0,VALID,VALID
+Volcacius Sedigitus,,,,,,0,0,VALID,VALID
+Volumnius,,,,,,0,0,VALID,VALID
+Zeno of Verona,,,,,,0,0,VALID,VALID

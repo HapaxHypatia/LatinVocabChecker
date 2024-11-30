@@ -54,7 +54,7 @@ if __name__ == '__main__':
     vocab_list = read_wordlist(list_input)
 
     doc = (cltk.analyze(normalize_text(text)))
-    word_objects = [word for word in doc.words if word.lemma not in punctuation]  # list of all word objects in text
+    word_objects = [word for word in doc.words if word.upos != "PUNCT"]  # list of all word objects in text
 
     text_length = len(word_objects)
     print("text length = {}".format(text_length))
