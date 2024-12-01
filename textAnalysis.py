@@ -1,22 +1,7 @@
 from cltk import NLP
 from cltk.alphabet.lat import remove_macrons, JVReplacer
 import mysql.connector as SQL
-
-
-def normalize_text(text):
-	replacer = JVReplacer()
-	text = remove_macrons(text)
-	text = replacer.replace(text)
-	return text.lower()
-
-
-mydb = SQL.connect(
-	host="localhost",
-	user="root",
-	password="admin",
-	database="corpus"
-)
-mycursor = mydb.cursor()
+from openpyxl.reader.excel import load_workbook
 
 
 def getText(title):
@@ -46,6 +31,7 @@ def getText(title):
 	print("Text: {} by {} successfully collected".format(title, author))
 	return text
 
+
 def analyse(text):
 	cltk = NLP(language="lat", suppress_banner=True)
 	print("Beginning analysis. Please wait.")
@@ -64,16 +50,76 @@ def isFeatureInstance(wordObject, feature, value):
 			return False
 
 
+def normalize_text(text):
+	replacer = JVReplacer()
+	text = remove_macrons(text)
+	text = replacer.replace(text)
+	text.replace("- ", "").replace("-", "")
+	return text.lower()
+
+
 def ignore(wordObject):
-	if wordObject.upos == "PUNCT" or wordObject.upos =="X":
+	'''
+	Ignore words which are punctuation, empty strings, proper nouns, or (English) numbers
+	:param wordObject:
+	:return:
+	'''
+	if wordObject.upos == "PUNCT" or wordObject.upos =="X" or wordObject.upos=="PROPN":
+		return True
+	if wordObject.string == "":
 		return True
 	for char in wordObject.string:
-		if char.isdigit():
+		if char in "0123456789":
 			return True
 	return False
 
+
+def deduplicate(items):
+	seen = set()
+	for item in items:
+		if item.lemma not in seen:
+			seen.add(item.lemma)
+			yield item
+
+
+def compare_lists(wordlist1, wordlist2):
+	sharedWords = [w for w in wordlist1 if w in wordlist2]
+	return sharedWords
+
+
+def combine_lists(wordlist1, wordlist2):
+	return set(wordlist1 + wordlist2)
+
+
+def check_coverage(word_objects, vocablist):
+	totalWords = len(word_objects)
+	total_sharedWords = sum(1 for w in word_objects if w.lemma in vocablist)
+	if total_sharedWords < 1:
+		word_coverage = 0
+	else:
+		word_coverage = (total_sharedWords / totalWords) * 100
+
+	lemmaList = set([w.lemma for w in word_objects])
+	totalLemmata = len(lemmaList)
+	sharedLemmata = compare_lists(lemmaList, vocablist)
+	lemmaCoverage = (len(sharedLemmata) / totalLemmata) * 100
+
+	unknown_words = [w.string for w in word_objects if w.lemma not in vocablist]
+
+	return word_coverage, lemmaCoverage, unknown_words
+
+
 if __name__ == "__main__":
-	print("Starting...")
+	print("Starting...\n")
+	mydb = SQL.connect(
+		host="localhost",
+		user="root",
+		password="admin",
+		database="corpus"
+	)
+	mycursor = mydb.cursor()
+	print("Connected to database.\n")
+
 	while True:
 		title = input("Enter title of text: ")
 		text = getText(title)
@@ -81,7 +127,6 @@ if __name__ == "__main__":
 			title = input("Enter title of text: ")
 		else:
 			break
-
 	doc = analyse(text[0:30000])
 
 	words = [w for w in doc.words if not ignore(w)]
@@ -125,22 +170,35 @@ if __name__ == "__main__":
 	pos["pronouns"] = [w for w in doc.words if str(w.pos) == "pronoun"]
 	pos["prepositions"] = [w for w in doc.words if str(w.pos) == "adposition"]
 	pos["adverbs"] = [w for w in doc.words if str(w.pos) == "adverb"]
-	pos["conjunctions"] = [w for w in doc.words if
-						   str(w.pos) == "subordinating_conjunction" or str(w.pos) == "coordinating_conjunction"]
+	pos["conjunctions"] = [w for w in doc.words if str(w.pos) == "subordinating_conjunction" or str(w.pos) == "coordinating_conjunction"]
 	pos["particles"] = [w for w in doc.words if str(w.pos) == "particle"]
 	pos["determiners"] = [w for w in doc.words if str(w.pos) == "determiner"]
 	pos["interjections"] = [w for w in doc.words if str(w.pos) == "interjection"]
 
 	# print analysis
+	print("\n Totals")
 	print("Total words in text: {}".format(len(words)))
 	print("Total number of lemmata: {}".format(len(lemmalist)))
-
+	print("\n\n")
+	print("Verb Forms")
 	for k in verbforms.keys():
 		print("Number of {} in text: {}".format(k, len(verbforms[k])))
-
+	print("\n\n")
+	print("Noun Cases")
 	for k in cases.keys():
-		print("Number of {} in text: {}".format(k, len(verbforms[k])))
-
+		print("Number of {} in text: {}".format(k, len(cases[k])))
+	print("\n\n")
+	print("Parts of Speech")
 	for k in pos.keys():
-		print("Number of {} in text: {}".format(k, len(verbforms[k])))
+		print("Number of {} in text: {}".format(k, len(pos[k])))
+
+	wb = load_workbook("data/Latin Core Vocab.xlsx")
+	ws = wb.active
+	raw_dcc_list = [ws.cell(row=i, column=2).value for i in range(2, ws.max_row)]
+	dcc_list = [normalize_text(i) for i in raw_dcc_list]
+
+	wordCoverage, lemmaCoverage = check_coverage(words, dcc_list)
+	print("\n\n Coverage")
+	print("Percentage of lemmata known: {:.2f}%".format(lemmaCoverage))
+	print("Percentage of words known: {:.2f}%".format(wordCoverage))
 

@@ -12,9 +12,22 @@ def normalize_text(text):
 def deduplicate(items):
 	seen = set()
 	for item in items:
-		if not item.lemma in seen:
+		if item.lemma not in seen:
 			seen.add(item.lemma)
 			yield item
+
+def compare_lists(wordlist1, wordlist2):
+	sharedWords = [w for w in wordlist1 if w in wordlist2]
+	return sharedWords
+
+
+def combine_lists(wordlist1, wordlist2):
+	return set(wordlist1 + wordlist2)
+
+
+def check_coverage(text, wordlist):
+	total_len = len(text)
+
 
 def check_vocab(filename, Vocab1, Vocab2, corelist):
 	file = open(filename, 'r', encoding='utf-8')
