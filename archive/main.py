@@ -3,11 +3,6 @@ from cltk.alphabet.lat import remove_macrons, JVReplacer
 from openpyxl import load_workbook
 import os.path
 
-# TODO grab random unseen passages from corpora and assess coverage
-# TODO add stage selection for CLC
-# TODO analyse the top words coming up that are still unknown on DCC and what words in DCC are not coming up. (Per author?)
-# TODO find passages from corpora that meet a certain coverage threshold
-# TODO how many words do you typically need before a word repeats in latin?
 
 def read_text(text_input):
     '''

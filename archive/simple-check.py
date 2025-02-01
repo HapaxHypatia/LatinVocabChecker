@@ -49,12 +49,12 @@ def check_vocab(filename, Vocab1, Vocab2, corelist):
 	return important
 
 
-with open("10vocab.txt", 'r', encoding="utf-8") as file:
+with open("../data/10vocab.txt", 'r', encoding="utf-8") as file:
 	input_data = file.readlines()
 	raw_Vocab10 = [x.split()[0] for x in input_data]
 	Vocab10 = [normalize_text(i) for i in raw_Vocab10]
 
-wb = load_workbook("data/CLC Vocab Pool.xlsx")
+wb = load_workbook("../data/CLC Vocab Pool.xlsx")
 ws = wb.active
 raw_clc_list = [ws.cell(row=i, column=2).value for i in range(2, ws.max_row)]
 clc_list = []
@@ -64,7 +64,7 @@ try:
 except AttributeError:
 	print(i)
 
-wb = load_workbook("data/Latin Core Vocab.xlsx")
+wb = load_workbook("../data/Latin Core Vocab.xlsx")
 ws = wb.active
 raw_dcc_list = [ws.cell(row=i, column=2).value for i in range(2, ws.max_row)]
 dcc_list = [normalize_text(i) for i in raw_dcc_list]
