@@ -8,7 +8,6 @@ from openpyxl.reader.excel import load_workbook
 import time
 from semantic_text_splitter import TextSplitter
 import pickle
-from spacy.tokens import Doc
 
 # TODO grab random unseen passages from corpora and assess coverage
 # TODO add stage selection for CLC
@@ -40,11 +39,12 @@ def getText(title):
 		selection = int(input("Please type the number of the text you want."))
 		text = results[selection][0]
 		author = results[selection][1]
+	# TODO offer suggestions of nearby titles if no match
 	else:
 		text = results[0][0]
 		author = results[0][1]
 	print("Text: {} by {} successfully collected".format(title, author))
-	return text
+	return text, author
 
 
 def splitText(text, num):
@@ -53,16 +53,21 @@ def splitText(text, num):
 	return chunks
 
 
-def analyse(text, return_list):
+def analyse(text, return_list=None):
 	cltk = NLP(language="lat", suppress_banner=True)
 	print("Beginning analysis. Please wait.")
 	doc = cltk.analyze(text)
 	print("Finished analysing")
-	return_list.append(doc)
+	if return_list:
+		return_list.append(doc)
+	else:
+		return doc
 
 
-def store_data(title, nlp_doc):
-	with open(title + '.pickle', 'wb') as handle:
+def store_data(title, author, nlp_doc):
+	if not os.path.isdir(f'docs/{author}'):
+		os.mkdir(f'docs/{author}')
+	with open(f'docs/{author}/{title}.pickle', 'wb') as handle:
 		pickle.dump(nlp_doc, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
 
@@ -190,13 +195,13 @@ def set_lists(wordList):
 
 
 def set_wordlist(name, listSource):
-	'''
+	"""
 
 	:param listSource: either a filepath to a spreadsheet
 	 					or a list object
 	Latin terms must be in first column of spreadsheet
 	:return: normalised version of list
-	'''
+	"""
 	if os.path.exists(listSource):
 		wb = load_workbook(listSource)
 		ws = wb.active
@@ -204,7 +209,8 @@ def set_wordlist(name, listSource):
 		result = [normalize_text(i) for i in raw_list]
 	elif type(listSource) == list:
 		result = [normalize_text(i) for i in listSource]
-	with open(name+" list.txt", "a") as f:
+	filename = f'data/wordlists/{name} list.txt'
+	with open(filename, "a") as f:
 		for item in result:
 			f.write(item)
 		f.close()
@@ -228,62 +234,67 @@ if __name__ == "__main__":
 	# get title from user, get text from db
 	while True:
 		title = input("Enter title of text: ")
-		text = getText(title)
+		text, author = getText(title)
 		if not text:
 			title = input("Enter title of text: ")
 		else:
 			break
 
-	# Split text then analyse each chunk
+	# Split text if long then analyse each chunk
 	# Store analysed chunks in shared variable
-	# TODO only split if text is long
-	chunks = splitText(text, 9)
-	start_time = time.time()
-	manager = multiprocessing.Manager()
-	docs = manager.list()
-	processes = [Process(target=analyse, args=(ch, docs)) for ch in chunks]
-	for process in processes:
-		process.start()
-	for process in processes:
-		process.join()
-	print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
+	length = len(text.split())
+	num = length//1500
+	if num > 2:
+		chunks = splitText(text, 5)
+		start_time = time.time()
+		manager = multiprocessing.Manager()
+		docs = manager.list()
+		processes = [Process(target=analyse, args=(ch, docs)) for ch in chunks]
+		for process in processes:
+			process.start()
+		for process in processes:
+			process.join()
+		print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
+	else:
+		start_time = time.time()
+		analyse(text)
+		print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
 
-	# Combine analysed chunks, pickle, store
-	doc = Doc.from_docs(docs) # TODO doesn't work because they don't share the same vocab?
-	# for i in range(len(docs)):
-	# 	store_data(title+str(i), docs[i])
-	# words = [word for doc in docs for word in doc.words if not ignore(word)]
-	store_data(title, doc)
+	# pickle & store
+	# TODO save in database
+	for i in range(len(docs)):
+		store_data(title + str(i), author, docs[i])
+		# TODO didn't store pickle files, but no error
 
 	# set vocab lists
 	dcc_list = set_wordlist("dcc", "data/Latin Core Vocab.xlsx")
 	clc_list = set_wordlist("clc", "data/CLC Vocab Pool.xlsx")
-
-	# get lists of text features
-	words = doc.words
-	lemmalist = set([w.lemma for w in words])
-	verbforms, cases, pos = set_lists(words)
-
-	# print analysis
-	print("\n Totals")
-	print("Total words in text: {}".format(len(words)))
-	print("Total number of lemmata: {}".format(len(lemmalist)))
-	wordCoverage, lemmaCoverage, unknown = check_coverage(words, dcc_list)
-	print("\n Coverage")
-	print("Percentage of lemmata known: {:.2f}%".format(lemmaCoverage))
-	print("Percentage of words known: {:.2f}%".format(wordCoverage))
-	print("\n")
-
-	print("Verb Forms")
-	for k in verbforms.keys():
-		print("Number of {} in text: {}".format(k, len(verbforms[k])))
-	print("\n")
-
-	print("Noun Cases")
-	for k in cases.keys():
-		print("Number of {} in text: {}".format(k, len(cases[k])))
-	print("\n")
-
-	print("Parts of Speech")
-	for k in pos.keys():
-		print("Number of {} in text: {}".format(k, len(pos[k])))
+	#
+	# # get lists of text features
+	# words = [word for doc in docs for word in doc.words if not ignore(word)]
+	# lemmalist = set([w.lemma for w in words])
+	# verbforms, cases, pos = set_lists(words)
+	#
+	# # print analysis
+	# print("\n Totals")
+	# print("Total words in text: {}".format(len(words)))
+	# print("Total number of lemmata: {}".format(len(lemmalist)))
+	# wordCoverage, lemmaCoverage, unknown = check_coverage(words, dcc_list)
+	# print("\n Coverage")
+	# print("Percentage of lemmata known: {:.2f}%".format(lemmaCoverage))
+	# print("Percentage of words known: {:.2f}%".format(wordCoverage))
+	# print("\n")
+	#
+	# print("Verb Forms")
+	# for k in verbforms.keys():
+	# 	print("Number of {} in text: {}".format(k, len(verbforms[k])))
+	# print("\n")
+	#
+	# print("Noun Cases")
+	# for k in cases.keys():
+	# 	print("Number of {} in text: {}".format(k, len(cases[k])))
+	# print("\n")
+	#
+	# print("Parts of Speech")
+	# for k in pos.keys():
+	# 	print("Number of {} in text: {}".format(k, len(pos[k])))

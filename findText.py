@@ -56,15 +56,15 @@ while count < 9:
 		NL = "\n"
 		lemmaList = set([w.lemma for w in words])
 		analysis = f"\n\nPassage no. {count}" \
-				f"\n{author} {title}" \
-				f"\n\nTotals" \
-				f"\nTotal words in text: {len(words)}" \
-				f"\nTotal number of lemmata: {len(lemmaList)}" \
-				f"\n\nCoverage" \
-				f"\nPercentage of words known: {coverage[0]:.2f}%" \
-				f"\nPercentage of lemmata known: {coverage[1]:.2f}%" \
-				f"\n\n{cleanPassage}\n" \
-				f"\n{NL.join(coverage[2])}\n"
+				   f"\n{author} {title}" \
+				   f"\n\nTotals" \
+				   f"\nTotal words in text: {len(words)}" \
+				   f"\nTotal number of lemmata: {len(lemmaList)}" \
+				   f"\n\nCoverage" \
+				   f"\nPercentage of words known: {coverage[0]:.2f}%" \
+				   f"\nPercentage of lemmata known: {coverage[1]:.2f}%" \
+				   f"\n\n{cleanPassage}\n" \
+				   f"\n{NL.join(coverage[2])}\n"
 		print(analysis)
 
 		with open("results/" + str(minPercentage) + "% passages.txt", "a", encoding="utf-8") as outfile:
