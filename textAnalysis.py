@@ -253,31 +253,31 @@ if __name__ == "__main__":
 
 		text, author = getText(title)
 	
-	# Split text if long then analyse each chunk
-	# Store analysed chunks in shared variable
-	length = len(text.split())
-	num = length//1500
-	if num > 2:
-		chunks = splitText(text, 5)
-		start_time = time.time()
-		manager = multiprocessing.Manager()
-		docs = manager.list()
-		processes = [Process(target=analyse, args=(ch, docs)) for ch in chunks]
-		for process in processes:
-			process.start()
-		for process in processes:
-			process.join()
-		print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
-	else:
-		start_time = time.time()
-		analyse(text)
-		print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
-
-	# pickle & store
-	# TODO save in database
-	for i in range(len(docs)):
-		store_data(title + str(i), author, docs[i])
-		# TODO didn't store pickle files, but no error
+		# Split text if long then analyse each chunk
+		# Store analysed chunks in shared variable
+		length = len(text.split())
+		num = length//1500
+		if num > 2:
+			chunks = splitText(text, 5)
+			start_time = time.time()
+			manager = multiprocessing.Manager()
+			docs = manager.list()
+			processes = [Process(target=analyse, args=(ch, docs)) for ch in chunks]
+			for process in processes:
+				process.start()
+			for process in processes:
+				process.join()
+			print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
+		else:
+			start_time = time.time()
+			analyse(text)
+			print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
+	
+		# pickle & store
+		# TODO save in database
+		for i in range(len(docs)):
+			store_data(title + str(i), author, docs[i])
+			# TODO didn't store pickle files, but no error
 
 	# set vocab lists
 	dcc_list = set_wordlist("dcc", "data/Latin Core Vocab.xlsx")
