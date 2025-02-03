@@ -221,27 +221,38 @@ def set_wordlist(name, listSource):
 
 if __name__ == "__main__":
 	print("Starting...\n")
-
-	# connect to database
-	mydb = SQL.connect(
-		host="localhost",
-		user="root",
-		password="admin",
-		database="corpus"
-	)
-	mycursor = mydb.cursor()
-	print("Connected to database.\n")
-
-	# TODO alternate entry points - user input or hard-coded
-	# get title from user, get text from db
+	# get text title from user
 	while True:
-		title = input("Enter title of text: ")
-		text, author = getText(title)
-		if not text:
-			title = input("Enter title of text: ")
-		else:
-			break
+	title = input("Enter title of text: ")
+	if not text:
+		title = input("Please try entering the title again:  ")
+	else:
+		break
 
+	# if not already in docs, get from database and analyse
+	f = "{}.pickle".format(title)
+	for i in os.scandir(path):
+	    if i.is_file():
+	# get author from directory name
+	author = ""
+	userAnswer = input("Did you mean {title} by {author}? Enter y/n: ".format(title, author))
+	if userAnswer = 'y':
+		#load pickle file
+		text = ""
+		author = ""
+	else:
+		# connect to database
+		mydb = SQL.connect(
+			host="localhost",
+			user="root",
+			password="admin",
+			database="corpus"
+		)
+		mycursor = mydb.cursor()
+		print("Connected to database.\n")
+
+		text, author = getText(title)
+	
 	# Split text if long then analyse each chunk
 	# Store analysed chunks in shared variable
 	length = len(text.split())
