@@ -65,10 +65,12 @@ def analyse(text, return_list=None):
 
 
 def store_data(title, author, nlp_doc):
+	print("Storing data for {} by {}".format(title, author))
 	if not os.path.isdir(f'docs/{author}'):
 		os.mkdir(f'docs/{author}')
 	with open(f'docs/{author}/{title}.pickle', 'wb') as handle:
 		pickle.dump(nlp_doc, handle, protocol=pickle.HIGHEST_PROTOCOL)
+		print("{} by {} successfully saved to {}.".format(title, author, handle))
 
 
 def normalize_text(text):
