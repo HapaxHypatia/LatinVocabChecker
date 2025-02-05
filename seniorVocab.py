@@ -1,6 +1,6 @@
 import csv
-
-from textAnalysis import *
+from analyseText import *
+from setup import *
 
 # Get freq vocab of common prescribed texts
 # Cicero Forensic Speeches

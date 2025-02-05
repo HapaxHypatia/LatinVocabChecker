@@ -25,11 +25,13 @@ def getText(title, author):
 	results = mycursor.fetchall()
 	if len(results) < 1:
 		print("No text by that name found in the database.")
+		print(author)
+		print(title)
 		return False
 	if len(results) > 1:
-    res = list(filter(lambda x: x[1] ==author, results))    
-		text = res[0]
-		author = res[1]
+		res = list(filter(lambda x: x[1].lower() == author.lower(), results))
+		text = res[0][0]
+		author = res[0][1]
 	else:
 		text = results[0][0]
 		author = results[0][1]
@@ -38,20 +40,18 @@ def getText(title, author):
 
 
 def splitText(text, num):
+	print(f"Splitting Text into {num} parts")
 	splitter = TextSplitter(len(text) // num - 1)
 	chunks = splitter.chunks(text)
 	return chunks
 
 
-def analyse(text, return_list=None):
+def analyse(text, return_list):
 	cltk = NLP(language="lat", suppress_banner=True)
 	print("Beginning analysis. Please wait.")
 	doc = cltk.analyze(text)
 	print("Finished analysing")
-	if return_list:
-		return_list.append(doc)
-	else:
-		return doc
+	return_list.append(doc)
 
 
 def store_data(title, author, nlp_doc):
@@ -74,35 +74,10 @@ def normalize_text(text):
 	return text.lower()
 
 
-def ignore(wordObject):
-	'''
-	Ignore words which are punctuation, empty strings, proper nouns, or (English) numbers
-	:param wordObject:
-	:return:
-	'''
-	if wordObject.upos == "PUNCT" or wordObject.upos == "X" or wordObject.upos == "PROPN":
-		return True
-	if wordObject.string == "":
-		return True
-	for char in wordObject.string:
-		if char in "0123456789":
-			return True
-	return False
-
-
-def deduplicate(items):
-	seen = set()
-	for item in items:
-		if item.lemma not in seen:
-			seen.add(item.lemma)
-			yield item
-
-
 def set_wordlist(name, listSource):
 	"""
 
-	:param listSource: either a filepath to a spreadsheet
-	 					or a list object
+	:param listSource: either a filepath to a spreadsheet	 					or a list object
 	Latin terms must be in first column of spreadsheet
 	:return: normalised version of list
 	"""
@@ -134,69 +109,79 @@ if __name__ == "__main__":
 	mycursor = mydb.cursor()
 	print("Connected to database.\n")
 
-  # get senior texts
-  titles = [
-    "aeneis",
-    "de bello gallico",
-    "metamorphoses",
-    "ab urbe condita",
-    "pro caelio",
-    "in catilinam",
-    "in verrem",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-  ]
+	# get senior texts
+	titles = [
+		("Cicero", 'Pro S. Roscio Amerino'),
+		("apuleius", "metamorphoses"),
+		("gellius", "noctes atticae"),
+		("Caesar", "de bello gallico"),
+		("Catullus", "carmina"),
+		("Cicero", "de legibus"),
+		("Cicero", "de officiis"),
+		("Cicero", "de legibus"),
+		("Cicero", "Pro Q. Roscio Comoedo"),
+		("Cicero", "Pro Lege Manilia"),
+		("Cicero", "Pro Rabirio Perduellionis Reo"),
+		("Cicero", "Pro Murena"),
+		("Cicero", "Pro Sulla"),
+		("Cicero", "Pro Archia"),
+		("Cicero", "Pro Caelio"),
+		("Cicero", "Pro Milone"),
+		("Cicero", "in verrem"),
+		("Cicero", "in catilinam"),
+		("iuvenalis", "saturae"),
+		("livius", "ab urbe condita"),
+		("lucretius", "de rerum natura"),
+		("ovidius", "metamorphoses"),
+		("ovidius", "amores"),
+		("ovidius", "remedia amoris"),
+		("ovidius", "Epistulae (vel Heroides)"),
+		("plinius", "epistulae"),
+		("tacitus", "annales"),
+		("tibullus", "elegiae"),
+		("virgilius", "aeneis"),
+		("virgilius", "georgica")
+	]
 
-  for title in titles:
-		text, author = getText(title)
+	for title in titles:
+		text, author = getText(title[1], title[0])
 
-	# Split text if long then analyse each chunk
-	# Store analysed chunks in shared variable
-	length = len(text.split())
-	num = length//1500
-	if num > 2:
-		chunks = splitText(text, num)
-		start_time = time.time()
+		# Split text if long then analyse each chunk
+		# Store analysed chunks in shared variable
+		length = len(text.split())
+		print("Text length: {}".format(length))
+		num = length//2000
 		manager = multiprocessing.Manager()
 		docs = manager.list()
-		processes = [Process(target=analyse, args=(ch, docs)) for ch in chunks]
-		for process in processes:
-			process.start()
-		for process in processes:
-			process.join()
-		print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
-	else:
-		start_time = time.time()
-		analyse(text)
-		print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
+		if num > 2:
+			chunks = splitText(text, min(10, num))
+			start_time = time.time()
+			processes = [Process(target=analyse, args=(ch, docs)) for ch in chunks]
+			for process in processes:
+				process.start()
+			for process in processes:
+				process.join()
+			print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
+		else:
+			start_time = time.time()
+			docs.append(analyse(text))
+			print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
 
-	# pickle & store
-	# TODO save in database
-	for i in range(len(docs)):
-		store_data(title + str(i), author, docs[i])
-		# TODO didn't store pickle files, but no error
+		# pickle & store
+		# TODO save in database
+		print(f"Length of docs = {len(docs)}")
+		for i in range(len(docs)):
+			store_data(title + str(i), author, docs[i])
 
   # set vocab lists
-  vocabLists = [
-    ("dcc", "data/Latin Core Vocab.xlsx"),
-    ("clc", "data/CLC Vocab Pool.xlsx"),
-    ("llpsi", ""),
-    ("ecrom", ""),
-    ("olc", ""),
-    ("sub", ""),
-  ]
+	vocabLists = [
+		("dcc", "data/Latin Core Vocab.xlsx"),
+		("clc", "data/CLC Vocab Pool.xlsx"),
+		("llpsi", "data/LLPSI vocab.xlsx"),
+		# ("ecrom", ""),
+		# ("olc", ""),
+		# ("sub", ""),
+	]
   
-  for v in vocabLists:
-    set_wordlist(v[0], v[1])
+	for v in vocabLists:
+		set_wordlist(v[0], v[1])

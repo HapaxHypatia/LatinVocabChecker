@@ -1,6 +1,6 @@
 import random
-
-from textAnalysis import *
+from analyseText import *
+from setup import *
 
 
 def get_random_passage(passageLength):
