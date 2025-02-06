@@ -1,3 +1,6 @@
+import mysql.connector as SQL
+
+
 mydb = SQL.connect(
 	host="localhost",
 	user="root",

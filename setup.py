@@ -46,21 +46,25 @@ def splitText(text, num):
 	return chunks
 
 
-def analyse(text, return_list):
+def analyseLarge(text, return_list):
 	cltk = NLP(language="lat", suppress_banner=True)
 	print("Beginning analysis. Please wait.")
 	doc = cltk.analyze(text)
 	print("Finished analysing")
 	return_list.append(doc)
-
+def analyseSmall(text):
+	cltk = NLP(language="lat", suppress_banner=True)
+	print("Beginning analysis. Please wait.")
+	doc = cltk.analyze(text)
+	print("Finished analysing")
+	return doc
 
 def store_data(title, author, nlp_doc):
-	print("Storing data for {} by {}".format(title, author))
 	if not os.path.isdir(f'docs/{author}'):
 		os.mkdir(f'docs/{author}')
 	with open(f'docs/{author}/{title}.pickle', 'wb') as handle:
 		pickle.dump(nlp_doc, handle, protocol=pickle.HIGHEST_PROTOCOL)
-		print("{} by {} successfully saved to {}.".format(title, author, handle))
+		print("{} by {} successfully saved".format(title, author))
 
 
 def normalize_text(text):
@@ -92,6 +96,7 @@ def set_wordlist(name, listSource):
 	with open(filename, "a") as f:
 		for item in result:
 			f.write(item)
+			f.write("\n")
 		f.close()
 	return result
 
@@ -110,13 +115,14 @@ if __name__ == "__main__":
 	print("Connected to database.\n")
 
 	# get senior texts
-	titles = [
-		("Cicero", 'Pro S. Roscio Amerino'),
+	works = [
+		("Cicero", "de legibus"),
+		("Cicero", "Pro Archia"),
+		("Cicero", "Pro Caelio"),
 		("apuleius", "metamorphoses"),
 		("gellius", "noctes atticae"),
 		("Caesar", "de bello gallico"),
 		("Catullus", "carmina"),
-		("Cicero", "de legibus"),
 		("Cicero", "de officiis"),
 		("Cicero", "de legibus"),
 		("Cicero", "Pro Q. Roscio Comoedo"),
@@ -124,8 +130,6 @@ if __name__ == "__main__":
 		("Cicero", "Pro Rabirio Perduellionis Reo"),
 		("Cicero", "Pro Murena"),
 		("Cicero", "Pro Sulla"),
-		("Cicero", "Pro Archia"),
-		("Cicero", "Pro Caelio"),
 		("Cicero", "Pro Milone"),
 		("Cicero", "in verrem"),
 		("Cicero", "in catilinam"),
@@ -140,23 +144,25 @@ if __name__ == "__main__":
 		("tacitus", "annales"),
 		("tibullus", "elegiae"),
 		("virgilius", "aeneis"),
-		("virgilius", "georgica")
+		("virgilius", "georgica"),
+		("Cicero", 'Pro S. Roscio Amerino')
+
 	]
 
-	for title in titles:
+	for title in works:
 		text, author = getText(title[1], title[0])
+		manager = multiprocessing.Manager()
+		docs = manager.list()
 
 		# Split text if long then analyse each chunk
 		# Store analysed chunks in shared variable
 		length = len(text.split())
 		print("Text length: {}".format(length))
 		num = length//2000
-		manager = multiprocessing.Manager()
-		docs = manager.list()
-		if num > 2:
+		if num > 1:
 			chunks = splitText(text, min(10, num))
 			start_time = time.time()
-			processes = [Process(target=analyse, args=(ch, docs)) for ch in chunks]
+			processes = [Process(target=analyseLarge, args=(ch, docs)) for ch in chunks]
 			for process in processes:
 				process.start()
 			for process in processes:
@@ -164,16 +170,16 @@ if __name__ == "__main__":
 			print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
 		else:
 			start_time = time.time()
-			docs.append(analyse(text))
+			docs.append(analyseSmall(text))
 			print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
 
 		# pickle & store
 		# TODO save in database
-		print(f"Length of docs = {len(docs)}")
+		#print(f"Length of docs = {len(docs)}")
 		for i in range(len(docs)):
-			store_data(title + str(i), author, docs[i])
+			store_data(title[1] + str(i), author, docs[i])
 
-  # set vocab lists
+	# set vocab lists
 	vocabLists = [
 		("dcc", "data/Latin Core Vocab.xlsx"),
 		("clc", "data/CLC Vocab Pool.xlsx"),
