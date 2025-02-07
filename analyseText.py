@@ -1,5 +1,5 @@
-import pickle
-
+import random
+from setup import *
 
 works = [
 	("Cicero", 'Pro S. Roscio Amerino'),
@@ -20,35 +20,43 @@ works = [
 	("Cicero", "Pro Milone"),
 	("Cicero", "in verrem"),
 	("Cicero", "in catilinam"),
-	("iuvenalis", "saturae"),
-	("livius", "ab urbe condita"),
-	("lucretius", "de rerum natura"),
-	("ovidius", "metamorphoses"),
-	("ovidius", "amores"),
-	("ovidius", "remedia amoris"),
-	("ovidius", "Epistulae (vel Heroides)"),
-	("plinius", "epistulae"),
-	("tacitus", "annales"),
-	("tibullus", "elegiae"),
-	("virgilius", "aeneis"),
-	("virgilius", "georgica")
+	# ("iuvenalis", "saturae"),
+	# ("livius", "ab urbe condita"),
+	# ("lucretius", "de rerum natura"),
+	# ("ovidius", "metamorphoses"),
+	# ("ovidius", "amores"),
+	# ("ovidius", "remedia amoris"),
+	# ("ovidius", "Epistulae (vel Heroides)"),
+	# ("plinius", "epistulae"),
+	# ("tacitus", "annales"),
+	# ("tibullus", "elegiae"),
+	# ("virgilius", "aeneis"),
+	# ("virgilius", "georgica")
 ]
 
-def deserialize(author, title):
+
+def getPickles(author, title):
+	res = []
+	for filename in os.listdir(f"docs/{author}"):
+		if re.search(rf"{title}\d.pickle", filename):
+			res.append(f"docs/{author}/{filename}")
+	return res
+
+
+def deserialize(filename):
 	# Open the file in binary mode
-	filepath = f"docs/{author}/{title}.pickle"
-	with open(filepath, 'rb') as file:
+	with open(filename, 'rb') as file:
 		# Call load method to deserialze
 		doc = pickle.load(file)
 		return doc
 
 
 def ignore(wordObject):
-	'''
+	"""
 	Ignore words which are punctuation, empty strings, proper nouns, or (English) numbers
 	:param wordObject:
 	:return:
-	'''
+	"""
 	if wordObject.upos == "PUNCT" or wordObject.upos == "X" or wordObject.upos == "PROPN":
 		return True
 	if wordObject.string == "":
@@ -105,69 +113,74 @@ def check_coverage(word_objects, vocablist):
 
 
 def set_lists(wordList):
-	cases = {}
-	pos = {}
-	verbforms = {}
-
 	# TODO not finding any gerundives, gerunds, supines
-	verbforms["subjunctives"] = [(w.string, w.index_char_start) for w in wordList if
-								 isFeatureInstance(w, "Mood", "subjunctive")]
-	verbforms["imperatives"] = [(w.string, w.index_char_start) for w in wordList if
-								isFeatureInstance(w, "Mood", "imperative")]
-	verbforms["gerundives"] = [(w.string, w.index_char_start) for w in wordList if
-							   isFeatureInstance(w, "VerbForm", "gerundive")]
-	verbforms["gerunds"] = [(w.string, w.index_char_start) for w in wordList if
-							isFeatureInstance(w, "VerbForm", "gerund")]
-	verbforms["supines"] = [(w.string, w.index_char_start) for w in wordList if
-							isFeatureInstance(w, "VerbForm", "supine")]
-	verbforms["participles"] = [(w.string, w.index_char_start) for w in wordList if
-								isFeatureInstance(w, "VerbForm", "participle")]
-	verbforms["AbAbs"] = [(w.string, w.index_char_start) for w in wordList if
-						  isFeatureInstance(w, "VerbForm", "participle") and isFeatureInstance(w, "Case", "ablative")]
-	verbforms["infinitives"] = [(w.string, w.index_char_start) for w in wordList if
-								isFeatureInstance(w, "VerbForm", "infinitive")]
-	verbforms["finite verbs"] = [(w.string, w.index_char_start) for w in wordList if
-								 isFeatureInstance(w, "VerbForm", "finite")]
+	verbforms = {"subjunctives": [(w.string, w.index_char_start) for w in wordList
+								  if isFeatureInstance(w, "Mood", "subjunctive")],
+				 "imperatives": [(w.string, w.index_char_start) for w in wordList
+								 if isFeatureInstance(w, "Mood", "imperative")],
+				 "gerundives": [(w.string, w.index_char_start) for w in wordList
+								if isFeatureInstance(w, "VerbForm", "gerundive")],
+				 "gerunds": [(w.string, w.index_char_start) for w in wordList
+							 if isFeatureInstance(w, "VerbForm", "gerund")],
+				 "supines": [(w.string, w.index_char_start) for w in wordList
+							 if isFeatureInstance(w, "VerbForm", "supine")],
+				 "participles": [(w.string, w.index_char_start) for w in wordList
+								 if isFeatureInstance(w, "VerbForm", "participle")],
+				 "AbAbs": [(w.string, w.index_char_start) for w in wordList
+						   if
+						   isFeatureInstance(w, "VerbForm", "participle") and isFeatureInstance(w, "Case", "ablative")],
+				 "infinitives": [(w.string, w.index_char_start) for w in wordList
+								 if isFeatureInstance(w, "VerbForm", "infinitive")],
+				 "finite verbs": [(w.string, w.index_char_start) for w in wordList
+								  if isFeatureInstance(w, "VerbForm", "finite")]}
 
 	# TODO not finding vocatives
-	cases["ablatives"] = [(w.string, w.index_char_start) for w in wordList if isFeatureInstance(w, "Case", "ablative")]
-	cases["datives"] = [(w.string, w.index_char_start) for w in wordList if isFeatureInstance(w, "Case", "dative")]
-	cases["genitives"] = [(w.string, w.index_char_start) for w in wordList if isFeatureInstance(w, "Case", "genitive")]
-	cases["locatives"] = [(w.string, w.index_char_start) for w in wordList if isFeatureInstance(w, "Case", "locative")]
-	cases["vocatives"] = [(w.string, w.index_char_start) for w in wordList if isFeatureInstance(w, "Case", "vocative")]
+	cases = {
+		"ablatives": [(w.string, w.index_char_start) for w in wordList if isFeatureInstance(w, "Case", "ablative")],
+		"datives": [(w.string, w.index_char_start) for w in wordList if isFeatureInstance(w, "Case", "dative")],
+		"genitives": [(w.string, w.index_char_start) for w in wordList if isFeatureInstance(w, "Case", "genitive")],
+		"locatives": [(w.string, w.index_char_start) for w in wordList if isFeatureInstance(w, "Case", "locative")],
+		"vocatives": [(w.string, w.index_char_start) for w in wordList if isFeatureInstance(w, "Case", "vocative")]}
 
 	# TODO not finding proper nouns, interjections
-	pos["verbs"] = [w for w in wordList if str(w.pos) == "verb"]
+
+	pos = {
+		"verbs": [w for w in wordList if str(w.pos) == "verb"],
+		"nouns": [w for w in wordList if str(w.pos) == "noun"],
+		"proper nouns": [w for w in wordList if str(w.pos) == "proper_noun"],
+		"adjectives": [w for w in wordList if str(w.pos) == "adjective"],
+		"pronouns": [w for w in wordList if str(w.pos) == "pronoun"],
+		"prepositions": [w for w in wordList if str(w.pos) == "adposition"],
+		"adverbs": [w for w in wordList if str(w.pos) == "adverb"],
+		"conjunctions": [w for w in wordList if
+						 str(w.pos) == "subordinating_conjunction" or str(w.pos) == "coordinating_conjunction"],
+		"particles": [w for w in wordList if str(w.pos) == "particle"],
+		"determiners": [w for w in wordList if str(w.pos) == "determiner"],
+		"interjections": [w for w in wordList if str(w.pos) == "interjection"]
+	}
 	pos["verbs"] += [w for w in wordList if str(w.pos) == "auxiliary"]
-	pos["nouns"] = [w for w in wordList if str(w.pos) == "noun"]
-	pos["proper nouns"] = [w for w in wordList if str(w.pos) == "proper_noun"]
-	pos["adjectives"] = [w for w in wordList if str(w.pos) == "adjective"]
 	pos["adjectives"] += [w for w in wordList if str(w.pos) == "numeral"]
-	pos["pronouns"] = [w for w in wordList if str(w.pos) == "pronoun"]
-	pos["prepositions"] = [w for w in wordList if str(w.pos) == "adposition"]
-	pos["adverbs"] = [w for w in wordList if str(w.pos) == "adverb"]
-	pos["conjunctions"] = [w for w in wordList if
-						   str(w.pos) == "subordinating_conjunction" or str(w.pos) == "coordinating_conjunction"]
-	pos["particles"] = [w for w in wordList if str(w.pos) == "particle"]
-	pos["determiners"] = [w for w in wordList if str(w.pos) == "determiner"]
-	pos["interjections"] = [w for w in wordList if str(w.pos) == "interjection"]
 
 	return verbforms, cases, pos
 
 
 if __name__ == "__main__":
-
-	docs = []
 	# get pickle file from disk or db
 	# deserialize
-	#
+	author, title = random.choice(works)
+	docfiles = getPickles(author, title)
+	docs = list([deserialize(pickle) for pickle in docfiles])
 
 	# get lists of text features
 	words = [word for doc in docs for word in doc.words if not ignore(word)]
 	lemmalist = set([w.lemma for w in words])
 	verbforms, cases, pos = set_lists(words)
 
+	with open("data/wordlists/dcc list.txt", 'rb') as file:
+		dcc_list = list([x.strip().decode() for x in file.readlines()])
+
 	# print analysis
+	print(f"\n {title} by {author}")
 	print("\n Totals")
 	print("Total words in text: {}".format(len(words)))
 	print("Total number of lemmata: {}".format(len(lemmalist)))
