@@ -8,6 +8,8 @@ from openpyxl.reader.excel import load_workbook
 import time
 from semantic_text_splitter import TextSplitter
 import pickle
+import re
+from unidecode import unidecode
 
 # TODO create pickle files for all common senior texts
 # TODO create normalised lists of all common latin textbooks
@@ -35,7 +37,7 @@ def getText(title, author):
 	else:
 		text = results[0][0]
 		author = results[0][1]
-	print("Text: {} by {} successfully collected".format(title, author))
+	print("\nText: {} by {} successfully collected".format(title, author))
 	return text, author
 
 
@@ -71,10 +73,11 @@ def normalize_text(text):
 	replacer = JVReplacer()
 	text = remove_macrons(text)
 	text = replacer.replace(text)
-	replace_strings = ["- ", "-", "†"]
+	replace_strings = ["- ", "-", "†", '-', '᠆', '‐', '‒', '–', '—', '―', '⁻', '₋', '−', '⸺', '⸻', '﹘', '﹣', '－']
 	for r in replace_strings:
 		text = text.replace(r, "")
-	# TODO still not catching all hyphenated words
+	# TODO still not catching all hyphenated words (fix above, to be tested)
+	text = unidecode(text)
 	return text.lower()
 
 
@@ -93,12 +96,20 @@ def set_wordlist(name, listSource):
 	elif type(listSource) == list:
 		result = [normalize_text(i) for i in listSource]
 	filename = f'data/wordlists/{name} list.txt'
-	with open(filename, "a") as f:
+	with open(filename, "a", encoding="utf-8") as f:
 		for item in result:
 			f.write(item)
 			f.write("\n")
 		f.close()
 	return result
+
+def pickleExists(title, author):
+	if os.path.isdir(f"docs/{author}"):
+		for filename in os.listdir(f"docs/{author}"):
+			if re.search(rf"{title}\d.pickle", filename):
+				return True
+	else:
+		return False
 
 
 if __name__ == "__main__":
@@ -151,14 +162,18 @@ if __name__ == "__main__":
 
 	for title in works:
 		text, author = getText(title[1], title[0])
-		manager = multiprocessing.Manager()
-		docs = manager.list()
+
+		if pickleExists(title[1], author):
+			print("Text analysis already stored.")
+			continue
 
 		# Split text if long then analyse each chunk
 		# Store analysed chunks in shared variable
 		length = len(text.split())
 		print("Text length: {}".format(length))
 		num = length//2000
+		manager = multiprocessing.Manager()
+		docs = manager.list()
 		if num > 1:
 			chunks = splitText(text, min(10, num))
 			start_time = time.time()
@@ -185,7 +200,7 @@ if __name__ == "__main__":
 		("clc", "data/CLC Vocab Pool.xlsx"),
 		("llpsi", "data/LLPSI vocab.xlsx"),
 		# ("ecrom", ""),
-		# ("olc", ""),
+		# ("olc", "data/Oxford Book 1 Vocab.xlsx"),
 		# ("sub", ""),
 	]
   

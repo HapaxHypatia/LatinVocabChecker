@@ -1,14 +1,5 @@
 import pickle
-from cltk.alphabet.lat import remove_macrons, JVReplacer
 
-
-# TODO grab random unseen passages from corpora and assess coverage
-# TODO add stage selection for CLC
-# TODO analyse the top words coming up that are still unknown on DCC and what words in DCC are not coming up. (Per author?)
-# TODO find passages from corpora that meet a certain coverage threshold
-# TODO how many words do you typically need before a word repeats in latin?
-# TODO create normalised lists vocab for major textbooks
-# TODO create frequency list for 90% coverage of common HS texts only, compare to textbook lists
 
 works = [
 	("Cicero", 'Pro S. Roscio Amerino'),
@@ -50,17 +41,6 @@ def deserialize(author, title):
 		# Call load method to deserialze
 		doc = pickle.load(file)
 		return doc
-
-
-def normalize_text(text):
-	replacer = JVReplacer()
-	text = remove_macrons(text)
-	text = replacer.replace(text)
-	replace_strings = ["- ", "-", "†"]
-	for r in replace_strings:
-		text = text.replace(r, "")
-	# TODO still not catching all hyphenated words
-	return text.lower()
 
 
 def ignore(wordObject):
@@ -176,6 +156,12 @@ def set_lists(wordList):
 
 
 if __name__ == "__main__":
+
+	docs = []
+	# get pickle file from disk or db
+	# deserialize
+	#
+
 	# get lists of text features
 	words = [word for doc in docs for word in doc.words if not ignore(word)]
 	lemmalist = set([w.lemma for w in words])

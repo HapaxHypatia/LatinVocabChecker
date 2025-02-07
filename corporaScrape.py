@@ -57,6 +57,7 @@ def DBaddText(text):
 		'authorName': authorName
 	}
 	findText = textExists(text)
+	# TODO missed Pliny NH somehow - because of multiple authors with same name?
 	if not findText:
 		#If text does not already exist in db
 		print("Adding text: {} by {}".format(text['title'], text['author']))
@@ -138,6 +139,7 @@ for author in author_links:
 				print(textdata)
 				continue
 			# click next button until full text is gathered
+			# TODO How to maintain the book/chapter/line info?
 			next_button = driver.find_element(By.ID, value="next")
 			if next_button.get_attribute("href") == "":
 				break
