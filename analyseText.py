@@ -167,7 +167,10 @@ def set_lists(wordList):
 if __name__ == "__main__":
 	# get pickle file from disk or db
 	# deserialize
-	author, title = random.choice(works)
+	# author, title = random.choice(works)
+	author = "Vergilius"
+	title = "aeneis"
+
 	docfiles = getPickles(author, title)
 	docs = list([deserialize(pickle) for pickle in docfiles])
 
@@ -180,12 +183,12 @@ if __name__ == "__main__":
 		dcc_list = list([x.strip().decode() for x in file.readlines()])
 
 	# print analysis
-	print(f"\n {title} by {author}")
-	print("\n Totals")
+	print(f"\n{title} by {author}")
+	print("\nTotals")
 	print("Total words in text: {}".format(len(words)))
 	print("Total number of lemmata: {}".format(len(lemmalist)))
 	wordCoverage, lemmaCoverage, unknown = check_coverage(words, dcc_list)
-	print("\n Coverage")
+	print("\nCoverage")
 	print("Percentage of lemmata known: {:.2f}%".format(lemmaCoverage))
 	print("Percentage of words known: {:.2f}%".format(wordCoverage))
 	print("\n")
@@ -203,3 +206,5 @@ if __name__ == "__main__":
 	print("Parts of Speech")
 	for k in pos.keys():
 		print("Number of {} in text: {}".format(k, len(pos[k])))
+
+

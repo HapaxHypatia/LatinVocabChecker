@@ -70,20 +70,23 @@ def store_data(title, author, nlp_doc):
 
 
 def normalize_text(text):
-	replacer = JVReplacer()
-	text = remove_macrons(text)
-	text = replacer.replace(text)
-	replace_strings = ["- ", "-", "†", '-', '᠆', '‐', '‒', '–', '—', '―', '⁻', '₋', '−', '⸺', '⸻', '﹘', '﹣', '－']
-	for r in replace_strings:
-		text = text.replace(r, "")
-	# TODO still not catching all hyphenated words (fix above, to be tested)
-	text = unidecode(text)
-	return text.lower()
+	if type(text) != str:
+		text = str(text)
+	else:
+		text = unidecode(text)
+		replacer = JVReplacer()
+		text = remove_macrons(text)
+		text = replacer.replace(text)
+		replace_strings = [",", "!", "?", "- ", "-", "†", '-', '᠆', '‐', '‒', '–', '—', '―', '⁻', '₋', '−', '⸺', '⸻', '﹘', '﹣', '－']
+		for r in replace_strings:
+			text = text.replace(unidecode(r), "")
+		return text.lower()
+		# TODO still not catching all hyphenated words (fix above, to be tested)
 
 
 def set_wordlist(name, listSource):
 	"""
-
+	:param name: string.
 	:param listSource: either a filepath to a spreadsheet	 					or a list object
 	Latin terms must be in first column of spreadsheet
 	:return: normalised version of list
@@ -91,14 +94,19 @@ def set_wordlist(name, listSource):
 	if os.path.exists(listSource):
 		wb = load_workbook(listSource)
 		ws = wb.active
-		raw_list = [ws.cell(row=i, column=1).value for i in range(2, ws.max_row)]
+		raw_list = list([ws.cell(row=i, column=1).value for i in range(2, ws.max_row)])
 		result = [normalize_text(i) for i in raw_list]
 	elif type(listSource) == list:
 		result = [normalize_text(i) for i in listSource]
 	filename = f'data/wordlists/{name} list.txt'
 	with open(filename, "a", encoding="utf-8") as f:
 		for item in result:
-			f.write(item)
+			if not item:
+				continue
+			if len(item.split()) > 1:
+				f.write(item.split()[0])
+			else:
+				f.write(item)
 			f.write("\n")
 		f.close()
 	return result
@@ -160,47 +168,46 @@ if __name__ == "__main__":
 
 	]
 
-	for title in works:
-		text, author = getText(title[1], title[0])
-
-		if pickleExists(title[1], author):
-			print("Text analysis already stored.")
-			continue
-
-		# Split text if long then analyse each chunk
-		# Store analysed chunks in shared variable
-		length = len(text.split())
-		print("Text length: {}".format(length))
-		num = length//2000
-		manager = multiprocessing.Manager()
-		docs = manager.list()
-		if num > 1:
-			chunks = splitText(text, min(10, num))
-			start_time = time.time()
-			processes = [Process(target=analyseLarge, args=(ch, docs)) for ch in chunks]
-			for process in processes:
-				process.start()
-			for process in processes:
-				process.join()
-			print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
-		else:
-			start_time = time.time()
-			docs.append(analyseSmall(text))
-			print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
-
-		# pickle & store
-		# TODO save in database
-		#print(f"Length of docs = {len(docs)}")
-		for i in range(len(docs)):
-			store_data(title[1] + str(i), author, docs[i])
+	# for title in works:
+	# 	text, author = getText(title[1], title[0])
+	#
+	# 	if pickleExists(title[1], author):
+	# 		print("Text analysis already stored.")
+	# 		continue
+	#
+	# 	# Split text if long then analyse each chunk
+	# 	# Store analysed chunks in shared variable
+	# 	length = len(text.split())
+	# 	print("Text length: {}".format(length))
+	# 	num = length//2000
+	# 	manager = multiprocessing.Manager()
+	# 	docs = manager.list()
+	# 	if num > 1:
+	# 		chunks = splitText(text, min(10, num))
+	# 		start_time = time.time()
+	# 		processes = [Process(target=analyseLarge, args=(ch, docs)) for ch in chunks]
+	# 		for process in processes:
+	# 			process.start()
+	# 		for process in processes:
+	# 			process.join()
+	# 		print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
+	# 	else:
+	# 		start_time = time.time()
+	# 		docs.append(analyseSmall(text))
+	# 		print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
+	#
+	# 	# pickle & store
+	# 	# TODO save in database
+	# 	for i in range(len(docs)):
+	# 		store_data(title[1] + str(i), author, docs[i])
 
 	# set vocab lists
 	vocabLists = [
 		("dcc", "data/Latin Core Vocab.xlsx"),
 		("clc", "data/CLC Vocab Pool.xlsx"),
 		("llpsi", "data/LLPSI vocab.xlsx"),
+		("olc", "data/Oxford Book 1 Vocab.xlsx"),
 		# ("ecrom", ""),
-		# ("olc", "data/Oxford Book 1 Vocab.xlsx"),
 		# ("sub", ""),
 	]
   
