@@ -14,6 +14,7 @@ from unidecode import unidecode
 # TODO create pickle files for all common senior texts
 # TODO create normalised lists of all common latin textbooks
 
+
 def getText(title, author):
 	'''
 	Get full text from DB
@@ -54,12 +55,15 @@ def analyseLarge(text, return_list):
 	doc = cltk.analyze(text)
 	print("Finished analysing")
 	return_list.append(doc)
+
+
 def analyseSmall(text):
 	cltk = NLP(language="lat", suppress_banner=True)
 	print("Beginning analysis. Please wait.")
 	doc = cltk.analyze(text)
 	print("Finished analysing")
 	return doc
+
 
 def store_data(title, author, nlp_doc):
 	if not os.path.isdir(f'docs/{author}'):
@@ -104,12 +108,14 @@ def set_wordlist(name, listSource):
 			if not item:
 				continue
 			if len(item.split()) > 1:
-				f.write(item.split()[0])
+				item = unidecode(item.split()[0])
 			else:
-				f.write(item)
+				item = unidecode(item)
+			f.write(item)
 			f.write("\n")
 		f.close()
 	return result
+
 
 def pickleExists(title, author):
 	if os.path.isdir(f"docs/{author}"):
@@ -210,6 +216,6 @@ if __name__ == "__main__":
 		# ("ecrom", ""),
 		# ("sub", ""),
 	]
-  
+
 	for v in vocabLists:
 		set_wordlist(v[0], v[1])

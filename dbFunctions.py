@@ -1,14 +1,6 @@
 import mysql.connector as SQL
 
 
-mydb = SQL.connect(
-	host="localhost",
-	user="root",
-	password="admin",
-	database="corpus"
-)
-mycursor = mydb.cursor()
-
 
 def getText(title, author):
 	'''
@@ -59,3 +51,14 @@ def searchDB(table, ret, prop, val):
 	mycursor.execute(sql)
 	results = mycursor.fetchall()
 	return results
+
+
+if __name__ == "__main__":
+	mydb = SQL.connect(
+		host="localhost",
+		user="root",
+		password="admin",
+		database="corpus"
+	)
+	mycursor = mydb.cursor()
+

@@ -1,21 +1,10 @@
 import time
-
 import mysql.connector as SQL
 from _mysql_connector import MySQLInterfaceError
 from mysql.connector import DatabaseError
 from selenium import webdriver
 from selenium.common import NoSuchElementException, StaleElementReferenceException
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.action_chains import ActionChains
-
-mydb = SQL.connect(
-	host="localhost",
-	user="root",
-	password="admin",
-	database="corpus"
-)
-mycursor = mydb.cursor()
-
 
 def DBaddAuthor(name, fullname):
 	# insert author
@@ -81,80 +70,91 @@ def DBaddText(text):
 			print("Text updated.")
 
 
-driver = webdriver.Chrome()
-driver.set_page_load_timeout(60)
+if __name__ == "__main__":
+	mydb = SQL.connect(
+		host="localhost",
+		user="root",
+		password="admin",
+		database="corpus"
+	)
+	mycursor = mydb.cursor()
 
-driver.get("https://latin.packhum.org/browse")
-print("Connected to site")
-checkbox = driver.find_element(By.CSS_SELECTOR, value='#showall')
-checkbox.click()
-texts = []
+	driver = webdriver.Chrome()
+	driver.set_page_load_timeout(60)
 
-authorElements = driver.find_elements(By.CSS_SELECTOR, value='.authors li a')
-for item in authorElements:
-	name = item.find_element(By.CSS_SELECTOR, value='span b').text
-	fullname = item.find_element(By.CSS_SELECTOR, value='span').text
-# DBaddAuthor(name, fullname)
+	driver.get("https://latin.packhum.org/browse")
+	print("Connected to site")
+	checkbox = driver.find_element(By.CSS_SELECTOR, value='#showall')
+	checkbox.click()
+	texts = []
 
-author_links = [x.get_attribute("href") for x in authorElements]
-for author in author_links:
-	driver.get(author)
-	time.sleep(2)
+	authorElements = driver.find_elements(By.CSS_SELECTOR, value='.authors li a')
+	for item in authorElements:
+		name = item.find_element(By.CSS_SELECTOR, value='span b').text
+		fullname = item.find_element(By.CSS_SELECTOR, value='span').text
+	# DBaddAuthor(name, fullname)
 
-	textElements = driver.find_elements(By.CSS_SELECTOR, value='li.work a')
-	textlist = [x.get_attribute("href") for x in textElements]
-	text_count = 0
-	for text in textlist:
-		textdata = {
-			"title": "",
-			"date": "",
-			"length": 0,
-			"genre": "",
-			"fulltext": "",
-			"author": "",
-			"authorID": 0
-		}
-		driver.get(text)
-		textdata["author"] = driver.find_element(By.ID, value='author').text
-		textdata["title"] = driver.find_element(By.ID, value='work').text
-		textdata["authorID"] = DBgetAuthor(textdata["author"])[0]
-		findText = textExists(textdata)
-		if findText:
-			sql = "SELECT textLength FROM texts WHERE textID = %s"
-			val = (findText[0][0],)
-			mycursor.execute(sql, val)
-			length = mycursor.fetchall()[0][0]
-			if length > 1000:
-				continue
+	author_links = [x.get_attribute("href") for x in authorElements]
+	for author in author_links:
+		driver.get(author)
+		time.sleep(2)
 
-		count = 0
-		text = []
-		while True:
-			count += 1
-			tableCells = driver.find_elements(by=By.TAG_NAME, value='td')
+		textElements = driver.find_elements(By.CSS_SELECTOR, value='li.work a')
+		textlist = [x.get_attribute("href") for x in textElements]
+		text_count = 0
+		for text in textlist:
+			textdata = {
+				"title": "",
+				"date": "",
+				"length": 0,
+				"genre": "",
+				"fulltext": "",
+				"author": "",
+				"authorID": 0
+			}
+			driver.get(text)
+			textdata["author"] = driver.find_element(By.ID, value='author').text
+			textdata["title"] = driver.find_element(By.ID, value='work').text
+			textdata["authorID"] = DBgetAuthor(textdata["author"])[0]
+			findText = textExists(textdata)
+			if findText:
+				sql = "SELECT textLength FROM texts WHERE textID = %s"
+				val = (findText[0][0],)
+				mycursor.execute(sql, val)
+				length = mycursor.fetchall()[0][0]
+				if length > 1000:
+					continue
+
+			text = []
+			while True:
+				# Add reference to array
+				# Add text segments to array
+				# Click next button
+				# TODO test this function after adding ref
+				tableCells = driver.find_elements(by=By.TAG_NAME, value='td')
+				ref = driver.find_element(by=By.ID, value='cit').text
+				text += "ref: " + ref + "\n"
+				try:
+					text += list([cell.text for cell in tableCells])
+				except StaleElementReferenceException:
+					print(driver.current_url)
+					print(textdata)
+					continue
+				next_button = driver.find_element(By.ID, value="next")
+				if next_button.get_attribute("href") == "":
+					break
+				before_click = driver.current_url
+				next_button.click()
+				time.sleep(2)
+				if before_click == driver.current_url:
+					print('Reached end of {} after {} pages'.format(textdata['title'], count))
+					break
+
+			textdata["fulltext"] = " ".join(text)
+			textdata["length"] = len(textdata["fulltext"].split(" "))
+			texts.append(textdata)
 			try:
-				text += list([cell.text for cell in tableCells])
-			except StaleElementReferenceException:
-				print(driver.current_url)
-				print(textdata)
+				DBaddText(textdata)
+			except (MySQLInterfaceError, DatabaseError) as e:
 				continue
-			# click next button until full text is gathered
-			# TODO How to maintain the book/chapter/line info?
-			next_button = driver.find_element(By.ID, value="next")
-			if next_button.get_attribute("href") == "":
-				break
-			before_click = driver.current_url
-			next_button.click()
-			time.sleep(2)
-			if before_click == driver.current_url:
-				print('Reached end of {} after {} pages'.format(textdata['title'], count))
-				break
-
-		textdata["fulltext"] = " ".join(text)
-		textdata["length"] = len(textdata["fulltext"].split(" "))
-		texts.append(textdata)
-		try:
-			DBaddText(textdata)
-		except (MySQLInterfaceError, DatabaseError) as e:
-			continue
 
