@@ -5,6 +5,7 @@ from mysql.connector import DatabaseError
 from selenium import webdriver
 from selenium.common import NoSuchElementException, StaleElementReferenceException
 from selenium.webdriver.common.by import By
+from setup import normalize_text
 
 def DBaddAuthor(name, fullname):
 	# insert author
@@ -49,6 +50,7 @@ def DBaddText(text):
 	# TODO missed Pliny NH somehow - because of multiple authors with same name?
 	if not findText:
 		#If text does not already exist in db
+		#  TODO need to normalise text before entering. Fix hyphenated words, line numbers in middle of words.
 		print("Adding text: {} by {}".format(text['title'], text['author']))
 		add_text = ("INSERT INTO texts "
 					"(title, textLength, textString, authorID) "
