@@ -2,7 +2,6 @@ import multiprocessing
 import os
 from multiprocessing import Process
 from cltk import NLP
-from cltk.alphabet.lat import remove_macrons, JVReplacer
 import mysql.connector as SQL
 from openpyxl.reader.excel import load_workbook
 import time
@@ -11,7 +10,7 @@ import pickle
 import re
 from unidecode import unidecode
 
-# TODO create pickle files for all common senior texts
+
 # TODO create normalised lists of all common latin textbooks
 
 
@@ -50,6 +49,7 @@ def splitText(text, num):
 
 
 def analyseLarge(text, return_list):
+	cleanText = normalize_text(text)
 	cltk = NLP(language="lat", suppress_banner=True)
 	print("Beginning analysis. Please wait.")
 	doc = cltk.analyze(text)
@@ -58,6 +58,7 @@ def analyseLarge(text, return_list):
 
 
 def analyseSmall(text):
+	cleanText = normalize_text(text)
 	cltk = NLP(language="lat", suppress_banner=True)
 	print("Beginning analysis. Please wait.")
 	doc = cltk.analyze(text)
@@ -77,15 +78,37 @@ def normalize_text(text):
 	if type(text) != str:
 		text = str(text)
 	else:
-		text = unidecode(text)
-		replacer = JVReplacer()
-		text = remove_macrons(text)
-		text = replacer.replace(text)
-		replace_strings = [",", "!", "?", "- ", "-", "†", '-', '᠆', '‐', '‒', '–', '—', '―', '⁻', '₋', '−', '⸺', '⸻', '﹘', '﹣', '－']
-		for r in replace_strings:
-			text = text.replace(unidecode(r), "")
-		return text.lower()
-		# TODO still not catching all hyphenated words (fix above, to be tested)
+		text = text.lower()
+		macrons = {
+			'ā': 'a',
+			'ē': 'e',
+			'ō': 'o',
+			'ī': 'I',
+			'ū': 'u',
+			'ȳ': 'y'
+		}
+
+		jv = {
+			'ja': 'ia',
+			'je': 'ie',
+			'ji': 'ii',
+			'jo': 'io',
+			'ju': 'iu',
+			'va': 'ua',
+			've': 'ue',
+			'vi': 'ui',
+			'vo': 'uo',
+			'vu': 'uu',
+		}
+		for k, v in macrons.items():
+			text.replace(k, v)
+		for k, v in jv.items():
+			text.replace(k, v)
+		punctuation = ",;:'\"()[]_-<>?†"
+		# TODO need to remove full stops etc only if inside a word
+		for p in punctuation:
+			text = text.replace(p, "")
+		return text
 
 
 def set_wordlist(name, listSource):
@@ -124,6 +147,12 @@ def pickleExists(title, author):
 				return True
 	else:
 		return False
+
+
+def getVocab(name):
+	with open(f"data/wordlists/{name} list.txt", 'r', encoding='utf-8') as f:
+		vocab = [x.strip() for x in f.readlines()]
+		return vocab
 
 
 if __name__ == "__main__":
@@ -174,6 +203,7 @@ if __name__ == "__main__":
 
 	]
 
+	# TODO run this setup again ensuring normalisation of text before analysis
 	# for title in works:
 	# 	text, author = getText(title[1], title[0])
 	#
@@ -210,9 +240,9 @@ if __name__ == "__main__":
 	# set vocab lists
 	vocabLists = [
 		("dcc", "data/Latin Core Vocab.xlsx"),
-		("clc", "data/CLC Vocab Pool.xlsx"),
+		("clc", "data/CLC Vocab Pool.xlsx"),  # Missing some Bk5 vocab
 		("llpsi", "data/LLPSI vocab.xlsx"),
-		("olc", "data/Oxford Book 1 Vocab.xlsx"),
+		("olc", "data/Oxford Book 1 Vocab.xlsx"),  # Only to Ch.22
 		# ("ecrom", ""),
 		# ("sub", ""),
 	]

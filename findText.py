@@ -16,7 +16,7 @@ def get_random_work():
 			database="corpus"
 		)
 		mycursor = mydb.cursor()
-		print("Getting random text from database.")
+		print("\nGetting random text from database.")
 		id = random.randint(52, 884)
 		textQuery = "SELECT title, textString, authorName FROM texts WHERE textID = %s"
 		vals = (id,)
@@ -35,9 +35,12 @@ def get_random_passage(text, passageLength):
 		print("Getting random passage from text.")
 		text = normalize_text(text)
 		sentences = sent_tokenize(text)
+		if len(sentences) < 2:
+			print("Not enough sentences.")
+			return False
 		passage = ""
 		while len(passage.split()) < passageLength:
-			start = random.randint(1, len(sentences)-2)
+			start = random.randint(0, len(sentences)-1)
 			for s in sentences[start:]:
 				wordcount = len([w for w in passage.split() if w != "."])
 				if wordcount + len(s.split()) < passageLength * 1.1:

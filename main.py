@@ -4,6 +4,7 @@ from dbFunctions import *
 from analyseText import *
 from findText import *
 from frequency import *
+from loggingSetup import *
 
 # TODO add stage selection for CLC
 # TODO analyse the top words coming up that are still unknown on DCC and what words in DCC are not coming up. (Per author?)
@@ -16,7 +17,13 @@ from frequency import *
 
 
 if __name__ == "__main__":
-	# punctuation = " .,;:'\"?! ()[]_-"
+	# freqdict = create_freq_list()
+	# with open("data/wordlists/senior list.txt", "a", encoding="utf-8") as outfile:
+	# 	count = 0
+	# 	for key, val in freqdict.items():
+	# 		count += 1
+	# 		outfile.write(f"{count}, {key}, {val}\n")
+
 	#
 	# Get 10 random readable passages from a given text
 
@@ -28,13 +35,12 @@ if __name__ == "__main__":
 	# text = " ".join([token for doc in docs for token in doc.tokens])
 
 	percentage = 80
-	passageLength = 120
+	passageLength = 50
 	vocab = "dcc"
 	number = 10
 
 	file = f"results/{number}x{passageLength} words at {percentage}%.txt"
-	with open(f"data/wordlists/{vocab} list.txt", 'r', encoding='utf-8') as f:
-		vocab = [x.strip() for x in f.readlines()]
+	vocab = getVocab('dcc')
 
 	passages = []
 	while len(passages) < number:
@@ -44,8 +50,9 @@ if __name__ == "__main__":
 		if not passage:
 			continue
 		else:
-			doc = analyseSmall(passage)
-			word_coverage, lemmaCoverage, unknown_words = check_coverage(doc.words)
+			cleanPassage = normalize_text(passage)
+			doc = analyseSmall(cleanPassage)
+			word_coverage, lemmaCoverage, unknown_words = check_coverage(doc.words, vocab)
 
 			details = {
 				"author": author,
@@ -54,7 +61,13 @@ if __name__ == "__main__":
 				"Coverage": word_coverage,
 				"Unknown": unknown_words
 			}
-			print(f"{author}, {title}: {word_coverage}")
+			if word_coverage >= percentage:
+				colour = '\033[32m'
+			else:
+				colour = '\033[31m'
+			print(colour)
+			logger.info(f"{author}, {title}: {word_coverage:.2f}%")
+			print("\x1b[0m")
 			if word_coverage > percentage:
 				passages.append(details)
 				with open(file, 'a') as f:
@@ -62,25 +75,8 @@ if __name__ == "__main__":
 						f.write(f"{k}: {v}\n")
 					f.write('\n')
 
-# freqdict = create_freq_list()
-# with open("results/seniorfrequency.txt", "a", encoding="utf-8") as outfile:
-# 	count = 0
-# 	for key, val in freqdict.items():
-# 		count += 1
-# 		outfile.write(f"{count}, {key}, {val}\n")
 
-# 	with open("results/seniorfrequency.txt", 'r', encoding='utf-8') as f:
-# 		senior = [x.split()[1].strip(',') for x in f.readlines()]
-#
-#
-# 	with open("data/wordlists/llpsi list.txt", 'r', encoding='utf-8') as f:
-# 		llpsi = [x.strip() for x in f.readlines()]
-#
-# 	with open("data/wordlists/clc list.txt", 'r', encoding='utf-8') as f:
-# 		clc = [x.strip() for x in f.readlines()]
-#
-# 	with open("data/wordlists/olc list.txt", 'r', encoding='utf-8') as f:
-# 		olc = [x.strip() for x in f.readlines()]
+
 
 
 # average lemmata in a 130 word passage
