@@ -6,6 +6,7 @@ from findText import *
 from frequency import *
 from loggingSetup import *
 
+# TODO organise files better- what is the purpose of each one, what are the entry points and what goes in main?
 # TODO add stage selection for CLC
 # TODO analyse the top words coming up that are still unknown on DCC and what words in DCC are not coming up. (Per author?)
 # TODO how many words do you typically need before a word repeats in latin?
@@ -14,6 +15,7 @@ from loggingSetup import *
 #  DCC definitely gives the best coverage, compared to clc and llpsi, but still only 69%
 # TODO Try to find the longest readable passage possible in a given text/author
 # TODO add date and genre to database
+# TODO texts are normalised when retrieved from database. If working with a user-entered text, need to add normalisation step
 
 
 if __name__ == "__main__":
@@ -50,8 +52,7 @@ if __name__ == "__main__":
 		if not passage:
 			continue
 		else:
-			cleanPassage = normalize_text(passage)
-			doc = analyseSmall(cleanPassage)
+			doc = analyseSmall(passage)
 			word_coverage, lemmaCoverage, unknown_words = check_coverage(doc.words, vocab)
 
 			details = {

@@ -10,7 +10,6 @@ def create_freq_list():
 			doc = deserialize(f"docs/{folder}/{file}")
 			words = [w for w in doc.lemmata if not ignore(w)]
 			all_words+=words
-	cleanList = [normalize_text(w) for w in all_words]
 	result = {}
 	for w in all_words:
 		if w in result.keys():

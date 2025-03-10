@@ -60,6 +60,7 @@ def DBaddText(text):
 		print("Text added.")
 	else:
 		textID = findText[0][0]
+		# TODO Skip this check to refresh database with new version of texts.
 		check_length = "SELECT textLength FROM texts WHERE textID=%s"
 		mycursor.execute(check_length, (textID,))
 		current_length = mycursor.fetchall()
@@ -132,10 +133,7 @@ if __name__ == "__main__":
 				# Add reference to array
 				# Add text segments to array
 				# Click next button
-				# TODO test this function after adding ref
 				tableCells = driver.find_elements(by=By.TAG_NAME, value='td')
-				ref = driver.find_element(by=By.ID, value='cit').text
-				text += "ref: " + ref + "\n"
 				try:
 					text += list([cell.text for cell in tableCells])
 				except StaleElementReferenceException:

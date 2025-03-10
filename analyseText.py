@@ -1,39 +1,6 @@
 import random
 from setup import *
 
-works = [
-	("Cicero", 'Pro S. Roscio Amerino'),
-	("apuleius", "metamorphoses"),
-	("gellius", "noctes atticae"),
-	("Caesar", "de bello gallico"),
-	("Catullus", "carmina"),
-	("Cicero", "de legibus"),
-	("Cicero", "de officiis"),
-	("Cicero", "de legibus"),
-	("Cicero", "Pro Q. Roscio Comoedo"),
-	("Cicero", "Pro Lege Manilia"),
-	("Cicero", "Pro Rabirio Perduellionis Reo"),
-	("Cicero", "Pro Murena"),
-	("Cicero", "Pro Sulla"),
-	("Cicero", "Pro Archia"),
-	("Cicero", "Pro Caelio"),
-	("Cicero", "Pro Milone"),
-	("Cicero", "in verrem"),
-	("Cicero", "in catilinam"),
-	# ("iuvenalis", "saturae"),
-	# ("livius", "ab urbe condita"),
-	# ("lucretius", "de rerum natura"),
-	# ("ovidius", "metamorphoses"),
-	# ("ovidius", "amores"),
-	# ("ovidius", "remedia amoris"),
-	# ("ovidius", "Epistulae (vel Heroides)"),
-	# ("plinius", "epistulae"),
-	# ("tacitus", "annales"),
-	# ("tibullus", "elegiae"),
-	# ("virgilius", "aeneis"),
-	# ("virgilius", "georgica")
-]
-
 
 def getPickles(author, title):
 	res = []
@@ -51,13 +18,54 @@ def deserialize(filename):
 		return doc
 
 
+def combine_docs(doclist):
+	"""
+	combine several nlp docs into 1
+	:param doclist:
+	:return: doc
+	"""
+	docObject = {
+		'embeddings': [],
+		'lemmata': [],
+		'morphosyntactic_features': [],
+		'pos': [],
+		'sentences': [],
+		'sentences_strings': [],
+		'sentences_tokens': [],
+		'stems': [],
+		'tokens': [],
+		'tokens_stops_filtered': [],
+		'words': [],
+		'raw': '',
+		'normalized_text': '', }
+
+	for doc in doclist:
+		for ATT in docObject.keys():
+			val = getattr(doc, ATT)
+			try:
+				if ATT == 'words' and len(docObject['words']) > 0:
+					highestSentence = docObject['words'][-1].index_sentence
+					for w in val:
+						w.index_sentence += highestSentence
+				docObject[ATT] += val
+			except Exception as e:
+				print(e)
+				continue
+	docObject['token_count'] = len(docObject['tokens'])
+	docObject['sentence_count'] = len(docObject['sentences'])
+	docObject['clean_words'] = [x for x in docObject['words'] if not ignore(x)]
+	docObject['word_count'] = len(docObject['clean_words'])
+	docObject['unique'] = set(w.lemma for w in docObject['clean_words'])
+	docObject['density'] = len(docObject['unique'])/docObject['word_count']
+	return docObject
+
 def ignore(wordObject):
 	"""
 	Ignore words which are punctuation, empty strings, proper nouns, or (English) numbers
 	:param wordObject:
 	:return:
 	"""
-	if wordObject.upos == "PUNCT" or wordObject.upos == "X" or wordObject.upos == "PROPN":
+	if wordObject.upos == "PUNCT" or wordObject.upos == "X" or wordObject.upos == "PROPN" or wordObject.upos == "SYM":
 		return True
 	if wordObject.string == "":
 		return True
@@ -113,41 +121,51 @@ def check_coverage(word_objects, vocablist):
 
 
 def set_lists(wordList):
-	# TODO not finding any gerundives, gerunds, supines
-	verbforms = {"subjunctives": [(w.string, w.index_char_start) for w in wordList
-								  if isFeatureInstance(w, "Mood", "subjunctive")],
-				 "imperatives": [(w.string, w.index_char_start) for w in wordList
-								 if isFeatureInstance(w, "Mood", "imperative")],
-				 "gerundives": [(w.string, w.index_char_start) for w in wordList
-								if isFeatureInstance(w, "VerbForm", "gerundive")],
-				 "gerunds": [(w.string, w.index_char_start) for w in wordList
-							 if isFeatureInstance(w, "VerbForm", "gerund")],
-				 "supines": [(w.string, w.index_char_start) for w in wordList
-							 if isFeatureInstance(w, "VerbForm", "supine")],
-				 "participles": [(w.string, w.index_char_start) for w in wordList
-								 if isFeatureInstance(w, "VerbForm", "participle")],
-				 "AbAbs": [(w.string, w.index_char_start) for w in wordList
-						   if
-						   isFeatureInstance(w, "VerbForm", "participle") and isFeatureInstance(w, "Case", "ablative")],
-				 "infinitives": [(w.string, w.index_char_start) for w in wordList
-								 if isFeatureInstance(w, "VerbForm", "infinitive")],
-				 "finite verbs": [(w.string, w.index_char_start) for w in wordList
-								  if isFeatureInstance(w, "VerbForm", "finite")]}
+	"""
+	:param wordList: list of word objects
+	:return: 3 dictionaries
+	"""
+	gerundives = []
+	participles = []
+	for w in wordList:
+		if isFeatureInstance(w, "VerbForm", "participle"):
+			if 'nd' in w.string:
+				gerundives.append((w.string, w.index_char_start))
+			else:
+				participles.append((w.string, w.index_char_start))
 
-	# TODO not finding vocatives
+	# TODO not finding any gerunds, supines
+	verbforms = {
+				"subjunctives": [(w.string, w.index_sentence, w.index_token) for w in wordList
+									if isFeatureInstance(w, "Mood", "subjunctive")],
+				"imperatives": [(w.string, w.index_sentence, w.index_token) for w in wordList
+							 		if isFeatureInstance(w, "Mood", "imperative")],
+				"gerundives": gerundives,
+				# "gerunds": [(w.string, w.index_sentence, w.index_token) for w in wordList
+				# 		 			if isFeatureInstance(w, "VerbForm", "gerund")],
+				# "supines": [(w.string, w.index_sentence, w.index_token) for w in wordList
+				# 		 			if isFeatureInstance(w, "VerbForm", "supine")],
+				"participles": participles,
+				"AbAbs": [(w.string, w.index_sentence, w.index_token) for w in wordList
+					   				if isFeatureInstance(w, "VerbForm", "participle") and isFeatureInstance(w, "Case", "ablative")],
+				"infinitives": [(w.string, w.index_sentence, w.index_token) for w in wordList
+							 		if isFeatureInstance(w, "VerbForm", "infinitive")],
+				"finite verbs": [(w.string, w.index_sentence, w.index_token) for w in wordList
+							  		if isFeatureInstance(w, "VerbForm", "finite")]}
+
 	cases = {
-		"ablatives": [(w.string, w.index_char_start) for w in wordList if isFeatureInstance(w, "Case", "ablative")],
-		"datives": [(w.string, w.index_char_start) for w in wordList if isFeatureInstance(w, "Case", "dative")],
-		"genitives": [(w.string, w.index_char_start) for w in wordList if isFeatureInstance(w, "Case", "genitive")],
-		"locatives": [(w.string, w.index_char_start) for w in wordList if isFeatureInstance(w, "Case", "locative")],
-		"vocatives": [(w.string, w.index_char_start) for w in wordList if isFeatureInstance(w, "Case", "vocative")]}
+		"ablatives": [(w.string, w.index_sentence, w.index_token) for w in wordList if isFeatureInstance(w, "Case", "ablative")],
+		"datives": [(w.string, w.index_sentence, w.index_token) for w in wordList if isFeatureInstance(w, "Case", "dative")],
+		"genitives": [(w.string, w.index_sentence, w.index_token) for w in wordList if isFeatureInstance(w, "Case", "genitive")],
+		"locatives": [(w.string, w.index_sentence, w.index_token) for w in wordList if isFeatureInstance(w, "Case", "locative")],
+		"vocatives": [(w.string, w.index_sentence, w.index_token) for w in wordList if isFeatureInstance(w, "Case", "vocative")]}
 
-	# TODO not finding proper nouns, interjections
+	# TODO not finding interjections
 
 	pos = {
 		"verbs": [w for w in wordList if str(w.pos) == "verb"],
 		"nouns": [w for w in wordList if str(w.pos) == "noun"],
-		"proper nouns": [w for w in wordList if str(w.pos) == "proper_noun"],
+		"proper nouns": [w for w in wordList if str(w.upos) == "PROPN"],
 		"adjectives": [w for w in wordList if str(w.pos) == "adjective"],
 		"pronouns": [w for w in wordList if str(w.pos) == "pronoun"],
 		"prepositions": [w for w in wordList if str(w.pos) == "adposition"],
@@ -156,28 +174,38 @@ def set_lists(wordList):
 						 str(w.pos) == "subordinating_conjunction" or str(w.pos) == "coordinating_conjunction"],
 		"particles": [w for w in wordList if str(w.pos) == "particle"],
 		"determiners": [w for w in wordList if str(w.pos) == "determiner"],
-		"interjections": [w for w in wordList if str(w.pos) == "interjection"]
+		"interjections": [w for w in wordList if str(w.upos) == "INTJ"]
 	}
 	pos["verbs"] += [w for w in wordList if str(w.pos) == "auxiliary"]
 	pos["adjectives"] += [w for w in wordList if str(w.pos) == "numeral"]
 
 	return verbforms, cases, pos
 
+def create_freq_list(docobj):
+	words = [w for w in docobj['lemmata'] if not ignore(w)]
+	result = {}
+	for w in words:
+		if w in result.keys():
+			result[w] += 1
+		else:
+			result[w] = 1
+	result = dict(sorted(result.items(), key=lambda item: item[1], reverse=True))
+	return result
+
 
 if __name__ == "__main__":
 	# get pickle file from disk or db
 	# deserialize
-	# author, title = random.choice(works)
-	author = "Vergilius"
-	title = "aeneis"
+	author = "Cicero"
+	title = "In Catilinam"
 
 	docfiles = getPickles(author, title)
 	docs = list([deserialize(pickle) for pickle in docfiles])
+	doc = combine_docs(docs)
 
 	# get lists of text features
-	words = [word for doc in docs for word in doc.words if not ignore(word)]
-	lemmalist = set([w.lemma for w in words])
-	verbforms, cases, pos = set_lists(words)
+	lemmalist = doc["unique"]
+	verbforms, cases, pos = set_lists(doc["words"])
 
 	with open("data/wordlists/dcc list.txt", 'rb') as file:
 		dcc_list = list([x.strip().decode() for x in file.readlines()])
@@ -185,9 +213,9 @@ if __name__ == "__main__":
 	# print analysis
 	print(f"\n{title} by {author}")
 	print("\nTotals")
-	print("Total words in text: {}".format(len(words)))
+	print("Total words in text: {}".format(doc['word_count']))
 	print("Total number of lemmata: {}".format(len(lemmalist)))
-	wordCoverage, lemmaCoverage, unknown = check_coverage(words, dcc_list)
+	wordCoverage, lemmaCoverage, unknown = check_coverage(doc["clean_words"], dcc_list)
 	print("\nCoverage")
 	print("Percentage of lemmata known: {:.2f}%".format(lemmaCoverage))
 	print("Percentage of words known: {:.2f}%".format(wordCoverage))
@@ -206,5 +234,3 @@ if __name__ == "__main__":
 	print("Parts of Speech")
 	for k in pos.keys():
 		print("Number of {} in text: {}".format(k, len(pos[k])))
-
-

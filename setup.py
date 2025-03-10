@@ -1,7 +1,6 @@
 import multiprocessing
 import os
 from multiprocessing import Process
-from cltk import NLP
 import mysql.connector as SQL
 from openpyxl.reader.excel import load_workbook
 import time
@@ -9,17 +8,30 @@ from semantic_text_splitter import TextSplitter
 import pickle
 import re
 from unidecode import unidecode
+from cltk.data.fetch import FetchCorpus
+from cltk.tokenizers.lat.lat import LatinWordTokenizer
+from cltk import NLP
 
 
-# TODO create normalised lists of all common latin textbooks
+def getCorpora():
+	corpus_downloader = FetchCorpus(language="lat")
+	corpora = corpus_downloader.list_corpora
+	for c in corpora:
+		try:
+			corpus_downloader.import_corpus(c)
+			print(f"{c} successfully downloaded.")
+		except Exception as e:
+			print(c)
+			print(e)
+			continue
 
 
 def getText(title, author):
-	'''
+	"""
 	Get full text from DB
 	:param string title: Title of work
 	:return: string of text, string of author
-	'''
+	"""
 	title = title.lower()
 	textQuery = "SELECT textString, authorName FROM texts WHERE LOWER(title) = %s"
 	vals = (title,)
@@ -38,6 +50,7 @@ def getText(title, author):
 		text = results[0][0]
 		author = results[0][1]
 	print("\nText: {} by {} successfully collected".format(title, author))
+	text = normalize_text(text)
 	return text, author
 
 
@@ -45,11 +58,11 @@ def splitText(text, num):
 	print(f"Splitting Text into {num} parts")
 	splitter = TextSplitter(len(text) // num - 1)
 	chunks = splitter.chunks(text)
+	print(f"Returning {len(chunks)} chunks.")
 	return chunks
 
 
 def analyseLarge(text, return_list):
-	cleanText = normalize_text(text)
 	cltk = NLP(language="lat", suppress_banner=True)
 	print("Beginning analysis. Please wait.")
 	doc = cltk.analyze(text)
@@ -58,7 +71,6 @@ def analyseLarge(text, return_list):
 
 
 def analyseSmall(text):
-	cleanText = normalize_text(text)
 	cltk = NLP(language="lat", suppress_banner=True)
 	print("Beginning analysis. Please wait.")
 	doc = cltk.analyze(text)
@@ -75,41 +87,64 @@ def store_data(title, author, nlp_doc):
 
 
 def normalize_text(text):
+	"""
+	Removes macrons
+	Replaces Vs and Js
+	Removes punctuation in the middle of words
+	:param text: string of a passage
+	:return: string
+	"""
 	if type(text) != str:
 		text = str(text)
-	else:
-		text = text.lower()
-		macrons = {
-			'ā': 'a',
-			'ē': 'e',
-			'ō': 'o',
-			'ī': 'I',
-			'ū': 'u',
-			'ȳ': 'y'
-		}
+	text = text.lower()
 
-		jv = {
-			'ja': 'ia',
-			'je': 'ie',
-			'ji': 'ii',
-			'jo': 'io',
-			'ju': 'iu',
-			'va': 'ua',
-			've': 'ue',
-			'vi': 'ui',
-			'vo': 'uo',
-			'vu': 'uu',
-		}
-		for k, v in macrons.items():
-			text.replace(k, v)
-		for k, v in jv.items():
-			text.replace(k, v)
-		punctuation = ",;:'\"()[]_-<>?†"
-		# TODO need to remove full stops etc only if inside a word
-		for p in punctuation:
-			text = text.replace(p, "")
-		return text
+	# replace macrons
+	macrons = {
+		'ā': 'a',
+		'ē': 'e',
+		'ō': 'o',
+		'ī': 'I',
+		'ū': 'u',
+		'ȳ': 'y'
+	}
+	for k, v in macrons.items():
+		text.replace(k, v)
 
+	# replace Js and Vs
+	jv = {
+		'ja': 'ia',
+		'je': 'ie',
+		'ji': 'ii',
+		'jo': 'io',
+		'ju': 'iu',
+		'va': 'ua',
+		've': 'ue',
+		'vi': 'ui',
+		'vo': 'uo',
+		'vu': 'uu',
+	}
+	for k, v in jv.items():
+		text.replace(k, v)
+
+	# join words that split over line break
+	text = text.replace("-  ", "")
+	text = text.replace("- ", "")
+
+	# TODO move numbers when they occur inside words like this: multi4.1 tudo
+
+	# # Replace numbers
+	# res = ""
+	# word_tokenizer = LatinWordTokenizer()
+	# tokens = word_tokenizer.tokenize(text)
+	# for t in tokens:
+	# 	for num in '0123456789':
+	# 		if num in t:
+	# # 			move number to front of word
+	#
+	#
+	#
+	# print("Returning normalised text.")
+	return text
 
 def set_wordlist(name, listSource):
 	"""
@@ -158,6 +193,9 @@ def getVocab(name):
 if __name__ == "__main__":
 	print("Starting...\n")
 
+	# getCorpora()
+
+
 	# connect to database
 	mydb = SQL.connect(
 		host="localhost",
@@ -168,84 +206,94 @@ if __name__ == "__main__":
 	mycursor = mydb.cursor()
 	print("Connected to database.\n")
 
+	# set vocab lists
+	vocabLists = [
+		("dcc", "data/vocab/Latin Core Vocab.xlsx"),
+		("clc", "data/vocab/cambridge_latin_course.xlsx"),  # Missing some Bk5 vocab
+		("llpsi", "data/vocab/lingua_latina.xlsx"),
+		("olc", "data/vocab/oxford_latin_course.xlsx"),  # Only to Ch.22
+		("ecrom", "data/vocab/ecce_romani.xlsx"),
+		("sub", "data/vocab/suburani.xlsx"),
+		("wheel", "data/vocab/wheelock.xlsx"),
+		("newmil", "data/vocab/latin_for_the_new_millennium.xlsx")
+	]
+
+
 	# get senior texts
 	works = [
-		("Cicero", "de legibus"),
+		("Cicero", "In Catilinam"),
+		("Cicero", "In Pisonem"),
+		("Cicero", "In Q. Caecilium"),
+		("Cicero", "In Sallustium [sp.]"),
+		("Cicero", "In Vatinium"),
+		("Cicero", "In Verrem"),
 		("Cicero", "Pro Archia"),
+		("Cicero", "Pro Balbo"),
+		("Cicero", "Pro Caecina"),
 		("Cicero", "Pro Caelio"),
-		("apuleius", "metamorphoses"),
-		("gellius", "noctes atticae"),
+		("Cicero", "Pro Cluentio"),
+		("Cicero", "Pro Flacco"),
+		("Cicero", "Pro Fonteio"),
+		("Cicero", "Pro Lege Manilia"),
+		("Cicero", "Pro Ligario"),
+		("Cicero", "Pro Marcello"),
+		("Cicero", "Pro Milone"),
+		("Cicero", "Pro Murena"),
+		("Cicero", "Pro Plancio"),
+		("Cicero", "Pro Q. Roscio Comoedo"),
+		("Cicero", "Pro Quinctio"),
+		("Cicero", "Pro Rabirio Perduellionis Reo"),
+		("Cicero", "Pro Rabirio Postumo"),
+		("Cicero", "Pro Rege Deiotaro"),
+		("Cicero", "Pro S. Roscio Amerino"),
+		("Cicero", "Pro Scauro"),
+		("Cicero", "Pro Sestio"),
+		("Cicero", "Pro Sulla"),
+		("Cicero", "Pro Tullio"),
 		("Caesar", "de bello gallico"),
 		("Catullus", "carmina"),
-		("Cicero", "de officiis"),
-		("Cicero", "de legibus"),
-		("Cicero", "Pro Q. Roscio Comoedo"),
-		("Cicero", "Pro Lege Manilia"),
-		("Cicero", "Pro Rabirio Perduellionis Reo"),
-		("Cicero", "Pro Murena"),
-		("Cicero", "Pro Sulla"),
-		("Cicero", "Pro Milone"),
-		("Cicero", "in verrem"),
-		("Cicero", "in catilinam"),
-		("iuvenalis", "saturae"),
 		("livius", "ab urbe condita"),
-		("lucretius", "de rerum natura"),
 		("ovidius", "metamorphoses"),
 		("ovidius", "amores"),
 		("ovidius", "remedia amoris"),
 		("ovidius", "Epistulae (vel Heroides)"),
 		("plinius", "epistulae"),
-		("tacitus", "annales"),
-		("tibullus", "elegiae"),
-		("virgilius", "aeneis"),
-		("virgilius", "georgica"),
-		("Cicero", 'Pro S. Roscio Amerino')
-
+		("virgilius", "aeneis")
 	]
 
-	# TODO run this setup again ensuring normalisation of text before analysis
-	# for title in works:
-	# 	text, author = getText(title[1], title[0])
-	#
-	# 	if pickleExists(title[1], author):
-	# 		print("Text analysis already stored.")
-	# 		continue
-	#
-	# 	# Split text if long then analyse each chunk
-	# 	# Store analysed chunks in shared variable
-	# 	length = len(text.split())
-	# 	print("Text length: {}".format(length))
-	# 	num = length//2000
-	# 	manager = multiprocessing.Manager()
-	# 	docs = manager.list()
-	# 	if num > 1:
-	# 		chunks = splitText(text, min(10, num))
-	# 		start_time = time.time()
-	# 		processes = [Process(target=analyseLarge, args=(ch, docs)) for ch in chunks]
-	# 		for process in processes:
-	# 			process.start()
-	# 		for process in processes:
-	# 			process.join()
-	# 		print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
-	# 	else:
-	# 		start_time = time.time()
-	# 		docs.append(analyseSmall(text))
-	# 		print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
-	#
-	# 	# pickle & store
-	# 	# TODO save in database
-	# 	for i in range(len(docs)):
-	# 		store_data(title[1] + str(i), author, docs[i])
+	for title in works:
+		text, author = getText(title[1], title[0])
+		#
+		if pickleExists(title[1], author):
+			print("Text analysis already stored.")
+			continue
 
-	# set vocab lists
-	vocabLists = [
-		("dcc", "data/Latin Core Vocab.xlsx"),
-		("clc", "data/CLC Vocab Pool.xlsx"),  # Missing some Bk5 vocab
-		("llpsi", "data/LLPSI vocab.xlsx"),
-		("olc", "data/Oxford Book 1 Vocab.xlsx"),  # Only to Ch.22
-		# ("ecrom", ""),
-		# ("sub", ""),
-	]
+		# Split text if long then analyse each chunk
+		length = len(text.split())
+		print("Text length: {}".format(length))
+		num = length//2000
+		manager = multiprocessing.Manager()
+		docs = manager.list()
+		if num > 1:
+			chunks = splitText(text, min(10, num))
+			start_time = time.time()
+			# NOTE: multiprocessing must be done in __main__
+			processes = [Process(target=analyseLarge, args=(ch, docs)) for ch in chunks]
+			for process in processes:
+				process.start()
+			for process in processes:
+				process.join()
+			print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
+		else:
+			start_time = time.time()
+			docs.append(analyseSmall(text))
+			print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
 
-	for v in vocabLists:
-		set_wordlist(v[0], v[1])
+		# pickle & store
+		# TODO save in database
+		for i in range(len(docs)):
+			store_data(title[1] + str(i), author, docs[i])
+
+	# for v in vocabLists:
+	# 	set_wordlist(v[0], v[1])
+

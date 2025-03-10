@@ -1,10 +1,7 @@
 from analyseText import *
 from setup import *
 from dbFunctions import *
-import nltk
-from nltk.tokenize import sent_tokenize
-nltk.download('punkt_tab')
-
+from cltk.sentence.lat import LatinPunktSentenceTokenizer
 
 def get_random_work():
 	work = False
@@ -28,13 +25,14 @@ def get_random_work():
 
 
 def get_random_passage(text, passageLength):
+	# TODO remove numbers here?
 	if len(text.split()) < passageLength:
 		print("Work too short.")
 		return False
 	else:
 		print("Getting random passage from text.")
-		text = normalize_text(text)
-		sentences = sent_tokenize(text)
+		splitter = LatinPunktSentenceTokenizer()
+		sentences = splitter.tokenize(text)
 		if len(sentences) < 2:
 			print("Not enough sentences.")
 			return False
@@ -59,8 +57,7 @@ def isReadable(passage, minPercentage, vocablist):
 	:return: bool
 	"""
 	print("Checking readability.")
-	cleanPassage = normalize_text(passage)
-	doc = analyseSmall(cleanPassage)
+	doc = analyseSmall(passage)
 	words = [w for w in doc.words if not ignore(w)]
 	word_coverage, lemmaCoverage, unknown_words = check_coverage(words, vocablist)
 	if word_coverage >= minPercentage:
