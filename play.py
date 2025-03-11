@@ -1,37 +1,31 @@
-from setup import *
+def connect(func):
+	print("inside connect")
+	def wrapper(*args, **kwargs):
+		print("inside wrapper")
+		import mysql.connector as SQL
+		mydb = SQL.connect(
+			host="localhost",
+			user="root",
+			password="admin",
+			database="corpus"
+		)
+		cursor = mydb.cursor()
+		result = func(cursor, *args)
+		cursor.close()
+		return result
+
+	return wrapper
 
 
-if __name__ == "__main__":
+@connect
+def DBgetAuthor(cursor, fullname):
+	print("inside get author function")
+	# get author ID for text
+	val = (fullname,)
+	sql = "SELECT authorID, authorName FROM authors WHERE LOWER(fullName) = %s"
+	cursor.execute(sql, val)
+	results = cursor.fetchall()
+	return results[0][0], results[0][1]
 
-	with open("data/tusc.txt", 'r', encoding='utf-8') as file:
-		text = "".join(x.strip() for x in file.readlines())
 
-	res = normalize_text(text)
-
-	# Split text if long then analyse each chunk
-	# Store analysed chunks in shared variable
-	length = len(text.split())
-	print("Text length: {}".format(length))
-	num = length // 2000
-	manager = multiprocessing.Manager()
-	docs = manager.list()
-	if num > 1:
-		chunks = splitText(text, min(10, num))
-		start_time = time.time()
-		# NOTE: multiprocessing must be done in __main__
-		processes = [Process(target=analyseLarge, args=(ch, docs)) for ch in chunks]
-		for process in processes:
-			process.start()
-		for process in processes:
-			process.join()
-		print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
-
-	words = [word for doc in docs for word in doc.words]
-	for i in range(0, 500):
-		try:
-			print(words[i].string)
-			print(words[i].upos)
-		except UnicodeEncodeError:
-			continue
-#  TODO cltk analyser seems to removes the <> around the numbers and split them at full stops. Need to somehow extract references before analysing, split text at references, create dictionary with references as keys
-
+DBgetAuthor("Cicero")

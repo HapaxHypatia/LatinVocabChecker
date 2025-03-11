@@ -18,11 +18,33 @@ def deserialize(filename):
 		return doc
 
 
+def create_docObj(nlpDoc):
+	clean_words = [x for x in nlpDoc.words if not ignore(x)]
+
+	docObject = {'embeddings': nlpDoc.embeddings,
+				 'lemmata': nlpDoc.lemmata,
+				 'morphosyntactic_features': nlpDoc.morphosyntactic_features,
+				 'pos': nlpDoc.pos,
+				 'sentences': nlpDoc.sentences,
+				 'sentences_strings': nlpDoc.sentences_strings,
+				 'sentences_tokens': nlpDoc.sentences_tokens,
+				 'stems': nlpDoc.stems, 'tokens': nlpDoc.tokens,
+				 'tokens_stops_filtered': nlpDoc.tokens_stops_filtered,
+				 'words': nlpDoc.words, 'raw': nlpDoc.raw,
+				 'normalized_text': nlpDoc.normalized_text,
+				 'token_count': len(nlpDoc.tokens),
+				 'sentence_count': len(nlpDoc.sentences),
+				 'word_count': len(clean_words),
+				 'unique': set(w.lemma for w in clean_words)}
+
+	docObject['density'] = len(docObject['unique']) / docObject['word_count']
+	return docObject
+
 def combine_docs(doclist):
 	"""
-	combine several nlp docs into 1
+	combine several nlpdocs into one doc object
 	:param doclist:
-	:return: doc
+	:return:
 	"""
 	docObject = {
 		'embeddings': [],
@@ -192,45 +214,10 @@ def create_freq_list(docobj):
 	result = dict(sorted(result.items(), key=lambda item: item[1], reverse=True))
 	return result
 
+def avg_sentence_length(docObj):
+	sent_lengths = [len(s) for s in docObj['sentences']]
+	return sum(x for x in sent_lengths)/len(sent_lengths)
+
 
 if __name__ == "__main__":
-	# get pickle file from disk or db
-	# deserialize
-	author = "Cicero"
-	title = "In Catilinam"
-
-	docfiles = getPickles(author, title)
-	docs = list([deserialize(pickle) for pickle in docfiles])
-	doc = combine_docs(docs)
-
-	# get lists of text features
-	lemmalist = doc["unique"]
-	verbforms, cases, pos = set_lists(doc["words"])
-
-	with open("data/wordlists/dcc list.txt", 'rb') as file:
-		dcc_list = list([x.strip().decode() for x in file.readlines()])
-
-	# print analysis
-	print(f"\n{title} by {author}")
-	print("\nTotals")
-	print("Total words in text: {}".format(doc['word_count']))
-	print("Total number of lemmata: {}".format(len(lemmalist)))
-	wordCoverage, lemmaCoverage, unknown = check_coverage(doc["clean_words"], dcc_list)
-	print("\nCoverage")
-	print("Percentage of lemmata known: {:.2f}%".format(lemmaCoverage))
-	print("Percentage of words known: {:.2f}%".format(wordCoverage))
-	print("\n")
-
-	print("Verb Forms")
-	for k in verbforms.keys():
-		print("Number of {} in text: {}".format(k, len(verbforms[k])))
-	print("\n")
-
-	print("Noun Cases")
-	for k in cases.keys():
-		print("Number of {} in text: {}".format(k, len(cases[k])))
-	print("\n")
-
-	print("Parts of Speech")
-	for k in pos.keys():
-		print("Number of {} in text: {}".format(k, len(pos[k])))
+	pass
