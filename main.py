@@ -16,6 +16,61 @@ from loggingSetup import *
 # TODO Try to find the longest readable passage possible in a given text/author
 # TODO add date and genre to database
 # TODO texts are normalised when retrieved from database. If working with a user-entered text, need to add normalisation step
+# TODO lowercase for all author & title variables
+
+
+vocabLists = [
+	("dcc", "data/vocab/Latin Core Vocab.xlsx"),
+	("clc", "data/vocab/cambridge_latin_course.xlsx"),  # Missing some Bk5 vocab
+	("llpsi", "data/vocab/lingua_latina.xlsx"),
+	("olc", "data/vocab/oxford_latin_course.xlsx"),  # Only to Ch.22
+	("ecrom", "data/vocab/ecce_romani.xlsx"),
+	("sub", "data/vocab/suburani.xlsx"),
+	("wheel", "data/vocab/wheelock.xlsx"),
+	("newmil", "data/vocab/latin_for_the_new_millennium.xlsx")
+]
+
+works = [
+	("Cicero", "In Catilinam"),
+	("Cicero", "In Pisonem"),
+	("Cicero", "In Q. Caecilium"),
+	("Cicero", "In Sallustium [sp.]"),
+	("Cicero", "In Vatinium"),
+	("Cicero", "In Verrem"),
+	("Cicero", "Pro Archia"),
+	("Cicero", "Pro Balbo"),
+	("Cicero", "Pro Caecina"),
+	("Cicero", "Pro Caelio"),
+	("Cicero", "Pro Cluentio"),
+	("Cicero", "Pro Flacco"),
+	("Cicero", "Pro Fonteio"),
+	("Cicero", "Pro Lege Manilia"),
+	("Cicero", "Pro Ligario"),
+	("Cicero", "Pro Marcello"),
+	("Cicero", "Pro Milone"),
+	("Cicero", "Pro Murena"),
+	("Cicero", "Pro Plancio"),
+	("Cicero", "Pro Q. Roscio Comoedo"),
+	("Cicero", "Pro Quinctio"),
+	("Cicero", "Pro Rabirio Perduellionis Reo"),
+	("Cicero", "Pro Rabirio Postumo"),
+	("Cicero", "Pro Rege Deiotaro"),
+	("Cicero", "Pro S. Roscio Amerino"),
+	("Cicero", "Pro Scauro"),
+	("Cicero", "Pro Sestio"),
+	("Cicero", "Pro Sulla"),
+	("Cicero", "Pro Tullio"),
+	("Caesar", "de bello gallico"),
+	("Catullus", "carmina"),
+	("livius", "ab urbe condita"),
+	("ovidius", "metamorphoses"),
+	("ovidius", "amores"),
+	("ovidius", "remedia amoris"),
+	("ovidius", "Epistulae (vel Heroides)"),
+	("plinius", "epistulae"),
+	("vergilius", "aeneis")
+]
+
 
 def load_from_file(filename):
 	"""
@@ -44,8 +99,8 @@ if __name__ == "__main__":
 	'''
 	Text input options:
 	 - from textfile
-	 - from stored pickles
-	 - from database
+	 - from stored pickles DONE
+	 - from database DONE
 	 - random from database
 	'''
 
@@ -56,9 +111,9 @@ if __name__ == "__main__":
 		print("Could not find that author in our database. Check your spelling or try another author.")
 	else:
 		for ind, T in enumerate(texts):
-			print(f"{str(ind)}. {T}")
+			print(f"{str(ind+1)}. {T}")
 		choice = input("Please select title from list: ")
-		title = texts[int(choice)][0]
+		title = texts[int(choice)-1][0]
 
 	if pickleExists(title, author):
 		doc = load_from_pickles(author, title)
@@ -97,10 +152,10 @@ if __name__ == "__main__":
 	lemmalist = doc["unique"]
 	verbforms, cases, pos = set_lists(doc["words"])
 
-	for ind, name in enumerate(vocabLists.keys()):
-		print(f"{ind}. {name}")
-	vocab = input("Select which list you would like to use: ")
-
+	for ind, name in enumerate(vocabLists):
+		print(f"{ind+1}. {name}")
+	choice = input("Select which list you would like to use: ")
+	vocab = vocabLists[int(choice)-1][0]
 	with open(f"data/wordlists/{vocab} list.txt", 'rb') as file:
 		vocab_list = list([x.strip().decode() for x in file.readlines()])
 

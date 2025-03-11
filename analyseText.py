@@ -5,7 +5,7 @@ from setup import *
 def getPickles(author, title):
 	res = []
 	for filename in os.listdir(f"docs/{author}"):
-		if re.search(rf"{title}\d.pickle", filename):
+		if re.search(rf"{title.lower()}\d.pickle", filename):
 			res.append(f"docs/{author}/{filename}")
 	return res
 

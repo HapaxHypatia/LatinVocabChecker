@@ -1,8 +1,6 @@
 def connect(func):
-	print("inside connect")
 
 	def wrapper(*args, **kwargs):
-		print("inside wrapper")
 		import mysql.connector as SQL
 		mydb = SQL.connect(
 			host="localhost",
@@ -48,7 +46,6 @@ def getText(cursor, title, author):
 
 @connect
 def DBgetAuthor(cursor, name):
-	print("inside get author function")
 	# get author ID for text
 	val = (name,)
 	sql = "SELECT authorID, fullName FROM authors WHERE LOWER(authorName) = %s"
@@ -57,9 +54,11 @@ def DBgetAuthor(cursor, name):
 	if len(results) > 1:
 		print('Multiple authors found.')
 		for i, r in enumerate(results):
-			print(f'{str(i)}. {r[1]}')
+			print(f'{str(i+1)}. {r[1]}')
 		choice = input('Select the author you want: ')
-	return results[int(choice)][0], results[int(choice)][1]
+		return results[int(choice)-1][0], results[int(choice)-1][1]
+	else:
+		return results[0][0], results[0][1]
 
 
 @connect

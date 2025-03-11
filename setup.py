@@ -178,7 +178,7 @@ def set_wordlist(name, listSource):
 def pickleExists(title, author):
 	if os.path.isdir(f"docs/{author}"):
 		for filename in os.listdir(f"docs/{author}"):
-			if re.search(rf"{title}\d.pickle", filename):
+			if re.search(rf"{title.lower()}\d.pickle", filename):
 				return True
 	else:
 		return False
@@ -294,6 +294,6 @@ if __name__ == "__main__":
 		for i in range(len(docs)):
 			store_data(title[1] + str(i), author, docs[i])
 
-	# for v in vocabLists:
+	# for k, v in vocabLists.items():
 	# 	set_wordlist(v[0], v[1])
 
