@@ -73,7 +73,7 @@ def combine_docs(doclist):
 				if ATT == 'words' and len(docObject['words']) > 0:
 					highestSentence = docObject['words'][-1].index_sentence
 					for w in val:
-						w.index_sentence += highestSentence
+						w.index_sentence += highestSentence + 1
 				docObject[ATT] += val
 			except Exception as e:
 				print(e)

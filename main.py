@@ -91,6 +91,7 @@ def load_from_pickles(author, title):
 	"""
 	docfiles = getPickles(author, title)
 	docs = list([deserialize(pickle) for pickle in docfiles])
+	# TODO URGENT: pickle files are not in order, so the text is jumbled
 	return combine_docs(docs)
 
 def get_random_work():
@@ -327,6 +328,8 @@ if __name__ == "__main__":
 	# Virgil slightly high
 	# Catullus very high
 	#  DCC definitely gives the best coverage, compared to clc and llpsi, but still only 69%
+
+	#There are no 2 consecutive sentences in DBG where dcc gives 80% coverage.
 
 
 # Sentence Splitting
