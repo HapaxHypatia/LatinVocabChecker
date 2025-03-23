@@ -2,7 +2,6 @@ from corporaScrape import *
 from setup import *
 from DB import *
 from analyseText import *
-from findText import *
 from loggingSetup import *
 
 
@@ -12,11 +11,11 @@ from loggingSetup import *
 # TODO how many words do you typically need before a word repeats in latin?
 # TODO create normalised lists vocab for major textbooks
 # TODO create frequency list for 90% coverage of common HS texts only, compare to textbook lists
-#  DCC definitely gives the best coverage, compared to clc and llpsi, but still only 69%
 # TODO Try to find the longest readable passage possible in a given text/author
 # TODO add date and genre to database
 # TODO texts are normalised when retrieved from database. If working with a user-entered text, need to add normalisation step
 # TODO lowercase for all author & title variables
+# TODO standardise naming formats for functions & variables
 
 
 vocabLists = [
@@ -94,16 +93,97 @@ def load_from_pickles(author, title):
 	docs = list([deserialize(pickle) for pickle in docfiles])
 	return combine_docs(docs)
 
+def get_random_work():
+	work = False
+	while not work:
+		mydb = SQL.connect(
+			host="localhost",
+			user="root",
+			password="admin",
+			database="corpus"
+		)
+		mycursor = mydb.cursor()
+		print("\nGetting random text from database.")
+		id = random.randint(52, 884)
+		textQuery = "SELECT title, textString, authorName FROM texts WHERE textID = %s"
+		vals = (id,)
+		mycursor.execute(textQuery, vals)
+		work = mycursor.fetchall()
+	title, text, author = work[0]
+	print(f"Collected {title} by {author}")
+	return title, text, author
 
-if __name__ == "__main__":
-	'''
-	Text input options:
-	 - from textfile
-	 - from stored pickles DONE
-	 - from database DONE
-	 - random from database
-	'''
 
+def get_random_passage(docObj, passageLength):
+	if len(docObj["clean_words"]) < passageLength:
+		print("Work too short.")
+		return False
+	else:
+		print("Getting random passage from text.")
+		sentences = docObj['sentences']
+		if len(sentences) < 2:
+			print("Not enough sentences.")
+			return False
+		start = 0
+		end = 0
+		passage_words = [w for w in docObj["words"] if start < w.index_sentence < end]
+		wordcount = sum([1 for w in passage_words if w.upos != "PUNCT"])
+		while wordcount < passageLength:
+			start = random.randint(0, len(sentences)-1)
+			for s in sentences[start:]:
+				if wordcount + len(s.words) < passageLength * 1.1:
+					passage_words += [w for w in s.words]
+					wordcount = sum([1 for w in passage_words if w.upos != "PUNCT"])
+				else:
+					break
+		print(f"Returning passage of {wordcount} words.")
+		return " ".join([w.string for w in passage_words])
+
+def get_readable_passage(docObj, vocabList, min = 20, max = None, minCov = 90):
+	print("Getting random passage from text.")
+	if len(docObj["clean_words"]) < min:
+		print("Work too short.")
+		return False
+	sentences = docObj['sentences']
+	if len(sentences) < 2:
+		print("Not enough sentences.")
+		return False
+	if max == None:
+		max = len(docObj["clean_words"])
+
+	start = random.randint(0, len(sentences)-2)
+	end = start
+	passage_words = []
+	wordcount = sum([1 for w in passage_words if w.upos != "PUNCT"])
+	while len(passage_words) < max:
+		# start at random sentence
+		for s, ind in enumerate(sentences[start:]):
+			# check coverage of passage + sentence
+			tempPassage = passage_words + s.words
+			coverage = check_coverage(tempPassage, vocabList)[0]
+			# if over target, add s to passage_words, continue to next s
+			if coverage > minCov:
+				if len(tempPassage) + len(sentences[ind + 1].words) > max:
+					if len(tempPassage) > min:
+						# return passage
+						print(f"Returning passage of {wordcount} words.")
+						return " ".join(w.string for w in passage_words)
+					else:
+						# 	choose new random start point
+						break
+				# Otherwise continue to next sentence
+				passage_words += s.words
+				wordcount = sum([1 for w in passage_words if w.upos != "PUNCT"])
+			else:
+				if wordcount > min:
+					print(f"Returning passage of {wordcount} words.")
+					return " ".join(w.string for w in passage_words)
+				else:
+					# 	choose new random start point
+					break
+
+def load_and_analyse():
+	# Get author & text
 	author = input("Please enter author's name: ")
 	id = DBgetAuthor(author)[0]
 	texts = getTextList(id)
@@ -115,6 +195,15 @@ if __name__ == "__main__":
 		choice = input("Please select title from list: ")
 		title = texts[int(choice)-1][0]
 
+	# get choice of vocab list
+	for ind, name in enumerate(vocabLists):
+		print(f"{ind+1}. {name}")
+	choice = input("Select which list you would like to use: ")
+	vocab = vocabLists[int(choice)-1][0]
+	with open(f"data/wordlists/{vocab} list.txt", 'rb') as file:
+		vocab_list = list([x.strip().decode() for x in file.readlines()])
+
+	# Load & Analyse text
 	if pickleExists(title, author):
 		doc = load_from_pickles(author, title)
 	else:
@@ -152,13 +241,6 @@ if __name__ == "__main__":
 	lemmalist = doc["unique"]
 	verbforms, cases, pos = set_lists(doc["words"])
 
-	for ind, name in enumerate(vocabLists):
-		print(f"{ind+1}. {name}")
-	choice = input("Select which list you would like to use: ")
-	vocab = vocabLists[int(choice)-1][0]
-	with open(f"data/wordlists/{vocab} list.txt", 'rb') as file:
-		vocab_list = list([x.strip().decode() for x in file.readlines()])
-
 	# print analysis
 
 	# basic details
@@ -180,6 +262,7 @@ if __name__ == "__main__":
 	# lexical density
 	print(f"Lexical density (unique words : total words): {doc['density']:.1%}")
 
+	# Forms
 	print("Verb Forms")
 	for k in verbforms.keys():
 		print("Number of {} in text: {}".format(k, len(verbforms[k])))
@@ -195,64 +278,47 @@ if __name__ == "__main__":
 		print("Number of {} in text: {}".format(k, len(pos[k])))
 
 
-	# # Get 10 random readable passages from a given text
-	# percentage = 80
-	# passageLength = 50
-	# vocab = "dcc"
-	# number = 10
-	#
-	# file = f"results/{number}x{passageLength} words at {percentage}%.txt"
-	# vocab = getVocab('dcc')
-	#
-	# passages = []
-	# while len(passages) < number:
-	# 	work = get_random_work()
-	# 	title, text, author = work
-	# 	passage = get_random_passage(text, passageLength)
-	# 	if not passage:
-	# 		continue
-	# 	else:
-	# 		doc = analyseSmall(passage)
-	# 		word_coverage, lemmaCoverage, unknown_words = check_coverage(doc.words, vocab)
-	#
-	# 		details = {
-	# 			"author": author,
-	# 			"text": text,
-	# 			"passage": passage,
-	# 			"Coverage": word_coverage,
-	# 			"Unknown": unknown_words
-	# 		}
-	# 		if word_coverage >= percentage:
-	# 			colour = '\033[32m'
-	# 		else:
-	# 			colour = '\033[31m'
-	# 		print(colour)
-	# 		logger.info(f"{author}, {title}: {word_coverage:.2f}%")
-	# 		print("\x1b[0m")
-	# 		if word_coverage > percentage:
-	# 			passages.append(details)
-	# 			with open(file, 'a') as f:
-	# 				for k, v in details.items():
-	# 					f.write(f"{k}: {v}\n")
-	# 				f.write('\n')
+if __name__ == "__main__":
+	'''
+	Text input options:
+	 - from textfile
+	 - from stored pickles DONE
+	 - from database DONE
+	 - random from database
+	'''
+	"""
+	Get readable passage from saved docs
+	"""
+	# Define vocab list
+	# for ind, name in enumerate(vocabLists):
+	# 	print(f"{ind + 1}. {name[0]}")
+	# choice = input("Select which list you would like to use: ")
+	# vocab = vocabLists[int(choice) - 1][0]
+	vocab = "dcc"
+	with open(f"data/wordlists/{vocab} list.txt", 'rb') as file:
+		vocabList = list([x.strip().decode() for x in file.readlines()])
 
-	# def isReadable(passage, minPercentage, vocablist):
-	# 	"""
-	# 	:param passage: str. passage to be checked.
-	# 	:param percentage: int. Vocab coverage needed.
-	# 	:param vocablist: list. List of known vocab.
-	# 	:return: bool
-	# 	"""
-	# 	print("Checking readability.")
-	# 	doc = analyseSmall(passage)
-	# 	words = [w for w in doc.words if not ignore(w)]
-	# 	word_coverage, lemmaCoverage, unknown_words = check_coverage(words, vocablist)
-	# 	if word_coverage >= minPercentage:
-	# 		print(f"Found passage with {word_coverage:.2f}% coverage.")
-	# 		return word_coverage, lemmaCoverage, unknown_words
-	# 	else:
-	# 		print(f"Passage did not meet minimum coverage. Coverage was {word_coverage:.2f}%.")
-	# 		return False
+	# Optional settings: min and max word counts, preferred author/work/genre/date
+	# min = int(input("Minimum Word Count: "))
+	# max = int(input("Maximum Word Count: "))
+	# minCov = int(input("Minimum Coverage: "))
+	min = 20
+	max = 500
+	minCov = 80
+
+	# # Get random author, work
+	# authorFolders = os.listdir("./docs/")
+	# A = random.randint(0, len(authorFolders)-1)
+	# author = authorFolders[A]
+
+	author = "caesar"
+	titleFolders = os.listdir(f"./docs/{author}/")
+	T = random.randint(0, len(titleFolders)-1)
+	title = titleFolders[T]
+
+	# Get random passage
+	docObj = load_from_pickles(author, title)
+	print(get_readable_passage(docObj, vocabList, 20, 500, 80))
 
 
 
@@ -260,9 +326,10 @@ if __name__ == "__main__":
 	# Caesar has quite low lexical density
 	# Virgil slightly high
 	# Catullus very high
+	#  DCC definitely gives the best coverage, compared to clc and llpsi, but still only 69%
 
 
-	# Sentence Splitting
+# Sentence Splitting
 	# from cltk.sentence.lat import LatinPunktSentenceTokenizer
 	# splitter = LatinPunktSentenceTokenizer()
 	# sentences = splitter.tokenize(text)

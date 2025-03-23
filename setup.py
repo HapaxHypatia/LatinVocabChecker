@@ -1,7 +1,6 @@
 import multiprocessing
 import os
 from multiprocessing import Process
-import mysql.connector as SQL
 from openpyxl.reader.excel import load_workbook
 import time
 from semantic_text_splitter import TextSplitter
@@ -9,8 +8,8 @@ import pickle
 import re
 from unidecode import unidecode
 from cltk.data.fetch import FetchCorpus
-from cltk.tokenizers.lat.lat import LatinWordTokenizer
 from cltk import NLP
+from DB import getText
 
 
 def getCorpora():
@@ -24,34 +23,6 @@ def getCorpora():
 			print(c)
 			print(e)
 			continue
-
-
-def getText(title, author):
-	"""
-	Get full text from DB
-	:param string title: Title of work
-	:return: string of text, string of author
-	"""
-	title = title.lower()
-	textQuery = "SELECT textString, authorName FROM texts WHERE LOWER(title) = %s"
-	vals = (title,)
-	mycursor.execute(textQuery, vals)
-	results = mycursor.fetchall()
-	if len(results) < 1:
-		print("No text by that name found in the database.")
-		print(author)
-		print(title)
-		return False
-	if len(results) > 1:
-		res = list(filter(lambda x: x[1].lower() == author.lower(), results))
-		text = res[0][0]
-		author = res[0][1]
-	else:
-		text = results[0][0]
-		author = results[0][1]
-	print("\nText: {} by {} successfully collected".format(title, author))
-	text = normalize_text(text)
-	return text, author
 
 
 def splitText(text, num):
@@ -78,10 +49,22 @@ def analyseSmall(text):
 	return doc
 
 
-def store_data(title, author, nlp_doc):
+def store_data(author, title, part, nlp_doc):
+	"""
+
+	:param author: string
+	:param title: string
+	:param part: string of a digit
+	:param nlp_doc: nlp-document
+	:return:
+	"""
 	if not os.path.isdir(f'docs/{author}'):
 		os.mkdir(f'docs/{author}')
-	with open(f'docs/{author}/{title}.pickle', 'wb') as handle:
+
+	if not os.path.isdir(f'docs/{author}/{title}'):
+		os.mkdir(f'docs/{author}/{title}')
+
+	with open(f'docs/{author}/{title}/{title}{part}.pickle', 'wb') as handle:
 		pickle.dump(nlp_doc, handle, protocol=pickle.HIGHEST_PROTOCOL)
 		print("{} by {} successfully saved".format(title, author))
 
@@ -195,17 +178,6 @@ if __name__ == "__main__":
 
 	# getCorpora()
 
-
-	# connect to database
-	mydb = SQL.connect(
-		host="localhost",
-		user="root",
-		password="admin",
-		database="corpus"
-	)
-	mycursor = mydb.cursor()
-	print("Connected to database.\n")
-
 	# set vocab lists
 	vocabLists = [
 		("dcc", "data/vocab/Latin Core Vocab.xlsx"),
@@ -217,7 +189,6 @@ if __name__ == "__main__":
 		("wheel", "data/vocab/wheelock.xlsx"),
 		("newmil", "data/vocab/latin_for_the_new_millennium.xlsx")
 	]
-
 
 	# get senior texts
 	works = [
@@ -292,7 +263,7 @@ if __name__ == "__main__":
 		# pickle & store
 		# TODO save in database
 		for i in range(len(docs)):
-			store_data(title[1] + str(i), author, docs[i])
+			store_data(author, title[1], str(i), docs[i])
 
 	# for k, v in vocabLists.items():
 	# 	set_wordlist(v[0], v[1])

@@ -4,9 +4,8 @@ from setup import *
 
 def getPickles(author, title):
 	res = []
-	for filename in os.listdir(f"docs/{author}"):
-		if re.search(rf"{title.lower()}\d.pickle", filename):
-			res.append(f"docs/{author}/{filename}")
+	for filename in os.listdir(f"docs/{author}/{title}"):
+		res.append(f"docs/{author}/{title}/{filename}")
 	return res
 
 
@@ -34,10 +33,16 @@ def create_docObj(nlpDoc):
 				 'normalized_text': nlpDoc.normalized_text,
 				 'token_count': len(nlpDoc.tokens),
 				 'sentence_count': len(nlpDoc.sentences),
-				 'word_count': len(clean_words),
+				 'word_count': sum([1 for w in nlpDoc.words if w.upos != "PUNCT"]),
 				 'unique': set(w.lemma for w in clean_words)}
 
 	docObject['density'] = len(docObject['unique']) / docObject['word_count']
+	docObject['token_count'] = len(docObject['tokens'])
+	docObject['sentence_count'] = len(docObject['sentences'])
+	docObject['clean_words'] = [x for x in docObject['words'] if not ignore(x)]
+	docObject['word_count'] = len(docObject['clean_words'])
+	docObject['unique'] = set(w.lemma for w in docObject['clean_words'])
+
 	return docObject
 
 def combine_docs(doclist):
@@ -92,6 +97,7 @@ def ignore(wordObject):
 	if wordObject.string == "":
 		return True
 	for char in wordObject.string:
+		# TODO inaccurate because of the words that have numbers attached.
 		if char in "0123456789":
 			return True
 	return False
@@ -204,13 +210,13 @@ def set_lists(wordList):
 	return verbforms, cases, pos
 
 def create_freq_list(docobj):
-	words = [w for w in docobj['lemmata'] if not ignore(w)]
+	words = [w for w in docobj['words'] if not ignore(w)]
 	result = {}
 	for w in words:
-		if w in result.keys():
-			result[w] += 1
+		if w.lemma in result.keys():
+			result[w.lemma] += 1
 		else:
-			result[w] = 1
+			result[w.lemma] = 1
 	result = dict(sorted(result.items(), key=lambda item: item[1], reverse=True))
 	return result
 
