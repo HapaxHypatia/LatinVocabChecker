@@ -7,6 +7,9 @@ from selenium.common import NoSuchElementException, StaleElementReferenceExcepti
 from selenium.webdriver.common.by import By
 from setup import normalize_text
 
+
+# TODO update DB calls to new functions
+
 def DBaddAuthor(name, fullname):
 	# insert author
 	val = (name, fullname)

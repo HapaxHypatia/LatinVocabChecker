@@ -92,7 +92,8 @@ def ignore(wordObject):
 	:param wordObject:
 	:return:
 	"""
-	if wordObject.upos == "PUNCT" or wordObject.upos == "X" or wordObject.upos == "PROPN" or wordObject.upos == "SYM":
+
+	if wordObject.upos in ["PUNCT", "X", "PROPN", "NUM", "SYM"]:
 		return True
 	if wordObject.string == "":
 		return True
@@ -131,22 +132,45 @@ def combine_lists(wordlist1, wordlist2):
 
 
 def check_coverage(word_objects, vocablist):
+	# totalWords = len(word_objects)
+	# total_sharedWords = sum(1 for w in word_objects if w.lemma in vocablist)
+	# if total_sharedWords < 1:
+	# 	word_coverage = 0
+	# else:
+	# 	word_coverage = (total_sharedWords / totalWords) * 100
+	#
+	# lemmaList = set([w.lemma for w in word_objects])
+	# totalLemmata = len(lemmaList)
+	# sharedLemmata = compare_lists(lemmaList, vocablist)
+	# lemmaCoverage = (len(sharedLemmata) / totalLemmata) * 100
+	#
+	# unknown_words = [w.string for w in word_objects if w.lemma not in vocablist]
+	#
+	# return word_coverage, lemmaCoverage, unknown_words
+	vocab_set = set(vocablist)
+
 	totalWords = len(word_objects)
-	total_sharedWords = sum(1 for w in word_objects if w.lemma in vocablist)
-	if total_sharedWords < 1:
-		word_coverage = 0
-	else:
-		word_coverage = (total_sharedWords / totalWords) * 100
+	total_sharedWords = 0
+	lemmaList = set()
+	unknown_words = []
 
-	lemmaList = set([w.lemma for w in word_objects])
-	totalLemmata = len(lemmaList)
-	sharedLemmata = compare_lists(lemmaList, vocablist)
-	lemmaCoverage = (len(sharedLemmata) / totalLemmata) * 100
+	# Efficiently calculate word coverage and lemma coverage
+	for w in word_objects:
+		lemma = w.lemma
+		lemmaList.add(lemma)
+		if lemma in vocab_set:
+			total_sharedWords += 1
+		else:
+			unknown_words.append(w.string)
 
-	unknown_words = [w.string for w in word_objects if w.lemma not in vocablist]
+	# Calculate word coverage percentage
+	word_coverage = (total_sharedWords / totalWords) * 100 if total_sharedWords > 0 else 0
+
+	# Calculate lemma coverage percentage using set operations (intersection)
+	sharedLemmata = lemmaList.intersection(vocab_set)
+	lemmaCoverage = (len(sharedLemmata) / len(lemmaList)) * 100 if lemmaList else 0
 
 	return word_coverage, lemmaCoverage, unknown_words
-
 
 def set_lists(wordList):
 	"""
@@ -209,16 +233,38 @@ def set_lists(wordList):
 
 	return verbforms, cases, pos
 
+
 def create_freq_list(docobj):
-	words = [w for w in docobj['words'] if not ignore(w)]
-	result = {}
-	for w in words:
-		if w.lemma in result.keys():
-			result[w.lemma] += 1
-		else:
-			result[w.lemma] = 1
-	result = dict(sorted(result.items(), key=lambda item: item[1], reverse=True))
-	return result
+	from collections import Counter
+	lemmata = [w.lemma for w in docobj['words'] if not ignore(w)]
+	frequency = Counter(lemmata)
+	sorted_freq = dict(frequency.most_common())
+	return sorted_freq
+
+
+def get_percentage_list(docObj, percentage):
+	"""
+
+	:param docObj: analysed text
+	:param percentage:
+	:return: list of words needed for target coverage %
+	"""
+	freq = create_freq_list(docObj)
+	voc_words = list(freq.keys())
+	print(f"Text contains {len(voc_words)} unique words.")
+	ind = 0
+	voc = []
+	coverage = 0
+	while len(voc) < len(voc_words):
+		voc.append(voc_words[ind])
+		wordCoverage, lemmaCoverage, unknown = check_coverage(docObj["clean_words"], voc)
+		if (ind+1) % 100 == 0:
+			print(f"{ind+1}, {wordCoverage}")
+		if wordCoverage >= percentage:
+			print("target coverage reached.")
+			print(voc)
+			return voc
+		ind += 1
 
 def avg_sentence_length(docObj):
 	sent_lengths = [len(s) for s in docObj['sentences']]
@@ -226,4 +272,6 @@ def avg_sentence_length(docObj):
 
 
 if __name__ == "__main__":
-	pass
+	from main import *
+
+

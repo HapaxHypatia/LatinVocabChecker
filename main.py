@@ -15,7 +15,8 @@ from loggingSetup import *
 # TODO add date and genre to database
 # TODO texts are normalised when retrieved from database. If working with a user-entered text, need to add normalisation step
 # TODO lowercase for all author & title variables
-# TODO standardise naming formats for functions & variables
+
+# TODO standardise naming formats for functions & variables e.g. docObj
 
 
 vocabLists = [
