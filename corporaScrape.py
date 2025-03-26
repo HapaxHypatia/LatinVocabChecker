@@ -5,75 +5,10 @@ from mysql.connector import DatabaseError
 from selenium import webdriver
 from selenium.common import NoSuchElementException, StaleElementReferenceException
 from selenium.webdriver.common.by import By
-from setup import normalize_text
+from DB import *
 
 
 # TODO update DB calls to new functions
-
-def DBaddAuthor(name, fullname):
-	# insert author
-	val = (name, fullname)
-	CHECKsql = "SELECT * FROM authors WHERE authorName = %s AND fullName = %s"
-	mycursor.execute(CHECKsql, val)
-	if not mycursor.fetchall():
-		print("Adding author: {},{}".format(name, fullname))
-		ADDsql = "INSERT INTO authors (authorName, fullName) VALUES (%s, %s)"
-		mycursor.execute(ADDsql, val)
-		mydb.commit()
-		print("Author added.")
-
-
-def DBgetAuthor(fullname):
-	# get author ID for text
-	val = (fullname,)
-	sql = "SELECT authorID, authorName FROM authors WHERE fullName = %s"
-	mycursor.execute(sql, val)
-	results = mycursor.fetchall()
-	return results[0][0], results[0][1]
-
-def textExists(text):
-	CHECKsql = "SELECT * FROM texts WHERE title = %s AND authorID = %s"
-	val = (text["title"], text["authorID"])
-	mycursor.execute(CHECKsql, val)
-	searchResult = mycursor.fetchall()
-	return searchResult if searchResult else False
-
-
-def DBaddText(text):
-	# insert text
-	authorID, authorName = DBgetAuthor(text["author"])
-	values = {
-		'title': text["title"],
-		'length': text["length"],
-		'text': text["fulltext"],
-		'author': authorID,
-		'authorName': authorName
-	}
-	findText = textExists(text)
-	# TODO missed Pliny NH somehow - because of multiple authors with same name?
-	if not findText:
-		#If text does not already exist in db
-		#  TODO need to normalise text before entering. Fix hyphenated words, line numbers in middle of words.
-		print("Adding text: {} by {}".format(text['title'], text['author']))
-		add_text = ("INSERT INTO texts "
-					"(title, textLength, textString, authorID) "
-					"VALUES (%(title)s, %(length)s, %(text)s, %(author)s)")
-		mycursor.execute(add_text, values)
-		mydb.commit()
-		print("Text added.")
-	else:
-		textID = findText[0][0]
-		# TODO Skip this check to refresh database with new version of texts.
-		check_length = "SELECT textLength FROM texts WHERE textID=%s"
-		mycursor.execute(check_length, (textID,))
-		current_length = mycursor.fetchall()
-		if current_length[0][0] != text['length']:
-			# if text is not complete
-			update_text = 'UPDATE texts SET textLength=%s, textString=%s WHERE textID = %s'
-			values = (text['length'], text['fulltext'], textID)
-			mycursor.execute(update_text, values)
-			mydb.commit()
-			print("Text updated.")
 
 
 if __name__ == "__main__":
@@ -83,7 +18,6 @@ if __name__ == "__main__":
 		password="admin",
 		database="corpus"
 	)
-	mycursor = mydb.cursor()
 
 	driver = webdriver.Chrome()
 	driver.set_page_load_timeout(60)
@@ -98,7 +32,6 @@ if __name__ == "__main__":
 	for item in authorElements:
 		name = item.find_element(By.CSS_SELECTOR, value='span b').text
 		fullname = item.find_element(By.CSS_SELECTOR, value='span').text
-	# DBaddAuthor(name, fullname)
 
 	author_links = [x.get_attribute("href") for x in authorElements]
 	for author in author_links:
@@ -124,33 +57,52 @@ if __name__ == "__main__":
 			textdata["authorID"] = DBgetAuthor(textdata["author"])[0]
 			findText = textExists(textdata)
 			if findText:
-				sql = "SELECT textLength FROM texts WHERE textID = %s"
-				val = (findText[0][0],)
-				mycursor.execute(sql, val)
-				length = mycursor.fetchall()[0][0]
+				length = getTextByID(findText[0])
 				if length > 1000:
 					continue
 
-			text = []
+			text = ""
+			page_count = 1
 			while True:
 				# Add reference to array
 				# Add text segments to array
 				# Click next button
-				tableCells = driver.find_elements(by=By.TAG_NAME, value='td')
-				try:
-					text += list([cell.text for cell in tableCells])
-				except StaleElementReferenceException:
-					print(driver.current_url)
-					print(textdata)
-					continue
+				tableRows = driver.find_elements(by=By.TAG_NAME, value='tr')
+				for r in tableRows:
+					cells = r.find_elements(by=By.TAG_NAME, value='td')
+					textstring = cells[0].text
+					number = cells[1].text
+
+					# Add text segments to array
+					try:
+						if number:
+							textSegments = re.split(r"((?:\.\s?){1,3}|(?:\?)|(?:\;))", textstring)
+							if textSegments[-1] == "":
+								textSegments = textSegments[:-1]
+							segs = len(textSegments)
+							match segs:
+								case 1:
+									text += f" {number} {textSegments[0]}"
+								case 2:
+									text += f" {number} {textSegments[0]}{textSegments[1]}"
+								case 3:
+									text += f" {textSegments[0]}{textSegments[1]} {number} {textSegments[2]}"
+
+						else:
+							text += textstring + " "
+					except StaleElementReferenceException:
+						print(driver.current_url)
+						print(textdata)
+						continue
 				next_button = driver.find_element(By.ID, value="next")
 				if next_button.get_attribute("href") == "":
 					break
 				before_click = driver.current_url
 				next_button.click()
+				page_count += 1
 				time.sleep(2)
 				if before_click == driver.current_url:
-					print('Reached end of {} after {} pages'.format(textdata['title'], count))
+					print('Reached end of {} after {} pages'.format(textdata['title'], page_count))
 					break
 
 			textdata["fulltext"] = " ".join(text)

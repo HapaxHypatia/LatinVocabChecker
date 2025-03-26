@@ -1,5 +1,6 @@
 import random
 from setup import *
+import re
 
 
 def getPickles(author, title):

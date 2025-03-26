@@ -10,6 +10,7 @@ from unidecode import unidecode
 from cltk.data.fetch import FetchCorpus
 from cltk import NLP
 from DB import getText
+import re
 
 
 def getCorpora():
@@ -110,23 +111,7 @@ def normalize_text(text):
 		text.replace(k, v)
 
 	# join words that split over line break
-	text = text.replace("-  ", "")
-	text = text.replace("- ", "")
-
-	# TODO move numbers when they occur inside words like this: multi4.1 tudo
-
-	# # Replace numbers
-	# res = ""
-	# word_tokenizer = LatinWordTokenizer()
-	# tokens = word_tokenizer.tokenize(text)
-	# for t in tokens:
-	# 	for num in '0123456789':
-	# 		if num in t:
-	# # 			move number to front of word
-	#
-	#
-	#
-	# print("Returning normalised text.")
+	text = re.sub(r'(-\s{0,3})', "", text)
 	return text
 
 def set_wordlist(name, listSource):
