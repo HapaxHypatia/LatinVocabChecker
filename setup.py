@@ -28,23 +28,25 @@ def getCorpora():
 
 def splitText(text, num):
 	print(f"Splitting Text into {num} parts")
-	splitter = TextSplitter(len(text) // num - 1)
+	splitter = TextSplitter(len(text) // num)
 	chunks = splitter.chunks(text)
+	result = [(ind, ch) for ind, ch in enumerate(chunks)]
 	print(f"Returning {len(chunks)} chunks.")
-	return chunks
+	return result
 
 
-def analyseLarge(text, return_list):
+def analyseLarge(chunk, return_list):
+	ind, text = chunk
 	cltk = NLP(language="lat", suppress_banner=True)
-	print("Beginning analysis. Please wait.")
+	print(f"Beginning analysis of chunk {ind} of large text. Please wait.")
 	doc = cltk.analyze(text)
-	print("Finished analysing")
-	return_list.append(doc)
+	print(f"Finished analysing chunk {ind} of large text")
+	return_list.append((ind, doc))
 
 
 def analyseSmall(text):
 	cltk = NLP(language="lat", suppress_banner=True)
-	print("Beginning analysis. Please wait.")
+	print("Beginning analysis of small text. Please wait.")
 	doc = cltk.analyze(text)
 	print("Finished analysing")
 	return doc
@@ -59,6 +61,8 @@ def store_data(author, title, part, nlp_doc):
 	:param nlp_doc: nlp-document
 	:return:
 	"""
+	author = author.lower()
+	title = title.lower()
 	if not os.path.isdir(f'docs/{author}'):
 		os.mkdir(f'docs/{author}')
 
@@ -145,9 +149,10 @@ def set_wordlist(name, listSource):
 
 def pickleExists(title, author):
 	if os.path.isdir(f"docs/{author}"):
-		for filename in os.listdir(f"docs/{author}"):
-			if re.search(rf"{title.lower()}\d.pickle", filename):
-				return True
+		for folder in os.listdir(f"docs/{author}"):
+			for filename in os.listdir(f"docs/{author}/{folder}"):
+				if re.search(rf"{title.lower()}\d.pickle", filename):
+					return True
 	else:
 		return False
 
@@ -177,37 +182,37 @@ if __name__ == "__main__":
 
 	# get senior texts
 	works = [
-		("Cicero", "In Catilinam"),
-		("Cicero", "In Pisonem"),
-		("Cicero", "In Q. Caecilium"),
-		("Cicero", "In Sallustium [sp.]"),
-		("Cicero", "In Vatinium"),
-		("Cicero", "In Verrem"),
-		("Cicero", "Pro Archia"),
-		("Cicero", "Pro Balbo"),
-		("Cicero", "Pro Caecina"),
-		("Cicero", "Pro Caelio"),
-		("Cicero", "Pro Cluentio"),
-		("Cicero", "Pro Flacco"),
-		("Cicero", "Pro Fonteio"),
-		("Cicero", "Pro Lege Manilia"),
-		("Cicero", "Pro Ligario"),
-		("Cicero", "Pro Marcello"),
-		("Cicero", "Pro Milone"),
-		("Cicero", "Pro Murena"),
-		("Cicero", "Pro Plancio"),
-		("Cicero", "Pro Q. Roscio Comoedo"),
-		("Cicero", "Pro Quinctio"),
-		("Cicero", "Pro Rabirio Perduellionis Reo"),
-		("Cicero", "Pro Rabirio Postumo"),
-		("Cicero", "Pro Rege Deiotaro"),
-		("Cicero", "Pro S. Roscio Amerino"),
-		("Cicero", "Pro Scauro"),
-		("Cicero", "Pro Sestio"),
-		("Cicero", "Pro Sulla"),
-		("Cicero", "Pro Tullio"),
+		("cicero", "In Catilinam"),
+		("cicero", "In Pisonem"),
+		("cicero", "In Q. Caecilium"),
+		("cicero", "In Sallustium [sp.]"),
+		("cicero", "In Vatinium"),
+		("cicero", "In Verrem"),
+		("cicero", "Pro Archia"),
+		("cicero", "Pro Balbo"),
+		("cicero", "Pro Caecina"),
+		("cicero", "Pro Caelio"),
+		("cicero", "Pro Cluentio"),
+		("cicero", "Pro Flacco"),
+		("cicero", "Pro Fonteio"),
+		("cicero", "Pro Lege Manilia"),
+		("cicero", "Pro Ligario"),
+		("cicero", "Pro Marcello"),
+		("cicero", "Pro Milone"),
+		("cicero", "Pro Murena"),
+		("cicero", "Pro Plancio"),
+		("cicero", "Pro Q. Roscio Comoedo"),
+		("cicero", "Pro Quinctio"),
+		("cicero", "Pro Rabirio Perduellionis Reo"),
+		("cicero", "Pro Rabirio Postumo"),
+		("cicero", "Pro Rege Deiotaro"),
+		("cicero", "Pro S. Roscio Amerino"),
+		("cicero", "Pro Scauro"),
+		("cicero", "Pro Sestio"),
+		("cicero", "Pro Sulla"),
+		("cicero", "Pro Tullio"),
 		("Caesar", "de bello gallico"),
-		("Catullus", "carmina"),
+		("catullus", "carmina"),
 		("livius", "ab urbe condita"),
 		("ovidius", "metamorphoses"),
 		("ovidius", "amores"),
@@ -219,7 +224,7 @@ if __name__ == "__main__":
 
 	for title in works:
 		text, author = getText(title[1], title[0])
-		#
+
 		if pickleExists(title[1], author):
 			print("Text analysis already stored.")
 			continue
@@ -235,20 +240,21 @@ if __name__ == "__main__":
 			start_time = time.time()
 			# NOTE: multiprocessing must be done in __main__
 			processes = [Process(target=analyseLarge, args=(ch, docs)) for ch in chunks]
-			for process in processes:
+			for ind, process in enumerate(processes):
 				process.start()
-			for process in processes:
+			for ind, process in enumerate(processes):
 				process.join()
 			print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
 		else:
 			start_time = time.time()
-			docs.append(analyseSmall(text))
+			docs.append((0, analyseSmall(text)))
 			print("Analysis took {} minutes.".format(round((time.time() - start_time) / 60), 2))
 
 		# pickle & store
 		# TODO save in database
-		for i in range(len(docs)):
-			store_data(author, title[1], str(i), docs[i])
+		res = sorted(docs, key=lambda x: x[0])
+		for d in res:
+			store_data(author, title[1], str(d[0]), d[1])
 
 	# for k, v in vocabLists.items():
 	# 	set_wordlist(v[0], v[1])

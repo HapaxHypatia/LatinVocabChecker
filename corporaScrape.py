@@ -6,7 +6,8 @@ from selenium import webdriver
 from selenium.common import NoSuchElementException, StaleElementReferenceException
 from selenium.webdriver.common.by import By
 from DB import *
-
+import re
+from setup import normalize_text
 
 # TODO update DB calls to new functions
 
@@ -55,11 +56,12 @@ if __name__ == "__main__":
 			textdata["author"] = driver.find_element(By.ID, value='author').text
 			textdata["title"] = driver.find_element(By.ID, value='work').text
 			textdata["authorID"] = DBgetAuthor(textdata["author"])[0]
-			findText = textExists(textdata)
-			if findText:
-				length = getTextByID(findText[0])
-				if length > 1000:
-					continue
+			# TODO fix calls to database functions, including returning named properties from them.
+			# findText = textExists(textdata)
+			# if findText:
+			# 	length = getTextByID(findText[0])[5]
+			# 	if length > 1000:
+			# 		continue
 
 			text = ""
 			page_count = 1
@@ -76,7 +78,8 @@ if __name__ == "__main__":
 					# Add text segments to array
 					try:
 						if number:
-							textSegments = re.split(r"((?:\.\s?){1,3}|(?:\?)|(?:\;))", textstring)
+							# Add line numbers before line. If mid-sentence, move to start.
+							textSegments = re.split(r"((?:\.\s?){1,3}|(?:\?)|(?:;):|(?:-\s?){1,3})", textstring)
 							if textSegments[-1] == "":
 								textSegments = textSegments[:-1]
 							segs = len(textSegments)
@@ -87,6 +90,8 @@ if __name__ == "__main__":
 									text += f" {number} {textSegments[0]}{textSegments[1]}"
 								case 3:
 									text += f" {textSegments[0]}{textSegments[1]} {number} {textSegments[2]}"
+								case 4:
+									text += f" {textSegments[0]}{textSegments[1]} {number} {textSegments[2]} {textSegments[3]}"
 
 						else:
 							text += textstring + " "
@@ -105,8 +110,9 @@ if __name__ == "__main__":
 					print('Reached end of {} after {} pages'.format(textdata['title'], page_count))
 					break
 
+			textdata["length"] = len(textdata["fulltext"])
 			textdata["fulltext"] = " ".join(text)
-			textdata["length"] = len(textdata["fulltext"].split(" "))
+			textdata["fulltext"] = normalize_text(text)
 			texts.append(textdata)
 			try:
 				DBaddText(textdata)

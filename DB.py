@@ -1,5 +1,4 @@
 def connect(func):
-
 	def wrapper(*args, **kwargs):
 		import mysql.connector as SQL
 		mydb = SQL.connect(
@@ -41,7 +40,7 @@ def getText(cursor, title, author):
 		text = results[0][0]
 		author = results[0][1]
 	print("Text: {} by {} successfully collected".format(title, author))
-	return text
+	return text, author
 
 
 def getTextByID(cursor, id):
@@ -61,9 +60,9 @@ def DBgetAuthor(cursor, name):
 	if len(results) > 1:
 		print('Multiple authors found.')
 		for i, r in enumerate(results):
-			print(f'{str(i+1)}. {r[1]}')
+			print(f'{str(i + 1)}. {r[1]}')
 		choice = input('Select the author you want: ')
-		return results[int(choice)-1][0], results[int(choice)-1][1]
+		return results[int(choice) - 1][0], results[int(choice) - 1][1]
 	else:
 		return results[0][0], results[0][1]
 
@@ -74,7 +73,6 @@ def textExists(cursor, text):
 	val = (text["title"], text["authorID"])
 	cursor.execute(CHECKsql, val)
 	searchResult = cursor.fetchall()
-	# TODO return a dictionary of named keys and values, so I don't have to code which index to grab. Consider doing this for all DB functions.
 	return searchResult if searchResult else False
 
 
@@ -97,6 +95,7 @@ def searchDB(cursor, table, ret, prop, val):
 	results = cursor.fetchall()
 	return results
 
+
 @connect
 def DBaddText(cursor, text):
 	# insert text
@@ -111,9 +110,8 @@ def DBaddText(cursor, text):
 	findText = textExists(text)
 	# TODO missed Pliny NH somehow - because of multiple authors with same name?
 	if not findText:
-		#If text does not already exist in db
-		#  TODO need to normalise text before entering. Fix hyphenated words, line numbers in middle of words.
-		print("Adding text: {} by {}".format(text['title'], text['author']))
+		# If text does not already exist in db
+		print(f"Adding text: {text['title']} by {text['author']}")
 		add_text = ("INSERT INTO texts "
 					"(title, textLength, textString, authorID) "
 					"VALUES (%(title)s, %(length)s, %(text)s, %(author)s)")
@@ -121,16 +119,20 @@ def DBaddText(cursor, text):
 		print("Text added.")
 	else:
 		textID = findText[0][0]
-		# TODO Skip this check to refresh database with new version of texts.
-		check_length = "SELECT textLength FROM texts WHERE textID=%s"
-		cursor.execute(check_length, (textID,))
-		current_length = cursor.fetchall()
-		if current_length[0][0] != text['length']:
-			# if text is not complete
-			update_text = 'UPDATE texts SET textLength=%s, textString=%s WHERE textID = %s'
-			values = (text['length'], text['fulltext'], textID)
-			cursor.execute(update_text, values)
-			print("Text updated.")
+		# # TODO Skip this check to refresh database with new version of texts.
+		# check_length = "SELECT textLength FROM texts WHERE textID=%s"
+		# cursor.execute(check_length, (textID,))
+		# current_length = cursor.fetchall()
+		# if current_length[0][0] != text['length']:
+		# 	# if text is not complete
+		# 	update_text = 'UPDATE texts SET textLength=%s, textString=%s WHERE textID = %s'
+		# 	values = (text['length'], text['fulltext'], textID)
+		# 	cursor.execute(update_text, values)
+		# 	print(f"Text {text['title']} by {text['author']} updated")
+		update_text = 'UPDATE texts SET textLength=%s, textString=%s WHERE textID = %s'
+		values = (text['length'], text['fulltext'], textID)
+		cursor.execute(update_text, values)
+		print(f"Text {text['title']} by {text['author']} updated")
 
 
 @connect
